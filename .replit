@@ -1,2 +1,0 @@
-language = "cpp"
-run = "g++ -o tp main.cpp Encomenda.cpp Cliente.cpp"
