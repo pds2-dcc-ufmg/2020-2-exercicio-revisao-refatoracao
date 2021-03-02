@@ -9,14 +9,14 @@ class Encomenda{
 	public:
 		double calcula(){
 			
-			double x = this->PESO * this->CUSTOkg;
+			this->T = this->PESO * this->CUSTOkg;
 			
 			if(this->relampago){
 				
-				x *= 1.25;
+				this->T *= 1.25;
 			}
 			
-			return x;
+			return this->T;
 		}
 		void print(){
 
