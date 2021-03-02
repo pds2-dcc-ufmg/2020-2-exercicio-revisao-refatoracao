@@ -3,177 +3,132 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
+
 using namespace std;
 
 int main(){
+
+  Cliente clientes[8];
 	
-	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	clientes[0].nome = "Thales";
+	clientes[0].endereco = "Rua dos Pré-Socráticos";
+	clientes[0].cidade = "Miletus";
+	clientes[0].estado = "Ionia";
+	clientes[0].cep = "548 a.C.";
 
-	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	clientes[1].nome = "Aristóteles";
+	clientes[1].endereco = "Avenida do Meio-Termo";
+	clientes[1].cidade = "Atenas";
+	clientes[1].estado = "Ática";
+	clientes[1].cep = "384 a.C.";
 
-	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	clientes[2].nome = "Platão";
+	clientes[2].endereco = "Praça das Formas";
+	clientes[2].cidade = "Atenas";
+	clientes[2].estado = "Ática";
+	clientes[2].cep = "348 a.C";
 
-	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	clientes[3].nome = "Sócrates";
+	clientes[3].endereco = "Rua do Elenchus";
+	clientes[3].cidade = "Atenas";
+	clientes[3].estado = "Ática";
+	clientes[3].cep = "399 a.C.";
 
-	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	clientes[4].nome = "Pitágoras";
+	clientes[4].endereco = "Praça dos Quadrados dos Catetos";
+	clientes[4].cidade = "Samos";
+	clientes[4].estado = "Egeu";
+	clientes[4].cep = "571 a.C.";
 
-	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	clientes[5].nome = "Parmênides";
+	clientes[5].endereco = "Rua do Não Ser";
+	clientes[5].cidade = "Eleia";
+	clientes[5].estado = "Magna Grécia";
+	clientes[5].cep = "460 a.C.";
 
-	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	clientes[6].nome = "Empédocles";
+	clientes[6].endereco = "Rua dos Quatro Elementos";
+	clientes[6].cidade = "Agrigento";
+	clientes[6].estado = "Sicília";
+	clientes[6].cep = "495 a.C.";
 
-	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	clientes[7].nome = "Anaxágoras";
+	clientes[7].endereco = "Avenida da Mente Cósmica";
+	clientes[7].cidade = "Clazômenas";
+	clientes[7].estado = "Jónia";
+	clientes[7].cep = "499 a.C.";
 
-	int quantN = 0;
-	int quantR = 0;
+	EncomendaNormal encomendasNormais[5];
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+	encomendasNormais[0].peso = 5;
+	encomendasNormais[0].custoKg = 12;
+	encomendasNormais[0].remetente = clientes[0];
+	encomendasNormais[0].destinatario = clientes[1];
 
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+	encomendasNormais[1].peso = 10;
+	encomendasNormais[1].custoKg = 12;
+	encomendasNormais[1].remetente = clientes[1];
+	encomendasNormais[1].destinatario = clientes[2];
 
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+	encomendasNormais[2].peso = 7;
+	encomendasNormais[2].custoKg = 12;
+	encomendasNormais[2].remetente = clientes[2];
+	encomendasNormais[2].destinatario = clientes[3];
 
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+	encomendasNormais[3].peso = 2;
+	encomendasNormais[3].custoKg = 12;
+	encomendasNormais[3].remetente = clientes[3];
+	encomendasNormais[3].destinatario = clientes[4];
 
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+	encomendasNormais[4].peso = 3;
+	encomendasNormais[4].custoKg = 12;
+	encomendasNormais[4].remetente = clientes[4];
+	encomendasNormais[4].destinatario = clientes[5];
 
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	EncomendaRelampago encomendasRelampago[3];
 
-	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+	encomendasRelampago[0].peso = 13;
+	encomendasRelampago[0].custoKg = 18;
+	encomendasRelampago[0].remetente = clientes[5];
+	encomendasRelampago[0].destinatario = clientes[6];
 
-	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
+	encomendasRelampago[1].peso = 6;
+	encomendasRelampago[1].custoKg = 18;
+	encomendasRelampago[1].remetente = clientes[6];
+	encomendasRelampago[1].destinatario = clientes[7];
 	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
-
-	double custN = 0;
-	double custR = 0;
-
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
-
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
-
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
-
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
-
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
-
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
-
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
+	encomendasRelampago[2].peso = 8;
+	encomendasRelampago[2].custoKg = 18;
+	encomendasRelampago[2].remetente = clientes[7];
+	encomendasRelampago[2].destinatario = clientes[0];
 	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
+	cout << "\n>> Relatório de encomendas <<" << endl;
+
+	double custoEncomendasNormais = 0;
+	double custoEncomendasRelampago = 0;
+
+  int quantidadeEncomendasNormais = sizeof(encomendasNormais)/sizeof(encomendasNormais[0]);
+  int quantidadeEncomendasRelampago = sizeof(encomendasRelampago)/sizeof(encomendasRelampago[0]);
+
+  for(int i = 0; i < quantidadeEncomendasNormais; i++) {
+    custoEncomendasNormais += encomendasNormais[i].calcula();
+    encomendasNormais[i].print();
+    cout << endl;
+  }
+
+  for(int i = 0; i < quantidadeEncomendasRelampago; i++) {
+    custoEncomendasRelampago += encomendasRelampago[i].calcula();
+    encomendasRelampago[i].print();
+    cout << endl;
+  }
+	
+	cout << "\n>> Encomendas Normais <<" 
+		 << "\nQuantidade: " << quantidadeEncomendasNormais
+		 << "\nValor Total: " << custoEncomendasNormais
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
+		 << "\nQuantidade: " << quantidadeEncomendasRelampago
+		 << "\nValor Total: " << custoEncomendasRelampago
 		 << endl;
 	
 }
