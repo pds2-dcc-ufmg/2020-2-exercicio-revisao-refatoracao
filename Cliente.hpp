@@ -7,7 +7,7 @@ class Cliente{
 	public:
 		
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		Cliente(std::string, std::string, std::string, std::string, std::string);
+		Cliente(std::string nome, std::string end, std::string cidade, std::string estado, std::string cep);
 	
 	private:
 		
