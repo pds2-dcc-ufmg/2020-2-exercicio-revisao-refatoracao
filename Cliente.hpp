@@ -5,8 +5,9 @@
 
 class Cliente{
 	public:
-		
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		// imprime na tela os dados de um cliente cadastrado
+		void print(); 
+		//funciona como o construtor da classe
 		void set(std::string nome, std::string end, std::string cidade, std::string estado, std::string cep);
 	
 	private:
