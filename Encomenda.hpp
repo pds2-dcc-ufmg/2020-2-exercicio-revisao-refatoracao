@@ -7,6 +7,15 @@ using namespace std;
 class Encomenda{
 	
 	public:
+		
+		Encomenda(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario){
+			this->relampago=prioridade;
+			this->PESO=peso;
+			this->CUSTOkg=custokg;
+			this->remetente=Remetente;
+			this->dest=Destinatario;
+		}
+		
 		double calcula(){
 			
 			this->T = this->PESO * this->CUSTOkg;
