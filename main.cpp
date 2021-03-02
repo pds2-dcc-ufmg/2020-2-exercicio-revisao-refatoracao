@@ -2,7 +2,6 @@
 #include <string>
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 int main(){
 	
@@ -57,5 +56,4 @@ int main(){
 		 << "\nQuantidade: " << quantR
 		 << "\nValor Total: " << custR
 		 << std::endl;
-	
 }
