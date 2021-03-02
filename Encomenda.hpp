@@ -9,7 +9,7 @@ class Encomenda{
 	public:
 		double calcula(){
 			
-			double x = PESO * CUSTOkg;
+			double x = this->PESO * this->CUSTOkg;
 			
 			if(this->relampago){
 				
@@ -20,10 +20,29 @@ class Encomenda{
 		}
 		void print(){
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
+			cout << "[Remetente]" << endl;
+			this->remetente.print();
+			cout << "[Destinatário]" << endl;
+			this->dest.print();
+			
+			if(!this->relampago){
+				cout << "[Encomenda Normal]" << endl;
+				cout << "  Peso: " << this->PESO << endl
+					<< "  Custo por kg: " << this->CUSTOkg << endl
+					<< "  Custo total: " << this->T << endl;
+			}
+			
+			else{
+				cout << "[Encomenda Relâmpago]" << endl;
+				cout << "  Peso: " << this->PESO << endl
+					<< "  Custo por kg: " << this->CUSTOkg << endl
+					<< "  Taxa adicional: " << 0.25 << endl
+					<< "  Custo total: " << this->T << endl;
+				
+		}
+		bool prioridade(){
+			
+			return this->relampago;
 		}
 	
 	private:
