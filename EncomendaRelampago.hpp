@@ -8,25 +8,22 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
-
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
+		void print() override;
+		double calcula() override;
+	
+		// Overrides do esqueleto definido na superclasse 'Encomenda'
+		void setPeso(double _peso) override;
+		void setCustoKG(double _custoKg) override;
+		void setTotal(double _total) override;
+		void setDest(Cliente _dest) override;
+		void setRemet(Cliente _remetente) override;
+		
+		// Funções para atribuir valor a variável taxa adicional e acessar esse valor.
+		void setTaxaAdc(double tax);
+		double getTaxaAdc();
+	
+	protected:
+		double taxaAdicional = 0.25;
 
 };
 
