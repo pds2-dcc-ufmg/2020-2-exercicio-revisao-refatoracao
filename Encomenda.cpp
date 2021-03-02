@@ -2,7 +2,7 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 		
-	Encomenda::Encomenda(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario){
+	void Encomenda::set(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario){
 		this->relampago=prioridade;
 		this->PESO=peso;
 		this->CUSTOkg=custokg;
@@ -23,24 +23,24 @@
 	}
 	void Encomenda::print(){
 
-		cout << "[Remetente]" << endl;
+		std::cout << "[Remetente]" << std::endl;
 		this->remetente.print();
-		cout << "[Destinatário]" << endl;
+		std::cout << "[Destinatário]" << std::endl;
 		this->dest.print();
 			
 		if(!this->relampago){
-			cout << "[Encomenda Normal]" << endl;
-			cout << "  Peso: " << this->PESO << endl
-				<< "  Custo por kg: " << this->CUSTOkg << endl
-				<< "  Custo total: " << this->T << endl;
+			std::cout << "[Encomenda Normal]" << std::endl;
+			std::cout << "  Peso: " << this->PESO << std::endl
+				<< "  Custo por kg: " << this->CUSTOkg << std::endl
+				<< "  Custo total: " << this->T << std::endl;
 		}
 			
 		else{
-			cout << "[Encomenda Relâmpago]" << endl;
-			cout << "  Peso: " << this->PESO << endl
-				<< "  Custo por kg: " << this->CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << this->T << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << this->PESO << std::endl
+				<< "  Custo por kg: " << this->CUSTOkg << std::endl
+				<< "  Taxa adicional: " << 0.25 << std::endl
+				<< "  Custo total: " << this->T << std::endl;
 				
 		}
 	}

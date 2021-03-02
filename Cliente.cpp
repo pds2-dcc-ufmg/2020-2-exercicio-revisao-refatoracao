@@ -5,13 +5,13 @@
 void Cliente::print(){
 
 	std::cout << "  Nome: " << this->NOME << std::endl
-		 << "  Endereço: " << this->ENDERACO << std::endl
+		 << "  Endereço: " << this->ENDERECO << std::endl
 		 << "  Cidade: " << this->CIDADE << std::endl
 		 << "  Estado: " << this->ESTADO << std::endl
 		 << "  CEP: " << this->CEP << std::endl;
 
 }
-Cliente::Cliente(std::string nome, std::string end, std::string cidade, std::string estado, std::string cep){
+void Cliente::set(std::string nome, std::string end, std::string cidade, std::string estado, std::string cep){
 	
 	this->NOME=nome;
 	this->ENDERECO=end;

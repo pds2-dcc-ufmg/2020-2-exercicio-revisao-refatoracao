@@ -7,8 +7,8 @@ class Encomenda{
 	
 	public:
 		
-		Encomenda(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario);
-		double calcula();
+		void set(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario);
+    double calcula();
 		void print();
 		bool prioridade();
 	
