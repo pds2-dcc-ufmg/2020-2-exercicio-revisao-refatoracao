@@ -7,15 +7,15 @@ class Cliente{
 	public:
 		
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		Cliente(string ,string ,string , string, string);
+		Cliente(std::string, std::string, std::string, std::string, std::string);
 	
 	private:
 		
-		string NOME;
-		string ENDERECO;
-		string CIDADE;
-		string ESTADO;
-		string CEP;
+		std::string NOME;
+		std::string ENDERECO;
+		std::string CIDADE;
+		std::string ESTADO;
+		std::string CEP;
 					
 };
 
