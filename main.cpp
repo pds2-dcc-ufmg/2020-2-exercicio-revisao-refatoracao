@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
@@ -18,9 +19,6 @@ int main(){
 	cli[6] = new Cliente(Empédocles, Rua dos Quatro Elementos, Agrigento, Sicília, 495 a.C.);
 	cli[7] = new Cliente(Anaxágoras, Avenida da Mente Cósmica, Clazômenas, Jónia, 499 a.C.);
 	
-	int quantN = 0;
-	int quantR = 0;
-	
 	Encomenda enc[8];
 	
 	enc[0] = new Encomenda(0,5,12,cli[0],cli[1]);
@@ -32,14 +30,7 @@ int main(){
 	enc[6] = new Encomenda(1,6,18,cli[6],cli[7]);
 	enc[7] = new Encomenda(1,8,18,cli[7],cli[0]);
 
-	/*EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;*/
-
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
 	int quantN = 0;
 	double custN = 0;
@@ -49,7 +40,7 @@ int main(){
 	for(int i=0; i<enc.size(); i++){
 		enc[i].calcula();
 		enc[i].print();
-		cout << endl;
+		std::cout << std::endl;
 		if(enc[i].Prioridade()){
 			quantR++;
 			custR+=enc[i].calcula();
@@ -63,10 +54,10 @@ int main(){
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN
 		 << "\nValor Total: " << custN
-		 << endl
+		 << std::endl
 		 << "\n>> Encomendas Relâmpago <<" 
 		 << "\nQuantidade: " << quantR
 		 << "\nValor Total: " << custR
-		 << endl;
+		 << std::endl;
 	
 }
