@@ -1,18 +1,17 @@
 #include <iostream>
 #include <string>
 #include "Cliente.hpp"
-using namespace std;
 
 void Cliente::print(){
 
-	std::cout << "  Nome: " << this->NOME << endl
-		 << "  Endereço: " << this->ENDERACO << endl
-		 << "  Cidade: " << this->CIDADE << endl
-		 << "  Estado: " << this->ESTADO << endl
-		 << "  CEP: " << this->CEP << endl;
+	std::cout << "  Nome: " << this->NOME << std::endl
+		 << "  Endereço: " << this->ENDERACO << std::endl
+		 << "  Cidade: " << this->CIDADE << std::endl
+		 << "  Estado: " << this->ESTADO << std::endl
+		 << "  CEP: " << this->CEP << std::endl;
 
 }
-Cliente::Cliente(string nome, string end, string cidade, string estado, string cep){
+Cliente::Cliente(std::string nome, std::string end, std::string cidade, std::string estado, std::string cep){
 	
 	this->NOME=nome;
 	this->ENDERECO=end;
