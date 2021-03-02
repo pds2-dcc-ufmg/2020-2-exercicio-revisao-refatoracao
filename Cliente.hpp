@@ -12,10 +12,10 @@ class Cliente{
 	private:
 		
 		string NOME;
-		string endereco;
+		string ENDERECO;
 		string CIDADE;
 		string ESTADO;
-		string cep;
+		string CEP;
 					
 };
 
