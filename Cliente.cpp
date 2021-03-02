@@ -14,8 +14,8 @@ void Cliente::print(){
 void Cliente::set(std::string nome, std::string end, std::string cidade, std::string estado, std::string cep){
 	
 	this->NOME=nome;
-	this->ENDERECO=end;
-	this->CIDADE=cidade;
 	this->ESTADO=estado;
+	this->CIDADE=cidade;
+	this->ENDERECO=end;
 	this->CEP=cep;
 }
