@@ -28,18 +28,18 @@
 		std::cout << "[Destinatário]" << std::endl;
 		this->dest.print();
 			
-		if(!this->relampago){
-			std::cout << "[Encomenda Normal]" << std::endl;
-			std::cout << "  Peso: " << this->PESO << std::endl
-				<< "  Custo por kg: " << this->CUSTOkg << std::endl
-				<< "  Custo total: " << this->T << std::endl;
-		}
-			
-		else{
+		if(this->relampago){
 			std::cout << "[Encomenda Relâmpago]" << std::endl;
 			std::cout << "  Peso: " << this->PESO << std::endl
 				<< "  Custo por kg: " << this->CUSTOkg << std::endl
 				<< "  Taxa adicional: " << 0.25 << std::endl
+				<< "  Custo total: " << this->T << std::endl;
+		}
+			
+		else{
+			std::cout << "[Encomenda Normal]" << std::endl;
+			std::cout << "  Peso: " << this->PESO << std::endl
+				<< "  Custo por kg: " << this->CUSTOkg << std::endl
 				<< "  Custo total: " << this->T << std::endl;
 				
 		}
