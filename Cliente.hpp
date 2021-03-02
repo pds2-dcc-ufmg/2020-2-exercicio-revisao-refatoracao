@@ -7,7 +7,7 @@ class Cliente{
 	public:
 		
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+		Cliente(string ,string ,string , string, string);
 	
 	private:
 		
