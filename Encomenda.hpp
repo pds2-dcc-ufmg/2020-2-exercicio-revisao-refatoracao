@@ -6,10 +6,13 @@
 class Encomenda{
 	
 	public:
-		
+		//funciona como um construtor da classe
 		void set(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario);
-    double calcula();
+		//Calcula o preço total da entrega
+		double calcula();
+		//Imprimi as informações da entrega
 		void print();
+		//Indica se há prioridade
 		bool prioridade();
 	
 	private:
