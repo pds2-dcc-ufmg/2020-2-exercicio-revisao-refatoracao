@@ -31,4 +31,3 @@ void EncomendaNormal::setDest(Cliente _dest) {
 void EncomendaNormal::setRemet(Cliente _remetente) {
     this->remetente = _remetente;
 }
-		
