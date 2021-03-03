@@ -2,50 +2,50 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 		
-	void Encomenda::set(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario){
-		this->relampago=prioridade;
-		this->PESO=peso;
-		this->CUSTOkg=custokg;
-		this->remetente=Remetente;
-		this->dest=Destinatario;
+	void Encomenda::set(bool prioridade, int peso, int custokg, Cliente remetente, Cliente destinatario){
+		this->Prioridade=prioridade;
+		this->Peso=peso;
+		this->CustoKg=custokg;
+		this->Remetente=remetente;
+		this->Destinatario=destinatario;
 	}
 		
 	double Encomenda::calcula(){
 			
-		this->T = this->PESO * this->CUSTOkg;
+		this->Total = this->Peso * this->CustoKg;
 			
-		if(this->relampago){
+		if(this->Prioridade){
 				
-			this->T *= 1.25;
+			this->Total *= 1.25;
 		}
 			
-		return this->T;
+		return this->Total;
 	}
 	void Encomenda::print(){
 
 		std::cout << "[Remetente]" << std::endl;
-		this->remetente.print();
+		this->Remetente.print();
 		std::cout << "[Destinatário]" << std::endl;
-		this->dest.print();
+		this->Destinatario.print();
 			
-		if(this->relampago){
+		if(this->Prioridade){
 			std::cout << "[Encomenda Relâmpago]" << std::endl;
-			std::cout << "  Peso: " << this->PESO << std::endl
-				<< "  Custo por kg: " << this->CUSTOkg << std::endl
+			std::cout << "  Peso: " << this->Peso << std::endl
+				<< "  Custo por kg: " << this->CustoKg << std::endl
 				<< "  Taxa adicional: " << 0.25 << std::endl
-				<< "  Custo total: " << this->T << std::endl;
+				<< "  Custo total: " << this->Total << std::endl;
 		}
 			
 		else{
 			std::cout << "[Encomenda Normal]" << std::endl;
-			std::cout << "  Peso: " << this->PESO << std::endl
-				<< "  Custo por kg: " << this->CUSTOkg << std::endl
-				<< "  Custo total: " << this->T << std::endl;
+			std::cout << "  Peso: " << this->Peso << std::endl
+				<< "  Custo por kg: " << this->CustoKg << std::endl
+				<< "  Custo total: " << this->Total << std::endl;
 				
 		}
 	}
 	bool Encomenda::prioridade(){
 			
-		return this->relampago;
+		return this->Prioridade;
 	}
 	
