@@ -8,6 +8,6 @@ void Cliente::print(){
 		 << "  Endereço: " << endereco << endl
 		 << "  Cidade: " << CIDADE << endl
 		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
+		 << "  cep: " << cep << endl;
 
 }
