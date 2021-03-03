@@ -7,7 +7,7 @@ class Encomenda{
 	
 	public:
 		//funciona como um construtor da classe
-		void set(bool prioridade, int peso, int custokg, Cliente Remetente, Cliente Destinatario);
+		void set(bool prioridade, int peso, int custokg, Cliente remetente, Cliente destinatario);
 		//Calcula o preço total da entrega
 		double calcula();
 		//Imprimi as informações da entrega
@@ -17,12 +17,12 @@ class Encomenda{
 	
 	private:
 		
-		bool relampago = 0;
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
+		bool Prioridade = 0;
+		double Peso = 0.0;
+		double CustoKg = 0.0;
+		double Total = 0.0;
+		Cliente Remetente;
+		Cliente Destinatario;
 
 };
 
