@@ -1,53 +1,27 @@
-#include "../incl/Cliente.hpp"
-#include "../incl/Encomenda.hpp"
-#include "../incl/EncomendaNormal.hpp"
-#include "../incl/EncomendaRelampago.hpp"
-#include <iostream>
+#include "../incl/RelatorioEncomendas.hpp"
 
 int main() {
 
-    const int quantiadeCliente = 8, quantidadeNormal = 5, quantidadeRelampago = 3;
-    double custoNormal = 0, custoRelampago = 0;
+    const int qtdeCliente = 8, qtdeEncNormal = 5, qtdeEncRelampago = 3;
 
-    Cliente cli[quantiadeCliente] = {{"custoTotalhales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."},
-                                     {"Aristóteles", "Avenida do Meio-custoTotalermo", "Atenas", "Ática", "384 a.C."},
-                                     {"Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C"},
-                                     {"Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C."},
-                                     {"Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C."},
-                                     {"Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C."},
-                                     {"Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C."},
-                                     {"Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C."}};
+    Cliente cli[qtdeCliente] = {{"custoTotalhales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."},
+                                {"Aristóteles", "Avenida do Meio-custoTotalermo", "Atenas", "Ática", "384 a.C."},
+                                {"Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C"},
+                                {"Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C."},
+                                {"Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C."},
+                                {"Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C."},
+                                {"Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C."},
+                                {"Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C."}};
 
-    EncomendaNormal encNormal[quantidadeNormal] = {{5, 12, cli[0], cli[1]},
-                                                   {10, 12, cli[1], cli[2]},
-                                                   {7, 12, cli[2], cli[3]},
-                                                   {2, 12, cli[3], cli[4]},
-                                                   {3, 12, cli[4], cli[5]}};
+    EncomendaNormal encNormal[qtdeEncNormal] = {{5, 12, cli[0], cli[1]},
+                                                {10, 12, cli[1], cli[2]},
+                                                {7, 12, cli[2], cli[3]},
+                                                {2, 12, cli[3], cli[4]},
+                                                {3, 12, cli[4], cli[5]}};
 
-    EncomendaRelampago encRelampago[quantidadeRelampago] = {{13, 18, cli[5], cli[6]},
-                                                            {6, 18, cli[6], cli[7]},
-                                                            {8, 18, cli[7], cli[0]}};
+    EncomendaRelampago encRelampago[qtdeEncRelampago] = {{13, 18, cli[5], cli[6]},
+                                                         {6, 18, cli[6], cli[7]},
+                                                         {8, 18, cli[7], cli[0]}};
 
-    std::cout << "\n>> Relatório de encomendas <<" << std::endl;
-
-    for (int i = 0; i < quantidadeNormal; ++i) {
-        encNormal[i].print();
-        custoNormal += encNormal[i].calcularCustoTotal();
-        std::cout << std::endl;
-    }
-
-    for (int i = 0; i < quantidadeRelampago; ++i) {
-        encRelampago[i].print();
-        custoRelampago += encRelampago[i].calcularCustoTotal();
-        std::cout << std::endl;
-    }
-
-    std::cout << "\n>> Encomendas Normais <<"
-              << "\nQuantidade: " << quantidadeNormal
-              << "\nValor Total: " << custoNormal
-              << std::endl
-              << "\n>> Encomendas Relâmpago <<"
-              << "\nQuantidade: " << quantidadeRelampago
-              << "\nValor Total: " << custoRelampago
-              << std::endl;
+    RelatorioEncomendas(encNormal, qtdeEncNormal, encRelampago, qtdeEncRelampago);
 }
