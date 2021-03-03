@@ -8,7 +8,7 @@ EncomendaRelampago::EncomendaRelampago(double _peso,
 
 double EncomendaRelampago::calcularCustoTotal() {
     double x = Encomenda::calcularCustoTotal();
-    x += x * 0.25;
+    x += x * taxaAdiconal;
     return x;
 }
 
