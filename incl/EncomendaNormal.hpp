@@ -8,7 +8,11 @@
 
 class EncomendaNormal : public Encomenda {
 public:
-    using Encomenda::Encomenda;
+    EncomendaNormal(double _peso,
+                    double _custoKg,
+                    Cliente _remetente,
+                    Cliente _destinatario);
+    double calcularCustoTotal();
     void print();
 };
 

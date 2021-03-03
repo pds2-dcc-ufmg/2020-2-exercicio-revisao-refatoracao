@@ -1,12 +1,13 @@
-#include "Cliente.hpp"
-#include "Encomenda.hpp"
-#include "EncomendaNormal.hpp"
-#include "EncomendaRelampago.hpp"
+#include "../incl/Cliente.hpp"
+#include "../incl/Encomenda.hpp"
+#include "../incl/EncomendaNormal.hpp"
+#include "../incl/EncomendaRelampago.hpp"
 #include <iostream>
 
 int main() {
 
     const int quantiadeCliente = 8, quantidadeNormal = 5, quantidadeRelampago = 3;
+    double custoNormal = 0, custoRelampago = 0;
 
     Cliente cli[quantiadeCliente] = {{"custoTotalhales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."},
                                      {"Aristóteles", "Avenida do Meio-custoTotalermo", "Atenas", "Ática", "384 a.C."},
@@ -25,12 +26,9 @@ int main() {
 
     EncomendaRelampago encRelampago[quantidadeRelampago] = {{13, 18, cli[5], cli[6]},
                                                             {6, 18, cli[6], cli[7]},
-                                                            {8, 18, cli[7], cli[10]}};
+                                                            {8, 18, cli[7], cli[0]}};
 
     std::cout << "\n>> Relatório de encomendas <<" << std::endl;
-
-    double custoNormal = 0;
-    double custoRelampago = 0;
 
     for (int i = 0; i < quantidadeNormal; ++i) {
         encNormal[i].print();
@@ -40,16 +38,16 @@ int main() {
 
     for (int i = 0; i < quantidadeRelampago; ++i) {
         encRelampago[i].print();
-        custoNormal += encRelampago[i].calcularCustoTotal();
+        custoRelampago += encRelampago[i].calcularCustoTotal();
         std::cout << std::endl;
     }
 
     std::cout << "\n>> Encomendas Normais <<"
               << "\nQuantidade: " << quantidadeNormal
-              << "\nValor custoTotalotal: " << custoNormal
+              << "\nValor Total: " << custoNormal
               << std::endl
               << "\n>> Encomendas Relâmpago <<"
               << "\nQuantidade: " << quantidadeRelampago
-              << "\nValor custoTotalotal: " << custoRelampago
+              << "\nValor Total: " << custoRelampago
               << std::endl;
 }

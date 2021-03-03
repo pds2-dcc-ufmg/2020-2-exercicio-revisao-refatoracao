@@ -13,11 +13,12 @@ private:
     Cliente destinatario;
 
 public:
-    Encomenda();
+    Encomenda(){};
     Encomenda(double _peso,
               double _custoKg,
               Cliente _remetente,
-              Cliente _destinatario);
+              Cliente _destinatario)
+        : peso(_peso), custoKg(_custoKg), remetente(_remetente), destinatario(_destinatario){};
 
     double getPeso();
     double getCustoKg();
@@ -29,9 +30,8 @@ public:
     void setRemetente(Cliente);
     void setDestinatario(Cliente);
 
-    double calcularCustoTotal();
-
-    void print();
+    virtual double calcularCustoTotal();
+    virtual void print();
 };
 
 #endif

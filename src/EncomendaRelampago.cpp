@@ -1,4 +1,10 @@
-#include "EncomendaRelampago.hpp"
+#include "../incl/EncomendaRelampago.hpp"
+
+EncomendaRelampago::EncomendaRelampago(double _peso,
+                                       double _custoKg,
+                                       Cliente _remetente,
+                                       Cliente _destinatario)
+    : Encomenda(_peso, _custoKg, _remetente, _destinatario){};
 
 double EncomendaRelampago::calcularCustoTotal() {
     double x = Encomenda::calcularCustoTotal();

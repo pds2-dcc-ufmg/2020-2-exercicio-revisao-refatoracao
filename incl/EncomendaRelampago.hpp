@@ -10,7 +10,11 @@ private:
     const double taxaAdiconal = 0.25;
 
 public:
-    using Encomenda::Encomenda;
+    EncomendaRelampago(double _peso,
+                       double _custoKg,
+                       Cliente _remetente,
+                       Cliente _destinatario);
+
     double getTaxaAdicional();
     double calcularCustoTotal();
     void print();

@@ -1,19 +1,13 @@
-#include "Cliente.hpp"
+#include "../incl/Cliente.hpp"
 #include <iostream>
 #include <string>
 
-Cliente::Cliente(){};
 Cliente::Cliente(std::string _nome,
                  std::string _endereco,
                  std::string _cidade,
                  std::string _estado,
-                 std::string _cep) {
-    nome = _nome;
-    endereco = _endereco;
-    cidade = _cidade;
-    estado = _estado;
-    cep = _cep;
-}
+                 std::string _cep)
+    : nome(_nome), endereco(_endereco), cidade(_cidade), estado(_estado), cep(_cep){};
 
 std::string Cliente::getNome() {
     return nome;

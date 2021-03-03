@@ -1,18 +1,4 @@
-#include "Encomenda.hpp"
-
-Encomenda::Encomenda() {
-    peso = 0;
-    custoKg = 0;
-}
-Encomenda::Encomenda(double _peso,
-                     double _custoKg,
-                     Cliente _remetente,
-                     Cliente _destinatario) {
-    peso = _peso;
-    custoKg = _custoKg;
-    remetente = _remetente;
-    destinatario = _destinatario;
-}
+#include "../incl/Encomenda.hpp"
 
 double Encomenda::getPeso() {
     return peso;
