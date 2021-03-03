@@ -1,44 +1,55 @@
 
-#ifndef Encomenda_H
-#define Encomenda_H
+#include "Encomenda.hpp"
 
-#include "Cliente.hpp"
-
-const int taxa = 0.25;
-
-namespace Compra
+void Compra::Encomenda::print()
 {
-    class Encomenda
-    {
-
-    public:
-        double getPeso();
-        double getCustokg();
-        virtual double calcula() = 0;
-        virtual void print();
-
-    private:
-        double PESO = 0.0;
-        double CUSTOkg = 0.0;
-        double T = 0.0;
-        Cliente remetente;
-        Cliente destinatario;
-    };
-
-    class EncomendaNormal : public Encomenda
-    {
-
-    public:
-        double calcula();
-        void print() overrride;
-    };
-
-    class EncomendaRelampago : public Encomenda
-    {
-
-    public:
-        double calcula();
-        void print();
-    };
+    std::cout << "[Remetente]" << endl;
+    remetente.print();
+    std::cout << "[Destinatário]" << endl;
+    destinatario.print();
 }
-#endif
+
+double Compra::Encomenda::getCustokg()
+{
+    return CUSTOkg;
+}
+
+double Compra::Encomenda::getPeso()
+{
+    return PESO;
+}
+
+void Compra::EncomendaNormal::print()
+{
+
+    Encomenda::print();
+    std::cout << "[Encomenda Normal]" << endl;
+    std::cout << "  Peso: " << PESO << endl
+              << "  Custo por kg: " << CUSTOkg << endl
+              << "  Custo total: " << T << endl;
+}
+
+double Compra::EncomendaNormal::calcula()
+{
+    double x = PESO * CUSTOkg;
+
+    return x;
+}
+
+double Compra::EncomendaRelampago::print()
+{
+    Encomenda::print();
+    std::cout << "[Encomenda Relâmpago]" << endl;
+    std::cout << "  Peso: " << PESO << endl
+              << "  Custo por kg: " << CUSTOkg << endl
+              << "  Taxa adicional: " << taxa << endl
+              << "  Custo total: " << T << endl;
+}
+
+double Compra::EncomendaRelampago::calcula()
+{
+    double x = PESO * CUSTOkg;
+    x += x * taxa;
+
+    return x;
+}
