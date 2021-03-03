@@ -5,175 +5,147 @@
 #include "Cliente.hpp"
 using namespace std;
 
-int main(){
-	
-	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+int main()
+{
+    /**Array dinâmico de clientes**/
+    Cliente *clio = new Cliente[8];
 
-	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+    clio[0].NOME = "Thales";
+    clio[0].endereco = "Rua dos Pré-Socráticos";
+    clio[0].CIDADE = "Miletus";
+    clio[0].ESTADO = "Ionia";
+    clio[0].cep = "548 a.C.";
 
-	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+    clio[1].NOME = "Aristóteles";
+    clio[1].endereco = "Avenida do Meio-Termo";
+    clio[1].CIDADE = "Atenas";
+    clio[1].ESTADO = "Ática";
+    clio[1].cep = "384 a.C.";
 
-	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+    clio[2].NOME = "Platão";
+    clio[2].endereco = "Praça das Formas";
+    clio[2].CIDADE = "Atenas";
+    clio[2].ESTADO = "Ática";
+    clio[2].cep = "348 a.C";
 
-	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+    clio[3].NOME = "Sócrates";
+    clio[3].endereco = "Rua do Elenchus";
+    clio[3].CIDADE = "Atenas";
+    clio[3].ESTADO = "Ática";
+    clio[3].cep = "399 a.C.";
 
-	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+    clio[4].NOME = "Pitágoras";
+    clio[4].endereco = "Praça dos Quadrados dos Catetos";
+    clio[4].CIDADE = "Samos";
+    clio[4].ESTADO = "Egeu";
+    clio[4].cep = "571 a.C.";
 
-	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+    clio[5].NOME = "Parmênides";
+    clio[5].endereco = "Rua do Não Ser";
+    clio[5].CIDADE = "Eleia";
+    clio[5].ESTADO = "Magna Grécia";
+    clio[5].cep = "460 a.C.";
 
-	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+    clio[6].NOME = "Empédocles";
+    clio[6].endereco = "Rua dos Quatro Elementos";
+    clio[6].CIDADE = "Agrigento";
+    clio[6].ESTADO = "Sicília";
+    clio[6].cep = "495 a.C.";
 
-	int quantN = 0;
-	int quantR = 0;
+    clio[7].NOME = "Anaxágoras";
+    clio[7].endereco = "Avenida da Mente Cósmica";
+    clio[7].CIDADE = "Clazômenas";
+    clio[7].ESTADO = "Jónia";
+    clio[7].cep = "499 a.C.";
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+    /**Variáveis com o número de encomendas Normais e Relâmpago respectivamente**/
+    int quantN = 0;
+    int quantR = 0;
 
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+    /**Arrays de encomendas, separados por Normais e Relâmpago**/
+    EncomendaNormal *encN = new EncomendaNormal[5];
+    EncomendaRelampago *encR = new EncomendaRelampago[3];
 
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+    encN[0].setPESO(5);
+    encN[0].setCUSTOkg(12);
+    encN[0].remetente = clio[0];
+    encN[0].dest = clio[1];
+    quantN++;
 
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+    encN[1].setPESO(10);
+    encN[1].setCUSTOkg(12);
+    encN[1].remetente = clio[1];
+    encN[1].dest = clio[2];
+    quantN++;
 
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+    encN[2].setPESO(7);
+    encN[2].setCUSTOkg(12);
+    encN[2].remetente = clio[2];
+    encN[2].dest = clio[3];
+    quantN++;
 
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+    encN[3].setPESO(2);
+    encN[3].setCUSTOkg(12);
+    encN[3].remetente = clio[3];
+    encN[3].dest = clio[4];
+    quantN++;
 
-	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+    encN[4].setPESO(3);
+    encN[4].setCUSTOkg(12);
+    encN[4].remetente = clio[4];
+    encN[4].dest = clio[5];
+    quantN++;
 
-	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
-	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+    encR[0].setPESO(13);
+    encR[0].setCUSTOkg(18);
+    encR[0].remetente = clio[5];
+    encR[0].dest = clio[6];
+    quantR++;
 
-	double custN = 0;
-	double custR = 0;
+    encR[1].setPESO(6);
+    encR[1].setCUSTOkg(18);
+    encR[1].remetente = clio[6];
+    encR[1].dest = clio[7];
+    quantR++;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
+    encR[2].setPESO(8);
+    encR[2].setCUSTOkg(18);
+    encR[2].remetente = clio[7];
+    encR[2].dest = clio[0];
+    quantR++;
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
+    std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
+    /**Variáveis que contém a quantidade de encomendas**/
+    double custN = 0;
+    double custR = 0;
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
+    /**Prenchimento da quantidade de encomendas e imprime as encomendas**/
+    for (int n = 0; n < 5; n++)
+    {
+        encN[n].printNormal();
+        custN += encN[n].calcula();
+        std::cout << endl;
+    }
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
+    for (int r = 0; r < 3; r++)
+    {
+        encR[r].printRelampago();
+        custR += encR[r].calcula();
+        std::cout << endl;
+    }
 
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
+    std::cout << "\n>> Encomendas Normais <<"
+              << "\nQuantidade: " << quantN
+              << "\nValor Total: " << custN
+              << endl
+              << "\n>> Encomendas Relâmpago <<"
+              << "\nQuantidade: " << quantR
+              << "\nValor Total: " << custR
+              << endl;
 
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
-	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
-	
+    /**Desalocação da memória alocada dinamicamente**/
+    delete clio;
+    delete encN;
+    delete encR;
 }

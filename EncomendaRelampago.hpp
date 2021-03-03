@@ -5,29 +5,34 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago : public Encomenda
+{
 
-	public:
+private:
+    /**Constante da taxa **/
+    int TaxaAdicional = 0.25;
 
-		double calcula(){
+public:
+    /**Preço total da encomenda relâmpago**/
+    double calcula() override
+    {
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
+        double x = getPESO() * getCUSTOkg();
+        x += x * TaxaAdicional;
 
-		void print(){
+        return x;
+    }
 
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+    void printRelampago()
+    {
 
-		}
-
+        Encomenda::print();
+        std::cout << "[Encomenda Relâmpago]" << endl;
+        std::cout << "  Peso: " << getPESO() << endl
+                  << "  Custo por kg: " << getCUSTOkg() << endl
+                  << "  Taxa adicional: " << 0.25 << endl
+                  << "  Custo total: " << getTotal() << endl;
+    }
 };
 
 #endif
