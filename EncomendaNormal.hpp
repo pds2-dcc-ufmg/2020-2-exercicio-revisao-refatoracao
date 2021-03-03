@@ -5,27 +5,30 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
+class EncomendaNormal : public Encomenda
+{
 
-	public:
-		
-	double calcula(){
+public:
+	EncomendaNormal() {} // construtor padrão
+	EncomendaNormal(double _peso, double _custokg, Cliente _remetente, Cliente _dest)
+	{
+		this->PESO = _peso;
+		this->CUSTOkg = _custokg;
+		this->remetente = _remetente;
+		this->dest = _dest;
+	} // construtor
 
-		double x = PESO * CUSTOkg;
-
-		return x;
-	}
-
-	void print(){
-
-		Encomenda::print();
+	void printEncomenda() override
+	{
+		std::cout << "[Remetente]" << endl;
+		remetente.printCliente();
+		std::cout << "[Destinatário]" << endl;
+		dest.printCliente();
 		std::cout << "[Encomenda Normal]" << endl;
 		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
-
+				  << "  Custo por kg: " << CUSTOkg << endl
+				  << "  Custo total: " << custoTotal << endl;
+	} // função para imprimir dados da entrega Normal
 };
 
 #endif

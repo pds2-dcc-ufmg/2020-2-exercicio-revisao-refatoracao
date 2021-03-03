@@ -4,24 +4,25 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class Encomenda{
+class Encomenda
+{
+protected:
+	double PESO = 0.0;
+	double CUSTOkg = 0.0;
+	double custoTotal = 0.0;
+	Cliente remetente;
+	Cliente dest;
 
-	public:
+public:
+	virtual double calcula()
+	{
+		double x = PESO * CUSTOkg;
+		return x;
+	} // função virtual para calcular o preço da entrega
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
+	virtual void printEncomenda(); // função virtual para imprimir dados da entrega
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+	~Encomenda();
 };
 
 #endif
