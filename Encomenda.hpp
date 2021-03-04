@@ -11,13 +11,6 @@ class Encomenda{
 		double _taxa;
 		Cliente _remetente;
 		Cliente _destinatario;
-
-		Encomenda(double peso, double custoKg, Cliente remetente, Cliente destinatario) {
-			this->_peso = peso;
-			this->_custoKg = custoKg;
-			this->_remetente = remetente;
-			this->_destinatario = destinatario;
-		};
 	
 	public:
 		Encomenda() {};

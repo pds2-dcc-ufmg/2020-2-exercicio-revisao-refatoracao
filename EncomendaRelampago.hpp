@@ -8,7 +8,11 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
-		EncomendaRelampago(double peso, double custoKg, Cliente remetente, Cliente destinatario): Encomenda(peso, custoKg, remetente, destinatario) {
+		EncomendaRelampago(double peso, double custoKg, Cliente remetente, Cliente destinatario) {
+			this->_peso = peso;
+			this->_custoKg = custoKg;
+			this->_remetente = remetente;
+			this->_destinatario = destinatario;
 			this->_taxa = 0.25;
 		} 
 
