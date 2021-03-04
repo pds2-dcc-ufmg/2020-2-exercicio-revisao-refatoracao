@@ -13,15 +13,17 @@ Encomenda:
 
 EncomendaNormal:
 1) Recebeu um arquivo .cpp, para separar a declaração das funções de sua implementação, e facilitar a modularização. Todas as implementações já colocadas foram transferidas para esse arquivo.
-2) A função "print" foi modificada para compensar pela falta de um print em Encomenda, que se tornou uma interface.
-3) Recebeu um método construtor que, além de já preencher os atributos da mesma forma que o construtor anterior preenchia, também preenche o atributo T (total) usando a função "calcula".
+2) A função "print" foi modificada para compensar pela falta de um print em "Encomenda", que se tornou uma interface.
+3) As funções "print" e "calcula" foram modificadas para sobrescreverem as funções da interface "Encomenda".
+4) Recebeu um método construtor que, além de já preencher os atributos da mesma forma que o construtor anterior preenchia, também preenche o atributo T (total) usando a função "calcula".
 
 EncomendaRelampago:
 1) Recebeu um arquivo .cpp, para separar a declaração das funções de sua implementação, e facilitar a modularização. Todas as implementações já colocadas foram transferidas para esse arquivo.
 2) A função "print" foi modificada para compensar pela falta de um print em Encomenda, que se tornou uma interface.
-3) Recebeu um método construtor que, além de já preencher os atributos da mesma forma que o construtor anterior preenchia, também preenche o atributo T (total) usando a função "calcula".
-4) O "0.25", que se referia à taxa adicional cobrada e aparecia repetidas vezes, foi substituido por um novo atributo chamado "taxa" (protected), o qual recebe 0.25 por padrão ao ser executado o método construtor.
-5) Recebeu um novo método "setTaxa" que altera o valor de "taxa", caso deseje-se usar um valor diferente do padrão
+3) As funções "print" e "calcula" foram modificadas para sobrescreverem as funções da interface "Encomenda".
+4) Recebeu um método construtor que, além de já preencher os atributos da mesma forma que o construtor anterior preenchia, também preenche o atributo T (total) usando a função "calcula".
+5) O "0.25", que se referia à taxa adicional cobrada e aparecia repetidas vezes, foi substituido por um novo atributo chamado "taxa" (protected), o qual recebe 0.25 por padrão ao ser executado o método construtor.
+6) Recebeu um novo método "setTaxa" que altera o valor de "taxa", caso deseje-se usar um valor diferente do padrão
 
 Main:
 1) Todas as declarações da classe "Cliente" foram alteradas para utilizar o novo método construtor implementado
