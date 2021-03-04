@@ -26,8 +26,9 @@ double metodo_relampago(EncomendaRelampago enc)
 	return enc.calcula();
 }
 
-int main(){
-
+int main()
+{
+	// Criação de vetores com as informações dos clientes
 	vector<string> nomes = {"Thales", "Aristóteles", "Platão", "Sócrates", "Pitágoras", "Parmênides", "Empédocles", "Anaxágoras"};
 
 	vector<string> enderecos = {
@@ -65,22 +66,26 @@ int main(){
 
 	vector<string> ceps = {"548 a.C.", "384 a.C.", "348 a.C", "399 a.C.", "571 a.C.", "460 a.C.", "495 a.C.", "499 a.C."};
 
+	// Criação e inicialização do vetor de clientes
 	vector<Cliente> clientes;
 	for (int i = 0; i < NUM_CLIENTES; i++)
 	{
 		clientes.push_back(Cliente(nomes[i], enderecos[i], cidades[i], estados[i], ceps[i]));
 	}
 
+	// Criação de vetores com as informações das encomendas
 	vector<double> pesos_normal = {5, 10, 7, 2, 3};
 	vector<double> pesos_relam = {13, 6, 8};
 	double custo_normal = 12, custo_relam = 18;
 
+	// Criação e inicialização do vetor de encomendas normais
 	vector<EncomendaNormal> encomendas_normais;
 	for (int i = 0; i < NUM_NORMAIS; i++)
 	{
 		encomendas_normais.push_back(EncomendaNormal(pesos_normal[i], custo_normal, clientes[i], clientes[i+1]));
 	}
 
+	// Criação e inicialização do vetor de encomendas relâmpago
 	vector<EncomendaRelampago> encomendas_relamp;
 	for (int i = 0; i < NUM_RELAMP-1; i++)
 	{
@@ -88,6 +93,7 @@ int main(){
 	}
 	encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_RELAMP-1], clientes[0]));
 	
+	// Impressão das informações das encomendas e dos respectivos clientes envolvidos
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custN = 0;

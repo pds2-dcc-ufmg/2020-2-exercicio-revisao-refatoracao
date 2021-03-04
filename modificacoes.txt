@@ -3,3 +3,4 @@
 3. Criação de metodo_normal e metodo_relampago: diferem apenas o tipo da encomenda -> possível ponto para refatoração
 4. Criação dos clientes usando vetores (um vetor para cada informação contida por um cliente)
 5. Criação das encomendas usando vetores (um vetor para cada tipo de encomenda + um vetor para cada informação contida na encomenda)
+6. Função calcula() : uso da constante "taxa" na classe EncomendaRelampago
