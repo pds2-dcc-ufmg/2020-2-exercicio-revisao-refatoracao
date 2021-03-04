@@ -1,13 +1,13 @@
-# Exercício Pull Request
+# Exercicio Pull Request
 
-O objetivo dessa atividade é praticar a parte de revisão e refatoração.
+O objetivo dessa atividade e praticar a parte de revisao e refatoracao.
 
-**Considere a seguinte descrição em alto nível da funcionalidade do código:**  
-Os serviços de correio expresso oferecem várias opções de entrega, cada um com custos específicos. Um pacote apresenta um peso (em quilos), o custo por quilo para a entrega e os dados dos clientes: remetente e destinatário. Uma encomenda normal tem um peso, um custo por quilo e um custo total. Uma encomenda relâmpago tem além disso uma taxa adicional, referente a prioridade no processo de entrega.
+**Considere a seguinte descricao em alto nivel da funcionalidade do codigo:**  
+Os servicos de correio expresso oferecem varias opcoes de entrega, cada um com custos especificos. Um ENCOMENDA apresenta um peso (em quilos), o CUSTO por quilo para a entrega e os dados dos clientes: REMETENTE e DESTINATARIO. Uma encomenda NORMAL tem um peso, um custo por quilo e um custo total. Uma encomenda RELAMPAGO tem alem disso uma TAXA adicional, referente a prioridade no processo de entrega.
 
-Você deve criar um **Fork** desse repositório, fazer as alterações que julgar necessárias e então realizar um **Pull Request**. Você é livre para criar outros arquivos, classes, métodos, etc., desde que o main continue produzindo a mesma saída. Lembre-se que essa etapa não altera o comportamento funcional.
+Voce deve criar um **Fork** desse repositorio, fazer as alteracoes que julgar necessarias e entao realizar um **Pull Request**. Voce e livre para criar outros arquivos, classes, metodos, etc., desde que o main continue produzindo a mesma saida. Lembre-se que essa etapa nao altera o comportamento funcional.
 
-No **título** do Pull Request informe o seu **número de matrícula** e **nome**. Na **descrição** faça uma **lista/análise detalhada** das possíveis **soluções** que você utilizou. Submissões que não seguirem essas instruções serão penalizadas.
+No **titulo** do Pull Request informe o seu **numero de matricula** e **nome**. Na **descricao** faca uma **lista/analise detalhada** das possiveis **solucoes** que voce utilizou. Submissoes que nao seguirem essas instrucoes serao penalizadas.
 
-Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
-Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+Lembre-se de analisar aspectos como: nomenclatura, formatacao, organizacao, comentarios, aplicacao correta dos conceitos de OO, entre outros.
+Dica: Utilize o catalogo para pensar em possiveis sugestoes de refatoracao (https://refactoring.com/catalog/).

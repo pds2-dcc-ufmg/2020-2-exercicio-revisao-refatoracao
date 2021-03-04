@@ -5,21 +5,38 @@
 using namespace std;
 
 class Encomenda{
+	private:
+		double peso = 0.0;
+		double custoKg = 0.0;
+		double total = 0.0;
+		Cliente remetente;
+		Cliente destinatario;
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
+		Encomenda(	double _peso,
+					double _custoKg,
+					Cliente _remetente,
+					Cliente _destinatario	)
+				:	
+					peso(_peso),
+					custoKg(_custoKg),
+					remetente(_remetente),
+					destinatario(_destinatario) {}
+
+		double 	getPeso()			{ return this->peso; 			}
+		double 	getCustoKg()		{ return this->custoKg; 		}
+		double 	getTotal()			{ return this->total; 			}
+		Cliente	getRemetente()		{ return this->remetente; 		}
+		Cliente	getDestinatario()	{ return this->destinatario;	}
+
 			
-		void print(){
+		virtual void print(){
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
 			std::cout << "[Destinatário]" << endl;
-			dest.print();
+			destinatario.print();
 		}
 
 };

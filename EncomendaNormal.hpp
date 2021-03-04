@@ -6,26 +6,49 @@
 using namespace std;
 
 class EncomendaNormal: public Encomenda{
-
 	public:
+		static int contadorNormal;
+		static double custoNormalTotal;
 		
-	double calcula(){
+		EncomendaNormal( 	double _peso,
+							double _custoKg,
+							Cliente _remetente,
+							Cliente _destinatario	)
+						:	Encomenda(
+							_peso,
+							_custoKg,
+							_remetente,
+							_destinatario
+						) {	// A chamada do contrutor incrementa o contador.
+							contadorNormal++;
+							custoNormalTotal+=this->calcula();
+						}
+					
+		~EncomendaNormal() {
+			contadorNormal--;
+		}
 
-		double x = PESO * CUSTOkg;
 
-		return x;
-	}
 
-	void print(){
+		double calcula(){
 
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
+			double custo = this->getPeso() * this->getCustoKg();
+			return custo;
+		}
 
-	}
+		void print() override {
+
+			Encomenda::print();
+			std::cout << "[Encomenda Normal]" << endl;
+			std::cout << "  Peso: " 	<< this->getPeso() 		<< endl
+				<< "  Custo por kg: " 	<< this->getCustoKg() 	<< endl
+				<< "  Custo total: " 	<< this->getTotal() 		<< endl;
+
+		}
 
 };
+
+int EncomendaNormal::contadorNormal=0;
+double EncomendaNormal::custoNormalTotal=0;
 
 #endif
