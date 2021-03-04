@@ -11,9 +11,8 @@ class Encomenda{
 		double _taxa;
 		Cliente _remetente;
 		Cliente _destinatario;
-	
+		
 	public:
-		Encomenda() {};
 
 		double calculaCustoTotal() {
 			double multiplicador = 1.0 + this->_taxa;
