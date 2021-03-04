@@ -1,3 +1,4 @@
 1. Criação de um construtor para a classe Cliente (alteração nos arquivos Cliente.cpp, Cliente.hpp e main.cpp)
 2. Criação de um construtor para as classes Encomenda, EncomendaRelampago e EncomendaNormal
 3. Criação de metodo_normal e metodo_relampago: diferem apenas o tipo da encomenda -> possível ponto para refatoração
+4. Criação dos clientes usando vetores (um vetor para cada informação contida por um cliente)

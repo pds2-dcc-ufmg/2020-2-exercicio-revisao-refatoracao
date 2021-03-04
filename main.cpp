@@ -7,6 +7,8 @@
 using namespace std;
 
 #define NUM_CLIENTES 8
+#define NUM_NORMAIS 5 // quantidade de encomendas normais
+#define NUM_RELAMP 3 // quantidade de encomendas relâmpago
 
 double metodo_normal(EncomendaNormal enc)
 {
@@ -69,54 +71,44 @@ int main(){
 		clientes.push_back(Cliente(nomes[i], enderecos[i], cidades[i], estados[i], ceps[i]));
 	}
 
-	int quantN = 0;
-	int quantR = 0;
+	vector<double> pesos_normal = {5, 10, 7, 2, 3};
+	vector<double> pesos_relam = {13, 6, 8};
+	double custo_normal = 12, custo_relam = 18;
 
-	EncomendaNormal enc0 = EncomendaNormal(5, 12, clientes[0], clientes[1]);
-	quantN++;
+	vector<EncomendaNormal> encomendas_normais;
+	for (int i = 0; i < NUM_NORMAIS; i++)
+	{
+		encomendas_normais.push_back(EncomendaNormal(pesos_normal[i], custo_normal, clientes[i], clientes[i+1]));
+	}
 
-	EncomendaNormal enc1 = EncomendaNormal(10, 12, clientes[1], clientes[2]);
-	quantN++;
-
-	EncomendaNormal enc2 = EncomendaNormal(7, 12, clientes[2], clientes[3]);
-	quantN++;
-
-	EncomendaNormal enc3 = EncomendaNormal(2, 12, clientes[3], clientes[4]);
-	quantN++;
-
-	EncomendaNormal enc4 = EncomendaNormal(3, 12, clientes[4], clientes[5]);
-	quantN++;
-
-	EncomendaRelampago enc5 = EncomendaRelampago(13, 18, clientes[5], clientes[6]);
-	quantR++;
-
-	EncomendaRelampago enc6 = EncomendaRelampago(6, 18, clientes[6], clientes[7]);
-	quantR++;
-
-	EncomendaRelampago enc7 = EncomendaRelampago(8, 18, clientes[7], clientes[0]);
-	quantR++;
+	vector<EncomendaRelampago> encomendas_relamp;
+	for (int i = 0; i < NUM_RELAMP-1; i++)
+	{
+		encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
+	}
+	encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_RELAMP-1], clientes[0]));
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custN = 0;
 	double custR = 0;
 
-	custN += metodo_normal(enc0);
-	custN += metodo_normal(enc1);
-	custN += metodo_normal(enc2);
-	custN += metodo_normal(enc3);
-	custN += metodo_normal(enc4);
+	for (int i = 0; i < NUM_NORMAIS; i++)
+	{
+		custN += metodo_normal(encomendas_normais[i]);
+	}
 
-	custR += metodo_relampago(enc5);
-	custR += metodo_relampago(enc6);
-	custR += metodo_relampago(enc7);
+	for (int i = 0; i < NUM_RELAMP; i++)
+	{
+		custR += metodo_relampago(encomendas_relamp[i]);
+	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
+		 << "\nQuantidade: " << NUM_NORMAIS
 		 << "\nValor Total: " << custN
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
+		 << "\nQuantidade: " << NUM_RELAMP
 		 << "\nValor Total: " << custR
 		 << endl;
 	
