@@ -99,14 +99,14 @@ int main()
 	double custN = 0;
 	double custR = 0;
 
-	for (int i = 0; i < NUM_NORMAIS; i++)
+	for (auto & enc : encomendas_normais)
 	{
-		custN += metodo_normal(encomendas_normais[i]);
+		custN += metodo_normal(enc);
 	}
 
-	for (int i = 0; i < NUM_RELAMP; i++)
+	for (auto & enc: encomendas_relamp)
 	{
-		custR += metodo_relampago(encomendas_relamp[i]);
+		custR += metodo_relampago(enc);
 	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
@@ -117,5 +117,4 @@ int main()
 		 << "\nQuantidade: " << NUM_RELAMP
 		 << "\nValor Total: " << custR
 		 << endl;
-	
 }
