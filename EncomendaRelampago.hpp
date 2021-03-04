@@ -8,25 +8,19 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
+	EncomendaRelampago(double peso, double custoKg, Cliente remetente, Cliente destinatario):
+		Encomenda(peso, custoKg, 0.25, remetente, destinatario) {};
 
-		double calcula(){
+	void print(){
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
+		Encomenda::print();
+		std::cout << "[Encomenda Relâmpago]" << endl;
+		std::cout << "  Peso: " << peso << endl
+			<< "  Custo por kg: " << custoKg << endl
+			<< "  Taxa adicional: " << 0.25 << endl
+			<< "  Custo total: " << calculaCustoTotal() << endl;
 
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
+	}
 
 };
 
