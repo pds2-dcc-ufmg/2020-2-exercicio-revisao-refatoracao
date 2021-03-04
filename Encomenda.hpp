@@ -11,16 +11,6 @@ class Encomenda{
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
 		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
 
 		Encomenda(double peso, double custo, Cliente remetente, Cliente destinatario)
 		{
@@ -29,7 +19,20 @@ class Encomenda{
 			this->remetente = remetente;
 			this->dest = destinatario;
 		}
-		
+
+		void print()
+		{
+			std::cout << "[Remetente]" << endl;
+			remetente.print();
+			std::cout << "[Destinatário]" << endl;
+			dest.print();
+		}
+
+	private:
+
+		Cliente remetente;
+		Cliente dest;
+			
 };
 
 #endif
