@@ -6,14 +6,16 @@ using namespace std;
 
 class Encomenda{
 
+	private:
+
+		double _peso = 0.0;
+		double _custo_kg = 0.0;
+		double _custo_total = 0.0;
+		Cliente _remetente;
+		Cliente _dest;
+
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
 		void print(){
 
 			std::cout << "[Remetente]" << endl;
@@ -21,6 +23,8 @@ class Encomenda{
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
 		}
+
+		virtual double calculaPreco() const override;
 
 };
 
