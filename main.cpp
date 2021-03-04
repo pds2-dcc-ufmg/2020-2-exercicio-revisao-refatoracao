@@ -74,69 +74,69 @@ int main(){
 	std::vector<EncomendaNormal> encomendasNormais;
 	std::vector<EncomendaRelampago> encomendasRelampago;
 
-	EncomendaNormal enc0(
+	EncomendaNormal encomenda0(
 		5,
 		12,
 		cliente0,
 		cliente1
 	);
-	encomendasNormais.push_back(enc0);
+	encomendasNormais.push_back(encomenda0);
 
-	EncomendaNormal enc1(
+	EncomendaNormal encomenda1(
 		10,
 		12,
 		cliente1,
 		cliente2
 	);
-	encomendasNormais.push_back(enc1);
+	encomendasNormais.push_back(encomenda1);
 
-	EncomendaNormal enc2(
+	EncomendaNormal encomenda2(
 		7,
 		12,
 		cliente2,
 		cliente3
 	);
-	encomendasNormais.push_back(enc2);
+	encomendasNormais.push_back(encomenda2);
 
-	EncomendaNormal enc3(
+	EncomendaNormal encomenda3(
 		2,
 		12,
 		cliente3,
 		cliente4
 	);
-	encomendasNormais.push_back(enc3);
+	encomendasNormais.push_back(encomenda3);
 
-	EncomendaNormal enc4(
+	EncomendaNormal encomenda4(
 		3,
 		12,
 		cliente4,
 		cliente5
 	);
-	encomendasNormais.push_back(enc4);
+	encomendasNormais.push_back(encomenda4);
 
-	EncomendaRelampago enc5(
+	EncomendaRelampago encomenda5(
 		13,
 		18,
 		cliente5,
 		cliente6
 	);
-	encomendasRelampago.push_back(enc5);
+	encomendasRelampago.push_back(encomenda5);
 
-	EncomendaRelampago enc6(
+	EncomendaRelampago encomenda6(
 		6,
 		18,
 		cliente6,
 		cliente7
 	);
-	encomendasRelampago.push_back(enc6);
+	encomendasRelampago.push_back(encomenda6);
 
-	EncomendaRelampago enc7(
+	EncomendaRelampago encomenda7(
 		8,
 		18,
 		cliente7,
 		cliente0
 	);
-	encomendasRelampago.push_back(enc7);
+	encomendasRelampago.push_back(encomenda7);
 	
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
