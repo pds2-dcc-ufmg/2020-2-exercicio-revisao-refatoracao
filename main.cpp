@@ -1,9 +1,12 @@
 #include <iostream>
+#include <vector>
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
 using namespace std;
+
+#define NUM_CLIENTES 8
 
 double metodo_normal(EncomendaNormal enc)
 {
@@ -23,40 +26,74 @@ double metodo_relampago(EncomendaRelampago enc)
 
 int main(){
 
-	Cliente cli0 = Cliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
-	Cliente cli1 = Cliente("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
-	Cliente cli2 = Cliente("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
-	Cliente cli3 = Cliente("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.");
-	Cliente cli4 = Cliente("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C.");
-	Cliente cli5 = Cliente("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C.");
-	Cliente cli6 = Cliente("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.");
-	Cliente cli7 = Cliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.");
+	vector<string> nomes = {"Thales", "Aristóteles", "Platão", "Sócrates", "Pitágoras", "Parmênides", "Empédocles", "Anaxágoras"};
+
+	vector<string> enderecos = {
+		"Rua dos Pré-Socráticos",
+		"Avenida do Meio-Termo",
+		"Praça das Formas",
+		"Rua do Elenchus",
+		"Praça dos Quadrados dos Catetos",
+		"Rua do Não Ser",
+		"Rua dos Quatro Elementos",
+		"Avenida da Mente Cósmica"
+	};
+
+	vector<string> cidades = {
+		"Miletus",
+		"Atenas",
+		"Atenas",
+		"Atenas",
+		"Samos",
+		"Eleia",
+		"Agrigento",
+		"Clazômenas"
+	};
+
+	vector<string> estados = {
+		"Ionia",
+		"Ática",
+		"Ática",
+		"Ática",
+		"Egeu",
+		"Magna Grécia",
+		"Sicília",
+		"Jónia"
+	};
+
+	vector<string> ceps = {"548 a.C.", "384 a.C.", "348 a.C", "399 a.C.", "571 a.C.", "460 a.C.", "495 a.C.", "499 a.C."};
+
+	vector<Cliente> clientes;
+	for (int i = 0; i < NUM_CLIENTES; i++)
+	{
+		clientes.push_back(Cliente(nomes[i], enderecos[i], cidades[i], estados[i], ceps[i]));
+	}
 
 	int quantN = 0;
 	int quantR = 0;
 
-	EncomendaNormal enc0 = EncomendaNormal(5, 12, cli0, cli1);
+	EncomendaNormal enc0 = EncomendaNormal(5, 12, clientes[0], clientes[1]);
 	quantN++;
 
-	EncomendaNormal enc1 = EncomendaNormal(10, 12, cli1, cli2);
+	EncomendaNormal enc1 = EncomendaNormal(10, 12, clientes[1], clientes[2]);
 	quantN++;
 
-	EncomendaNormal enc2 = EncomendaNormal(7, 12, cli2, cli3);
+	EncomendaNormal enc2 = EncomendaNormal(7, 12, clientes[2], clientes[3]);
 	quantN++;
 
-	EncomendaNormal enc3 = EncomendaNormal(2, 12, cli3, cli4);
+	EncomendaNormal enc3 = EncomendaNormal(2, 12, clientes[3], clientes[4]);
 	quantN++;
 
-	EncomendaNormal enc4 = EncomendaNormal(3, 12, cli4, cli5);
+	EncomendaNormal enc4 = EncomendaNormal(3, 12, clientes[4], clientes[5]);
 	quantN++;
 
-	EncomendaRelampago enc5 = EncomendaRelampago(13, 18, cli5, cli6);
+	EncomendaRelampago enc5 = EncomendaRelampago(13, 18, clientes[5], clientes[6]);
 	quantR++;
 
-	EncomendaRelampago enc6 = EncomendaRelampago(6, 18, cli6, cli7);
+	EncomendaRelampago enc6 = EncomendaRelampago(6, 18, clientes[6], clientes[7]);
 	quantR++;
 
-	EncomendaRelampago enc7 = EncomendaRelampago(8, 18, cli7, cli0);
+	EncomendaRelampago enc7 = EncomendaRelampago(8, 18, clientes[7], clientes[0]);
 	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
