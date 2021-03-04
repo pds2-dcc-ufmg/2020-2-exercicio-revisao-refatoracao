@@ -6,21 +6,32 @@ using namespace std;
 
 class Encomenda{
 
+	protected:
+		Encomenda(double peso, double custoKg, double taxaEncomenda, Cliente remetente, Cliente destinatario):
+			peso(peso), custoKg(custoKg), taxaEncomenda(taxaEncomenda), remetente(remetente), destinatario(destinatario) {};
+
+		double peso;
+		double custoKg;
+		double taxaEncomenda;
+		Cliente remetente;
+		Cliente destinatario;
+
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
+	double calculaCustoTotal() {
+		double custoTotal = peso * custoKg;
+		custoTotal += custoTotal * taxaEncomenda;
+		
+		return custoTotal;
+	}
 			
-		void print(){
+	void print(){
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		std::cout << "[Remetente]" << endl;
+		remetente.print();
+		std::cout << "[Destinatário]" << endl;
+		destinatario.print();
+	}
 
 };
 
