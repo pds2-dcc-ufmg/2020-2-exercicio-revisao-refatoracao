@@ -22,6 +22,13 @@ class Encomenda{
 			dest.print();
 		}
 
+		Encomenda(double peso, double custo, Cliente remetente, Cliente destinatario)
+		{
+			this->PESO = peso;
+			this->CUSTOkg = custo;
+			this->remetente = remetente;
+			this->dest = destinatario;
+		}
 };
 
 #endif

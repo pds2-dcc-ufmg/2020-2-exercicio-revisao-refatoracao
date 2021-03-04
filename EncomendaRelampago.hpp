@@ -28,6 +28,10 @@ class EncomendaRelampago: public Encomenda{
 
 		}
 
+		EncomendaRelampago(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
+		{
+			this->T = 0;
+		}
 };
 
 #endif

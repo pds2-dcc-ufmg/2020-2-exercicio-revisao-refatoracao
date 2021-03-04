@@ -13,7 +13,10 @@ class Cliente{
 		string CIDADE;
 		string ESTADO;
 		string cep;
-				
+		
+		Cliente(string nome, string end, string cidade, string estado, string CEP);
+		Cliente();
+
 		void print(); // imprime na tela os dados de um cliente cadastrado
 		
 };
