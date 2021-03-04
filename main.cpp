@@ -3,7 +3,6 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 int main(){
 	
@@ -63,117 +62,117 @@ int main(){
 	cli7.ESTADO = "Jónia";
 	cli7.cep = "499 a.C.";
 
-	int quantN = 0;
-	int quantR = 0;
+	int quantidade_encomenda_normal = 0;
+	int quantidade_encomenda_relampago = 0;
 
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
 	enc0.CUSTOkg = 12;
 	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+	enc0.destinatario = cli1;
+	quantidade_encomenda_normal++;
 
 	EncomendaNormal enc1;
 	enc1.PESO = 10;
 	enc1.CUSTOkg = 12;
 	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+	enc1.destinatario = cli2;
+	quantidade_encomenda_normal++;
 
 	EncomendaNormal enc2;
 	enc2.PESO = 7;
 	enc2.CUSTOkg = 12;
 	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+	enc2.destinatario = cli3;
+	quantidade_encomenda_normal++;
 
 	EncomendaNormal enc3;
 	enc3.PESO = 2;
 	enc3.CUSTOkg = 12;
 	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+	enc3.destinatario = cli4;
+	quantidade_encomenda_normal++;
 
 	EncomendaNormal enc4;
 	enc4.PESO = 3;
 	enc4.CUSTOkg = 12;
 	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+	enc4.destinatario = cli5;
+	quantidade_encomenda_normal++;
 
 	EncomendaRelampago enc5;
 	enc5.PESO = 13;
 	enc5.CUSTOkg = 18;
 	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	enc5.destinatario = cli6;
+	quantidade_encomenda_relampago++;
 
 	EncomendaRelampago enc6;
 	enc6.PESO = 6;
 	enc6.CUSTOkg = 18;
 	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+	enc6.destinatario = cli7;
+	quantidade_encomenda_relampago++;
 
 	EncomendaRelampago enc7;
 	enc7.PESO = 8;
 	enc7.CUSTOkg = 18;
 	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
+	enc7.destinatario = cli0;
+	quantidade_encomenda_relampago++;
 	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custo_normal = 0;
+	double custo_relampago = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
+	enc0.taxa_entrega_calcular();
+	enc0.imprimir();
+	custo_normal += enc0.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
+	enc1.taxa_entrega_calcular();
+	enc1.imprimir();
+	custo_normal += enc1.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
+	enc2.taxa_entrega_calcular();
+	enc2.imprimir();
+	custo_normal += enc2.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
+	enc3.taxa_entrega_calcular();
+	enc3.imprimir();
+	custo_normal += enc3.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
+	enc4.taxa_entrega_calcular();
+	enc4.imprimir();
+	custo_normal += enc4.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
+	enc5.taxa_entrega_calcular();
+	enc5.imprimir();
+	custo_relampago += enc5.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
+	enc6.taxa_entrega_calcular();
+	enc6.imprimir();
+	custo_relampago += enc6.taxa_entrega_calcular();
+	std::cout << std::endl;
 
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
+	enc7.taxa_entrega_calcular();
+	enc7.imprimir();
+	custo_relampago += enc7.taxa_entrega_calcular();
+	std::cout << std::endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
+		 << "\nQuantidade: " << quantidade_encomenda_normal
+		 << "\nValor Total: " << custo_normal
+		 << std::endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
+		 << "\nQuantidade: " << quantidade_encomenda_relampago
+		 << "\nValor Total: " << custo_relampago
+		 << std::endl;
 	
 }
