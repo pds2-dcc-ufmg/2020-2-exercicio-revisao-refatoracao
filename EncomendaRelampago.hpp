@@ -9,25 +9,49 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
+		static int contadorRelampago;
+		static double custoRelampagototal;
+		const double taxaAdicional = 0.25;
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		EncomendaRelampago( double _peso,
+							double _custoKg,
+							Cliente _remetente,
+							Cliente _destinatario	)
+						:	Encomenda(
+							_peso,
+							_custoKg,
+							_remetente,
+							_destinatario
+						) {	// A chamada do contrutor incrementa o contador.
+							contadorRelampago++;
+							custoRelampagototal+=this->calcula();
+						}
+
+		~EncomendaRelampago() {
+			contadorRelampago--;
 		}
 
-		void print(){
+
+		double calcula() {
+			double custo = getPeso() * getCustoKg();
+			custo += custo * taxaAdicional;
+			return custo;
+		}
+
+		void print() override {
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "[Encomenda Relâmpago]" 			<< endl
+				<< "  Peso: " 			<< getPeso() 		<< endl
+				<< "  Custo por kg: " 	<< getCustoKg() 	<< endl
+				<< "  Taxa adicional: " << taxaAdicional 	<< endl
+				<< "  Custo total: " 	<< getTotal() 		<< endl;
 
 		}
 
 };
+
+int EncomendaRelampago::contadorRelampago=0;
+double EncomendaRelampago::custoRelampagototal=0;
 
 #endif
