@@ -11,13 +11,6 @@ class EncomendaNormal: public Encomenda{
 	EncomendaNormal(double peso, double custoKg, Cliente remetente, Cliente destinatario):
 		Encomenda(peso, custoKg, 0.0, remetente, destinatario) {};
 		
-	double calcula(){
-
-		double x = peso * custoKg;
-
-		return x;
-	}
-
 	void print(){
 
 		Encomenda::print();
