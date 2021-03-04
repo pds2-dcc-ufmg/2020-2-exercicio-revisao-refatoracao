@@ -5,6 +5,22 @@
 #include "Cliente.hpp"
 using namespace std;
 
+double metodo_normal(EncomendaNormal enc)
+{
+	enc.calcula();
+	enc.print();
+	std::cout << endl;
+	return enc.calcula();
+}
+
+double metodo_relampago(EncomendaRelampago enc)
+{
+	enc.calcula();
+	enc.print();
+	std::cout << endl;
+	return enc.calcula();
+}
+
 int main(){
 
 	Cliente cli0 = Cliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
@@ -48,45 +64,15 @@ int main(){
 	double custN = 0;
 	double custR = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
+	custN += metodo_normal(enc0);
+	custN += metodo_normal(enc1);
+	custN += metodo_normal(enc2);
+	custN += metodo_normal(enc3);
+	custN += metodo_normal(enc4);
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
-
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
-
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
-
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
-
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
-
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
+	custR += metodo_relampago(enc5);
+	custR += metodo_relampago(enc6);
+	custR += metodo_relampago(enc7);
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN

@@ -29,6 +29,7 @@ class Encomenda{
 			this->remetente = remetente;
 			this->dest = destinatario;
 		}
+		
 };
 
 #endif
