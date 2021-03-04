@@ -2,8 +2,7 @@
 #include <string>
 #include "Cliente.hpp"
 
-Cliente::Cliente(string nome, string endereco, string cidade, 
-	string estado, string cep) {
+Cliente::Cliente(std::string nome, std::string endereco, std::string cidade, std::string estado, std::string cep) {
 	this->_nome = nome; 
 	this->_endereco = endereco; 
 	this->_cidade = cidade; 
