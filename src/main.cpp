@@ -52,7 +52,7 @@ int main(){
 	enc2.print();
 	custN += enc2.calcula();
 	std::cout << endl;
-
+	
 	enc3.calcula();
 	enc3.print();
 	custN += enc3.calcula();
