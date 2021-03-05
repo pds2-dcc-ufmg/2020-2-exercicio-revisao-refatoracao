@@ -31,7 +31,6 @@ Compra::Encomenda *NovaEncomenda(double peso, double custo, Cliente remetente, C
 }
 int main()
 {
-    std::cout << "teste de pullrequest proprio" << std::endl;
     clientes.push_back(Cliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."));
     clientes.push_back(Cliente("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C."));
     clientes.push_back(Cliente("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C"));
