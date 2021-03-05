@@ -8,23 +8,32 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
-
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		static const double taxa_relampago = 0.25;
+	
+		// constroi uma encomenda relampago e atribui os valores
+		EncomendaRelampago(double peso; double custo_kg; Cliente remetente; Cliente destinatario){
+			this-> _peso = peso;
+			this-> _custo_kg = custo_kg;
+			this-> _rementente = remetente;
+			this-> _destinatario = destinatario;	
+		}
+	
+		// calcula e atribui custo total da encomenda relampago
+		double calculaCustoTotal() override{
+			double custo_total = this->_peso * this->_custo_kg * taxa_relampago;
+			this-> _custo_total = custo_total;
+			return custo_total;
 		}
 
-		void print(){
+		// imprime os dados da encomenda relampago e dos clientes envolvidos
+		void printEncomendaRelampago(){
 
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			Encomenda::printRemetenteDestinatario();
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << " Peso: " << this-> _peso << std::endl;
+			std::cout << " Custo por kg: " << this-> _custo_kg << std::endl;
+			std::cout << " Taxa adicional: " << taxa_relampago << std::endl;
+			std::cout << " Custo total: " << this-> _custo_total << std::endl;
 
 		}
 
