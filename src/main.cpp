@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Encomenda.hpp"
-#include "EncomendaNormal.hpp"
-#include "EncomendaRelampago.hpp"
-#include "Cliente.hpp"
+#include "./encomenda/Encomenda.hpp"
+#include "./encomenda/encomendaNormal/EncomendaNormal.hpp"
+#include "./encomenda/encomendaRelampago/EncomendaRelampago.hpp"
+#include "./cliente/Cliente.hpp"
 using namespace std;
 
 int main(){

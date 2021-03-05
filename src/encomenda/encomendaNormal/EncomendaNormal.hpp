@@ -1,11 +1,13 @@
 #ifndef EncomendaNormal_H
 #define EncomendaNormal_H
 
-#include "Encomenda.hpp"
-#include "Cliente.hpp"
+#include "../Encomenda.hpp"
+#include "../../cliente/Cliente.hpp"
+#include <iostream>
+
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
+class EncomendaNormal: public Encomenda {
 
 	public:
 		

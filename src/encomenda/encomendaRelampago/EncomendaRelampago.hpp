@@ -1,11 +1,11 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
 
-#include "Encomenda.hpp"
-#include "Cliente.hpp"
+#include "../Encomenda.hpp"
+#include "../../cliente/Cliente.hpp"
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda {
 
 	public:
 
@@ -18,16 +18,13 @@ class EncomendaRelampago: public Encomenda{
 		}
 
 		void print(){
-
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
 				<< "  Taxa adicional: " << 0.25 << endl
 				<< "  Custo total: " << T << endl;
-
 		}
-
 };
 
 #endif
