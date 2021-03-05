@@ -21,9 +21,9 @@ class Encomenda{
 		void printRemetenteDestinatario(){ 
 
 			std::cout << "[Remetente]" << std::endl;
-			_remetente.printCliente();
+			this->_remetente.printCliente();
 			std::cout << "[Destinatário]" << std::endl;
-			_destinatario.printCliente();
+			this->_destinatario.printCliente();
 		}
 
 };
