@@ -4,29 +4,40 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 using namespace std;
+#define TaxaRelampago 0.25
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda {
 
-	public:
+public:
 
-		double calcula(){
+	EncomendaRelampago() {
+	}
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
+	//Construtor
+	EncomendaRelampago(double _peso, double _custokg) {
+		this->peso = _peso;
+		this->custoKg = _custokg;
+	}
 
-		void print(){
+	//método que calcula o valor de Entregas Relâmpago
+	double calculaEntrega() override {
 
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+		double valorEntregaRelampago = peso * custoKg;
+		valorEntregaRelampago += valorEntregaRelampago * TaxaRelampago;
 
-		}
+		return valorEntregaRelampago;
+	}
+
+	//método que imprime dados de Entregas Relâmpago
+	void print() {
+
+		Encomenda::print();
+		std::cout << "[Encomenda Relâmpago]" << endl;
+		std::cout << "  Peso: " << peso << endl
+				  << "  Custo por kg: " << custoKg << endl
+				  << "  Taxa adicional: " << 0.25  << endl
+				  << "  Custo total: " << custoTotal << endl;
+	}
 
 };
 
