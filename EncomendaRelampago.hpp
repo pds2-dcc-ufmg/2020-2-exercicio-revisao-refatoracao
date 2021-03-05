@@ -9,21 +9,18 @@ class EncomendaRelampago: public Encomenda{
 
 	private:
 
-		double _taxa;
+		static double constexpr _TAXA = 0.25;
 
 	public:
-		
-		EncomendaRelampago(double peso, double custo_kg, Cliente remetente, Cliente destinatario, double taxa) :
-			Encomenda(peso, custo_kg, remetente, destinatario), _taxa(taxa) {}
 
-		double getTaxa() { return this->_taxa; }
+		EncomendaRelampago(double peso, double custo_kg, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo_kg, remetente, destinatario) {}
 
-		void setTaxa(double taxa) { this->_taxa = taxa; }
+		static double getTaxa() { return _TAXA; }
 
 		virtual double calculaPreco() override {
 
 			double preco = this->getPeso() * this->getCustoKg();
-			preco += preco * this->getTaxa();
+			preco += preco * EncomendaRelampago::getTaxa();
 			
 			return preco;
 		}
@@ -34,7 +31,7 @@ class EncomendaRelampago: public Encomenda{
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << this->getPeso() << endl
 				<< "  Custo por kg: " << this->getCustoKg() << endl
-				<< "  Taxa adicional: " << this->getTaxa() << endl
+				<< "  Taxa adicional: " << EncomendaRelampago::getTaxa() << endl
 				<< "  Custo total: " << this->getCustoTotal() << endl;
 
 		}
