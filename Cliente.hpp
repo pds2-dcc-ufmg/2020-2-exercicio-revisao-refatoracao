@@ -15,6 +15,7 @@ class Cliente{
 		string _cep;
 				
 	public:
+	
 		Cliente(string nome, string endereco, string cidade, string estado, string cep) :
 			_nome(nome), _endereco(endereco), _cidade(cidade), _estado(estado), _cep(cep) {}
 
