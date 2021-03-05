@@ -2,20 +2,35 @@
 #define CLIENTE_H
 
 #include <string>
-using namespace std;
 
-class Cliente{
+class print{
+	virtual void imprimir() = 0;
+};
+
+class Cliente: public print{
+
+	protected:
+		std::string NOME;
+		std::string endereco;
+		std::string CIDADE;
+		std::string ESTADO;
+		std::string cep;
 
 	public:
-
-		string NOME;
-		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		std::string getNome();
+		std::string getEndereco();
+		std::string getCidade();
+		std::string getEstado();
+		std::string getCep();
 		
+		void setNome(std::string aux);
+		void setEndereco(std::string aux);
+		void setCidade(std::string aux);
+		void setEstado(std::string aux);
+		void setCep(std::string aux);
+
+
+		void imprimir() override;
 };
 
 #endif
