@@ -4,24 +4,30 @@
 #include "../cliente/Cliente.hpp"
 using namespace std;
 
-class Encomenda{
+class Encomenda {
+  
+  Encomenda();
+  Encomenda(double peso, double custoKg, Cliente remetente, Cliente dest);
+	
+  public:
+    void print();
+    
+    void setPeso(double peso);
+    void setCustoKG(double custo);
+    void setRemetente(Cliente remetente);
+    void setDest(Cliente dest);
 
-	public:
+    double getPeso();
+    double getCustoKG();
+    Cliente getRemetente();
+    Cliente getDest();
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
+  private:
+    double peso;
+		double custoKg;
+		double t;
 		Cliente remetente;
 		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
 };
 
 #endif
