@@ -1,19 +1,19 @@
 output: cliente.o encomenda.o encomendaNormal.o encomendaRelampago.o main.o
 	g++ cliente.o encomenda.o encomendaNormal.o encomendaRelampago.o main.o -o output
 
-cliente.o: src/cliente/Cliente.cpp src/cliente/Cliente.hpp
-	g++ -c src/cliente/Cliente.cpp
+cliente.o: src/Cliente.cpp headers/Cliente.hpp
+	g++ -c src/Cliente.cpp
 
-encomenda.o: src/encomenda/Encomenda.cpp src/encomenda/Encomenda.hpp src/cliente/Cliente.hpp
-	g++ -c src/encomenda/Encomenda.cpp
+encomenda.o: src/Encomenda.cpp headers/Encomenda.hpp headers/Cliente.hpp
+	g++ -c src/Encomenda.cpp
 
-encomendaNormal.o: src/encomenda/encomendaNormal/EncomendaNormal.cpp src/encomenda/encomendaNormal/EncomendaNormal.hpp src/encomenda/Encomenda.hpp
-	g++ -c src/encomenda/encomendaNormal/EncomendaNormal.cpp
+encomendaNormal.o: src/EncomendaNormal.cpp headers/EncomendaNormal.hpp headers/Encomenda.hpp
+	g++ -c src/EncomendaNormal.cpp
 
-encomendaRelampago.o: src/encomenda/encomendaRelampago/EncomendaRelampago.cpp src/encomenda/encomendaRelampago/EncomendaRelampago.hpp src/encomenda/Encomenda.hpp
-	g++ -c src/encomenda/encomendaRelampago/EncomendaRelampago.cpp
+encomendaRelampago.o: src/EncomendaRelampago.cpp headers/EncomendaRelampago.hpp headers/Encomenda.hpp
+	g++ -c src/EncomendaRelampago.cpp
 
-main.o: src/main.cpp src/cliente/Cliente.hpp src/encomenda/Encomenda.hpp src/encomenda/encomendaNormal/EncomendaNormal.hpp src/encomenda/encomendaRelampago/EncomendaRelampago.hpp
+main.o: src/main.cpp headers/Cliente.hpp headers/Encomenda.hpp headers/EncomendaNormal.hpp headers/EncomendaRelampago.hpp
 	g++ -c src/main.cpp
 
 output: cliente.o encomenda.o encomendaNormal.o encomendaRelampago.o main.o

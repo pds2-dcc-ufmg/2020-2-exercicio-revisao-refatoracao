@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
-#include "./encomenda/Encomenda.hpp"
-#include "./encomenda/encomendaNormal/EncomendaNormal.hpp"
-#include "./encomenda/encomendaRelampago/EncomendaRelampago.hpp"
-#include "./cliente/Cliente.hpp"
+#include "../headers/Encomenda.hpp"
+#include "../headers/EncomendaNormal.hpp"
+#include "../headers/EncomendaRelampago.hpp"
+#include "../headers/Cliente.hpp"
+
 using namespace std;
 
 template <class Template> Template makeEncomenda(int *count, double peso, double custoKg, Cliente remetente, Cliente dest) {

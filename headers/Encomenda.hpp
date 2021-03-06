@@ -1,7 +1,7 @@
 #ifndef Encomenda_H
 #define Encomenda_H
 
-#include "../cliente/Cliente.hpp"
+#include "Cliente.hpp"
 using namespace std;
 
 class Encomenda {

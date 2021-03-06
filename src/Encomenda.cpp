@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-#include "Encomenda.hpp"
-
-#include "../cliente/Cliente.hpp"
+#include "../headers/Encomenda.hpp"
+#include "../headers/Cliente.hpp"
 
 Encomenda::Encomenda() {
   this->peso = 0.0;

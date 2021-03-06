@@ -1,7 +1,6 @@
-#include "EncomendaNormal.hpp"
-#include "../Encomenda.hpp"
-
-#include "iostream"
+#include "../headers/EncomendaNormal.hpp"
+#include "../headers/Encomenda.hpp"
+#include <iostream>
 
 double EncomendaNormal::calcula() {
   double x = this->getPeso() * this->getCustoKG();
