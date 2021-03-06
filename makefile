@@ -17,4 +17,4 @@ main.o: src/main.cpp headers/Cliente.hpp headers/Encomenda.hpp headers/Encomenda
 	g++ -c src/main.cpp -o build/main.o
 
 clean:
-	rm *.o output
+	del build\*.o build\output.exe
