@@ -7,7 +7,8 @@ using namespace std;
 class Cliente {
 
 	public:
-    Cliente();
+    
+		Cliente();
     Cliente(string nome, string endereco, string cidade, string estado, string cep);
 
     void setNome(string nome);
