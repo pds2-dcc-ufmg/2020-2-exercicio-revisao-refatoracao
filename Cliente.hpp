@@ -3,18 +3,25 @@
 
 #include <string>
 
-class Cliente{
+class Cliente {
 
 	public:
 
-		string nome;
-		string endereco;
-		string cidade;
-		string estado;
-		string cep;
+        //TODO: Excluir depois
+        Cliente() {};
+
+        Cliente(std::string nome, std::string endereco, std::string cidade, std::string estado, std::string cep);
 	    
         // imprime na tela os dados de um cliente cadastrado
 		void imprimeDados();
+
+    private:
+
+        std::string nome;
+        std::string endereco;
+        std::string cidade;
+        std::string estado;
+        std::string cep;
 };
 
 #endif

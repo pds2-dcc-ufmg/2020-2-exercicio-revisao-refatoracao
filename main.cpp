@@ -9,119 +9,79 @@ using namespace std;
 
 int main() {
 	
-	Cliente cliente0;
-	cliente0.NOME = "Thales";
-	cliente0.endereco = "Rua dos Pré-Socráticos";
-	cliente0.CIDADE = "Miletus";
-	cliente0.ESTADO = "Ionia";
-	cliente0.cep = "548 a.C.";
+	Cliente cliente0 = Cliente("Thales","Rua dos Pré-Socráticos","Miletus","Ionia","548 a.C.");
 
-	Cliente cliente1;
-	cliente1.NOME = "Aristóteles";
-	cliente1.endereco = "Avenida do Meio-Termo";
-	cliente1.CIDADE = "Atenas";
-	cliente1.ESTADO = "Ática";
-	cliente1.cep = "384 a.C.";
+	Cliente cliente1 = Cliente("Aristóteles","Avenida do Meio-Termo","Atenas","Ática","384 a.C.");
 
-	Cliente cliente2;
-	cliente2.NOME = "Platão";
-	cliente2.endereco = "Praça das Formas";
-	cliente2.CIDADE = "Atenas";
-	cliente2.ESTADO = "Ática";
-	cliente2.cep = "348 a.C";
+	Cliente cliente2 = Cliente("Platão","Praça das Formas","Atenas","Ática","348 a.C");
 
-	Cliente cliente3;
-	cliente3.NOME = "Sócrates";
-	cliente3.endereco = "Rua do Elenchus";
-	cliente3.CIDADE = "Atenas";
-	cliente3.ESTADO = "Ática";
-	cliente3.cep = "399 a.C.";
+	Cliente cliente3 = Cliente("Sócrates","Rua do Elenchus","Atenas","Ática","399 a.C.");
 
-	Cliente cliente4;
-	cliente4.NOME = "Pitágoras";
-	cliente4.endereco = "Praça dos Quadrados dos Catetos";
-	cliente4.CIDADE = "Samos";
-	cliente4.ESTADO = "Egeu";
-	cliente4.cep = "571 a.C.";
+	Cliente cliente4 = Cliente("Pitágoras","Praça dos Quadrados dos Catetos","Samos","Egeu","571 a.C.");
 
-	Cliente cliente5;
-	cliente5.NOME = "Parmênides";
-	cliente5.endereco = "Rua do Não Ser";
-	cliente5.CIDADE = "Eleia";
-	cliente5.ESTADO = "Magna Grécia";
-	cliente5.cep = "460 a.C.";
+	Cliente cliente5 = Cliente("Parmênides","Rua do Não Ser","Eleia","Magna Grécia","460 a.C.");
 
-	Cliente cliente6;
-	cliente6.NOME = "Empédocles";
-	cliente6.endereco = "Rua dos Quatro Elementos";
-	cliente6.CIDADE = "Agrigento";
-	cliente6.ESTADO = "Sicília";
-	cliente6.cep = "495 a.C.";
+	Cliente cliente6 = Cliente("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
 
-	Cliente cliente7;
-	cliente7.NOME = "Anaxágoras";
-	cliente7.endereco = "Avenida da Mente Cósmica";
-	cliente7.CIDADE = "Clazômenas";
-	cliente7.ESTADO = "Jónia";
-	cliente7.cep = "499 a.C.";
+	Cliente cliente7 = Cliente("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
 
 	int quantN = 0;
 	int quantR = 0;
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cliente0;
-	enc0.dest = cliente1;
+	EncomendaNormal encomenda0;
+	encomenda0.peso = 5;
+	encomenda0.custoEmKg = 12;
+	encomenda0.remetente = cliente0;
+	encomenda0.destinatario = cliente1;
 	quantN++;
 
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cliente1;
-	enc1.dest = cliente2;
+	EncomendaNormal encomenda1;
+	encomenda1.peso = 10;
+	encomenda1.custoEmKg = 12;
+	encomenda1.remetente = cliente1;
+	encomenda1.destinatario = cliente2;
 	quantN++;
 
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cliente2;
-	enc2.dest = cliente3;
+	EncomendaNormal encomenda2;
+	encomenda2.peso = 7;
+	encomenda2.custoEmKg = 12;
+	encomenda2.remetente = cliente2;
+	encomenda2.destinatario = cliente3;
 	quantN++;
 
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cliente3;
-	enc3.dest = cliente4;
+	EncomendaNormal encomenda3;
+	encomenda3.peso = 2;
+	encomenda3.custoEmKg = 12;
+	encomenda3.remetente = cliente3;
+	encomenda3.destinatario = cliente4;
 	quantN++;
 
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cliente4;
-	enc4.dest = cliente5;
+	EncomendaNormal encomenda4;
+	encomenda4.peso = 3;
+	encomenda4.custoEmKg = 12;
+	encomenda4.remetente = cliente4;
+	encomenda4.destinatario = cliente5;
 	quantN++;
 
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cliente5;
-	enc5.dest = cliente6;
+	EncomendaRelampago encomenda5;
+	encomenda5.peso = 13;
+	encomenda5.custoEmKg = 18;
+	encomenda5.remetente = cliente5;
+	encomenda5.destinatario = cliente6;
 	quantR++;
 
-	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cliente6;
-	enc6.dest = cliente7;
+	EncomendaRelampago encomenda6;
+	encomenda6.peso = 6;
+	encomenda6.custoEmKg = 18;
+	encomenda6.remetente = cliente6;
+	encomenda6.destinatario = cliente7;
 	quantR++;
 
-	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cliente7;
-	enc7.dest = cliente0;
+	EncomendaRelampago encomenda7;
+	encomenda7.peso = 8;
+	encomenda7.custoEmKg = 18;
+	encomenda7.remetente = cliente7;
+	encomenda7.destinatario = cliente0;
 	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
@@ -129,44 +89,44 @@ int main() {
 	double custN = 0;
 	double custR = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
+	encomenda0.calculaCustoTotal();
+	encomenda0.imprimeDados();
+	custN += encomenda0.calculaCustoTotal();
 	std::cout << endl;
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
+	encomenda1.calculaCustoTotal();
+	encomenda1.imprimeDados();
+	custN += encomenda1.calculaCustoTotal();
 	std::cout << endl;
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
+	encomenda2.calculaCustoTotal();
+	encomenda2.imprimeDados();
+	custN += encomenda2.calculaCustoTotal();
 	std::cout << endl;
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
+	encomenda3.calculaCustoTotal();
+	encomenda3.imprimeDados();
+	custN += encomenda3.calculaCustoTotal();
 	std::cout << endl;
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
+	encomenda4.calculaCustoTotal();
+	encomenda4.imprimeDados();
+	custN += encomenda4.calculaCustoTotal();
 	std::cout << endl;
 
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
+	encomenda5.calculaCustoTotal();
+	encomenda5.imprimeDados();
+	custR += encomenda5.calculaCustoTotal();
 	std::cout << endl;
 
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
+	encomenda6.calculaCustoTotal();
+	encomenda6.imprimeDados();
+	custR += encomenda6.calculaCustoTotal();
 	std::cout << endl;
 
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
+	encomenda7.calculaCustoTotal();
+	encomenda7.imprimeDados();
+	custR += encomenda7.calculaCustoTotal();
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 

@@ -14,13 +14,13 @@ class Encomenda {
 		Cliente remetente;
 		Cliente destinatario;
 			
-		void print() {
+		void imprimeDados() {
 
 			std::cout << "[Remetente]" << std::endl;
-			remetente.print();
+			remetente.imprimeDados();
 
 			std::cout << "[Destinatário]" << std::endl;
-			destinatario.print();
+			destinatario.imprimeDados();
 		}
 };
 
