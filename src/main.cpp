@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "../headers/Encomenda.hpp"
 #include "../headers/EncomendaNormal.hpp"
 #include "../headers/EncomendaRelampago.hpp"
@@ -7,9 +8,13 @@
 
 using namespace std;
 
-template <class Template> Template makeEncomenda(int *count, double peso, double custoKg, Cliente remetente, Cliente dest) {
+template <class Template> void makeEncomenda(int *count, double peso, double custoKg, Cliente remetente, Cliente dest, vector<Template> *encomendas) {
   (*count)++;
-  return Template(peso, custoKg, remetente, dest);
+  encomendas->push_back(Template(peso, custoKg, remetente, dest));
+}
+
+template <class Template> void makeCliente(string nome, string endereco, string cidade, string estado, string cep, vector<Template> *clientes) {
+  clientes->push_back(Template(nome, endereco, cidade, estado, cep));
 }
 
 template <class Template> void makeCalculo(Template encomenda, double *ptr) {
@@ -21,6 +26,18 @@ template <class Template> void makeCalculo(Template encomenda, double *ptr) {
 
 int main(){
 	
+  vector<EncomendaNormal> encomendasNormais;
+  vector<EncomendaNormal> *encomendasNormaisPtr;
+  encomendasNormaisPtr = &encomendasNormais;
+
+  vector<EncomendaRelampago> encomendasRelampago;
+  vector<EncomendaRelampago> *encomendasRelampagoPtr;
+  encomendasRelampagoPtr = &encomendasRelampago;
+
+  vector<Cliente> clientes;
+  vector<Cliente> *clientesPtr;
+  clientesPtr = &clientes;
+
   int quantN = 0;
   int quantR = 0;
   int *quantNptr;
@@ -35,34 +52,33 @@ int main(){
   custNptr = &custN;
   custRptr = &custR;
 
-  Cliente cli0 = Cliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
-  Cliente cli1 = Cliente("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
-  Cliente cli2 = Cliente("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
-  Cliente cli3 = Cliente("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.");
-  Cliente cli4 = Cliente("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C.");
-  Cliente cli5 = Cliente("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C.");
-  Cliente cli6 = Cliente("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.");
-  Cliente cli7 = Cliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.");
+  makeCliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.", clientesPtr);
+  makeCliente("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.", clientesPtr);
+  makeCliente("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C", clientesPtr);
+  makeCliente("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.", clientesPtr);
+  makeCliente("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C.", clientesPtr);
+  makeCliente("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C.", clientesPtr);
+  makeCliente("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.", clientesPtr);
+  makeCliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.", clientesPtr);
 	
-  EncomendaNormal enc0 = makeEncomenda<EncomendaNormal>(quantNptr, 5, 12, cli0, cli1);
-  EncomendaNormal enc1 = makeEncomenda<EncomendaNormal>(quantNptr, 10, 12, cli1, cli2);
-  EncomendaNormal enc2 = makeEncomenda<EncomendaNormal>(quantNptr, 7, 12, cli2, cli3);
-  EncomendaNormal enc3 = makeEncomenda<EncomendaNormal>(quantNptr, 2, 12, cli3, cli4);
-  EncomendaNormal enc4 = makeEncomenda<EncomendaNormal>(quantNptr, 3, 12, cli4, cli5);
-  EncomendaRelampago enc5 = makeEncomenda<EncomendaRelampago>(quantRptr, 13, 18, cli5, cli6);
-  EncomendaRelampago enc6 = makeEncomenda<EncomendaRelampago>(quantRptr, 6, 18, cli6, cli7);
-  EncomendaRelampago enc7 = makeEncomenda<EncomendaRelampago>(quantRptr, 8, 18, cli7, cli0);
+  makeEncomenda<EncomendaNormal>(quantNptr, 5, 12, clientes[0], clientes[1], encomendasNormaisPtr);
+  makeEncomenda<EncomendaNormal>(quantNptr, 10, 12, clientes[1], clientes[2], encomendasNormaisPtr);
+  makeEncomenda<EncomendaNormal>(quantNptr, 7, 12, clientes[2], clientes[3], encomendasNormaisPtr);
+  makeEncomenda<EncomendaNormal>(quantNptr, 2, 12, clientes[3], clientes[4], encomendasNormaisPtr);
+  makeEncomenda<EncomendaNormal>(quantNptr, 3, 12, clientes[4], clientes[5], encomendasNormaisPtr);
+  makeEncomenda<EncomendaRelampago>(quantRptr, 13, 18, clientes[5], clientes[6], encomendasRelampagoPtr);
+  makeEncomenda<EncomendaRelampago>(quantRptr, 6, 18, clientes[6], clientes[7], encomendasRelampagoPtr);
+  makeEncomenda<EncomendaRelampago>(quantRptr, 8, 18, clientes[7], clientes[0], encomendasRelampagoPtr);
 	
   std::cout << "\n>> Relatório de encomendas <<" << endl;
   
-  makeCalculo<EncomendaNormal>(enc0, custNptr);
-  makeCalculo<EncomendaNormal>(enc1, custNptr);
-  makeCalculo<EncomendaNormal>(enc2, custNptr);
-  makeCalculo<EncomendaNormal>(enc3, custNptr);
-  makeCalculo<EncomendaNormal>(enc4, custNptr);
-  makeCalculo<EncomendaRelampago>(enc5, custRptr);
-  makeCalculo<EncomendaRelampago>(enc6, custRptr);
-  makeCalculo<EncomendaRelampago>(enc7, custRptr);
+  for (int i = 0; i < encomendasNormais.size(); i++) {
+    makeCalculo<EncomendaNormal>(encomendasNormais[i], custNptr);
+  }
+
+  for (int i = 0; i < encomendasRelampago.size(); i++) {
+    makeCalculo<EncomendaRelampago>(encomendasRelampago[i], custRptr);
+  }
 	
   std::cout << "\n>> Encomendas Normais <<" 
 	<< "\nQuantidade: " << quantN
@@ -73,4 +89,3 @@ int main(){
 	<< "\nValor Total: " << custR
 	<< endl;
 }
-
