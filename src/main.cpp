@@ -1,8 +1,6 @@
 #include <iostream>
-#include "../include/encomenda/Encomenda.hpp"
 #include "../include/encomenda/EncomendaNormal.hpp"
 #include "../include/encomenda/EncomendaRelampago.hpp"
-#include "../include/cliente/Cliente.hpp"
 #include <vector>
 
 int main(){

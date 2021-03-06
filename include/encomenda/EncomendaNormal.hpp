@@ -11,7 +11,6 @@ class EncomendaNormal: public Encomenda{
 
 		EncomendaNormal(double pesoEncomenda, double custoPorKg, Cliente remetente, Cliente destinatario);
 			
-
 };
 
 #endif
