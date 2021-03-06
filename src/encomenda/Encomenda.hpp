@@ -26,10 +26,10 @@ class Encomenda {
 
   private:
     double peso;
-		double custoKg;
-		double t = 0.0;
-		Cliente remetente;
-		Cliente dest;
+    double custoKg;
+    double t = 0.0;
+    Cliente remetente;
+    Cliente dest;
 };
 
 #endif
