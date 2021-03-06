@@ -17,10 +17,10 @@ Encomenda::Encomenda(double peso, double custoKg, Cliente remetente, Cliente des
 }
 
 void Encomenda::print() {
-	std::cout << "[Remetente]" << endl;
-	remetente.print();
-	std::cout << "[Destinatário]" << endl;
-	dest.print();
+  std::cout << "[Remetente]" << endl;
+  remetente.print();
+  std::cout << "[Destinatário]" << endl;
+  dest.print();
 }
 
 void Encomenda::setPeso(double peso) {
