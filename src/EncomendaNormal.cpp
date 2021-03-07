@@ -3,8 +3,7 @@
 #include <iostream>
 
 double EncomendaNormal::calcula() {
-  double x = this->getPeso() * this->getCustoKG();
-  return x;
+  return this->getPeso() * this->getCustoKG();
 }
 
 void EncomendaNormal::print(){
