@@ -6,14 +6,15 @@ using namespace std;
 
 class Encomenda{
 
-	public:
+	private:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
+		double peso = 0.0;
+		double custokg = 0.0;
 		double T = 0.0;
 		Cliente remetente;
-		Cliente dest;
-			
+		Cliente destinatario;
+	
+	public:
 		void print(){
 
 			std::cout << "[Remetente]" << endl;
