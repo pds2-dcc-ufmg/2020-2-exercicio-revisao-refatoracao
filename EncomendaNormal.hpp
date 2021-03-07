@@ -8,23 +8,33 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
+
+		EncomendaNormal() {}
+
+		EncomendaNormal(double peso, double custoKg, Cliente remetente, Cliente destinatario) {
+			setPeso(peso);
+			setCustoKg(custoKg);
+			setCustoTotal(calculaCustoTotal());
+			setRemetente(remetente);
+			setDestinatario(destinatario);
+		}
 		
-	double calcula(){
+		double calculaCustoTotal() override {
 
-		double x = PESO * CUSTOkg;
+			double x = getPeso() * getCustoKg();
 
-		return x;
-	}
+			return x;
+		}
 
-	void print(){
+		void print(){
 
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
+			Encomenda::print();
+			std::cout << "[Encomenda Normal]" << endl;
+			std::cout << "  Peso: " << getPeso() << endl
+				<< "  Custo por kg: " << getCustoKg() << endl
+				<< "  Custo total: " << getCustoTotal() << endl;
 
-	}
+		}
 
 };
 
