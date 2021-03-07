@@ -3,28 +3,35 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
+
 using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
+	private:
+		static constexpr double _taxa_adicional = 1.25;
+
 	public:
 
-		double calcula(){
+		EncomendaRelampago(double peso, double custo_por_kg, Cliente remetente, Cliente dest) : 
+			Encomenda(peso, custo_por_kg, remetente, dest) {}
+		
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		double calcula() override {
+			// retirando os números magicos
+			_total = (_peso * _custo_por_kg) * _taxa_adicional;			
+			return _total;
 		}
+	
 
 		void print(){
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			cout << "[Encomenda Relâmpago]" << endl;
+			cout << "  Peso: " << _peso << endl
+				<< "  Custo por kg: " << _custo_por_kg << endl
+				<< "  Taxa adicional: " << _taxa_adicional << endl
+				<< "  Custo total: " << _total << endl;
 
 		}
 
