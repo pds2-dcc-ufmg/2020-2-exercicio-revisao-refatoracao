@@ -3,30 +3,30 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
 	public:
+		/**
+		 * @brief Construtor para a classe EncomendaRelampago
+		 * 
+		 * @param _peso 
+		 * @param _custoKg 
+		 * @param _remetente 
+		 * @param _destinatario 
+		 */
+		EncomendaRelampago(double _peso , double _custoKg , Cliente * _remetente , Cliente * _destinatario) 
+		: Encomenda( _peso, _custoKg, _remetente, _destinatario) {};
+		
+		/* Calcula o valor total adicionando a taxa */
+		double calcularTotal() override;
+		const double getTaxaAdicional(){ return TAXA_ADICIONAL; };
 
-		double calcula(){
+		/* Mostra as informações dos clientes envolvidos e as informações da encomenda */
+		void print() override;
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
+		private :
+		const double TAXA_ADICIONAL = 0.25 ;
 
 };
 
