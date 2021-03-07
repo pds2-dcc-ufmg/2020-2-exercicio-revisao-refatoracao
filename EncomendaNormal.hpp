@@ -8,22 +8,22 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-	double calcula(){
+	EncomendaNormal(double peso, double custokg, Cliente remetente, Cliente destinatario): Encomenda(peso, custokg, remetente, destinatario){}
+	EncomendaNormal(){}
 
-		double x = PESO * CUSTOkg;
+	double calcula() const override{
+		double valor_calculado = _peso * _custokg;
 
-		return x;
+		return valor_calculado;
 	}
 
-	void print(){
-
+	void print() const override{
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
+		std::cout << "  Peso: " << _peso << endl
+			<< "  Custo por kg: " << _custokg << endl
+			<< "  Custo total: " << _custo_total << endl
+			<< endl;
 	}
 
 };
