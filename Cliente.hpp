@@ -5,17 +5,25 @@
 using namespace std;
 
 class Cliente{
+  public:
 
-	public:
+  void setDadosCliente(string _nome,string _endereco,string _cidade,string _estado,string _cep);
+  string getNome();
+  string getEndereco();
+  string getCidade();
+  string getEstado();
+  string getCep();
+  void printDadosCliente(); // imprime na tela os dados de um cliente cadastrado
 
-		string NOME;
+
+	private:
+
+		string nome;
 		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+		string cidade;
+		string estado;
+		string cep;	
+
 };
 
 #endif
