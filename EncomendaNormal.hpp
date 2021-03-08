@@ -9,10 +9,17 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
+	EncomendaNormal(double P,double C,Cliente* r, Cliente* d){
+		this->PESO= P;
+		this->CUSTOkg= C;
+		this->remetente=r;
+		this->dest=d;
+	}
+	
 	double calcula(){
 
 		double x = PESO * CUSTOkg;
-
+		this->T = x;
 		return x;
 	}
 
@@ -25,6 +32,16 @@ class EncomendaNormal: public Encomenda{
 			<< "  Custo total: " << T << endl;
 
 	}
+
+	void relatorio_enc(double *custN){
+	this->calcula();
+	this->print();
+	*custN += this->calcula();
+	std::cout << endl;
+
+	}
+
+	
 
 };
 
