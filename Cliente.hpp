@@ -30,13 +30,13 @@ class Cliente{
     void set_CEP(string cep){this->CEP = cep;}
 
   
-  private:
+        private:
 
     string nome;
-		string endereco;
-		string cidade;
-		string estado;
-		string CEP;
+    string endereco;
+    string cidade;
+    string estado;
+    string CEP;
 
 };
 
