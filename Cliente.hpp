@@ -6,16 +6,29 @@ using namespace std;
 
 class Cliente{
 
-	public:
+	private: // Variáveis privadas; acesso via getters e setters
 
-		string NOME;
+		string nome;
 		string endereco;
-		string CIDADE;
-		string ESTADO;
+		string cidade;
+		string estado;
 		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+
+	public: // Métodos publicos implementados em Cliente.cpp
+
+		void print(); 
+
+		string get_nome();
+		string get_endereco();
+		string get_cidade();
+		string get_estado();
+		string get_cep();
+
+		void set_nome(string _nome);
+		void set_endereco(string _endereco);
+		void set_cidade(string _cidade);
+		void set_estado(string _estado);
+		void set_cep(string _cep);
 };
 
 #endif
