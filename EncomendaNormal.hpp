@@ -8,11 +8,6 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-		double calcula()
-		{
-			return PESO * CUSTOkg;
-		}
 
 		void print(){
 
@@ -27,6 +22,14 @@ class EncomendaNormal: public Encomenda{
 		EncomendaNormal(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
 			this->T = this->calcula();
+			this->taxa = 0.0;
+		}
+
+		double metodo()
+		{
+			this->print();
+			std::cout << endl;
+			return this->calcula();
 		}
 };
 

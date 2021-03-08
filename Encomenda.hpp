@@ -11,6 +11,7 @@ class Encomenda{
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
 		double T = 0.0;
+		double taxa;
 
 		Encomenda(double peso, double custo, Cliente remetente, Cliente destinatario)
 		{
@@ -26,6 +27,11 @@ class Encomenda{
 			remetente.print();
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
+		}
+
+		double calcula()
+		{
+			return PESO * CUSTOkg * (1 + this->taxa);
 		}
 
 	private:

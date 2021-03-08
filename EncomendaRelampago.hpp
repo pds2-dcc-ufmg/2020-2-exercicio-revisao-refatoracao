@@ -5,16 +5,9 @@
 #include "Cliente.hpp"
 using namespace std;
 
-const double taxa = 0.25;
-
 class EncomendaRelampago: public Encomenda{
 
 	public:
-
-		double calcula()
-		{
-			return PESO * CUSTOkg * (1 + taxa);
-		}
 
 		void print()
 		{
@@ -29,6 +22,14 @@ class EncomendaRelampago: public Encomenda{
 		EncomendaRelampago(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
 			this->T = this->calcula();
+			this->taxa = 0.25;
+		}
+
+		double metodo()
+		{
+			this->print();
+			std::cout << endl;
+			return this->calcula();
 		}
 };
 

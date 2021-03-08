@@ -10,20 +10,6 @@ using namespace std;
 #define NUM_NORMAIS 5 // quantidade de encomendas normais
 #define NUM_RELAMP 3 // quantidade de encomendas relâmpago
 
-double metodo_normal(EncomendaNormal enc)
-{
-	enc.print();
-	std::cout << endl;
-	return enc.calcula();
-}
-
-double metodo_relampago(EncomendaRelampago enc)
-{
-	enc.print();
-	std::cout << endl;
-	return enc.calcula();
-}
-
 int main()
 {
 	// Criação de vetores com as informações dos clientes
@@ -99,12 +85,12 @@ int main()
 
 	for (auto & enc : encomendas_normais)
 	{
-		custN += metodo_normal(enc);
+		custN += enc.metodo();
 	}
 
 	for (auto & enc: encomendas_relamp)
 	{
-		custR += metodo_relampago(enc);
+		custR += enc.metodo();
 	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
