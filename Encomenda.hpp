@@ -7,20 +7,13 @@ using namespace std;
 class Encomenda{
 
 	public:
+		virtual void print()= 0;//Função virtual de print
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+    protected:
+        double _peso = 0.0;
+		double _custoPorkg = 0.0;
+		Cliente _remetente;
+		Cliente _destinatario;
 
 };
 
