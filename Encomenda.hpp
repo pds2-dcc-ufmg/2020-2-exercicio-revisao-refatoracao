@@ -8,13 +8,16 @@ using namespace std;
 
 class Encomenda{
 
-	public:
+	protected:
+	// Encapsulamento
 
 		double _peso;
 		double _custo_por_kg;
 		double _total;
 		Cliente _remetente;
 		Cliente _dest;
+
+	public:
 
 		Encomenda(double peso, double custo_por_kg, Cliente& remetente, Cliente& dest) : 
     			_peso(peso), _custo_por_kg(custo_por_kg) , _remetente(remetente),  _dest(dest) {}

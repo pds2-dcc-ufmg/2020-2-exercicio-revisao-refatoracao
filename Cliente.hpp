@@ -7,6 +7,8 @@ using namespace std;
 class Cliente {
 
 	private:
+		//Encapsulamento 
+
 		// Nomes refatorados
 		string _nome;
 		string _endereco;
