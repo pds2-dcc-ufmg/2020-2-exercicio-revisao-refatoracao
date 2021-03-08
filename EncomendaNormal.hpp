@@ -7,7 +7,7 @@ using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
-	private:
+	public:
 		
 	double calcula(); //calcula o preço da encomenda normal
 	void print(); // printa na tela os dados da encomenda
