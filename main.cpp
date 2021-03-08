@@ -7,173 +7,168 @@ using namespace std;
 
 int main(){
 	
-	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	Cliente *cliente = new Cilente[8];
+	int _cliente = 0
+	
+	cliente[_cliente].name = "Thales";
+	cliente[_cliente].andress = "Rua dos Pré-Socráticos";
+	cliente[_cliente].city = "Miletus";
+	cliente[_cliente].state = "Ionia";
+	cliente[_cliente].post_card = "548 a.C.";
+	_cliente += 1;
+	
+	cliente[_cliente].name = "Aristóteles";
+	cliente[_cliente].andress = "Avenida do Meio-Termo";
+	cliente[_cliente].city = "Atenas";
+	cliente[_cliente].state = "Ática";
+	cliente[_cliente].post_card = "384 a.C.";
+	_cliente += 1;
+	
+	cliente[_cliente].name = "Platão";
+	cliente[_cliente].andress = "Praça das Formas";
+	cliente[_cliente].city = "Atenas";
+	cliente[_cliente].state = "Ática";
+	cliente[_cliente].post_card = "348 a.C";
+	_cliente += 1;
+	
+	cliente[_cliente].name = "Sócrates";
+	cliente[_cliente].andress = "Rua do Elenchus";
+	cliente[_cliente].city = "Atenas";
+	cliente[_cliente].state = "Ática";
+	cliente[_cliente].post_card = "399 a.C.";
+	_cliente += 1;
 
-	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	cliente[_cliente].name = "Pitágoras";
+	cliente[_cliente].andress = "Praça dos Quadrados dos Catetos";
+	cliente[_cliente].city = "Samos";
+	cliente[_cliente].state = "Egeu";
+	cliente[_cliente].post_card = "571 a.C.";
 
-	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	_cliente += 1;
+	cliente[_cliente].name = "Parmênides";
+	cliente[_cliente].andress = "Rua do Não Ser";
+	cliente[_cliente].city = "Eleia";
+	cliente[_cliente].state = "Magna Grécia";
+	cliente[_cliente].post_card = "460 a.C.";
 
-	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	_cliente += 1;
+	cliente[_cliente].name = "Empédocles";
+	cliente[_cliente].andress = "Rua dos Quatro Elementos";
+	cliente[_cliente].city = "Agrigento";
+	cliente[_cliente].state = "Sicília";
+	cliente[_cliente].post_card = "495 a.C.";
+	
+	_cliente += 1;
+	cliente[_cliente].name = "Anaxágoras";
+	cliente[_cliente].andress = "Avenida da Mente Cósmica";
+	cliente[_cliente].city = "Clazômenas";
+	cliente[_cliente].state = "Jónia";
+	cliente[_cliente].post_card = "499 a.C.";
 
-	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	int normal_amount = 0;
+	int express_amount = 0;
+	
+	EncomendaNormal *_EncomendaNormal = new EncomendaNormal[5];
+	EncomendaRelampago *_EncomendaRelampago = new EncomendaRelampago[3];
+	int _encomendaNormal = 0;
+	int _encomendaRelampago = 0;
+	_cliente = 0;
+	
+	EncomendaNormal[_encomendaNormal].weight = 5;
+	EncomendaNormal[_encomendaNormal].cost_kg = 12;
+	EncomendaNormal[_encomendaNormal].sender = cliente[_cliente];
+	EncomendaNormal[_encomendaNormal].receiver = cliente[_cliente + 1];
+	normal_amount++;
+	_cliente =+ 1;
+	_encomendaNormal += 1;
 
-	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	EncomendaNormal[_encomendaNormal].weight = 10;
+	EncomendaNormal[_encomendaNormal].cost_kg = 12;
+	EncomendaNormal[_encomendaNormal].sender = cliente[_cliente];
+	EncomendaNormal[_encomendaNormal].receiver = cliente[_cliente + 1];
+	normal_amount++;
+	_cliente += 1;
+	_encomendaNormal += 1;
 
-	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	EncomendaNormal[_encomendaNormal].weight = 7;
+	EncomendaNormal[_encomendaNormal].cost_kg = 12;
+	EncomendaNormal[_encomendaNormal].sender = cliente[_cliente];
+	EncomendaNormal[_encomendaNormal].receiver = cliente[_cliente + 1];
+	normal_amount++;
+	_cliente += 1;
+	_encomendaNormal += 1;
 
-	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	EncomendaNormal[_encomendaNormal].weight = 2;
+	EncomendaNormal[_encomendaNormal].cost_kg = 12;
+	EncomendaNormal[_encomendaNormal].sender = cliente[_cliente];
+	EncomendaNormal[_encomendaNormal].receiver = cliente[_cliente + 1];
+	normal_amount++;
+	_cliente += 1;
+	_encomendaNormal += 1;
 
-	int quantN = 0;
-	int quantR = 0;
+	EncomendaNormal[_encomendaNormal].weight = 3;
+	EncomendaNormal[_encomendaNormal].cost_kg = 12;
+	EncomendaNormal[_encomendaNormal].sender = cliente[_cliente];
+	EncomendaNormal[_encomendaNormal].receiver = cliente[_cliente + 1];
+	normal_amount++;
+	_cliente += 1;
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
-
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
-
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
-
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
-
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
-
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	EncomendaRelampago[_encomendaRelampago].weight = 13;
+	EncomendaRelampago[_encomendaRelampago].cost_kg = 18;
+	EncomendaRelampago[_encomendaRelampago].sender = cliente[_cliente];
+	EncomendaRelampago[_encomendaRelampago].receiver = cliente[_cliente + 1];
+	express_amount++;
+	_cliente += 1;
+	_encomendaRelampago += 1;
 
 	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
-
+	EncomendaRelampago[_encomendaRelampago].weight = 6;
+	EncomendaRelampago[_encomendaRelampago].cost_kg = 18;
+	EncomendaRelampago[_encomendaRelampago].sender = cliente[_cliente];
+	EncomendaRelampago[_encomendaRelampago].receiver = cliente[_cliente + 1];
+	express_amount++;
+	_cliente += 1;
+	_encomendaRelampago += 1;
+	
 	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
+	EncomendaRelampago[_encomendaRelampago].weight = 8;
+	EncomendaRelampago[_encomendaRelampago].cost_kg = 18;
+	EncomendaRelampago[_encomendaRelampago].sender = cliente[_cliente];
+	EncomendaRelampago[_encomendaRelampago].receiver = cliente[0];
+	express_amount++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
-
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
-
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
-
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
-
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
-
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
-
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
-
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
+	double normal_cost = 0;
+	double express_cost = 0;
 	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
+	for(int i = 0; i < 8; i++)
+	{
+		if(i < 5)
+		{
+		normal_cost += EncomendaNormal[i].normal_price_calculate();
+		EncomendaNormal[i].print();
+		std::cout << endl;
+		}
+		else
+		{
+		express_cost += EncomendaRelampago[i-5].express_price_calculate();
+		EncomendaRelampago[i-5].print();
+		std::cout << endl;
+		}
+	}
+	
+	std::cout << "\n>> Encomendas normais <<" 
+		  << "\nQuantidade: " << normal_amount
+		  << "\nValor Total: " << normal_cost
+		  << endl
+		  << "\n>> Encomendas Relâmpago <<" 
+		  << "\nQuantidade: " << express_amount
+		  << "\nValor Total: " << express_cost
+		  << endl;
+	
+delete cliente;
+delete _EncomendaNormal;
+delete _EncomendaRelampago;
 	
 }
