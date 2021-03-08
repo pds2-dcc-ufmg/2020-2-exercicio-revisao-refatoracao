@@ -127,44 +127,36 @@ int main(){
 	double normal_cost = 0;
 	double express_cost = 0;
 
-	enc0.calcula();
-	enc0.print();
 	normal_cost += enc0.calcula();
+	enc0.print();
 	std::cout << endl;
 
-	enc1.calcula();
-	enc1.print();
 	normal_cost += enc1.calcula();
+	enc1.print();
 	std::cout << endl;
 
-	enc2.calcula();
-	enc2.print();
 	normal_cost += enc2.calcula();
+	enc2.print();
 	std::cout << endl;
 
-	enc3.calcula();
-	enc3.print();
 	normal_cost += enc3.calcula();
+	enc3.print();
 	std::cout << endl;
 
-	enc4.calcula();
-	enc4.print();
 	normal_cost += enc4.calcula();
+	enc4.print();
 	std::cout << endl;
 
-	enc5.calcula();
-	enc5.print();
 	express_cost += enc5.calcula();
+	enc5.print();
 	std::cout << endl;
 
-	enc6.calcula();
-	enc6.print();
 	express_cost += enc6.calcula();
+	enc6.print();
 	std::cout << endl;
 
-	enc7.calcula();
-	enc7.print();
 	express_cost += enc7.calcula();
+	enc7.print();
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas normais <<" 
