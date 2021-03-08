@@ -33,8 +33,8 @@ int main(){
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double quantN = 0;
-  double quantR = 0;
-  double custN = 0;
+        double quantR = 0;
+        double custN = 0;
 	double custR = 0;
 
   for(int i = 0; i < encomenda_vector.size(); i++){
