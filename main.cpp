@@ -3,7 +3,7 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
-#include "Relatorio.h"
+#include "Relatorio.hpp"
 #include <vector>
 
 using namespace std;
