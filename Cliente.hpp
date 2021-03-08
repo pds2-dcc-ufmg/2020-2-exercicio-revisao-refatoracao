@@ -15,11 +15,11 @@ class Cliente{
 		std::string get_estado();
 		std::string get_cep();
 
-		set_nome( std::string nome );
-		set_endereco( std::string endereco );
-		set_cidade( std::string cidade );
-		set_estado( std::string estado );
-		set_cep( std::string cep );
+		void set_nome( std::string nome );
+		void set_endereco( std::string endereco );
+		void set_cidade( std::string cidade );
+		void set_estado( std::string estado );
+		void set_cep( std::string cep );
 		
 
 	private:

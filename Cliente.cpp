@@ -22,23 +22,23 @@ std::string Cliente::get_cep() {
 	return this->cep;
 }
 
-Cliente::set_nome( std::string nome ) {
+void Cliente::set_nome( std::string nome ) {
 	this->nome = nome;
 }
 
-Cliente::set_endereco( std::string endereco ) {
+void Cliente::set_endereco( std::string endereco ) {
 	this->endereco = endereco;
 }
 
-Cliente::set_cidade( std::string cidade ) {
+void Cliente::set_cidade( std::string cidade ) {
 	this->cidade = cidade;
 }
 
-Cliente::set_estado( std::string estado ) {
+void Cliente::set_estado( std::string estado ) {
 	this->estado = estado;
 }
 
-Cliente::set_cep( std::string cep ) {
+void Cliente::set_cep( std::string cep ) {
 	this->cep = cep;
 }
 

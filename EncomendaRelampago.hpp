@@ -8,8 +8,8 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double taxa_relampago = 0.25;
-		
+		const double taxa_relampago = 0.25;
+
 		double calcula(){
 
 			double x = peso * custoKG;
