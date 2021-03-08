@@ -43,7 +43,7 @@ Mudanças que fiz:
     * Nova variável para taxa.
     * Novos getters e setters para a taxa;
 
-- EncomendaNormal.cpp:
+- EncomendaRelampago.cpp:
     * Agora existe;
     * Implementação dos métodos de EncomendaRelampago.hpp;
     * Adicionado std:: ao começo dos endl
