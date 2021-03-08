@@ -2,25 +2,27 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
-using namespace std;
 
 class Encomenda{
-
+	
 	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		//funciona como um construtor da classe
+		void set(std::string prioridade, int peso, Cliente remetente, Cliente destinatario);
+		//Calcula o preço total da entrega
+		double calcula();
+		//Imprimi as informações da entrega
+		void print();
+		//Indica se há prioridade
+		bool prioridade();
+	
+	private:
+		
+		bool Prioridade = 0;
+		double Peso = 0.0;
+		double CustoKg = 12.0;
+		double Total = 0.0;
+		Cliente Remetente;
+		Cliente Destinatario;
 
 };
 
