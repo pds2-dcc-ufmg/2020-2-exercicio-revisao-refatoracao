@@ -9,9 +9,9 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(); // calcula o preço da encomenda relampago
-
+		double express_price_calculate(); // calcula o preço da encomenda relampago
 		void print(); // printa na tela os dados da encomenda
+	
 };
 
 #endif
