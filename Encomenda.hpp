@@ -10,7 +10,7 @@ class Encomenda{
 
 		double weight = 0.0;
 		double cost_kg = 0.0;
-		double T = 0.0;
+		double final_cost = 0.0;
 		double tax = 0.25;
 		Cliente sender;
 		Cliente receiver;
