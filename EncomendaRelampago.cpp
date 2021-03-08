@@ -2,12 +2,12 @@
 #include <string>
 #include <EncomendaRelampago.hpp>
 
-double calcula()
+double express_price_calculate()
 {
 	double x = weight * cost_kg;
-	x += x * tax;
-			
+	x += x * tax;	
 	return x;
+	
 }
 
 void print() 
