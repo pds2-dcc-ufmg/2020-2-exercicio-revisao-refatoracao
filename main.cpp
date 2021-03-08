@@ -12,7 +12,6 @@ using namespace std;
 
 double metodo_normal(EncomendaNormal enc)
 {
-	enc.calcula();
 	enc.print();
 	std::cout << endl;
 	return enc.calcula();
@@ -20,7 +19,6 @@ double metodo_normal(EncomendaNormal enc)
 
 double metodo_relampago(EncomendaRelampago enc)
 {
-	enc.calcula();
 	enc.print();
 	std::cout << endl;
 	return enc.calcula();
@@ -91,7 +89,7 @@ int main()
 	{
 		encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
 	}
-	encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_RELAMP-1], clientes[0]));
+	encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
 	
 	// Impressão das informações das encomendas e dos respectivos clientes envolvidos
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
