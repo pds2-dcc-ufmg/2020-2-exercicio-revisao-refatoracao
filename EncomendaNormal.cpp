@@ -14,5 +14,5 @@ void print()
 	std::cout << "[Encomenda Normal]" << endl;
 	std::cout << "  Peso: " << weight << endl
 		  << "  Custo por kg: " << cost_kg << endl
-		  << "  Custo total: " << T << endl;
+		  << "  Custo total: " << final_cost << endl;
 }
