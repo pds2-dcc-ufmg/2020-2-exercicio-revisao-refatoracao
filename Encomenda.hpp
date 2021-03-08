@@ -13,14 +13,8 @@ class Encomenda{
 		double T = 0.0;
 		Cliente remetente;
 		Cliente dest;
-			
-		void print(){
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		void print();
 
 };
 
