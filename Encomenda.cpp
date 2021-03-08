@@ -1,11 +1,14 @@
 #include <iostream>
+#include <string>
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 		
-	void Encomenda::set(bool prioridade, int peso, int custokg, Cliente remetente, Cliente destinatario){
-		this->Prioridade=prioridade;
-		this->Peso=peso;
-		this->CustoKg=custokg;
+	void Encomenda::set(std::string prioridade, int peso, Cliente remetente, Cliente destinatario){
+		if(prioridade=="Relampago"){
+      this->Prioridade=1;
+		  this->CustoKg=18;
+    }
+    this->Peso=peso;
 		this->Remetente=remetente;
 		this->Destinatario=destinatario;
 	}

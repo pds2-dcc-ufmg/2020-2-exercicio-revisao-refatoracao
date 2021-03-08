@@ -18,14 +18,14 @@ int main(){
 	
 	Encomenda encomenda[8];
 	
-	encomenda[0].set(0,5,12,cli[0],cli[1]);
-	encomenda[1].set(0,10,12,cli[1],cli[2]);
-	encomenda[2].set(0,7,12,cli[2],cli[3]);
-	encomenda[3].set(0,2,12,cli[3],cli[4]);
-	encomenda[4].set(0,3,12,cli[4],cli[5]);
-	encomenda[5].set(1,13,18,cli[5],cli[6]);
-	encomenda[6].set(1,6,18,cli[6],cli[7]);
-	encomenda[7].set(1,8,18,cli[7],cli[0]);
+	encomenda[0].set("Normal",5,cliente[0],cliente[1]);
+	encomenda[1].set("Normal",10,cliente[1],cliente[2]);
+	encomenda[2].set("Normal",7,cliente[2],cliente[3]);
+	encomenda[3].set("Normal",2,cliente[3],cliente[4]);
+	encomenda[4].set("Normal",3,cliente[4],cliente[5]);
+	encomenda[5].set("Relampago",13,cliente[5],cliente[6]);
+	encomenda[6].set("Relampago",6,cliente[6],cliente[7]);
+	encomenda[7].set("Relampago",8,cliente[7],cliente[0]);
 
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
@@ -36,19 +36,17 @@ int main(){
 	
 	for(int i=0; i<8; i++){
 		
-		encomenda[i].calcula();
-		encomenda[i].print();
-		
-		std::cout << std::endl;
-		
 		if(encomenda[i].prioridade()){
-			QuantN++;
+			QuantR++;
 			CustoR+=encomenda[i].calcula();
 		}
 		else{
-			QuantiaR++;
+			QuantN++;
 			CustoN+=encomenda[i].calcula();
 		}
+    
+    encomenda[i].print();
+		std::cout << std::endl;
 	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
