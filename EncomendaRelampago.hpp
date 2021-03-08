@@ -2,31 +2,42 @@
 #define EncomendaRelampago_H
 
 #include "Encomenda.hpp"
-#include "Cliente.hpp"
-using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda {
 
 	public:
 
-		double calcula(){
+		EncomendaRelampago() {}
+		EncomendaRelampago(double peso, double custoKg,
+						   Cliente remetente, Cliente destinatario)
+		: 				   Encomenda(peso, custoKg,
+								     remetente, destinatario) {}
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		double getTaxa() { return this->_taxa; }
+
+		virtual double calcPreco() override {
+
+			double precoEncomenda = this->getPeso() * this->getCustoKg();
+    		precoEncomenda += precoEncomenda * this->getTaxa();
+
+    		return precoEncomenda;
+
 		}
 
-		void print(){
+		virtual void print() override {
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << this->getPeso() << std::endl
+					<< "  Custo por kg: " << this->getCustoKg() << std::endl
+					<< "  Taxa adicional: " << this->getTaxa() << std::endl
+					<< "  Custo total: " << this->getCustoTotal() << std::endl;
+		
 		}
+		
+	private:
+
+		static double constexpr _taxa = 0.25;
 
 };
 
