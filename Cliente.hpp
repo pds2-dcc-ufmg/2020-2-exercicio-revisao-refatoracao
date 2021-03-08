@@ -4,18 +4,31 @@
 #include <string>
 using namespace std;
 
-class Cliente{
-
+class Cliente {
 	public:
-
-		string NOME;
+		//imprime na tela os dados de um cliente cadastrado
+		void print(); 
+	
+		//Métodos getters:
+		string getNome();
+		string getEndereco();
+		string getCidade();
+		string getEstado();
+		string getCep();
+	
+		//Métodos setters:
+		void setNome();
+		void setEndereco();
+		void setCidade();
+		void setEstado();
+		void setCep();
+	private:
+		//Atributos do cliente:
+		string nome;
 		string endereco;
-		string CIDADE;
-		string ESTADO;
+		string cidade;
+		string estado;
 		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
 };
 
 #endif
