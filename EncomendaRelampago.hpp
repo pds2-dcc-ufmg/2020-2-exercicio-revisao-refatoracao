@@ -12,7 +12,7 @@ class EncomendaRelampago: public Encomenda{
 
 	    EncomendaRelampago(Cliente remetente,Cliente destinatario,double peso,double custoPorkg);
 
-		double calcula();
+		double calcula();//Calcula o custo da encomenta com a taxa adicional
 
 		void print();
 };
