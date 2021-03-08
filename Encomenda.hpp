@@ -7,20 +7,23 @@ using namespace std;
 class Encomenda{
 
 	public:
+    void setDadosEncomenda(Cliente _remetente,Cliente _destinatario,double _peso,double _custoKg,bool _relampago);
+    Cliente getRemetente();
+    Cliente getDestinatario();
+    double getPeso();
+    double getCustoKg();
+    double calculaTotal();
+    bool getRelampago();
+    void printDadosEncomenda();
+		
+    private:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+      double peso = 0.0;
+		  double custoKg = 0.0;
+		  double taxa = 0.25;
+      bool relampago = false; // booleano para indicar se é relampago ou não
+		  Cliente remetente;
+		  Cliente dest;
 
 };
 
