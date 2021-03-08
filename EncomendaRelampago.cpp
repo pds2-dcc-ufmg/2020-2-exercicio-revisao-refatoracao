@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include "EncomendaRelampago.hpp"
+#define TAXA 0.25
 
 double EncomendaRelampago::calcula(){
 
-  double taxaAdicional = 0.25;
+  double taxaAdicional = TAXA;
 	double x = peso * custoKg;
 	
   return x += x * taxaAdicional;
@@ -16,7 +17,7 @@ double EncomendaRelampago::calcula(){
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << peso << endl
 				        << "  Custo por kg: " << custoKg << endl
-				        << "  Taxa adicional: " << 0.25 << endl
+				        << "  Taxa adicional: " << TAXA << endl
 				        << "  Custo total: " << T << endl;
 
 		};
