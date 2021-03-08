@@ -6,27 +6,16 @@
 using namespace std;
 
 class EncomendaRelampago: public Encomenda{
+private:
+	double _taxaAdicional = 0.25;
+public:
 
-	public:
+	double calcula();
+	void print();
 
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
+//getter e setter
+	double getTaxa();
+	void setTaxa(double taxaAdicional);
 
 };
 
