@@ -7,10 +7,10 @@ using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
-	public:
+	private:
 		
-	double calcula(); 
-	void print(); 
+	double calcula(); //calcula o preço da encomenda
+	void print(); // printa na tela os dados da encomenda
 	
 };
 
