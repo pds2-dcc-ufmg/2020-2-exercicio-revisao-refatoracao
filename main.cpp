@@ -59,4 +59,7 @@ int main(){
 		 << "\nValor Total: " << custR
 		 << endl;
 	
+	clients.clear();
+  	encomenda_vector.clear();
+	
 }
