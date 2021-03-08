@@ -34,6 +34,13 @@ class Encomenda{
 			return PESO * CUSTOkg * (1 + this->taxa);
 		}
 
+		double metodo()
+		{
+			this->print();
+			std::cout << endl;
+			return this->calcula();
+		}
+
 	private:
 
 		Cliente remetente;
