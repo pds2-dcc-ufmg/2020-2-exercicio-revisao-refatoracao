@@ -35,51 +35,15 @@ int main(){
 	
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
-	encomendas[0].calculaPrecoTotal();
-	encomendas[0].printEncomenda();
-	custoTotalEncomendasNormais += encomendas[0].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[1].calculaPrecoTotal();
-	encomendas[1].printEncomenda();
-	custoTotalEncomendasNormais += encomendas[1].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[2].calculaPrecoTotal();
-	encomendas[2].printEncomenda();
-	custoTotalEncomendasNormais += encomendas[2].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[3].calculaPrecoTotal();
-	encomendas[3].printEncomenda();
-	custoTotalEncomendasNormais += encomendas[3].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[4].calculaPrecoTotal();
-	encomendas[4].printEncomenda();
-	custoTotalEncomendasNormais += encomendas[4].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[5].calculaPrecoTotal();
-	encomendas[5].printEncomenda();
-	custoTotalEncomendasNormais += encomendas[5].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[6].calculaPrecoTotal();
-	encomendas[6].printEncomenda();
-	custoTotalEncomendasRelampago += encomendas[6].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[7].calculaPrecoTotal();
-	encomendas[7].printEncomenda();
-	custoTotalEncomendasRelampago += encomendas[7].calculaPrecoTotal();
-	std::cout << std::endl;
-
-    encomendas[8].calculaPrecoTotal();
-	encomendas[8].printEncomenda();
-	custoTotalEncomendasRelampago += encomendas[8].calculaPrecoTotal();
-	std::cout << std::endl;
-
+    for(Encomenda encomenda: encomendas) {
+	    encomenda.printEncomenda();
+        if(EncomendaNormal* e = dynamic_cast<EncomendaNormal*>(&encomenda)) {
+            custoTotalEncomendasNormais += encomenda.calculaPrecoTotal();
+        } else if(EncomendaRelampago* e = dynamic_cast<EncomendaRelampago*>(&encomenda)) {
+            custoTotalEncomendasRelampago += encomenda.calculaPrecoTotal();
+        }
+        std::cout << std::endl;
+    }
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantidadeEncomendasNormais
