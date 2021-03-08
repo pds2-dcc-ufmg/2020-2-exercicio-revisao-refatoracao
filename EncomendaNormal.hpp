@@ -26,7 +26,7 @@ class EncomendaNormal: public Encomenda{
 
 		EncomendaNormal(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
-			this->T = 0;
+			this->T = this->calcula();
 		}
 };
 
