@@ -17,11 +17,11 @@ class Cliente {
 		string getCep();
 	
 		//Métodos setters:
-		void setNome();
-		void setEndereco();
-		void setCidade();
-		void setEstado();
-		void setCep();
+		void setNome(string nome);
+		void setEndereco(string endereco);
+		void setCidade(string cidade);
+		void setEstado(string estado);
+		void setCep(string cep);
 	private:
 		//Atributos do cliente:
 		string nome;
