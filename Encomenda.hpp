@@ -5,6 +5,10 @@
 using namespace std;
 
 class Encomenda{
+	
+	public:
+		
+		void print();// imprime na tela os dados da encomenda
 
 	private:
 
@@ -14,9 +18,7 @@ class Encomenda{
 		double tax = 0.25;
 		Cliente sender;
 		Cliente receiver;
-			
-		void print();// imprime na tela os dados da encomenda
-
+	
 };
 
 #endif
