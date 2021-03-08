@@ -6,6 +6,10 @@ using namespace std;
 
 class Cliente{
 	
+	public:
+	
+		void print(); // imprime na tela os dados de um cliente cadastrado
+	
 	private:
 
 		string name;
@@ -13,9 +17,6 @@ class Cliente{
 		string city;
 		string state;
 		string post_card;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
 };
 
 #endif
