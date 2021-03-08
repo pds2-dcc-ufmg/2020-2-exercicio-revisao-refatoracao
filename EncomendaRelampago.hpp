@@ -3,7 +3,6 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
@@ -20,11 +19,11 @@ class EncomendaRelampago: public Encomenda{
 		void print(){
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << PESO << std::endl
+				<< "  Custo por kg: " << CUSTOkg << std::endl
+				<< "  Taxa adicional: " << 0.25 << std::endl
+				<< "  Custo total: " << T << std::endl;
 
 		}
 
