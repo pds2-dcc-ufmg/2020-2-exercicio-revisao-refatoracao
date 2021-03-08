@@ -5,7 +5,7 @@
 void Encomenda::print()
 {
 			std::cout << "[Remetente]" << endl;
-			remetente.print();
+			sender.print();
 			std::cout << "[Destinatário]" << endl;
-			dest.print();
+			receiver.print();
 }
