@@ -9,9 +9,9 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula();
+		double calcula(); // calcula o preço da encomenda relampago
 
-		void print(); 
+		void print(); // printa na tela os dados da encomenda
 };
 
 #endif
