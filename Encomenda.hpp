@@ -6,21 +6,24 @@ using namespace std;
 
 class Encomenda{
 
-	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
+  private:
+    double peso = 0.0;
+		double custoKg = 0.0;
+		double total = 0.0;
 		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		Cliente destinatario;
+	public:
+        void setPeso(double pPeso);
+        double getPeso();
+        void setCustoKg(double pCustoKg);
+        double getCustoKg();
+        void setTotal(double pTotal);
+        double getTotal();
+        void setRemetente(Cliente pRemetente);
+        Cliente getRemetente();
+        void setdestinatario(Cliente pDestinatario);
+        Cliente getDestinatario();
+		void print();
 
 };
 
