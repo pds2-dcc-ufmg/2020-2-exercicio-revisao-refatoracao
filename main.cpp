@@ -45,7 +45,7 @@ int main(){
 			CustoN+=encomenda[i].calcula();
 		}
     
-    encomenda[i].print();
+    		encomenda[i].print();
 		std::cout << std::endl;
 	}
 	
