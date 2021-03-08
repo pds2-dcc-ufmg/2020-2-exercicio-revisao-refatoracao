@@ -6,13 +6,7 @@
 class Encomenda{
 
 	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
+	
 		void print(){
 
 			std::cout << "[Remetente]" << std::endl;
@@ -20,6 +14,26 @@ class Encomenda{
 			std::cout << "[Destinatário]" << std::endl;
 			dest.print();
 		}
+
+		double get_peso();
+		double get_custoKG();
+		double get_T();
+		cliente get_remetente();
+		cliente get_dest();
+
+		set_peso( double peso );
+		set_custoKG( double custoKG );
+		set_T( double T );
+		set_remetente( Cliente remetente );
+		set_dest( Cliente dest );
+
+	protected:
+
+		double peso = 0.0;
+		double custoKG = 0.0;
+		double T = 0.0;
+		Cliente remetente;
+		Cliente dest;
 
 };
 
