@@ -7,10 +7,7 @@
 
 class EncomendaRelampago : public Encomenda {
    public:
-    EncomendaRelampago(double _peso,
-                       double _custoKg,
-                       Cliente _remetente,
-                       Cliente _destinatario) : Encomenda(_peso, _custoKg, _remetente, _destinatario){};
+    EncomendaRelampago(double _peso, double _custoKg, Cliente _remetente, Cliente _destinatario);
 
     double calculaPreco() override;
 

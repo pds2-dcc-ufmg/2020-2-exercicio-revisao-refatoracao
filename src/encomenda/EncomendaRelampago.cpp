@@ -3,6 +3,13 @@
 #include <iostream>
 #include <string>
 
+EncomendaRelampago::EncomendaRelampago(double _peso,
+                                       double _custoKg,
+                                       Cliente _remetente,
+                                       Cliente _destinatario) : Encomenda(_peso, _custoKg, _remetente, _destinatario) {
+    custoTotal = calculaPreco();
+};
+
 double EncomendaRelampago::calculaPreco() {
     double total = peso * custoKg;
     total += total * taxaAdicional;
@@ -18,5 +25,5 @@ void EncomendaRelampago::imprimeEncomenda() {
     std::cout << "  Peso: " << peso << std::endl
               << "  Custo por kg: " << custoKg << std::endl
               << "  Taxa adicional: " << taxaAdicional << std::endl
-              << "  Custo total: " << calculaPreco() << std::endl;
+              << "  Custo total: " << custoTotal << std::endl;
 }
