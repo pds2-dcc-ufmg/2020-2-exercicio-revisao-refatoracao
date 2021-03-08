@@ -7,173 +7,173 @@ using namespace std;
 
 int main(){
 	
-	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	Cliente client_0;
+	client_0.name = "Thales";
+	client_0.andress = "Rua dos Pré-Socráticos";
+	client_0.city = "Miletus";
+	client_0.state = "Ionia";
+	client_0.post_card = "548 a.C.";
 
-	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	Cliente client_1;
+	client_1.name = "Aristóteles";
+	client_1.andress = "Avenida do Meio-Termo";
+	client_1.city = "Atenas";
+	client_1.state = "Ática";
+	client_1.post_card = "384 a.C.";
 
-	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	Cliente client_2;
+	client_2.name = "Platão";
+	client_2.andress = "Praça das Formas";
+	client_2.city = "Atenas";
+	client_2.state = "Ática";
+	client_2.post_card = "348 a.C";
 
-	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	Cliente client_3;
+	client_3.name = "Sócrates";
+	client_3.andress = "Rua do Elenchus";
+	client_3.city = "Atenas";
+	client_3.state = "Ática";
+	client_3.post_card = "399 a.C.";
 
-	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	Cliente client_4;
+	client_4.name = "Pitágoras";
+	client_4.andress = "Praça dos Quadrados dos Catetos";
+	client_4.city = "Samos";
+	client_4.state = "Egeu";
+	client_4.post_card = "571 a.C.";
 
-	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	Cliente client_5;
+	client_5.name = "Parmênides";
+	client_5.andress = "Rua do Não Ser";
+	client_5.city = "Eleia";
+	client_5.state = "Magna Grécia";
+	client_5.post_card = "460 a.C.";
 
-	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	Cliente client_6;
+	client_6.name = "Empédocles";
+	client_6.andress = "Rua dos Quatro Elementos";
+	client_6.city = "Agrigento";
+	client_6.state = "Sicília";
+	client_6.post_card = "495 a.C.";
 
-	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	Cliente client_7;
+	client_7.name = "Anaxágoras";
+	client_7.andress = "Avenida da Mente Cósmica";
+	client_7.city = "Clazômenas";
+	client_7.state = "Jónia";
+	client_7.post_card = "499 a.C.";
 
-	int quantN = 0;
-	int quantR = 0;
+	int normal_amount = 0;
+	int express_amount = 0;
 
 	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+	enc0.weight = 5;
+	enc0.cost_kg = 12;
+	enc0.sender = client_0;
+	enc0.receiver = client_1;
+	normal_amount++;
 
 	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+	enc1.weight = 10;
+	enc1.cost_kg = 12;
+	enc1.sender = client_1;
+	enc1.receiver = client_2;
+	normal_amount++;
 
 	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+	enc2.weight = 7;
+	enc2.cost_kg = 12;
+	enc2.sender = client_2;
+	enc2.receiver = client_3;
+	normal_amount++;
 
 	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+	enc3.weight = 2;
+	enc3.cost_kg = 12;
+	enc3.sender = client_3;
+	enc3.receiver = client_4;
+	normal_amount++;
 
 	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+	enc4.weight = 3;
+	enc4.cost_kg = 12;
+	enc4.sender = client_4;
+	enc4.receiver = client_5;
+	normal_amount++;
 
 	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	enc5.weight = 13;
+	enc5.cost_kg = 18;
+	enc5.sender = client_5;
+	enc5.receiver = client_6;
+	express_amount++;
 
 	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+	enc6.weight = 6;
+	enc6.cost_kg = 18;
+	enc6.sender = client_6;
+	enc6.receiver = client_7;
+	express_amount++;
 
 	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
+	enc7.weight = 8;
+	enc7.cost_kg = 18;
+	enc7.sender = client_7;
+	enc7.receiver = client_0;
+	express_amount++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double normal_cost = 0;
+	double express_cost = 0;
 
 	enc0.calcula();
 	enc0.print();
-	custN += enc0.calcula();
+	normal_cost += enc0.calcula();
 	std::cout << endl;
 
 	enc1.calcula();
 	enc1.print();
-	custN += enc1.calcula();
+	normal_cost += enc1.calcula();
 	std::cout << endl;
 
 	enc2.calcula();
 	enc2.print();
-	custN += enc2.calcula();
+	normal_cost += enc2.calcula();
 	std::cout << endl;
 
 	enc3.calcula();
 	enc3.print();
-	custN += enc3.calcula();
+	normal_cost += enc3.calcula();
 	std::cout << endl;
 
 	enc4.calcula();
 	enc4.print();
-	custN += enc4.calcula();
+	normal_cost += enc4.calcula();
 	std::cout << endl;
 
 	enc5.calcula();
 	enc5.print();
-	custR += enc5.calcula();
+	express_cost += enc5.calcula();
 	std::cout << endl;
 
 	enc6.calcula();
 	enc6.print();
-	custR += enc6.calcula();
+	express_cost += enc6.calcula();
 	std::cout << endl;
 
 	enc7.calcula();
 	enc7.print();
-	custR += enc7.calcula();
+	express_cost += enc7.calcula();
 	std::cout << endl;
 	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
+	std::cout << "\n>> Encomendas normais <<" 
+		 << "\nQuantidade: " << normal_amount
+		 << "\nValor Total: " << normal_cost
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
+		 << "\nQuantidade: " << express_amount
+		 << "\nValor Total: " << express_cost
 		 << endl;
 	
 }
