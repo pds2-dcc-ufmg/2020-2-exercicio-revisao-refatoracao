@@ -9,7 +9,7 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
-	double calcula(); //calcula o preço da encomenda normal
+	double normal_price_calculate(); //calcula o preço da encomenda normal
 	void print(); // printa na tela os dados da encomenda
 	
 };
