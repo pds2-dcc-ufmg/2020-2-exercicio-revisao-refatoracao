@@ -5,6 +5,11 @@
 using namespace std;
 
 class Cliente{
+	
+	public:
+		Cliente();
+		Cliente(string, string, string, string, string);
+		
 
 	private:
 
