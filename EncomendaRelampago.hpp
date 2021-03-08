@@ -10,12 +10,12 @@ class EncomendaRelampago: public Encomenda{
 
     EncomendaRelampago(double mass, double cost, Cliente rement, Cliente dest);
 
-		double calcula() override;
+    double calcula() override;
 
-		void print() override;
+    void print() override;
 
-  private:
-  double taxa = 1.25;
+  	private:
+    const double taxa = 1.25;
 
 };
 
