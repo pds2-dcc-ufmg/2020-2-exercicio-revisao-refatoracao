@@ -6,7 +6,7 @@ using namespace std;
 
 class Encomenda{
 
-	public:
+	private:
 
 		double weight = 0.0;
 		double cost_kg = 0.0;
