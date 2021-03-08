@@ -167,4 +167,8 @@ int main(){
 		  << "\nValor Total: " << express_cost
 		  << endl;
 	
+delete cliente;
+delete _EncomendaNormal;
+delete _EncomendaRelampago;
+	
 }
