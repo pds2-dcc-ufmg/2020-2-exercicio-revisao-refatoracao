@@ -17,5 +17,5 @@ void print()
 	std::cout << "  Peso: " << weight << endl
 		  << "  Custo por kg: " << cost_kg << endl
 		  << "  Taxa adicional: " << tax << endl
-		  << "  Custo total: " << T << endl;
+		  << "  Custo total: " << final_cost << endl;
 }
