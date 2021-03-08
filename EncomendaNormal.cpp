@@ -4,15 +4,15 @@
 
 double calcula()
 {
-		double x = weight * cost_kg;
-		return x;
-	}
+	double x = weight * cost_kg;
+	return x;
+}
 
-	void print()
-  {
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << weight << endl
-			<< "  Custo por kg: " << cost_kg << endl
-			<< "  Custo total: " << T << endl;
-	}
+void print()
+{
+	Encomenda::print();
+	std::cout << "[Encomenda Normal]" << endl;
+	std::cout << "  Peso: " << weight << endl
+		  << "  Custo por kg: " << cost_kg << endl
+		  << "  Custo total: " << T << endl;
+}
