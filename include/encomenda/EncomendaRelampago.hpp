@@ -1,9 +1,10 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
 
-#include <Cliente.hpp>
-#include <Encomenda.hpp>
 #include <iostream>
+
+#include "Cliente.hpp"
+#include "Encomenda.hpp"
 
 class EncomendaRelampago : public Encomenda {
    public:
@@ -14,7 +15,7 @@ class EncomendaRelampago : public Encomenda {
     void imprimeEncomenda() override;
 
    private:
-    double taxaAdicional = 0.25;
+    const double taxaAdicional = 0.25;
 };
 
 #endif
