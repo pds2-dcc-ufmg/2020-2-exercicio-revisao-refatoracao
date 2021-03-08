@@ -5,10 +5,10 @@
 		
 	void Encomenda::set(std::string prioridade, int peso, Cliente remetente, Cliente destinatario){
 		if(prioridade=="Relampago"){
-      this->Prioridade=1;
-		  this->CustoKg=18;
-    }
-    this->Peso=peso;
+      			this->Prioridade=1;
+			this->CustoKg=18;
+    		}
+    		this->Peso=peso;
 		this->Remetente=remetente;
 		this->Destinatario=destinatario;
 	}
