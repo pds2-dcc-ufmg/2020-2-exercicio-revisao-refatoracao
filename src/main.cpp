@@ -5,8 +5,9 @@
 #include "Cliente.hpp"
 using namespace std;
 
-int main(){
-	
+int main()
+{
+
 	Cliente cli0;
 	cli0.NOME = "Thales";
 	cli0.endereco = "Rua dos Pré-Socráticos";
@@ -121,7 +122,7 @@ int main(){
 	enc7.remetente = cli7;
 	enc7.dest = cli0;
 	quantR++;
-	
+
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custN = 0;
@@ -166,14 +167,13 @@ int main(){
 	enc7.print();
 	custR += enc7.calcula();
 	std::cout << endl;
-	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
-	
+
+	std::cout << "\n>> Encomendas Normais <<"
+						<< "\nQuantidade: " << quantN
+						<< "\nValor Total: " << custN
+						<< endl
+						<< "\n>> Encomendas Relâmpago <<"
+						<< "\nQuantidade: " << quantR
+						<< "\nValor Total: " << custR
+						<< endl;
 }

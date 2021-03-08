@@ -4,24 +4,24 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class Encomenda{
+class Encomenda
+{
 
-	public:
+public:
+	double PESO = 0.0;
+	double CUSTOkg = 0.0;
+	double T = 0.0;
+	Cliente remetente;
+	Cliente dest;
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
+	void print()
+	{
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+		std::cout << "[Remetente]" << endl;
+		remetente.print();
+		std::cout << "[Destinatário]" << endl;
+		dest.print();
+	}
 };
 
 #endif
