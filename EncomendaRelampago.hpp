@@ -15,7 +15,7 @@ class EncomendaRelampago: public Encomenda{
 		void print() override;
 
   private:
-  double taxa = 0.25;
+  double taxa = 1.25;
 
 };
 
