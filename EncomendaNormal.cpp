@@ -2,7 +2,7 @@
 #include <string>
 #include <EncomendaNormal.hpp>
 
-double calcula()
+double normal_price_calculate()
 {
 	double x = weight * cost_kg;
 	return x;
