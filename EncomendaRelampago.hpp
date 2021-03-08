@@ -19,7 +19,10 @@ class EncomendaRelampago: public Encomenda{
 
 		void print(){
 
-			Encomenda::print();
+			std::cout << "[Remetente]" << endl;
+			remetente.print();
+			std::cout << "[Destinatário]" << endl;
+			dest.print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
