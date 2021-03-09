@@ -1,6 +1,3 @@
-#ifndef EncomendaNormal_H
-#define EncomendaNormal_H
-
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 using namespace std;
@@ -8,24 +5,14 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-	double calcula(){
 
-		double x = PESO * CUSTOkg;
+	double calculaCusto() override;
 
-		return x;
-	}
+	void print() override;
 
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+	EncomendaNormal(double Peso, double CustoKg, Cliente* remetente, Cliente* dest); //Construtor
 
 };
+
 
 #endif
