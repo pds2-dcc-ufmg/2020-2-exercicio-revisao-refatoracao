@@ -5,7 +5,6 @@
 using namespace std;
 
 class Cliente{
-	
 	private:
 		string _nome;
 		string _endereco;
@@ -16,7 +15,6 @@ class Cliente{
 	public:
 		Cliente (string nome, string endereco, string cidade, string estado, string cep); // construtor para classe cliente
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		
 };
 
 #endif
