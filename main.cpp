@@ -3,6 +3,7 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
+#include <vector>
 
 int main(){
 	//Declaração dos clientes:
