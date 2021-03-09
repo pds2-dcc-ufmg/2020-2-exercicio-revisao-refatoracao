@@ -22,8 +22,8 @@ class Encomenda{
 			dest.print();
 		}
 
-		double calcula_custo_total(){
-			return (PESO * CUSTOkg);
+		double calcula_custo(){
+			return P
 		}
 
 };

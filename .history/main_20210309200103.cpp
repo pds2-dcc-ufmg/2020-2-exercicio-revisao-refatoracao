@@ -21,7 +21,6 @@ int main(){
 	int quantR = 0;
  
 
-
 //Definição dos clientes e alocação no vetor
 
 	Cliente cli0;
@@ -31,6 +30,7 @@ int main(){
 	cli0.ESTADO = "Ionia";
 	cli0.cep = "548 a.C.";
 	clientes.push_back(cli0);
+	
 
 	Cliente cli1;
 	cli1.NOME = "Aristóteles";
