@@ -12,10 +12,10 @@ class Encomenda{
 		double _total = 0.0;
 		Cliente _remetente;
 		Cliente _dest;
-			
+
 		void print(); //Imprime na tela os dados do remetente e destinátario.
 		double calcula(); //Calcula o valor total da encomenda.
-	
+
 };
 
 #endif
