@@ -11,7 +11,7 @@ class EncomendaRelampago: public Encomenda{
 
 		double calculo_encomenda_rapida(){
 			
-			int x = calculo_padrao;
+			double x = calculo_padrao;
 			x+=x*0.25;
 			
 			return x;
