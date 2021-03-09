@@ -6,14 +6,39 @@ using namespace std;
 
 class Encomenda{
 
-	public:
+	private:
 
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
-		double T = 0.0;
 		Cliente remetente;
 		Cliente dest;
-			
+
+	public:
+
+		void setPeso(int novoPeso){
+			PESO = novoPeso;
+		}
+
+		void setCusto(int novoCusto){
+			CUSTOkg = novoCusto;
+		}
+
+		void setRemetente(Cliente R){
+			remetente = R;
+		}
+
+		void setDest(Cliente destinatario){
+			dest = destinatario;
+		}
+
+		double getPeso(){
+			return PESO;
+		}
+
+		double getCusto(){
+			return CUSTOkg;
+		}
+	
 		void print(){
 
 			std::cout << "[Remetente]" << endl;
