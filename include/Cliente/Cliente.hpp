@@ -16,7 +16,7 @@ public:
 	void printCep();
 
 	void setNome(std::string Nome);
-	void setEndereco(std::string Enderco);
+	void setEndereco(std::string Endereco);
 	void setCidade(std::string Cidade);
 	void setEstado(std::string Estado);
 	void setCep(std::string Cep);

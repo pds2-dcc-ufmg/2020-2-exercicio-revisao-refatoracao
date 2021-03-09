@@ -4,9 +4,9 @@
 void Encomenda::print()
 {
     std::cout << "[Remetente]" << std::endl;
-    printRemetente();
+    this->printRemetente();
     std::cout << "[Destinatário]" << std::endl;
-    printDestinatario();
+    this->printDestinatario();
 }
 
 double Encomenda::calcula()

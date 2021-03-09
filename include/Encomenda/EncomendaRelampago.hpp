@@ -7,6 +7,7 @@ class EncomendaRelampago : public Encomenda
 {
 
 public:
+	EncomendaRelampago();
 	void print();
 
 protected:

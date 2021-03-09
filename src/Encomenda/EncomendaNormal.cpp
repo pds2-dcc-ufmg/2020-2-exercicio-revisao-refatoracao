@@ -5,7 +5,7 @@ void EncomendaNormal::print()
 {
     Encomenda::print();
     std::cout << "[Encomenda Normal]" << std::endl;
-    printPeso();
-    printCustoKG();
-    printTotal();
+    this->printPeso();
+    this->printCustoKG();
+    this->printTotal();
 }

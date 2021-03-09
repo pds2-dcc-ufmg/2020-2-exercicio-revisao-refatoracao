@@ -4,11 +4,11 @@
 
 void Cliente::print()
 {
-	printNome();
-	printEndereco();
-	printCidade();
-	printEstado();
-	printCep();
+	this->printNome();
+	this->printEndereco();
+	this->printCidade();
+	this->printEstado();
+	this->printCep();
 }
 
 void Cliente::printNome()
