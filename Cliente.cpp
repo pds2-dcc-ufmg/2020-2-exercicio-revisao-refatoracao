@@ -4,10 +4,10 @@
 
 void Cliente::print(){
 
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
+	std::cout << "  Nome: " << Nome << endl
+		 << "  Endereço: " << Endereco << endl
+		 << "  Cidade: " << Cidade << endl
+		 << "  Estado: " << Estado << endl
+		 << "  CEP: " << CEP << endl;
 
 }
