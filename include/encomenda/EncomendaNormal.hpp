@@ -9,6 +9,7 @@
 class EncomendaNormal : public Encomenda {
    public:
     EncomendaNormal(double _peso, double _custoKg, Cliente _remetente, Cliente _destinatario);
+    ~EncomendaNormal(){};
 
     double calculaPreco() override;
 
