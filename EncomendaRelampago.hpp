@@ -10,8 +10,8 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		// Impressão dos atributos da classe EncomendaRelampago
-		void print_data() override
+		// Impressão das informações da encomenda relâmpago
+		void print_info() override
 		{
 			std::cout << "[Encomenda Relâmpago]" << std::endl;
 			std::cout << "  Peso: " << this->_peso << std::endl
@@ -26,6 +26,7 @@ class EncomendaRelampago: public Encomenda{
 			this->_custo_total = this->calcula();
 		}
 
+		// Cálculo do custo total
 		double calcula() override
 		{
 			return this->_peso * this->_custo_kg * (1 + taxa);

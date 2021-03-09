@@ -21,7 +21,7 @@ class Encomenda{
 			this->_destinatario = destinatario;
 		}
 
-		// Impressão dos atributos da classe
+		// Impressão das informações dos clientes associados à encomenda
 		void print() 
 		{
 			std::cout << "[Remetente]" << std::endl;
@@ -33,13 +33,14 @@ class Encomenda{
 		// Cálculo do custo total da encomenda
 		virtual double calcula() = 0;
 
-		virtual void print_data() = 0;
+		// Impressão das informações específicas da encomenda
+		virtual void print_info() = 0;
 
 		// Formatação da impressão final e cálculo do custo total
 		double metodo()
 		{
 			this->print();
-			this->print_data();
+			this->print_info();
 			std::cout << std::endl;
 			return this->calcula();
 		}

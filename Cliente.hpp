@@ -4,8 +4,8 @@
 #include <string>
 using namespace std;
 
-class Cliente{
-
+class Cliente
+{
 	public:
 
 		Cliente(); // construtor padrão
