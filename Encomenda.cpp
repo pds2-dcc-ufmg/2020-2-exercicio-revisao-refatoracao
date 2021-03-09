@@ -4,9 +4,9 @@
 
 void Encomenda::print(){
 
-			std::cout << "[Remetente]" << endl;
+			std::cout << "[Remetente]" << std::endl;
 			_remetente.print();
-			std::cout << "[Destinatário]" << endl;
+			std::cout << "[Destinatário]" << std::endl;
 			_dest.print();
   
 }
