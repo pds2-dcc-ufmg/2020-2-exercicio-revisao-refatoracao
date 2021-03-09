@@ -10,6 +10,7 @@ int main(){
 	
 	std::vector<Cliente> Clientes;
 	Clientes.push_back(Cliente ("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."));
+	Clientes.push_back(Cliente ("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C."));
 	Clientes.push_back(Cliente ("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C"));
 	Clientes.push_back(Cliente ("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C."));
 	Clientes.push_back(Cliente ("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C."));
