@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Encomenda{
+class Encomenda{//Classe com variaveis que calcula o total de uma encomenda feita.
 
 	public:
 
@@ -15,7 +15,7 @@ class Encomenda{
 		Cliente remetente;
 		Cliente dest;
 			
-		void print(){
+		void print(){//Função que vai imprimir os dados do remetente e do destinatário.
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
