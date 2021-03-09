@@ -9,8 +9,8 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
-		double calcula();
-		void print();
+		double calcula(); // Calcula o custo total da encomenda normal.
+		void print(); //Imprime o mesmo que Encomenda mais os dados de peso e custo referentes a Encomenda Normal.
 
 };
 
