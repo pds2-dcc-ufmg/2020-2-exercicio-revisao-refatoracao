@@ -9,7 +9,7 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calculo_encomenda_rapida(){
+		double calcula(){
 			
 			Encomenda::calculo_padrao();
 			double x = calculo_padrao;
