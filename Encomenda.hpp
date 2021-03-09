@@ -16,7 +16,7 @@ class Encomenda{
 
 	public:
 
-		void print(){
+		void print_cliente(){
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
@@ -24,7 +24,7 @@ class Encomenda{
 			dest.print();
 		}
 
-		double calcula(){
+		double calculo_padrao(){
 
 			double x = PESO * CUSTOkg;
 
