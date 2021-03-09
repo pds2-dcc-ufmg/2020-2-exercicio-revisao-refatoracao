@@ -11,7 +11,7 @@ class EncomendaRelampago: public Encomenda{
 
 		double calculo_encomenda_rapida(){
 			
-			Encomenda::calculo_padrao;
+			Encomenda::calculo_padrao();
 			double x = calculo_padrao;
 			x+=x*0.25;
 			
