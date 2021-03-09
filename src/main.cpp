@@ -35,7 +35,6 @@ int main(){
 	encomendas_relampago[0] = EncomendaRelampago(13, 18, clientes[5], clientes[6]);
 	encomendas_relampago[1] = EncomendaRelampago(6, 18, clientes[6], clientes[7]);
 	encomendas_relampago[2] = EncomendaRelampago(8, 18, clientes[7], clientes[0]);
-	encomendas_normal[0] = EncomendaNormal(5, 12, clientes[0], clientes[1]);
 
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
