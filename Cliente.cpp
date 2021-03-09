@@ -44,10 +44,10 @@ void Cliente::setCidade(string cidade) {
 	this->cidade = cidade;
 }
 
-void Cliente::getEstado(string estado) {
+void Cliente::setEstado(string estado) {
 	this->estado = estado;
 }
 
-void Cliente::getCep(string cep) {
+void Cliente::setCep(string cep) {
 	this->cep = cep;
 }
