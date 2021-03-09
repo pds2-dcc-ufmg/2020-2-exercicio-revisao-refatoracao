@@ -24,45 +24,55 @@ int main() {
 	cliente[6] = new Cliente("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
 	cliente[7] = new Cliente("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
 
-	int numEncomendasNormais = NUM_ENCOMENDAS_NORMAIS;
-	int numEncomendasRelampago = NUM_ENCOMENDAS_RELAMPAGO;
+    EncomendaNormal *encomendaNormal[NUM_ENCOMENDAS_NORMAIS];
+    EncomendaRelampago *encomendaRelampago[NUM_ENCOMENDAS_RELAMPAGO];
 
-    int totalDeEncomendas = numEncomendasNormais + numEncomendasRelampago;
-
-    Encomenda *encomenda[totalDeEncomendas];
-
-	encomenda[0] = new EncomendaNormal(5,12,cliente[0],cliente[1]);
-	encomenda[1] = new EncomendaNormal(10,12,cliente[1],cliente[2]);
-	encomenda[2] = new EncomendaNormal(7,12,cliente[2],cliente[3]);
-	encomenda[3] = new EncomendaNormal(2,12,cliente[3],cliente[4]);
-	encomenda[4] = new EncomendaNormal(3,12,cliente[4],cliente[5]);
-	encomenda[5] = new EncomendaRelampago(13,18,cliente[5],cliente[6]);
-	encomenda[6] = new EncomendaRelampago(6,18,cliente[6],cliente[7]);
-	encomenda[7] = new EncomendaRelampago(8,18,cliente[7],cliente[0]);
+	encomendaNormal[0] = new EncomendaNormal(5,12,cliente[0],cliente[1]);
+	encomendaNormal[1] = new EncomendaNormal(10,12,cliente[1],cliente[2]);
+	encomendaNormal[2] = new EncomendaNormal(7,12,cliente[2],cliente[3]);
+	encomendaNormal[3] = new EncomendaNormal(2,12,cliente[3],cliente[4]);
+	encomendaNormal[4] = new EncomendaNormal(3,12,cliente[4],cliente[5]);
+	encomendaRelampago[0] = new EncomendaRelampago(13,18,cliente[5],cliente[6]);
+	encomendaRelampago[1] = new EncomendaRelampago(6,18,cliente[6],cliente[7]);
+	encomendaRelampago[2] = new EncomendaRelampago(8,18,cliente[7],cliente[0]);
 
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custoTotalEncomendasNormais = 0;
 	double custoTotalEncomendasRelampago = 0;
 
-    for (int i = 0; i < totalDeEncomendas; i++) {
-        encomenda[i]->calculaCustoTotal();
-        encomenda[i]->imprimeDados();
-        custoTotalEncomendasNormais += encomenda[i]->calculaCustoTotal();
-        std::cout << endl;
+    for (int i = 0; i < NUM_ENCOMENDAS_NORMAIS; i++) {
+        encomendaNormal[i]->calculaCustoTotal();
+        encomendaNormal[i]->imprimeDados();
+        custoTotalEncomendasNormais += encomendaNormal[i]->calculaCustoTotal();
+        std::cout << std::endl;
+    }
+
+    for (int i = 0; i < NUM_ENCOMENDAS_RELAMPAGO; i++) {
+        encomendaRelampago[i]->calculaCustoTotal();
+        encomendaRelampago[i]->imprimeDados();
+        custoTotalEncomendasRelampago += encomendaRelampago[i]->calculaCustoTotal();
+        std::cout << std::endl;
     }
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << numEncomendasNormais
+		 << "\nQuantidade: " << NUM_ENCOMENDAS_NORMAIS
 		 << "\nValor Total: " << custoTotalEncomendasNormais
-		 << endl
+		 << std::endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << numEncomendasRelampago
+		 << "\nQuantidade: " << NUM_ENCOMENDAS_RELAMPAGO
 		 << "\nValor Total: " << custoTotalEncomendasRelampago
-		 << endl;
+		 << std::endl;
 
-    for (int i = 0; i < totalDeEncomendas; i++) {
+    for (int i = 0; i < NUM_CLIENTES; i++) {
         delete cliente[i];
-        delete encomenda[i];
+    }
+    
+    for (int i = 0; i < NUM_ENCOMENDAS_NORMAIS; i++) {
+        delete encomendaNormal[i];
+    }
+
+    for (int i = 0; i < NUM_ENCOMENDAS_RELAMPAGO; i++) {
+        delete encomendaRelampago[i];
     }
 }

@@ -11,7 +11,9 @@ class EncomendaNormal: public Encomenda {
         EncomendaNormal(double peso, double custoPorKg, Cliente *remetente, Cliente *destinatario):
             Encomenda(peso, custoPorKg, remetente, destinatario) {}
 
-
+        // Complementa a função imprimeDados()
+        // da superclasse adicionando os dados
+        // de peso e custo da encomenda
         void imprimeDados() override  {
 
             Encomenda::imprimeDados();

@@ -9,9 +9,13 @@ class EncomendaRelampago: public Encomenda {
 	public:
 
         EncomendaRelampago(double peso, double custoPorKg, Cliente *remetente, Cliente *destinatario):
-            Encomenda(peso, custoPorKg, remetente, destinatario) {}
+            Encomenda(peso, custoPorKg, remetente, destinatario) {
+            this->taxaAdicional = 0.25;
+            }
 
-
+        // Complementa a função imprimeDados()
+        // da superclasse adicionando os dados
+        // de peso, taxa e custo da encomenda
 		void imprimeDados() override {
 
 			Encomenda::imprimeDados();
@@ -21,10 +25,6 @@ class EncomendaRelampago: public Encomenda {
 				<< "  Taxa adicional: " << taxaAdicional << std::endl
 				<< "  Custo total: " << custoTotal << std::endl;
 		}
-
-    private:
-
-        double taxaAdicional = 0.25;
 };
 
 #endif
