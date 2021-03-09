@@ -2,6 +2,11 @@
 #include <string>
 #include "Cliente.hpp"
 
+
+Cliente::Cliente(std::string nomex, std::string enderecox, std::string cidadex,
+                 std::string estadox, std::string cepx): nome(nomex), endereco(enderecox), cidade(cidadex), estado(estadox), cep(cepx){}
+
+
 void Cliente::print(){
 
 	std::cout << "  Nome: " << nome << endl

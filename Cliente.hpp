@@ -14,6 +14,9 @@ class Cliente{
 		std::string cep;
     
     public:
+        Cliente(std::string nomex, std::string enderecox, std::string cidadex,
+            std::string estadox, std::string cepx);
+    
 		void print(); // imprime na tela os dados de um cliente cadastrado
         void getNome();
         void setNome(std::string n);
