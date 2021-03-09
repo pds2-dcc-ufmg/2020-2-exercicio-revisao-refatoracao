@@ -27,6 +27,7 @@ class Encomenda {
 		Cliente getDest();
 			
 		void print();
+		virtual double calcula();
 	
 	private:
 		double _peso = 0.0;
