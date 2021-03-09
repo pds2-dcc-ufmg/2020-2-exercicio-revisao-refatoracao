@@ -67,59 +67,59 @@ int main(){
 	int quantR = 0;
 
 	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
+	enc0.setPeso(5);
+	enc0.setCustoKg(12);
+	enc0.setRemetente(cli0);
+	enc0.setDest(cli1);
 	quantN++;
 
 	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
+	enc1.setPeso(10);
+	enc1.setCustoKg(12);
+	enc1.setRemetente(cli1);
+	enc1.setDest(cli2);
 	quantN++;
 
 	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
+	enc2.setPeso(7);
+	enc2.setCustoKg(12);
+	enc2.setRemetente(cli2);
+	enc2.setDest(cli3;)
 	quantN++;
 
 	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
+	enc3.setPeso(2);
+	enc3.setCustoKg(12);
+	enc3.setRemetente(cli3);
+	enc3.setDest(cli4);
 	quantN++;
 
 	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
+	enc4.setPeso(3);
+	enc4.setCustoKg(12);
+	enc4.setRemetente(cli4);
+	enc4.setDest(cli5);
 	quantN++;
 
 	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
+	enc5.setPeso(13);
+	enc5.setCustoKg(18);
+	enc5.setRemetente(cli5);
+	enc5.setDest(cli6);
 	quantR++;
 
 	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
+	enc6.setPeso(6);
+	enc6.setCustoKg(18);
+	enc6.setRemetente(cli6);
+	enc6.setDest(cli7);
 	quantR++;
 
 	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
+	enc7.setPeso(8);
+	enc7.setCustoKg(18);
+	enc7.setRemetente(cli7);
+	enc7.setDest(cli0);
 	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
@@ -127,44 +127,44 @@ int main(){
 	double custN = 0;
 	double custR = 0;
 
-	enc0.calcula();
+	enc0.getCustoTotal(getTaxa());
 	enc0.print();
-	custN += enc0.calcula();
+	custN += enc0.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc1.calcula();
+	enc1.getCustoTotal(getTaxa());
 	enc1.print();
-	custN += enc1.calcula();
+	custN += enc1.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc2.calcula();
+	enc2.getCustoTotal(getTaxa());
 	enc2.print();
-	custN += enc2.calcula();
+	custN += enc2.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc3.calcula();
+	enc3.getCustoTotal(getTaxa());
 	enc3.print();
-	custN += enc3.calcula();
+	custN += enc3.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc4.calcula();
+	enc4.getCustoTotal(getTaxa());
 	enc4.print();
-	custN += enc4.calcula();
+	custN += enc4.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc5.calcula();
+	enc5.getCustoTotal(getTaxa());
 	enc5.print();
-	custR += enc5.calcula();
+	custR += enc5.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc6.calcula();
+	enc6.getCustoTotal(getTaxa());
 	enc6.print();
-	custR += enc6.calcula();
+	custR += enc6.getCustoTotal(getTaxa());
 	std::cout << endl;
 
-	enc7.calcula();
+	enc7.getCustoTotal(getTaxa());
 	enc7.print();
-	custR += enc7.calcula();
+	custR += enc7.getCustoTotal(getTaxa());
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
