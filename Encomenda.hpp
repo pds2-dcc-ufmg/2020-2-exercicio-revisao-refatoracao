@@ -14,7 +14,9 @@ class Encomenda{
 	
 	public:
 		Encomenda(double peso, double custo_kg, Cliente remetente, Cliente destinatario); // construtor para classe encomenda
-		void print(); // imprime na tela os dados de uma encomenda cadastrada
+		void print_parte_1(); // imprime na tela o remetente e o destinatário
+		virtual double calcula() {} // função abstrata para utilizar nas subclasses
+		virtual void print_parte_2() {} // // função abstrata para utilizar nas subclasses
 };
 
 #endif
