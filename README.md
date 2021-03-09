@@ -1,4 +1,4 @@
-# Exercício Pull Request
+# Análise das Soluções
 
 De modo geral busquei diminuir a repetição de informações e funções, facilitar a compreensão do programa e deixá-lo mais otimizado.
 
