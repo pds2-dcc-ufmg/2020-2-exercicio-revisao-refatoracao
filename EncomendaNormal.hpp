@@ -5,26 +5,33 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
+class EncomendaNormal: public Encomenda {
 
 	public:
+
+		EncomendaNormal(double weight, double costkg, Cliente sender, Cliente receiver) {
+
+			this->PESO = weight;
+			this->CUSTOkg = costkg;
+			this->remetente = sender;
+			this->dest = receiver;
+		}
 		
-	double calcula(){
+		double calcula() override {
 
-		double x = PESO * CUSTOkg;
+			this->custoTotal = PESO * CUSTOkg;
 
-		return x;
-	}
+			return this->custoTotal;
+		}
 
-	void print(){
+		void print() override {
 
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+			Encomenda::print();
+			std::cout << "[Encomenda Normal]" << endl;
+			std::cout << "  Peso: " << PESO << endl
+				<< "  Custo por kg: " << CUSTOkg << endl
+				<< "  Custo total: " << custoTotal << endl;
+		}
 
 };
 
