@@ -6,7 +6,7 @@
 using namespace std;
 
 int main(){
-	
+	//Cadastro dos clientes.
 	Cliente cli0;
 	cli0.NOME = "Thales";
 	cli0.endereco = "Rua dos Pré-Socráticos";
@@ -65,7 +65,8 @@ int main(){
 
 	int quantN = 0;
 	int quantR = 0;
-
+        
+	//Cadastro das encomendas.
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
 	enc0.CUSTOkg = 12;
