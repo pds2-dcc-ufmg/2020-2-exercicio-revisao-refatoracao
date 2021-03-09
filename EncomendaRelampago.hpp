@@ -4,17 +4,15 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 
-
-
 class EncomendaRelampago: public Encomenda{
-	
-	const double _taxa = 0.25;
+
+		const double _taxa = 0.25;
 
 	public:
 
 		double calcula(); //Calcula o custo total de uma Encomenda Relampago.
 		void print(); //Imprime o mesmo que Encomenda mais os dados de peso e custo referentes a Encomenda Relampago.
-	
+
 };
 
 #endif
