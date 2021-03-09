@@ -23,11 +23,11 @@ class Encomenda
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
 		}
-		void set_PESO(double peso)
+		void set_PESO(double peso)//seta o peso da encomenda
 		{
 			PESO = peso;
 		}
-		 void set_CUSTOkg(double custoKg)
+		 void set_CUSTOkg(double custoKg)//seta o custo por kilo da encomenda
                 {
                 	CUSTOkg = custoKg;
                 }
@@ -35,6 +35,16 @@ class Encomenda
                 {
 	                T = t;
                 }
+		void set_remetente(Cliente Remetente)//seta o remetente da encomenda
+		{
+			remetente = Remetente;
+
+		}
+		void set_dest(Cliente Dest)
+		{
+			dest = Dest;
+
+		}
 
 };
 

@@ -70,57 +70,57 @@ int main()
 	EncomendaNormal enc0;
 	enc0.set_PESO(5);
 	enc0.set_CUSTOkg(12);
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
+	enc0.set_remetente(cli0);
+	enc0.set_dest(cli1);
 	quantN++;
 
 	EncomendaNormal enc1;
 	enc1.set_PESO(10);
 	enc1.set_CUSTOkg(12);
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
+	enc1.set_remetente(cli1);
+	enc1.set_dest(cli2);
 	quantN++;
 
 	EncomendaNormal enc2;
 	enc2.set_PESO(7);
 	enc2.set_CUSTOkg(12);
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
+	enc2.set_remetente(cli2);
+	enc2.set_dest(cli3);
 	quantN++;
 
 	EncomendaNormal enc3;
 	enc3.set_PESO(2);
 	enc3.set_CUSTOkg(12);
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
+	enc3.set_remetente(cli3);
+	enc3.set_dest(cli4);
 	quantN++;
 
 	EncomendaNormal enc4;
 	enc4.set_PESO(3);
 	enc4.set_CUSTOkg(12);
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
+	enc4.set_remetente(cli4);
+	enc4.set_dest(cli5);
 	quantN++;
 
 	EncomendaRelampago enc5;
 	enc5.set_PESO(13);
 	enc5.set_CUSTOkg(18);
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
+	enc5.set_remetente(cli5);
+	enc5.set_dest(cli6);
 	quantR++;
 
 	EncomendaRelampago enc6;
 	enc6.set_PESO(6);
 	enc6.set_CUSTOkg(18);
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
+	enc6.set_remetente(cli6);
+	enc6.set_dest(cli7);
 	quantR++;
 
 	EncomendaRelampago enc7;
 	enc7.set_PESO(8);
 	enc7.set_CUSTOkg(18);
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
+	enc7.set_remetente(cli7);
+	enc7.set_dest(cli0);
 	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
