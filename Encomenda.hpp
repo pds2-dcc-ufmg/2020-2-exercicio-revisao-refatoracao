@@ -25,7 +25,7 @@ class Encomenda{
 		}
 
 		// Impressão dos atributos da classe
-		void print()
+		void print() 
 		{
 			std::cout << "[Remetente]" << endl;
 			REMET.print();
@@ -37,6 +37,17 @@ class Encomenda{
 		double calcula()
 		{
 			return PESO * CUSTOkg * (1 + this->TAXA);
+		}
+
+		virtual void print_data() = 0;
+
+		// Formatação da impressão final e cálculo do custo total
+		double metodo()
+		{
+			this->print();
+			this->print_data();
+			std::cout << endl;
+			return this->calcula();
 		}
 
 	private:

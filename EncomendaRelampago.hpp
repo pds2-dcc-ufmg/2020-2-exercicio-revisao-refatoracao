@@ -10,9 +10,9 @@ class EncomendaRelampago: public Encomenda{
 	public:
 
 		// Impressão dos atributos da classe EncomendaRelampago
-		void print()
+		void print_data() override
 		{
-			Encomenda::print();
+			//Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
@@ -24,14 +24,6 @@ class EncomendaRelampago: public Encomenda{
 		EncomendaRelampago(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
 			this->TAXA = 0.25;
-		}
-
-		// Formatação para impressão final e cálculo do custo total
-		double metodo() 
-		{
-			this->print();
-			std::cout << endl;
-			return this->calcula();
 		}
 };
 
