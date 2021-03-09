@@ -9,14 +9,14 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
-	double calculaPreco(){
+	double calculaPreco(){//Função para calcular o valor da encomenda.
 
 		double PRECO = PESO * CUSTOkg;
 
 		return PRECO;
 	}
 
-	void print(){
+	void print(){//Para imprimir os dados da encomenda.
 
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
