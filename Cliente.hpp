@@ -7,28 +7,28 @@ using namespace std;
 class Cliente{
 	
 	private:
-		string NOME;
+		string nome;
 		string endereco;
-		string CIDADE;
-		string ESTADO;
+		string cidade;
+		string estado;
 		string cep;
 
 	public:
 
 		string getNome();
-		void setNome(string nome);
+		void setNome(string new_nome);
 	
 		string getEndereco();
-		void setEndereco(string endereco);
+		void setEndereco(string new_endereco);
 	
 		string getCidade();
-		void setCidade(string cidade);
+		void setCidade(string new_cidade);
 		
 		string getEstado();
-		void setEstado(string estado);
+		void setEstado(string new_estado);
 	
 		string getCep();
-		void setCep(string cep);
+		void setCep(string new_cep);
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
 		
