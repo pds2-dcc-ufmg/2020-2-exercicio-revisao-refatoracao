@@ -8,11 +8,11 @@ class Cliente{
 
 	public:
 
-		string NOME;
-		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
+		string _nome;
+		string _endereco;
+		string _cidade;
+		string _estado;
+		string _cep;
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
 		
