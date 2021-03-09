@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Encomenda.hpp"
 
-void Encomenda::imprimeEncomenda(){
+void Encomenda::imprimirEncomenda(){
     std::cout << "[Remetente]" << std::endl;
 	this->_remetente.imprimirDadosCliente();
 	std::cout << "[Destinatário]" << std::endl;
