@@ -6,28 +6,30 @@
 using namespace std;
 
 class EncomendaRelampago: public Encomenda{
-
 	public:
+	//taxa da encomenda:
+        static constexpr double TAXA = 0.25;
+	
+	//Construtor e destrutor:
+	EncomendaRelampago(Cliente c1, Cliente c2, double _peso, double _custo) : Encomenda(c1,c2,_peso,_custo) {};
+        ~EncomendaRelampago() {};
 
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+        //Função sobrescrita para imprimir:
+	void print() override {
+		Encomenda::print();
+		std::cout << "[Encomenda Relâmpago]" << endl;
+		std::cout << "  Peso: " << Encomenda::getPeso() << endl
+		<< "  Custo por kg: " << Encomenda::getCustoKg() << endl
+		<< "  Taxa adicional: " << TAXA << endl
+		<< "  Custo total: " << Encomenda::getTotal() << endl;
+	}
+	//Valor da encomenda com a taxa:
+	double calcula() override {
+		double x = Encomenda::getPeso() * Encomenda::getCustoKg();
+		x += x * TAXA;
+		return x;
+	}
 };
+
 
 #endif

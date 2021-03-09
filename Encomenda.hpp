@@ -4,24 +4,47 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class Encomenda{
-
+class Encomenda {
 	public:
+	//Construtores e destrutor:
+	Encomenda(Cliente _remetente, Cliente _dest,double _peso = 0, double _custoKg = 0) :
+		peso(_peso),
+	        custoKg(_custoKg),
+	        total(0),
+	        remetente(_remetente),
+	        dest(_dest)
+	        {};
+        Encomenda() {};
+        virtual ~Encomenda() {};
+	
+	//Getters:
+	double getPeso();
+	double getCustoKg();
+	double getTotal();
+        Cliente getRemetente();
+	Cliente getDest();
+	
+	//Setters:
+	void setPeso(double peso);
+	void setCustoKg(double custo);
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+	//Imprimir dados:
+        virtual void print() {
+		std::cout << "[Remetente]" << endl;
+		remetente.print();
+		std::cout << "[Destinatário]" << endl;
+		dest.print();
+        }
+	//Calcula o valor da encomenda:
+	virtual double calcula() = 0;
+	
+	private:
+	//Atributos:
+	double peso;
+	double custoKg;
+	double total;
+	Cliente remetente;
+	Cliente dest;	
 };
 
 #endif
