@@ -67,59 +67,59 @@ int main(){
 	int quantidadeRelampago = 0;
 
 	EncomendaNormal primeiraEncomenda;
-	primeiraEncomenda.PESO = 5;
-	primeiraEncomenda.CUSTOkg = 12;
+	primeiraEncomenda.peso = 5;
+	primeiraEncomenda.custoKg = 12;
 	primeiraEncomenda.remetente = primeiroCliente;
-	primeiraEncomenda.dest = segundoCliente;
+	primeiraEncomenda.destinatario = segundoCliente;
 	quantidadeNormal++;
 
 	EncomendaNormal segundaEncomenda;
-	segundaEncomenda.PESO = 10;
-	segundaEncomenda.CUSTOkg = 12;
+	segundaEncomenda.peso = 10;
+	segundaEncomenda.custoKg = 12;
 	segundaEncomenda.remetente = segundoCliente;
-	segundaEncomenda.dest = terceiroCliente;
+	segundaEncomenda.destinatario = terceiroCliente;
 	quantidadeNormal++;
 
 	EncomendaNormal terceiraEncomenda;
-	terceiraEncomenda.PESO = 7;
-	terceiraEncomenda.CUSTOkg = 12;
+	terceiraEncomenda.peso = 7;
+	terceiraEncomenda.custoKg = 12;
 	terceiraEncomenda.remetente = terceiroCliente;
-	terceiraEncomenda.dest = quartoCliente;
+	terceiraEncomenda.destinatario = quartoCliente;
 	quantidadeNormal++;
 
 	EncomendaNormal quartaEncomenda;
-	quartaEncomenda.PESO = 2;
-	quartaEncomenda.CUSTOkg = 12;
+	quartaEncomenda.peso = 2;
+	quartaEncomenda.custoKg = 12;
 	quartaEncomenda.remetente = quartoCliente;
-	quartaEncomenda.dest = quintoCliente;
+	quartaEncomenda.destinatario = quintoCliente;
 	quantidadeNormal++;
 
 	EncomendaNormal quintaEncomenda;
-	quintaEncomenda.PESO = 3;
-	quintaEncomenda.CUSTOkg = 12;
+	quintaEncomenda.peso = 3;
+	quintaEncomenda.custoKg = 12;
 	quintaEncomenda.remetente = quintoCliente;
-	quintaEncomenda.dest = sextoCliente;
+	quintaEncomenda.destinatario = sextoCliente;
 	quantidadeNormal++;
 
 	EncomendaRelampago sextaEncomenda;
-	sextaEncomenda.PESO = 13;
-	sextaEncomenda.CUSTOkg = 18;
+	sextaEncomenda.peso = 13;
+	sextaEncomenda.custoKg = 18;
 	sextaEncomenda.remetente = sextoCliente;
-	sextaEncomenda.dest = setimoCliente;
+	sextaEncomenda.destinatario = setimoCliente;
 	quantidadeRelampago++;
 
 	EncomendaRelampago setimaEncomenda;
-	setimaEncomenda.PESO = 6;
-	setimaEncomenda.CUSTOkg = 18;
+	setimaEncomenda.peso = 6;
+	setimaEncomenda.custoKg = 18;
 	setimaEncomenda.remetente = setimoCliente;
-	setimaEncomenda.dest = oitavoCliente;
+	setimaEncomenda.destinatario = oitavoCliente;
 	quantidadeRelampago++;
 
 	EncomendaRelampago oitavaEncomenda;
-	oitavaEncomenda.PESO = 8;
-	oitavaEncomenda.CUSTOkg = 18;
+	oitavaEncomenda.peso = 8;
+	oitavaEncomenda.custoKg = 18;
 	oitavaEncomenda.remetente = oitavoCliente;
-	oitavaEncomenda.dest = primeiroCliente;
+	oitavaEncomenda.destinatario = primeiroCliente;
 	quantidadeRelampago++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
