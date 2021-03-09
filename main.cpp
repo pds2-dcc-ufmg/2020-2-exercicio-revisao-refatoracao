@@ -61,7 +61,7 @@ int main(){
 	
 	for (int j = 0; j < encomendasR.size(); j++) {
 		encomendasR[j].calcula();
-		custo_encomendasR += encomendasR[j]._custo_total();
+		custo_encomendasR += encomendasR[j]._custo_total;
 		encomendasR[j].print();
 		std::cout << endl;
 	}
