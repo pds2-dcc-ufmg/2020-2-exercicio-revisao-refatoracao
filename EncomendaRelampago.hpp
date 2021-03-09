@@ -5,19 +5,27 @@
 #include "Cliente.hpp"
 using namespace std;
 
+#define PRICE_INCREASE_RELAMPAGO 0.25
+
 class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
+		EncomendaRelampago(double weight, double cost_per_kg, Cliente sender,  Cliente recipient): 	Encomenda(weight, cost_per_kg, sender, recipient){}
+
+		int getClassType() override{
+			return 2;
+		}
+
+		double calcula() override{
 
 			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+			x += x * PRICE_INCREASE_RELAMPAGO;
 			
 			return x;
 		}
 
-		void print(){
+		void print() override{
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
