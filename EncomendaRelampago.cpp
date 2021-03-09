@@ -4,7 +4,7 @@
 
 double EncomendaRelampago::calcula(){
 
-			double x = _peso * _custoKg;
+			double x = Encomenda::calcula();
 			x += x * 0.25;
 			
 			return x;
