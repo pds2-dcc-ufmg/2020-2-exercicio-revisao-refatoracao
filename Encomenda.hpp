@@ -23,8 +23,8 @@ class Encomenda {
 		double getPeso();
 		double getCustoKg();
 		double getTotal();
-		double getRemet();
-		double getDest();
+		Cliente getRemet();
+		Cliente getDest();
 			
 		void print();
 	
