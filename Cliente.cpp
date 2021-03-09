@@ -15,5 +15,4 @@ void Cliente::print(){
 		 << "  Cidade: " << CIDADE << endl
 		 << "  Estado: " << ESTADO << endl
 		 << "  CEP: " << cep << endl;
-
 }
