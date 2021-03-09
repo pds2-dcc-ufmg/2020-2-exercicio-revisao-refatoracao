@@ -7,7 +7,7 @@ using namespace std;
 
 class EncomendaRelampago: public Encomenda {
 	private:
-		double taxaAdicional = 0.25;
+		double taxaAdicional = 1.25;
 
 	public:
 		double calcula() {
