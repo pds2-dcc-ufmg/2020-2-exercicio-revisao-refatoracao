@@ -5,15 +5,17 @@
 using namespace std;
 
 class Encomenda{
-
-	public:
-
+	
+	private:
+	
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
 		double T = 0.0;
 		Cliente remetente;
 		Cliente dest;
-			
+
+	public:
+
 		void print(){
 
 			std::cout << "[Remetente]" << endl;
@@ -22,6 +24,12 @@ class Encomenda{
 			dest.print();
 		}
 
+		double calcula(){
+
+			double x = PESO * CUSTOkg;
+
+			return x;
+		}
 };
 
 #endif
