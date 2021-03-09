@@ -4,13 +4,6 @@
 #include <string>
 
 class Cliente {
-	private:
-		std::string _nome;
-		std::string _endereco;
-		std::string _cidade;
-		std::string _estado;
-		std::string _cep;
-		
 	public:
 		Cliente(std::string nome, std::string endereco, std::string cidade, std::string estado, std::string cep) {
 			this->_nome = nome;
@@ -34,6 +27,13 @@ class Cliente {
 		std::string getCep();
 	
 		void print(); // imprime na tela os dados de um cliente cadastrado
+	
+	private:
+		std::string _nome;
+		std::string _endereco;
+		std::string _cidade;
+		std::string _estado;
+		std::string _cep;
 };
 
 #endif
