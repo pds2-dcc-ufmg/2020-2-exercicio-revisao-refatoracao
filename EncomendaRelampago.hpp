@@ -3,7 +3,6 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 const double kTaxaAdicional = 0.25;
 
 class EncomendaRelampago: public Encomenda{
