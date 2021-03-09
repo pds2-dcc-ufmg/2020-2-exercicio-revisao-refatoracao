@@ -10,6 +10,7 @@ class EncomendaRelampago: public Encomenda{
     int TAXARELAMPAGO = 0.25;
     
 	public:
+        EncomendaRelampago(double p, double c, Cliente r, Cliente d);
         double calcula() override;
         void print() override;
     

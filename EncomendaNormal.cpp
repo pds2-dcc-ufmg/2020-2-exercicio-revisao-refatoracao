@@ -6,19 +6,21 @@
 #include "EncomendaNormal.hpp"
 
 
+EncomendaNormal::EncomendaNormal(double p, double c, Cliente r, Cliente d): peso(p), custoKg(c),                                            remetente(r), dest(d){}
+
 void print() override{
 
     Encomenda::print();
     std::cout << "[Encomenda Normal]" << endl;
-    std::cout << "  Peso: " << PESO << endl
-        << "  Custo por kg: " << CUSTOkg << endl
-        << "  Custo total: " << T << endl;
+    std::cout << "  Peso: " << peso << endl
+        << "  Custo por kg: " << custoKg << endl
+        << "  Custo total: " << t << endl;
 
 }
 
 double calcula() override{
 
-    double x = PESO * CUSTOkg;
+    double x = peso * custoKg;
 
     return x;
 }

@@ -10,5 +10,6 @@ class EncomendaNormal: public Encomenda{
 	public:
         double calcula() override;
         void print() override;
+        EncomendaNormal(double p, double c, Cliente r, Cliente d);
 
 #endif
