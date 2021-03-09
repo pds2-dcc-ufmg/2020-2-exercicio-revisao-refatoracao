@@ -9,7 +9,7 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calculaPreco(){
+		double calculaPreco(){//Função que calcula o preço da encomenda.
 
 			double PRECO = PESO * CUSTOkg;
 			PRECO += PRECO * 0.25;
@@ -17,7 +17,7 @@ class EncomendaRelampago: public Encomenda{
 			return PRECO;
 		}
 
-		void print(){
+		void print(){//Função para imprimir os dados da encomenda feita.
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
