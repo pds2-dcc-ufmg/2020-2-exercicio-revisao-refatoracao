@@ -8,172 +8,172 @@ using namespace std;
 int main(){
 	
 	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	cli0._nome = "Thales";
+	cli0._endereco = "Rua dos Pré-Socráticos";
+	cli0._cidade = "Miletus";
+	cli0._estado = "Ionia";
+	cli0._cep = "548 a.C.";
 
 	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	cli1._nome = "Aristóteles";
+	cli1._endereco = "Avenida do Meio-Termo";
+	cli1._cidade = "Atenas";
+	cli1._estado = "Ática";
+	cli1._cep = "384 a.C.";
 
 	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	cli2._nome = "Platão";
+	cli2._endereco = "Praça das Formas";
+	cli2._cidade = "Atenas";
+	cli2._estado = "Ática";
+	cli2._cep = "348 a.C";
 
 	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	cli3._nome = "Sócrates";
+	cli3._endereco = "Rua do Elenchus";
+	cli3._cidade = "Atenas";
+	cli3._estado = "Ática";
+	cli3._cep = "399 a.C.";
 
 	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	cli4._nome = "Pitágoras";
+	cli4._endereco = "Praça dos Quadrados dos Catetos";
+	cli4._cidade = "Samos";
+	cli4._estado = "Egeu";
+	cli4._cep = "571 a.C.";
 
 	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	cli5._nome = "Parmênides";
+	cli5._endereco = "Rua do Não Ser";
+	cli5._cidade = "Eleia";
+	cli5._estado = "Magna Grécia";
+	cli5._cep = "460 a.C.";
 
 	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	cli6._nome = "Empédocles";
+	cli6._endereco = "Rua dos Quatro Elementos";
+	cli6._cidade = "Agrigento";
+	cli6._estado = "Sicília";
+	cli6._cep = "495 a.C.";
 
 	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	cli7._nome = "Anaxágoras";
+	cli7._endereco = "Avenida da Mente Cósmica";
+	cli7._cidade = "Clazômenas";
+	cli7._estado = "Jónia";
+	cli7._cep = "499 a.C.";
 
-	int quantN = 0;
-	int quantR = 0;
+	int quantidadeNormal = 0;
+	int quantidadeRelampago = 0;
 
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
 	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+	enc0._remetente = cli0;
+	enc0._dest = cli1;
+	quantidadeNormal++;
 
 	EncomendaNormal enc1;
 	enc1.PESO = 10;
 	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+	enc1._remetente = cli1;
+	enc1._dest = cli2;
+	quantidadeNormal++;
 
 	EncomendaNormal enc2;
 	enc2.PESO = 7;
 	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+	enc2._remetente = cli2;
+	enc2._dest = cli3;
+	quantidadeNormal++;
 
 	EncomendaNormal enc3;
 	enc3.PESO = 2;
 	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+	enc3._remetente = cli3;
+	enc3._dest = cli4;
+	quantidadeNormal++;
 
 	EncomendaNormal enc4;
 	enc4.PESO = 3;
 	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+	enc4._remetente = cli4;
+	enc4._dest = cli5;
+	quantidadeNormal++;
 
 	EncomendaRelampago enc5;
 	enc5.PESO = 13;
 	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	enc5._remetente = cli5;
+	enc5._dest = cli6;
+	quantidadeRelampago++;
 
 	EncomendaRelampago enc6;
 	enc6.PESO = 6;
 	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+	enc6._remetente = cli6;
+	enc6._dest = cli7;
+	quantidadeRelampago++;
 
 	EncomendaRelampago enc7;
 	enc7.PESO = 8;
 	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
+	enc7._remetente = cli7;
+	enc7._dest = cli0;
+	quantidadeRelampago++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custoNormal = 0;
+	double custoRelampago = 0;
 
 	enc0.calcula();
 	enc0.print();
-	custN += enc0.calcula();
+	custoNormal += enc0.calcula();
 	std::cout << endl;
 
 	enc1.calcula();
 	enc1.print();
-	custN += enc1.calcula();
+	custoNormal += enc1.calcula();
 	std::cout << endl;
 
 	enc2.calcula();
 	enc2.print();
-	custN += enc2.calcula();
+	custoNormal += enc2.calcula();
 	std::cout << endl;
 
 	enc3.calcula();
 	enc3.print();
-	custN += enc3.calcula();
+	custoNormal += enc3.calcula();
 	std::cout << endl;
 
 	enc4.calcula();
 	enc4.print();
-	custN += enc4.calcula();
+	custoNormal += enc4.calcula();
 	std::cout << endl;
 
 	enc5.calcula();
 	enc5.print();
-	custR += enc5.calcula();
+	custoRelampago += enc5.calcula();
 	std::cout << endl;
 
 	enc6.calcula();
 	enc6.print();
-	custR += enc6.calcula();
+	custoRelampago += enc6.calcula();
 	std::cout << endl;
 
 	enc7.calcula();
 	enc7.print();
-	custR += enc7.calcula();
+	custoRelampago += enc7.calcula();
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
+		 << "\nQuantidade: " << quantidadeNormal
+		 << "\nValor Total: " << custoNormal
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
+		 << "\nQuantidade: " << quantidadeRelampago
+		 << "\nValor Total: " << custoRelampago
 		 << endl;
 	
 }
