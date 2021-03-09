@@ -8,8 +8,8 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula();
-		void print();
+		double calcula(); //Calcula o custo total de uma Encomenda Relampago.
+		void print(); //Imprime o mesmo que Encomenda mais os dados de peso e custo referentes a Encomenda Relampago.
 	
 };
 
