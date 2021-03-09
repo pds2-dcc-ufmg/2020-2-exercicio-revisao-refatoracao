@@ -4,6 +4,8 @@ De modo geral busquei diminuir a repetição de informações e funções, facil
 
 -> Em todos os casos utilizei as letras minúsculas para declaração das variáveis e o underline como primeiro carácter para se referir aos elementos da própria classe.
 
+Abaixo estão separadamente algumas mudanças que fiz em cada parte do código:
+
 **Cliente.cpp**
 
 -> Implementação da função construtora de cliente;
