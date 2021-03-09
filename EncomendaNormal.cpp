@@ -20,3 +20,5 @@ void EncomendaNormal::print(){
 int EncomendaNormal::getQntd(){
     return this->qntdNormal;
 }
+
+int EncomendaNormal::qntdNormal = 0;

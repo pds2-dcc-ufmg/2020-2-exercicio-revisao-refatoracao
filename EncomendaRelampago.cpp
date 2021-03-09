@@ -20,3 +20,5 @@ void EncomendaRelampago::print(){
 int EncomendaRelampago::getQntd(){
     return this->qntdRelampago;
 }
+
+int EncomendaRelampago::qntdRelampago= 0;

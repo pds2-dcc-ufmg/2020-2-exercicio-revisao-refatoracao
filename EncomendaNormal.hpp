@@ -24,6 +24,6 @@ class EncomendaNormal: public Encomenda{
 
 };
 
-int EncomendaNormal::qntdNormal = 0;
+
 
 #endif

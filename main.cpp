@@ -18,34 +18,25 @@ int main(){
 	Cliente cli6("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
 	Cliente cli7("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
 
-	int quantN = 0;
-	int quantR = 0;
+	
 
 	//encomenda normal
 	EncomendaNormal enc0(5,12,cli0,cli1);
-	quantN++;
 
 	EncomendaNormal enc1(10, 12, cli1, cli2);
-	quantN++;
 
 	EncomendaNormal enc2(7, 12, cli2, cli3);
-	quantN++;
 
 	EncomendaNormal enc3(2, 12, cli3, cli4);
-	quantN++;
 
 	EncomendaNormal enc4(3, 12, cli4, cli5);
-	quantN++;
 
 	//encomenda relampago
 	EncomendaRelampago enc5(13, 18, cli5, cli6);
-	quantR++;
 
 	EncomendaRelampago enc6(6, 18, cli6, cli7);
-	quantR++;
 
 	EncomendaRelampago enc7(8, 18, cli7, cli0);
-	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
@@ -93,11 +84,11 @@ int main(){
 	cout << endl;
 	
 	cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
+		 << "\nQuantidade: " << enc0.getQntd()
 		 << "\nValor Total: " << custN
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
+		 << "\nQuantidade: " << enc5.getQntd()
 		 << "\nValor Total: " << custR
 		 << endl;
 	
