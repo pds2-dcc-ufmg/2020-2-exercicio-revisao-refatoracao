@@ -12,7 +12,7 @@ class Encomenda{
 		
 		//Setters:
 		void setPeso(double peso);
-		void setCusto(double custo);
+		void setCustoKg(double custo);
 		
 		//Imprimir dados:
 		void print() override {
