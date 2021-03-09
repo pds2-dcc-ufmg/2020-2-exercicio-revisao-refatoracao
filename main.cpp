@@ -151,6 +151,7 @@ int main(){
 	TotalCustoRelampago += enc7.getCustoTotal();
 	std::cout << endl;
 	
+
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << QuantidadeEntregasNormal
 		 << "\nValor Total: " << TotalCustoNormal
