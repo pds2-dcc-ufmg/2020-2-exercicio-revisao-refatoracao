@@ -66,57 +66,57 @@ int main(){
 	int quantidadeRelampago = 0;
 
 	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
+	enc0._peso = 5;
+	enc0._custoKg = 12;
 	enc0._remetente = cli0;
 	enc0._dest = cli1;
 	quantidadeNormal++;
 
 	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
+	enc1._peso = 10;
+	enc1._custoKg = 12;
 	enc1._remetente = cli1;
 	enc1._dest = cli2;
 	quantidadeNormal++;
 
 	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
+	enc2._peso = 7;
+	enc2._custoKg = 12;
 	enc2._remetente = cli2;
 	enc2._dest = cli3;
 	quantidadeNormal++;
 
 	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
+	enc3._peso = 2;
+	enc3._custoKg = 12;
 	enc3._remetente = cli3;
 	enc3._dest = cli4;
 	quantidadeNormal++;
 
 	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
+	enc4._peso = 3;
+	enc4._custoKg = 12;
 	enc4._remetente = cli4;
 	enc4._dest = cli5;
 	quantidadeNormal++;
 
 	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
+	enc5._peso = 13;
+	enc5._custoKg = 18;
 	enc5._remetente = cli5;
 	enc5._dest = cli6;
 	quantidadeRelampago++;
 
 	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
+	enc6._peso = 6;
+	enc6._custoKg = 18;
 	enc6._remetente = cli6;
 	enc6._dest = cli7;
 	quantidadeRelampago++;
 
 	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
+	enc7._peso = 8;
+	enc7._custoKg = 18;
 	enc7._remetente = cli7;
 	enc7._dest = cli0;
 	quantidadeRelampago++;
