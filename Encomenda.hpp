@@ -2,26 +2,42 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
-using namespace std;
 
-class Encomenda{
+class Encomenda
+{
+protected:
+	double peso;
+	double custo;
+	double taxaAdicional;
+	Cliente remetente;
+	Cliente dest;
 
-	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+public:
+	Encomenda(){
+		peso = 0.0;
+		custo = 0.0;
+		taxaAdicional = 0.0;
+	}
+	Encomenda(double Peso, double Custo, Cliente Remetente,Cliente Destinatario){
+		this->peso = Peso;
+		this->custo = Custo;
+		this->remetente = Remetente;
+		this->dest = Destinatario;
+	}
+	Encomenda(double Peso, double Custo, double TaxaAdicional,Cliente Remetente,Cliente Destinatario){
+		this->peso = Peso;
+		this->custo = Custo;
+		this->taxaAdicional = TaxaAdicional;
+		this->remetente = Remetente;
+		this->dest = Destinatario;
+	}
+	void print()
+	{
+		std::cout << "[Remetente]" << std::endl;
+		remetente.print();
+		std::cout << "[Destinatário]" << std::endl;
+		dest.print();
+	}
 };
 
 #endif
