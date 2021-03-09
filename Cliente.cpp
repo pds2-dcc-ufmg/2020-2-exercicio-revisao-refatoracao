@@ -37,7 +37,7 @@ void Cliente::setCep(string new_cep) {
 	this->cep = new_cep;
 }
 
-void Cliente::print(){
+void Cliente::print() {
 
 	std::cout << "  Nome: " << this->nome << endl
 		 << "  Endereço: " << this->endereco << endl
