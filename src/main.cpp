@@ -23,7 +23,7 @@ int main() {
 	cliente[5] = new Cliente("Parmênides","Rua do Não Ser","Eleia","Magna Grécia","460 a.C.");
 	cliente[6] = new Cliente("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
 	cliente[7] = new Cliente("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
-
+	
     EncomendaNormal *encomendaNormal[NUM_ENCOMENDAS_NORMAIS];
     EncomendaRelampago *encomendaRelampago[NUM_ENCOMENDAS_RELAMPAGO];
 
@@ -63,6 +63,8 @@ int main() {
 		 << "\nQuantidade: " << NUM_ENCOMENDAS_RELAMPAGO
 		 << "\nValor Total: " << custoTotalEncomendasRelampago
 		 << std::endl;
+	
+	// Desalocação da memória reservada para os arrays de Clientes e Encomendas:
 
     for (int i = 0; i < NUM_CLIENTES; i++) {
         delete cliente[i];
