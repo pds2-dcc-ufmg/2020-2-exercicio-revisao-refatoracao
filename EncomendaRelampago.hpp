@@ -2,31 +2,38 @@
 #define EncomendaRelampago_H
 
 #include "Encomenda.hpp"
-#include "Cliente.hpp"
-using namespace std;
 
 class EncomendaRelampago: public Encomenda{
+	
+  	public:
 
-	public:
+		const double TAXA_ADICIONAL = 0.25;
+		
+		//Retorna o custo atualizado da encomenda com a taxa adicional
 
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		virtual double calcula() override {
+			double custoComTaxa = Encomenda::calcula();
+			custoComTaxa += custoComTaxa * TAXA_ADICIONAL;
+			return custoComTaxa;
 		}
 
-		void print(){
+		virtual void print() override{
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << this->peso << std::endl;
+			std::cout << "  Custo por kg: " << this->custoPorKg << std::endl;
+			std::cout << "  Taxa adicional: " << TAXA_ADICIONAL << std::endl;
+			std::cout << "  Custo total: " << this->custoTotal << std::endl;
 
 		}
+
+		EncomendaRelampago(double _peso,double _custoPorKg,Cliente _remetente,Cliente _destinatario){
+				this->peso = _peso;
+				this->custoPorKg = _custoPorKg;
+				this->remetente = _remetente;
+				this->destinatario = _destinatario;
+			}
 
 };
 

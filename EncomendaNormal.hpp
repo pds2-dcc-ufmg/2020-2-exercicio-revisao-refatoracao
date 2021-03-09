@@ -2,29 +2,26 @@
 #define EncomendaNormal_H
 
 #include "Encomenda.hpp"
-#include "Cliente.hpp"
-using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
-	public:
-		
-	double calcula(){
+  	public:
 
-		double x = PESO * CUSTOkg;
+		virtual void print() override{
+			Encomenda::print();
+			std::cout << "[Encomenda Normal]" << std::endl; 
+			std::cout << "  Peso: " << this->peso << std::endl;
+			std::cout << "  Custo por kg: " << this->custoPorKg << std::endl;
+			std::cout << "  Custo total: " << this->custoTotal << std::endl;
 
-		return x;
-	}
+		}
 
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+		EncomendaNormal(double _peso,double _custoPorKg,Cliente _remetente,Cliente _destinatario){
+				this->peso = _peso;
+				this->custoPorKg = _custoPorKg;
+				this->remetente = _remetente;
+				this->destinatario = _destinatario;
+			}
 
 };
 
