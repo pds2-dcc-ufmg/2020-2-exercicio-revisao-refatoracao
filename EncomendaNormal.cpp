@@ -10,14 +10,14 @@ double EncomendaNormal::calcula(){
   
 }
 
-void EncomendaNormal::print{
+void EncomendaNormal::print(){
 
 		Encomenda::print();
   
-		std::cout << "[Encomenda Normal]" << endl;
+		std::cout << "[Encomenda Normal]" << std::endl;
   
-		std::cout << "  Peso: " << _peso << endl
-			<< "  Custo por kg: " << _custoKg << endl
-			<< "  Custo total: " << _total << endl;
+		std::cout << "  Peso: " << _peso << std::endl
+			<< "  Custo por kg: " << _custoKg << std::endl
+			<< "  Custo total: " << _total << std::endl;
 
 }
