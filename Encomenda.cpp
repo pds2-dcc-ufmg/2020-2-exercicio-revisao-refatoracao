@@ -12,6 +12,10 @@ double Encomenda::getCustoKg() {
 	return custoKg;
 }
 
+double Encomenda::getTotal() {
+    return total;
+}
+
 Cliente Encomenda::getRemetente() {
     return remetente;
 }
