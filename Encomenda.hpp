@@ -2,7 +2,6 @@
 #define ENCOMENDA_H
 
 #include "Cliente.hpp"
-using namespace std;
 
 class Encomenda{
 	public:
