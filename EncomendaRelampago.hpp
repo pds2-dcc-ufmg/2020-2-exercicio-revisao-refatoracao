@@ -23,6 +23,12 @@ class EncomendaRelampago: public Encomenda{
 		<< "  Taxa adicional: " << TAXA << endl
 		<< "  Custo total: " << Encomenda::getTotal() << endl;
 	}
+	//Valor da encomenda com a taxa:
+	double calcula() override {
+		double x = Encomenda::getPeso() * Encomenda::getCustoKg();
+		x += x * TAXA;
+		return x;
+	}
 };
 
 
