@@ -58,7 +58,7 @@ int main(){
 			custN += Encomendas[i]->calcula(); //Adiciona o custo da normal.
 			quantN++; //Adiciona uma encomenda normal.
 		} else if (Encomendas[i]->gettype() == "Relampago") { //Se a encomenda e relampago.
-			custR += Encomendas[i]->calcula(); //Adiciona o custo da relampago
+			custR += Encomendas[i]->calcula(); //Adiciona o custo da relampago.
 			quantR++; //Adiciona uma encomenda relampago.
 		}
 	}
