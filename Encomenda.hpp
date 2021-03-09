@@ -7,21 +7,18 @@ using namespace std;
 class Encomenda{
 
 	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
+		double _weight;
+		double _costKg;
+		double _total;
+		Cliente _sender;
+		Cliente _recipient;
 			
-		void print(){
+		void print();
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		Encomenda(double weight, double costKg, Cliente sender, Cliente recipient);
+		Encomenda(); // construtor padrão
 
+		virtual double getTotal();
 };
 
 #endif

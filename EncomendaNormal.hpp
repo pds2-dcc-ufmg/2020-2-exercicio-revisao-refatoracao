@@ -9,23 +9,11 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
-	double calcula(){
+	void calcula();
 
-		double x = PESO * CUSTOkg;
+	void print();
 
-		return x;
-	}
-
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
-
+	EncomendaNormal(double weight, double costKg, Cliente sender, Cliente recipient);
 };
 
 #endif

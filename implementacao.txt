@@ -1,0 +1,33 @@
+nomenclatura, 
+formatação, 
+organização, 
+comentários, 
+aplicação correta dos conceitos de OO
+
+
+mover coisa repetida para superclasses (abstratas, as vezes
+
+usar doxygen nos arquivos .hpp das classes
+
+tab size de 4 para 2, em todos arquivos
+
+cliar arquivos .cpp para as tres classes
+	- ignorar makefiles se não compilar
+
+separar em pastas se der NÃO pau
+
+organizar construtores depois
+
+  EncomendaNormal* enc0 = new EncomendaNormal(5, 12, *cli0, *cli1)
+isso pode dar PAU!
+
+cria um vetor de encomendas na main para evitar repetição daquele jeito
+
+*** EXLUIR MAIN.EXE e ARQUIVOS TXT antes de dar PR ****
+
+------ IMPLEMENTAÇÃO ----
+1) main.cpp
+	- usar construtores para as classes
+	- corrigir indentação
+	- usar métodos GET e SET para acessar os métodos, nem tudo PUBLIC
+
