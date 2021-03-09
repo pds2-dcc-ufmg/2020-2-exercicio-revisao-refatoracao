@@ -5,7 +5,7 @@
 #include "Cliente.hpp"
 #include "EncomendaRelampago.hpp"
 
-void print override(){
+void print() override{
 
     Encomenda::print();
     std::cout << "[Encomenda Relâmpago]" << endl;
@@ -14,4 +14,12 @@ void print override(){
         << "  Taxa adicional: " << TAXARELAMPAGO << endl
         << "  Custo total: " << T << endl;
 
+}
+
+double calcula() override{
+
+    double x = PESO * CUSTOkg;
+    x += x * TAXARELAMPAGO;
+    
+    return x;
 }

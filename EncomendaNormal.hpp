@@ -8,14 +8,7 @@
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-        double calcula(){
-
-            double x = PESO * CUSTOkg;
-
-            return x;
-        }
-
-        void print override();
+        double calcula() override;
+        void print() override;
 
 #endif

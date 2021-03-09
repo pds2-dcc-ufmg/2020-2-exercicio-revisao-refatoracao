@@ -17,6 +17,7 @@ class Encomenda{
 		Cliente dest;
 			
         virtual void print();
+        virtual double calcula();
             
         void getPeso();
         void setPeso(double p);

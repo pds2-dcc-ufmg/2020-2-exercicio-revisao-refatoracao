@@ -10,16 +10,8 @@ class EncomendaRelampago: public Encomenda{
     int TAXARELAMPAGO = 0.25;
     
 	public:
-
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * TAXARELAMPAGO;
-			
-			return x;
-		}
-
-        void print override();
+        double calcula() override;
+        void print() override;
     
 };
 
