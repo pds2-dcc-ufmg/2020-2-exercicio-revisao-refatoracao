@@ -127,44 +127,44 @@ int main(){
 	double custN = 0;
 	double custR = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
+	enc0.calculaPreco();
+	enc0.printInfo();
+	custN += enc0.calculaPreco();
 	std::cout << endl;
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
+	enc1.calculaPreco();
+	enc1.printInfo();
+	custN += enc1.calculaPreco();
 	std::cout << endl;
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
+	enc2.calculaPreco();
+	enc2.printInfo();
+	custN += enc2.calculaPreco();
 	std::cout << endl;
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
+	enc3.calculaPreco();
+	enc3.printInfo();
+	custN += enc3.calculaPreco();
 	std::cout << endl;
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
+	enc4.calculaPreco();
+	enc4.printInfo();
+	custN += enc4.calculaPreco();
 	std::cout << endl;
 
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
+	enc5.calculaPreco();
+	enc5.printInfo();
+	custR += enc5.calculaPreco();
 	std::cout << endl;
 
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
+	enc6.calculaPreco();
+	enc6.printInfo();
+	custR += enc6.calculaPreco();
 	std::cout << endl;
 
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
+	enc7.calculaPreco();
+	enc7.printInfo();
+	custR += enc7.calculaPreco();
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 

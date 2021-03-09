@@ -20,6 +20,7 @@ class Encomenda{
 			remetente.printInfo();
 			std::cout << "[Destinatário]" << endl;
 			dest.printInfo();
+
 		}
 
 };
