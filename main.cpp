@@ -59,8 +59,8 @@ int main()
 
 	// Criação de vetores com as informações das encomendas
 	vector<double> peso_normal = {5, 10, 7, 2, 3};
-	vector<double> peso_relam = {13, 6, 8};
-	double custo_normal = 12, custo_relam = 18;
+	vector<double> peso_relamp = {13, 6, 8};
+	double custo_normal = 12, custo_relamp = 18;
 
 	// Criação e inicialização do vetor de encomendas normais
 	vector<EncomendaNormal> encomendas_normais;
@@ -70,35 +70,35 @@ int main()
 	}
 
 	// Criação e inicialização do vetor de encomendas relâmpago
-	vector<EncomendaRelampago> encomendas_relam;
+	vector<EncomendaRelampago> encomendas_relamp;
 	for (int i = 0; i < NUM_RELAMP-1; i++)
 	{
-		encomendas_relam.push_back(EncomendaRelampago(peso_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
+		encomendas_relamp.push_back(EncomendaRelampago(peso_relamp[i], custo_relamp, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
 	}
-	encomendas_relam.push_back(EncomendaRelampago(peso_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
+	encomendas_relamp.push_back(EncomendaRelampago(peso_relamp[NUM_RELAMP-1], custo_relamp, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
 	
 	// Impressão das informações das encomendas e dos respectivos clientes envolvidos
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0; // Custo total das encomendas normais
-	double custR = 0; // Custo total das encomendas relâmpago
+	double custo_total_normal = 0; // Custo total das encomendas normais
+	double custo_total_relam = 0; // Custo total das encomendas relâmpago
 
 	for (auto & enc : encomendas_normais)
 	{
-		custN += enc.metodo();
+		custo_total_normal += enc.metodo();
 	}
 
-	for (auto & enc: encomendas_relam)
+	for (auto & enc: encomendas_relamp)
 	{
-		custR += enc.metodo();
+		custo_total_relam += enc.metodo();
 	}
-	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << NUM_NORMAIS
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << NUM_RELAMP
-		 << "\nValor Total: " << custR
-		 << endl;
+
+	std::cout << "\n>> Encomendas Normais <<"
+			  << "\nQuantidade: " << NUM_NORMAIS
+			  << "\nValor Total: " << custo_total_normal
+			  << endl
+			  << "\n>> Encomendas Relâmpago <<"
+			  << "\nQuantidade: " << NUM_RELAMP
+			  << "\nValor Total: " << custo_total_relam
+			  << endl;
 }

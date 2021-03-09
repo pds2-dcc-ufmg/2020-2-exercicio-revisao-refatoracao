@@ -8,7 +8,7 @@ class Encomenda{
 
 	public:
 
-		// atributos da classe Encomenda
+		// Atributos da classe Encomenda
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
 		double TOTAL = 0.0;
