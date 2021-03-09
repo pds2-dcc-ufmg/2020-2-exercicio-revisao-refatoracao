@@ -7,14 +7,13 @@ class Encomenda {
 
 	public:
 
-        Encomenda(double peso, double custoEmKg, Cliente *remetente, Cliente *destinatario);
+        Encomenda(double peso, double custoPorKg, Cliente *remetente, Cliente *destinatario);
 
         virtual double calculaCustoTotal();
 
-		void imprimeDados();
+		virtual void imprimeDados();
 
         virtual ~Encomenda() {}
-
 
     protected:
 
@@ -22,8 +21,10 @@ class Encomenda {
 		Cliente *destinatario;
 			
 		double peso = 0.0;
-		double custoEmKg = 0.0;
+		double custoPorKg = 0.0;
 		double custoTotal = 0.0;
+
+        double taxaAdicional = 0;
 };
 
 #endif

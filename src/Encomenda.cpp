@@ -2,18 +2,19 @@
 
 #include <iostream>
 
-Encomenda::Encomenda(double peso, double custoEmKg, Cliente *remetente, Cliente *destinatario) {
+Encomenda::Encomenda(double peso, double custoPorKg, Cliente *remetente, Cliente *destinatario) {
 
     this->peso = peso;
-    this->custoEmKg = custoEmKg;
+    this->custoPorKg = custoPorKg;
     this->remetente = remetente;
     this->destinatario = destinatario;
 }
 
 double Encomenda::calculaCustoTotal() {
 
-    double custoTotal = peso * custoEmKg;
-
+    double custoTotal = peso * custoPorKg;
+    custoTotal += custoTotal * taxaAdicional;
+			
     return custoTotal;
 }
 
