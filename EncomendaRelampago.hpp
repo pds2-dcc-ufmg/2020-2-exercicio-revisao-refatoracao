@@ -13,6 +13,6 @@ class EncomendaRelampago: public Encomenda{
 
 	void print() override;
 
-	EncomendaRelampago(double Peso, double CustoKg, Cliente* remetente, Cliente* dest);
+	EncomendaRelampago(double Peso, double CustoKg, Cliente* remetente, Cliente* dest); //Construtor
 
 };
