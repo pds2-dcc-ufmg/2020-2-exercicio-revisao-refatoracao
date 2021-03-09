@@ -17,7 +17,7 @@ class EncomendaNormal: public Encomenda{
 
 		void print() override; //Imprime os dados da encomenda
 		
-		std::string gettype() override; //Retorna o typo de encomenda(Normal)
+		std::string getType() override; //Retorna o typo de encomenda(Normal)
 		
 };
 

@@ -28,6 +28,6 @@ void EncomendaNormal::print(){
 
 }
 
-std::string EncomendaNormal::gettype(){
+std::string EncomendaNormal::getType(){
 	return "Normal";
 }

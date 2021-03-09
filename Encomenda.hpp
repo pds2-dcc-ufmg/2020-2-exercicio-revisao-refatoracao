@@ -11,7 +11,7 @@ class Encomenda{
 		
 		virtual double calcula() = 0; //Calcula e retorna o CustoTotal.
 		
-		virtual std::string gettype() = 0; //Retorna o tipo de encomenda.
+		virtual std::string getType() = 0; //Retorna o tipo de encomenda.
 		
 	protected:
 	

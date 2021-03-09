@@ -20,7 +20,7 @@ class EncomendaRelampago: public Encomenda{
 
 		void print() override; //Imprime os dados da encomenda
 
-		std::string gettype() override; //Retorna o typo de encomenda(Relampago)
+		std::string getType() override; //Retorna o typo de encomenda(Relampago)
 };
 
 #endif

@@ -29,6 +29,6 @@ void EncomendaRelampago::print(){
 
 }
 
-std::string EncomendaRelampago::gettype(){
+std::string EncomendaRelampago::getType(){
 	return "Relampago";
 }
