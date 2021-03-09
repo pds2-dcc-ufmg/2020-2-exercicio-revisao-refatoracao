@@ -5,27 +5,49 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
+class EncomendaNormal {
+
+	double peso_kg;
+	double custo_por_kg;
+	Cliente remetente;
+	Cliente destinatario;
 
 	public:
+
+		EncomendaNormal(double _peso_kg, double _custo_por_kg, Cliente _remetente, Cliente _destinatario) {
+			peso_kg = _peso_kg;
+			custo_por_kg = _custo_por_kg;
+			remetente = _remetente;
+			destinatario = _destinatario;
+		}
+
+		double getPeso() {
+			return this->peso_kg;
+		}
+
+		double getCustoPorKg() {
+			return this->custo_por_kg;
+		}
+			//Encomenda(_peso_kg, _custo_por_kg, _remetente, _destinatario);
+		//peso_kg(_peso_kg), custo_por_kg(_custo_por_kg), remetente(_remetente), destinatario(_destinatario)  {}
+			//Encomenda(_peso_kg, _custo_por_kg, _remetente, _destinatario);
 		
-	double calcula(){
+		double calculaCustoTotal () {
+			return this->getPeso() * this->getCustoPorKg();
+		}
 
-		double x = PESO * CUSTOkg;
+		void printDadosEncomenda() {
+			cout << "[Remetente]" << endl;
+			this->remetente.printDadosCliente();
 
-		return x;
-	}
+			cout << "[Destinatário]" << endl;
+			this->destinatario.printDadosCliente();
 
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
-
+			cout << "[Encomenda Normal]" << endl;
+			cout << "  Peso: " << this->getPeso() << endl
+				 << "  Custo por kg: " << this->getCustoPorKg() << endl
+				 << "  Custo total: " << this->calculaCustoTotal() << endl;
+		}
 };
 
 #endif
