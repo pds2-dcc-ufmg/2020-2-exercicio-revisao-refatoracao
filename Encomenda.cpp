@@ -3,8 +3,8 @@
 #include "Cliente.hpp"
 
 void Encomenda::print(){
-    std::cout << "[Remetente]" << endl;
+    cout << "[Remetente]" << endl;
     this->_remetente.print();
-    std::cout << "[Destinatário]" << endl;
+    cout << "[DestinatÃ¡rio]" << endl;
     this->_dest.print();
 }
