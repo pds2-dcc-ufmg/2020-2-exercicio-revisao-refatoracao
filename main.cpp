@@ -126,7 +126,7 @@ int main(){
 
 	double custN = 0;
 	double custR = 0;
-
+	
 	enc0.calcula();
 	enc0.print();
 	custN += enc0.calcula();
