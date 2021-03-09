@@ -24,6 +24,8 @@ class Encomenda {
 		double custoPorKg = 0.0;
 		double custoTotal = 0.0;
 
+    private:
+
         double taxaAdicional = 0;
 };
 
