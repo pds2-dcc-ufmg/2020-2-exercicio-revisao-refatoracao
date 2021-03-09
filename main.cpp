@@ -4,11 +4,10 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 int main(){
 	//Criacao e armazenamento de todos clientes.
-	vector<Cliente*> Clientes;
+	std::vector<Cliente*> Clientes;
 	
 	Clientes.push_back(new Cliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."));
 	
@@ -27,7 +26,7 @@ int main(){
 	Clientes.push_back(new Cliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C."));
 	
 	//Criacao e armazenamento de todas encomendas.
-	vector<Encomenda*> Encomendas;
+	std::vector<Encomenda*> Encomendas;
 	
 	Encomendas.push_back(new EncomendaNormal(5, 12, *Clientes[0], *Clientes[1]));
 	
@@ -46,13 +45,14 @@ int main(){
 	Encomendas.push_back(new EncomendaRelampago(8, 18, *Clientes[7], *Clientes[0]));
 
 	//Saida do relatorio de encomendas.
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 	
 	int quantN = 0;	//Quantidade de encomendas normais.
 	int quantR = 0;	//Quantidade de encomendas relampago.
 	double custN = 0; //Custo das encomendas normais.
 	double custR = 0; //Custo das encomendas relampago.
 	for(int i = 0; i < (int)Encomendas.size(); i++){
+		Encomendas[i]->calcula(); //Calcula o CustoTotal
 		Encomendas[i]->print(); //Imprime os dados da encomenda.
 		if(Encomendas[i]->getType() == "Normal"){ //Se a encomenda e normal. 
 			custN += Encomendas[i]->calcula(); //Adiciona o custo da normal.
@@ -66,11 +66,11 @@ int main(){
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN
 		 << "\nValor Total: " << custN
-		 << endl
+		 << std::endl
 		 << "\n>> Encomendas Relâmpago <<" 
 		 << "\nQuantidade: " << quantR
 		 << "\nValor Total: " << custR
-		 << endl;
+		 << std::endl;
 	//Liberando memoria.
 	for(int i = 0; i < (int)Encomendas.size(); i++){
 		delete Encomendas[i];

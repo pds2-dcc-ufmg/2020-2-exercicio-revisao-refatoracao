@@ -21,11 +21,11 @@ void EncomendaRelampago::print(){
 
 	Encomenda::printRemDes();
 	
-	std::cout << "[Encomenda Relâmpago]" << endl;
-	std::cout << "  Peso: " << Peso << endl
-		<< "  Custo por kg: " << CustoKg << endl
-		<< "  Taxa adicional: " << TaxaAdicional << endl
-		<< "  Custo total: " << CustoTotal << endl;
+	std::cout << "[Encomenda Relâmpago]" << std::endl;
+	std::cout << "  Peso: " << Peso << std::endl
+		<< "  Custo por kg: " << CustoKg << std::endl
+		<< "  Taxa adicional: " << TaxaAdicional << std::endl
+		<< "  Custo total: " << CustoTotal << std::endl;
 
 }
 

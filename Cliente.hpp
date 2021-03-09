@@ -3,25 +3,23 @@
 
 #include <string>
 
-using namespace std;
-
 class Cliente{
 
 	public:
 	
 		Cliente(){}; //Construtor normal.
 	
-		Cliente(string _nome, string _endereco, string _cidade, string _estado, string _cep); //Construtor completo.
+		Cliente(std::string _nome, std::string _endereco, std::string _cidade, std::string _estado, std::string _cep); //Construtor completo.
 		
 		void print(); //Imprime na tela os dados de um cliente cadastrado.
 		
 	private:
 	
-		string Nome;
-		string Endereco;
-		string Cidade;
-		string Estado;
-		string CEP;
+		std::string Nome;
+		std::string Endereco;
+		std::string Cidade;
+		std::string Estado;
+		std::string CEP;
 };
 
 #endif

@@ -12,10 +12,10 @@ Cliente::Cliente(std::string _nome, std::string _endereco, std::string _cidade, 
 
 void Cliente::print(){
 
-	std::cout << "  Nome: " << Nome << endl
-		 << "  Endereço: " << Endereco << endl
-		 << "  Cidade: " << Cidade << endl
-		 << "  Estado: " << Estado << endl
-		 << "  CEP: " << CEP << endl;
+	std::cout << "  Nome: " << Nome << std::endl
+		 << "  Endereço: " << Endereco << std::endl
+		 << "  Cidade: " << Cidade << std::endl
+		 << "  Estado: " << Estado << std::endl
+		 << "  CEP: " << CEP << std::endl;
 
 }
