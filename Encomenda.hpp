@@ -26,7 +26,7 @@ class Encomenda {
 		Cliente getRemet();
 		Cliente getDest();
 			
-		void print();
+		virtual void print();
 		virtual double calcula();
 	
 	private:
