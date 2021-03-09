@@ -5,7 +5,7 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
+class EncomendaNormal: public Encomenda {
 
 	public:
 
@@ -19,8 +19,8 @@ class EncomendaNormal: public Encomenda{
 
 		Encomenda::print();
 		cout << "[Encomenda Normal]" << endl;
-		cout << "  Peso: " << PESO << endl
-		cout << "  Custo por kg: " << CUSTOkg << endl
+		cout << "  Peso: " << PESO << endl;
+		cout << "  Custo por kg: " << CUSTOkg << endl;
 		cout << "  Custo total: " << T << endl;
 
 	}
