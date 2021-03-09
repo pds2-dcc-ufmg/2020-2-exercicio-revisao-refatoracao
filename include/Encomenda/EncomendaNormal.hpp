@@ -11,10 +11,10 @@ class EncomendaNormal: public Encomenda{
 		EncomendaNormal() {}
 
 		EncomendaNormal(double peso, double custo_por_kg, Cliente remetente, Cliente destinatario){
-			this->_peso = peso;
-			this->_custo_por_kg = custo_por_kg;
-			this->_remetente = remetente;
-			this->_destinatario = destinatario;
+			_peso = peso;
+			_custo_por_kg = custo_por_kg;
+			_remetente = remetente;
+			_destinatario = destinatario;
 		}
 		
 		double calcula_tarifa_total() override;
