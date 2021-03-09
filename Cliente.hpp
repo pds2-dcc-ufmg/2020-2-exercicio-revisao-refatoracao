@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Cliente{
+class Cliente{ //Classe com os dados do cliente. 
 
 	public:
 
