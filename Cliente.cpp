@@ -44,10 +44,10 @@ void Cliente::set_cep( std::string cep ) {
 
 void Cliente::print() {
 
-	std::cout << "  Nome: " << nome << std::endl
-		 << "  Endereço: " << endereco << std::endl
-		 << "  Cidade: " << cidade << std::endl
-		 << "  Estado: " << estado << std::endl
-		 << "  CEP: " << cep << std::endl;
+	std::cout << "  Nome: " << this->nome << std::endl
+		 << "  Endereço: " << this->endereco << std::endl
+		 << "  Cidade: " << this->cidade << std::endl
+		 << "  Estado: " << this->estado << std::endl
+		 << "  CEP: " << this->cep << std::endl;
 
 }
