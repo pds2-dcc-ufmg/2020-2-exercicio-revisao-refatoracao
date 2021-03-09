@@ -168,13 +168,13 @@ int main(){
 	custR += enc7.calcula();
 	cout << endl;
 
-	cout << "\n>> Encomendas Normais <<"
-	cout << "\nQuantidade: " << quantN
-	cout << "\nValor Total: " << custN
-	cout << endl
-	cout << "\n>> Encomendas Relâmpago <<"
-	cout << "\nQuantidade: " << quantR
-	cout << "\nValor Total: " << custR
+	cout << "\n>> Encomendas Normais <<";
+	cout << "\nQuantidade: " << quantN;
+	cout << "\nValor Total: " << custN;
+	cout << endl;
+	cout << "\n>> Encomendas Relâmpago <<";
+	cout << "\nQuantidade: " << quantR;
+	cout << "\nValor Total: " << custR;
 	cout << endl;
 
 }
