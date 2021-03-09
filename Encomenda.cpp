@@ -9,7 +9,7 @@ Encomenda::Encomenda (double peso, double custo_kg, Cliente remetente, Cliente d
 	this->_destinatario = destinatario;
 }
 
-void Encomenda::print(){
+void Encomenda::print_parte_1(){
 	std::cout << "[Remetente]" << endl;
 	this->_remetente.print();
 	std::cout << "[Destinatário]" << endl;
