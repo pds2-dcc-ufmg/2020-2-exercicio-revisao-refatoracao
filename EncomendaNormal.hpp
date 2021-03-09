@@ -12,11 +12,12 @@ class EncomendaNormal: public Encomenda{
 		double taxa = 0.0;
 
 	public:
-	
+		//retorna a taxa da encomenda normal
 		double getTaxa() {
 			return this->taxa;	
 		}
 
+		//imprime na tela os dados de uma encomenda
 		void print(){
 
 			Encomenda::print();
