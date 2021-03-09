@@ -13,10 +13,10 @@ double EncomendaRelampago::calcula(){
 void EncomendaRelampago::print(){
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << _peso << endl
-				<< "  Custo por kg: " << _custoKg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << _total << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << _peso << std::endl
+				<< "  Custo por kg: " << _custoKg << std::endl
+				<< "  Taxa adicional: " << 0.25 << std::endl
+				<< "  Custo total: " << _total << std::endl;
 
 }
