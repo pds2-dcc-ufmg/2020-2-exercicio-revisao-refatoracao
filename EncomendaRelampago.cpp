@@ -23,7 +23,7 @@ EncomendaRelampago::EncomendaRelampago(int _peso, int _custoKG, Cliente _remeten
 double EncomendaRelampago::calcula() const { // calcula o custo de entrega de uma encomenda relampago
 
     double _custoEntrega = _peso * _custoKG;
-    _custoEntrega += _custoEntrega * TAXA_ENTREGRA_RELAMPAGO;
+    _custoEntrega += _custoEntrega * TAXA_ENTREGA_RELAMPAGO;
     return _custoEntrega;
 
 } // fim do metodo calcula
@@ -34,7 +34,7 @@ void EncomendaRelampago::print() const { // printa os valores armazenados refere
     std::cout << "[Encomenda Relâmpago]" << std::endl;
     std::cout << " Peso: " << _peso << std::endl;
     std::cout << " Custo por kg: " << _custoKG << std::endl;
-    std::cout << " Taxa adicional: " << TAXA_ENTREGRA_RELAMPAGO << std::endl;
+    std::cout << " Taxa adicional: " << TAXA_ENTREGA_RELAMPAGO << std::endl;
     std::cout << " Custo total: " << _custoTotal << "\n" << std::endl;
 
 } // fim do metodo print
