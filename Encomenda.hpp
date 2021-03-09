@@ -14,6 +14,7 @@ class Encomenda{
 		Cliente _dest;
 			
 		void print();
+		double calcula();
 	
 };
 
