@@ -2,26 +2,25 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
-using namespace std;
 
 class Encomenda{
-
+	//Classe abstrata, representa uma Encomenda qualquer.
 	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+	
+		virtual void print() = 0; //Imprime os dados da encomenda.
+		
+		virtual double calcula() = 0; //Calcula e retorna o CustoTotal.
+		
+		virtual std::string getType() = 0; //Retorna o tipo de encomenda.
+		
+	protected:
+	
+		void printRemDes(); // Imprime remetente e destinatario.
+		double Peso = 0.0;
+		double CustoKg = 0.0;
+		double CustoTotal = 0.0;
+		Cliente Remetente;
+		Cliente Destinatario;
 };
 
 #endif

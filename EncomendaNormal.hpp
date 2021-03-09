@@ -3,29 +3,21 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
 	public:
+	
+		EncomendaNormal(){}; //Construtor normal.
+	
+		EncomendaNormal(double, double, Cliente, Cliente);//Construtor completo. Peso, custo, remetente, destinatario.
 		
-	double calcula(){
+		double calcula() override; //Calcula e retorna o CustoTotal
 
-		double x = PESO * CUSTOkg;
-
-		return x;
-	}
-
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
-
+		void print() override; //Imprime os dados da encomenda
+		
+		std::string getType() override; //Retorna o typo de encomenda(Normal)
+		
 };
 
 #endif
