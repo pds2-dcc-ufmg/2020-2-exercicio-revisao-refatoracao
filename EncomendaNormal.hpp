@@ -5,26 +5,22 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
-
-	public:
+class EncomendaNormal: public Encomenda {
+	private:
+		static int _normal_quantity;
 		
-	double calcula(){
 
-		double x = PESO * CUSTOkg;
+		
+	public:	
+		EncomendaNormal(double weight, double cost,Cliente sender, Cliente receiver):Encomenda(weight,cost, sender,receiver) {
+			EncomendaNormal::_normal_quantity++;
+		}
+		void calculate();
+		void print();
 
-		return x;
-	}
-
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+		int get_quantity();
+		
+		
 
 };
 

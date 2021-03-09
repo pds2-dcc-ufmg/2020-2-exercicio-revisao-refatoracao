@@ -5,29 +5,16 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
-
+class EncomendaRelampago: public Encomenda {
+	private:
+		static int _lightning_quantity;
 	public:
-
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		EncomendaRelampago(double weight, double cost,Cliente sender, Cliente receiver):Encomenda(weight,cost, sender, receiver) {
+			EncomendaRelampago::_lightning_quantity++;
 		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+		void calculate();
+		void print();
+		int get_quantity();
 };
 
 #endif
