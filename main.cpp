@@ -53,13 +53,15 @@ int main(){
 	double custo_encomendasR = 0;
 
 	for (int i = 0; i < encomendasN.size(); i++) {
-		custo_encomendasN += encomendasN[i].calcula();
+		encomendasN[i].calcula();
+		custo_encomendasN += encomendasN[i]._custo_total;
 		encomendasN[i].print();
 		std::cout << endl;
 	}
 	
 	for (int j = 0; j < encomendasR.size(); j++) {
-		custo_encomendasR += encomendasR[j].calcula();
+		encomendasR[j].calcula();
+		custo_encomendasR += encomendasR[j]._custo_total();
 		encomendasR[j].print();
 		std::cout << endl;
 	}
