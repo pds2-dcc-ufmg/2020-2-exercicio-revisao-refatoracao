@@ -13,6 +13,7 @@ public:
 
 	void print(); // imprime na tela os dados de um cliente cadastrado
 
+	// Métodos printAtributo para facilitar reutilização.
 	void printNome();
 	void printEndereco();
 	void printCidade();

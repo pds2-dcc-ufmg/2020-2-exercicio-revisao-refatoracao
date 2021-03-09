@@ -10,10 +10,14 @@ public:
 	Encomenda(double peso, double custoKG, Cliente remetente, Cliente destinatario, double taxa)
 		: _peso(peso), _custoKG(custoKG), _remetente(remetente), _destinatario(destinatario), _taxa(taxa){};
 
+	// Imprime os dados dos destinatários e remetentes
 	void print();
+	// Imprime os dados específicos de cada tipo de encomenda, por isso é sobreescrita nas subclasses
 	virtual void print_sub() = 0;
+	// Retorna o valor total a ser pago na encomenda
 	double calcula();
 
+	// Métodos printAtributo para facilitar reutilização e acesso em subclasses.
 	void printPeso();
 	void printCustoKG();
 	void printTotal();
@@ -21,6 +25,7 @@ public:
 	void printRemetente();
 	void printDestinatario();
 
+	// Imprime as informações na ordem esperada do trabalho e retorna o valor de calcula();
 	double resultado();
 
 protected:

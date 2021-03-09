@@ -1,6 +1,12 @@
 #include <iostream>
 #include "Encomenda.hpp"
 
+Encomenda::Encomenda(double peso, double custoKG, Cliente remetente, Cliente destinatario, double taxa)
+    : _peso(peso), _custoKG(custoKG), _remetente(remetente), _destinatario(destinatario), _taxa(taxa)
+{
+    this->_total = this->calcula();
+};
+
 void Encomenda::print()
 {
     std::cout << "[Remetente]" << std::endl;
