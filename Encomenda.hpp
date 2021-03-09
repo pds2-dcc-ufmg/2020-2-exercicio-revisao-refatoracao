@@ -16,9 +16,9 @@ class Encomenda{
     protected:
 
         double _Peso;
-		double _CustoKg;
-		Cliente* _remetente;
-		Cliente* _dest;
+	double _CustoKg;
+	Cliente* _remetente;
+	Cliente* _dest;
 
 };
 
