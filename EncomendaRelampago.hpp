@@ -3,31 +3,33 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago : public Encomenda
+{
+public:
+	EncomendaRelampago(double Peso, double Custo, Cliente Remetente, Cliente Destinatario)
+	{
+		this->peso = Peso;
+		this->custo = Custo;
+		this->remetente = Remetente;
+		this->dest = Destinatario;
+	}
+	double calcula()
+	{
+		double x = this->peso * this->custo;
+		x += x * 0.25;
+		return x;
+	}
 
-	public:
-
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+	void print()
+	{
+		Encomenda::print();
+		std::cout << "[Encomenda Relâmpago]" << std::endl;
+		std::cout << "  Peso: " << this->peso << std::endl
+				  << "  Custo por kg: " << this->custo << std::endl
+				  << "  Taxa adicional: " << 0.25 << std::endl
+				  << "  Custo total: " << this->taxaAdicional << std::endl;
+	}
 };
 
 #endif
