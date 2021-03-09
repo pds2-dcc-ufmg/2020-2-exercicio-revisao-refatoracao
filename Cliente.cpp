@@ -34,7 +34,6 @@ string Cliente::getCep() {
 }
 
 // Setters:
-
 void Cliente::setNome(string nome) {
 	this->nome = nome;
 }
