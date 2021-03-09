@@ -14,7 +14,6 @@ class EncomendaRelampago: public Encomenda{
 		// Impressão dos atributos da classe EncomendaRelampago
 		void print_data() override
 		{
-			//Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl

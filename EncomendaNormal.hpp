@@ -12,7 +12,6 @@ class EncomendaNormal: public Encomenda{
 		// Impressão dos atributos da classe EncomendaNormal
 		void print_data() override
 		{
-			//Encomenda::print();
 			std::cout << "[Encomenda Normal]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
