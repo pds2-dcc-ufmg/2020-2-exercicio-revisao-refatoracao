@@ -4,7 +4,6 @@
 #include <string>
 
 class Cliente {
-	
 	private:
 		std::string _nome;
 		std::string _endereco;
