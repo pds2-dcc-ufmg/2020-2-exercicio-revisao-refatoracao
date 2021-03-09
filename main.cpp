@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-//#include "Encomenda.hpp"
+#include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
