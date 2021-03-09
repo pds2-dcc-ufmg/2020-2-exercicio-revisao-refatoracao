@@ -3,7 +3,6 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 int main(){
 	
@@ -122,7 +121,7 @@ int main(){
 	enc7._dest = cli0;
 	quantidadeRelampago++;
 	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
 	double custoNormal = 0;
 	double custoRelampago = 0;
@@ -130,50 +129,50 @@ int main(){
 	enc0.calcula();
 	enc0.print();
 	custoNormal += enc0.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc1.calcula();
 	enc1.print();
 	custoNormal += enc1.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc2.calcula();
 	enc2.print();
 	custoNormal += enc2.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc3.calcula();
 	enc3.print();
 	custoNormal += enc3.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc4.calcula();
 	enc4.print();
 	custoNormal += enc4.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc5.calcula();
 	enc5.print();
 	custoRelampago += enc5.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc6.calcula();
 	enc6.print();
 	custoRelampago += enc6.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 
 	enc7.calcula();
 	enc7.print();
 	custoRelampago += enc7.calcula();
-	std::cout << endl;
+	std::cout << std::endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantidadeNormal
 		 << "\nValor Total: " << custoNormal
-		 << endl
+		 << std::endl
 		 << "\n>> Encomendas Relâmpago <<" 
 		 << "\nQuantidade: " << quantidadeRelampago
 		 << "\nValor Total: " << custoRelampago
-		 << endl;
+		 << std::endl;
 	
 }
