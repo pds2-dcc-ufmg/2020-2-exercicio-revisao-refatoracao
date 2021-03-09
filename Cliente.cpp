@@ -2,10 +2,12 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print()//imprime na tela os dados do cliente
+void Cliente::
+{	
+	print()//imprime na tela os dados do cliente
 {
 
-	std::cout << "  Nome: " << NOME << endl
+		 std::cout << "  Nome: " << NOME << endl
 		 << "  Endereço: " << endereco << endl
 		 << "  Cidade: " << CIDADE << endl
 		 << "  Estado: " << ESTADO << endl
@@ -36,4 +38,4 @@ void Cliente::set_cep(string Cep)//seta o cep do cliente
 {
                 strcpy(cep, Cep);
 }
-
+}
