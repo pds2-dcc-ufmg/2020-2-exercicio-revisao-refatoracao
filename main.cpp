@@ -8,59 +8,59 @@ using namespace std;
 int main(){
 	
 	Cliente primeiroCliente;
-	primeiroCliente.NOME = "Thales";
+	primeiroCliente.nome = "Thales";
 	primeiroCliente.endereco = "Rua dos Pré-Socráticos";
-	primeiroCliente.CIDADE = "Miletus";
-	primeiroCliente.ESTADO = "Ionia";
+	primeiroCliente.cidade = "Miletus";
+	primeiroCliente.estado = "Ionia";
 	primeiroCliente.cep = "548 a.C.";
 
 	Cliente segundoCliente;
-	segundoCliente.NOME = "Aristóteles";
+	segundoCliente.nome = "Aristóteles";
 	segundoCliente.endereco = "Avenida do Meio-Termo";
-	segundoCliente.CIDADE = "Atenas";
-	segundoCliente.ESTADO = "Ática";
+	segundoCliente.cidade = "Atenas";
+	segundoCliente.estado = "Ática";
 	segundoCliente.cep = "384 a.C.";
 
 	Cliente terceiroCliente;
-	terceiroCliente.NOME = "Platão";
+	terceiroCliente.nome = "Platão";
 	terceiroCliente.endereco = "Praça das Formas";
-	terceiroCliente.CIDADE = "Atenas";
-	terceiroCliente.ESTADO = "Ática";
+	terceiroCliente.cidade = "Atenas";
+	terceiroCliente.estado = "Ática";
 	terceiroCliente.cep = "348 a.C";
 
 	Cliente quartoCliente;
-	quartoCliente.NOME = "Sócrates";
+	quartoCliente.nome = "Sócrates";
 	quartoCliente.endereco = "Rua do Elenchus";
-	quartoCliente.CIDADE = "Atenas";
-	quartoCliente.ESTADO = "Ática";
+	quartoCliente.cidade = "Atenas";
+	quartoCliente.estado = "Ática";
 	quartoCliente.cep = "399 a.C.";
 
 	Cliente quintoCliente;
-	quintoCliente.NOME = "Pitágoras";
+	quintoCliente.nome = "Pitágoras";
 	quintoCliente.endereco = "Praça dos Quadrados dos Catetos";
-	quintoCliente.CIDADE = "Samos";
-	quintoCliente.ESTADO = "Egeu";
+	quintoCliente.cidade = "Samos";
+	quintoCliente.estado = "Egeu";
 	quintoCliente.cep = "571 a.C.";
 
 	Cliente sextoCliente;
-	sextoCliente.NOME = "Parmênides";
+	sextoCliente.nome = "Parmênides";
 	sextoCliente.endereco = "Rua do Não Ser";
-	sextoCliente.CIDADE = "Eleia";
-	sextoCliente.ESTADO = "Magna Grécia";
+	sextoCliente.cidade = "Eleia";
+	sextoCliente.estado = "Magna Grécia";
 	sextoCliente.cep = "460 a.C.";
 
 	Cliente setimoCliente;
-	setimoCliente.NOME = "Empédocles";
+	setimoCliente.nome = "Empédocles";
 	setimoCliente.endereco = "Rua dos Quatro Elementos";
-	setimoCliente.CIDADE = "Agrigento";
-	setimoCliente.ESTADO = "Sicília";
+	setimoCliente.cidade = "Agrigento";
+	setimoCliente.estado = "Sicília";
 	setimoCliente.cep = "495 a.C.";
 
 	Cliente oitavoCliente;
-	oitavoCliente.NOME = "Anaxágoras";
+	oitavoCliente.nome = "Anaxágoras";
 	oitavoCliente.endereco = "Avenida da Mente Cósmica";
-	oitavoCliente.CIDADE = "Clazômenas";
-	oitavoCliente.ESTADO = "Jónia";
+	oitavoCliente.cidade = "Clazômenas";
+	oitavoCliente.estado = "Jónia";
 	oitavoCliente.cep = "499 a.C.";
 
 	int quantidadeNormal = 0;
