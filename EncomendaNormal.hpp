@@ -18,7 +18,7 @@ class EncomendaNormal: public Encomenda{
 			std::cout << "  Peso: " << this->_peso << endl
 				<< "  Custo por kg: " << this->_custo_kg << endl
 				<< "  Custo total: " << this->_custo_total << endl;
-		} // imprime na tela informações sobre a encomenda cadastrada
+		} // imprime na tela o resto das informações sobre a encomenda cadastrada
 };
 
 #endif
