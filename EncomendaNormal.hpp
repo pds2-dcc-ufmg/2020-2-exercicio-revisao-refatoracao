@@ -21,8 +21,13 @@ class EncomendaNormal: public Encomenda{
 
 		// Construtor - EncomendaNormal
 		EncomendaNormal(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
+		{ 
+			this->TOTAL = this->calcula();		
+		}
+
+		double calcula() override
 		{
-			this->TAXA = 0.0;
+			return this->PESO * this->CUSTOkg;
 		}
 };
 
