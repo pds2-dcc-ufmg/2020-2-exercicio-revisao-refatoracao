@@ -5,16 +5,18 @@
 using namespace std;
 
 class Encomenda{
-
-	public:
-
+	
+	private:
+	
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
 		double T = 0.0;
 		Cliente remetente;
 		Cliente dest;
-			
-		void print(){
+
+	public:
+
+		void print_cliente(){
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
@@ -22,6 +24,12 @@ class Encomenda{
 			dest.print();
 		}
 
+		double calculo_padrao(){
+
+			double x = PESO * CUSTOkg;
+
+			return x;
+		}
 };
 
 #endif

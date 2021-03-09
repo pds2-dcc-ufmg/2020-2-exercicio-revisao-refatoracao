@@ -8,11 +8,12 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
+	
 	double calcula(){
-
-		double x = PESO * CUSTOkg;
-
+	
+		Encomenda::calculo_padrao;
+		double x = calculo_padrao;
+		
 		return x;
 	}
 
