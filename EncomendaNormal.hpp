@@ -1,31 +1,25 @@
-#ifndef EncomendaNormal_H
-#define EncomendaNormal_H
+#ifndef ENCOMENDANORMAL_H
+#define ENCOMENDANORMAL_H
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 class EncomendaNormal: public Encomenda{
-
 	public:
-		
-	double calcula(){
+		double calculaCustoTotal(){
+			double custoTotal = getPeso() * getCustoKg();
+				return custoTotal;
+		}
 
-		double x = PESO * CUSTOkg;
+    		EncomendaNormal(double peso, double custoKg, Cliente& _remetente, Cliente& _destinatario):Encomenda(peso, custoKg, _remetente, _destinatario){};
 
-		return x;
-	}
-
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
-
+	    	void print(){
+	      		Encomenda::print();
+	      		std::cout << "[Encomenda Normal]" << endl;
+	      		std::cout << "  Peso: " << getPeso() << endl
+				<< "  Custo por kg: " << getCustoKg() << endl
+				<< "  Custo total: " << getCustoTotal() << endl;
+		}	
 };
 
 #endif
