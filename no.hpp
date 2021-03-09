@@ -10,11 +10,11 @@ template <class T> class No {
         No<T> *proximo; // ponteiro que aponta para o proximo no
 
     public:
-        No(T encomenda);
-        No(int _peso, int _custoKG, Cliente _remetente, Cliente _destinatario, int _quantidadeEntregas);
-        void setProximo(No*);
-        No *getProximo() const;
-        T getEncomenda() const;
+        No(T encomenda); // declaracao do construtor de no
+        No(int _peso, int _custoKG, Cliente _remetente, Cliente _destinatario, int _quantidadeEntregas); // declaracao do construtor de no
+        void setProximo(No*); // declaracao do metodo que atribui o proximo no da lista a variavel responsavel por amazena-lo
+        No *getProximo() const; // declaracao do metodo que retorna o proximo no da lista
+        T getEncomenda() const; // declaracao do metodo que retorna a encomenda do tipo T corrente
 
 }; // fim class no
 
