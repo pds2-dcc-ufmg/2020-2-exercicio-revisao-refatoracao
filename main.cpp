@@ -54,10 +54,10 @@ int main(){
 	double custR = 0; //Custo das encomendas relampago.
 	for(int i = 0; i < (int)Encomendas.size(); i++){
 		Encomendas[i]->print(); //Imprime os dados da encomenda.
-		if((*Encomendas[i]).gettype() == "Normal"){ //Se a encomenda e normal. 
+		if(Encomendas[i]->gettype() == "Normal"){ //Se a encomenda e normal. 
 			custN += Encomendas[i]->calcula(); //Adiciona o custo da normal.
 			quantN++; //Adiciona uma encomenda normal.
-		} else if ((*Encomendas[i]).gettype() == "Relampago") { //Se a encomenda e relampago.
+		} else if (Encomendas[i]->gettype() == "Relampago") { //Se a encomenda e relampago.
 			custR += Encomendas[i]->calcula(); //Adiciona o custo da relampago
 			quantR++; //Adiciona uma encomenda relampago.
 		}
