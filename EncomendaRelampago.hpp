@@ -8,26 +8,29 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
+		using Encomenda::Encomenda;
 
-		double calcula(){
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+		double calculaPreco(){
+
+			double preco = this->peso * this->custoKg;
+			preco += preco * _TAXA;
 			
-			return x;
+			return preco;
 		}
 
-		void print(){
-
-			Encomenda::print();
+		void printDados(){
+			Encomenda::printDados();
 			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
+			std::cout << "  Peso: " << peso << endl
+				<< "  Custo por kg: " << custoKg << endl
+				<< "  Taxa adicional: " << _TAXA << endl
+				<< "  Custo total: " << custoTotal << endl << endl;
 		}
 
+	private:
+		static double constexpr _TAXA = 0.25;
+		
 };
 
 #endif
