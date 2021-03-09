@@ -5,13 +5,6 @@
 using namespace std;
 
 class Cliente{
-	private:
-		string nome;
-		string endereco;
-		string cidade;
-		string estado;
-		string cep;
-	
 	public:
 		void setNome(string _nome){
 		      nome = _nome;
@@ -52,6 +45,13 @@ class Cliente{
     		}
 				
 		void print();
+	
+	private:
+		string nome;
+		string endereco;
+		string cidade;
+		string estado;
+		string cep;
 };
 
 #endif
