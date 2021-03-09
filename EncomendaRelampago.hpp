@@ -19,17 +19,8 @@ class EncomendaRelampago: public Encomenda{
 			return x;
 		}
 
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << TAXARELAMPAGO << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+        void print override();
+    
 };
 
 #endif

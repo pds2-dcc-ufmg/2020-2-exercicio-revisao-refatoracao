@@ -16,7 +16,7 @@ class Encomenda{
 		Cliente remetente;
 		Cliente dest;
 			
-        void print();
+        virtual void print();
             
         void getPeso();
         void setPeso(double p);

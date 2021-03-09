@@ -2,7 +2,7 @@
 #include <string>
 #include "Encomenda.hpp"
 
-void print(){
+virtual void print(){
 
     std::cout << "[Remetente]" << endl;
     remetente.print();
