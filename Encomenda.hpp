@@ -8,9 +8,9 @@ class Encomenda{
 
 	private:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
+		double peso = 0.0;
+		double custoKg = 0.0;
+		double t = 0.0;
     
     public:
 		Cliente remetente;

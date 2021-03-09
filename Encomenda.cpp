@@ -3,25 +3,25 @@
 #include "Encomenda.hpp"
 
 void getPeso(){
-    return this->PESO;
+    return this->peso;
 }
 
 void setPeso(double p){
-    this->PESO = p;
+    this->peso = p;
 }
 
 void getCustoKg(){
-    return this->CUSTOkg;
+    return this->custoKg;
 }
 
 void setCustoKg(double c){
-    this->CUSTOkg = c;
+    this->custoKg = c;
 }
 
 void getT(){
-    return this->T;
+    return this->t;
 }
 
 void setT(double tt){
-    this->T = tt;
+    this->t = tt;
 }
