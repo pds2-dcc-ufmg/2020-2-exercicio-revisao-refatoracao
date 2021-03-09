@@ -9,10 +9,10 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+		double calculo_encomenda_rapida(){
+			
+			int x = calculo_padrao;
+			x+=x*0.25;
 			
 			return x;
 		}
