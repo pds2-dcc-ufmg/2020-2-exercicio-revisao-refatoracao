@@ -10,7 +10,7 @@ class EncomendaNormal: public Encomenda{
 
 	void print() override;
 
-	EncomendaNormal(double Peso, double CustoKg, Cliente* remetente, Cliente* dest);
+	EncomendaNormal(double Peso, double CustoKg, Cliente* remetente, Cliente* dest); //Construtor
 
 };
 
