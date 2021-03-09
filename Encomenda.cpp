@@ -16,11 +16,9 @@ void Encomenda::setCustoKg(double new_custo_kg) {
   this->custo_kg = new_custo_kg;
 }
 	
-double Encomenda::getCustoTotal() {
-  return this->custo_total;
-}
-void Encomenda::setCustoTotal(double new_custo_total) {
-  this->custo_total = new_custo_total;
+double Encomenda::getCustoTotal(double taxa) {
+  double taxa_adicional = taxa + 1.0;
+  return this->peso * this->custo_kg * taxa_adicional;
 }
 	
 Cliente Encomenda::getRemetente() {
