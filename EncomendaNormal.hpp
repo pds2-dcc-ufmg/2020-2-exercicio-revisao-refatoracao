@@ -6,26 +6,24 @@
 using namespace std;
 
 class EncomendaNormal: public Encomenda{
+	private:
+		static int qntdNormal;
+		static double custoTotalNormal;
 
-	public:
 		
-	double calcula(){
+	public:	
+		EncomendaNormal(double peso, double custo,Cliente remetente, Cliente destinatario):Encomenda(peso,custo, remetente,destinatario){
+			EncomendaNormal::qntdNormal++;
+		}
+		void calcula();
+		void print();
 
-		double x = PESO * CUSTOkg;
-
-		return x;
-	}
-
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+		int getQntd();
+		
+		
 
 };
+
+int EncomendaNormal::qntdNormal = 0;
 
 #endif
