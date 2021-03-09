@@ -2,12 +2,40 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+using namespace std;
 
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
+Cliente::Cliente(string nome, string endereco, string cidade, string estado, string cep){
+	this-> nome = nome;
+	this-> endereco = endereco;
+	this-> cidade = cidade;
+	this-> estado = estado;
+	this-> cep = cep;
+}
+string Cliente::getNome(){
+	return this-> nome;
+}
+
+string Cliente::getEndereco(){
+	return this-> endereco;
+}
+
+string Cliente::getCidade(){
+	return this-> cidade;
+}
+
+string Cliente::getEstado(){
+	return this->estado;
+}
+
+string Cliente::getCep(){
+	return this->cep;
+}
+
+void Cliente::print(){
+	cout << "  Nome: " << this-> nome << endl
+		 << "  Endereço: " << this-> endereco << endl
+		 << "  Cidade: " << this-> cidade << endl
+		 << "  Estado: " << this-> estado << endl
+		 << "  CEP: " << this-> cep << endl;
 
 }
