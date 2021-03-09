@@ -7,6 +7,14 @@ using namespace std;
 
 int main(){
 	
+	int quantN = 0;  //quantidade de encomendas normais, inicialmente 0
+	int quantR = 0;  //quantidade de encomendas relampagos, inicialmente 0
+	double custo_kg_normal = 12.0;  //custo do kg da encomenda normal
+	double custo_kg_relampago = 18.0;  //custo do kg da encomenda relampago
+	double custN = 0;  //soma do custo de todas as encomendas normais, inicialmente 0
+	double custR = 0;  //soma do custo de todas as encomendas relampagos, inicialmente 0
+	
+	//clientes:
 	Cliente cli0;
 	cli0.setNome("Thales");
 	cli0.setEndereco("Rua dos Pré-Socráticos");
@@ -63,69 +71,67 @@ int main(){
 	cli7.setEstado("Jónia");
 	cli7.setCep("499 a.C.");
 
-	int quantN = 0;
-	int quantR = 0;
+	//encomendas:
 
 	EncomendaNormal enc0;
 	enc0.setPeso(5);
-	enc0.setCustoKg(12);
+	enc0.setCustoKg(custo_kg_normal);
 	enc0.setRemetente(cli0);
 	enc0.setDest(cli1);
 	quantN++;
 
 	EncomendaNormal enc1;
 	enc1.setPeso(10);
-	enc1.setCustoKg(12);
+	enc1.setCustoKg(custo_kg_normal);
 	enc1.setRemetente(cli1);
 	enc1.setDest(cli2);
 	quantN++;
 
 	EncomendaNormal enc2;
 	enc2.setPeso(7);
-	enc2.setCustoKg(12);
+	enc2.setCustoKg(custo_kg_normal);
 	enc2.setRemetente(cli2);
 	enc2.setDest(cli3;)
 	quantN++;
 
 	EncomendaNormal enc3;
 	enc3.setPeso(2);
-	enc3.setCustoKg(12);
+	enc3.setCustoKg(custo_kg_normal);
 	enc3.setRemetente(cli3);
 	enc3.setDest(cli4);
 	quantN++;
 
 	EncomendaNormal enc4;
 	enc4.setPeso(3);
-	enc4.setCustoKg(12);
+	enc4.setCustoKg(custo_kg_normal);
 	enc4.setRemetente(cli4);
 	enc4.setDest(cli5);
 	quantN++;
 
 	EncomendaRelampago enc5;
 	enc5.setPeso(13);
-	enc5.setCustoKg(18);
+	enc5.setCustoKg(custo_kg_relampago);
 	enc5.setRemetente(cli5);
 	enc5.setDest(cli6);
 	quantR++;
 
 	EncomendaRelampago enc6;
 	enc6.setPeso(6);
-	enc6.setCustoKg(18);
+	enc6.setCustoKg(custo_kg_relampago);
 	enc6.setRemetente(cli6);
 	enc6.setDest(cli7);
 	quantR++;
 
 	EncomendaRelampago enc7;
 	enc7.setPeso(8);
-	enc7.setCustoKg(18);
+	enc7.setCustoKg(custo_kg_relampago);
 	enc7.setRemetente(cli7);
 	enc7.setDest(cli0);
 	quantR++;
 	
+	//relatorio de encomendas:
+	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
-
-	double custN = 0;
-	double custR = 0;
 
 	enc0.getCustoTotal(getTaxa());
 	enc0.print();
