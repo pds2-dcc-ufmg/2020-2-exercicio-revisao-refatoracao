@@ -11,7 +11,7 @@ class Encomenda{
 
 		double _peso = 0.0;
 		double _custoKg = 0.0;
-		double _t = 0.0;
+		double _total = 0.0;
 		Cliente _remetente;
 		Cliente _dest;
 			
