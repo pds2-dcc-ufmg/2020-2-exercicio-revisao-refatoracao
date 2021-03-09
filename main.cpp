@@ -6,7 +6,7 @@
 #include <vector>
 
 int main(){
-	
+
 	Cliente cli0;
 	cli0._nome = "Thales";
 	cli0._endereco = "Rua dos Pré-Socráticos";
@@ -132,7 +132,7 @@ int main(){
 	enc7._dest = cli0;
 	quantidadeRelampago++;
 	EncomendasRelampago.push_back(enc7);
-	
+
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
 	double custoNormal = 0;
@@ -151,7 +151,7 @@ int main(){
 		custoRelampago += EncomendasRelampago[i].calcula();
 		std::cout << std::endl;
 	}
-	
+
 	std::cout << "\n>> Encomendas Normais <<" 
 	<< "\nQuantidade: " << quantidadeNormal
 	<< "\nValor Total: " << custoNormal
@@ -160,5 +160,5 @@ int main(){
 	<< "\nQuantidade: " << quantidadeRelampago
 	<< "\nValor Total: " << custoRelampago
 	<< std::endl;
-	
+
 }
