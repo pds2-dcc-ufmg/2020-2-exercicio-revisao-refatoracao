@@ -4,7 +4,6 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 #define NUM_CLIENTES 8 // quantidade total de clientes
 #define NUM_NORMAIS 5 // quantidade de encomendas normais
@@ -78,7 +77,7 @@ int main()
 	encomendas_relamp.push_back(EncomendaRelampago(peso_relamp[NUM_RELAMP-1], custo_relamp, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
 	
 	// Impressão das informações das encomendas e dos respectivos clientes envolvidos
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
 	double custo_total_normal = 0; // Custo total das encomendas normais
 	double custo_total_relam = 0; // Custo total das encomendas relâmpago
@@ -96,9 +95,9 @@ int main()
 	std::cout << "\n>> Encomendas Normais <<"
 			  << "\nQuantidade: " << NUM_NORMAIS
 			  << "\nValor Total: " << custo_total_normal
-			  << endl
+			  << std::endl
 			  << "\n>> Encomendas Relâmpago <<"
 			  << "\nQuantidade: " << NUM_RELAMP
 			  << "\nValor Total: " << custo_total_relam
-			  << endl;
+			  << std::endl;
 }

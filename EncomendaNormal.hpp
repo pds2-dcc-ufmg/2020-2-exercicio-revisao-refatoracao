@@ -3,7 +3,6 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
@@ -12,10 +11,10 @@ class EncomendaNormal: public Encomenda{
 		// Impressão dos atributos da classe EncomendaNormal
 		void print_data() override
 		{
-			std::cout << "[Encomenda Normal]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Custo total: " << TOTAL << endl;
+			std::cout << "[Encomenda Normal]" << std::endl;
+			std::cout << "  Peso: " << PESO << std::endl
+					  << "  Custo por kg: " << CUSTOkg << std::endl
+					  << "  Custo total: " << TOTAL << std::endl;
 		}
 
 		// Construtor - EncomendaNormal

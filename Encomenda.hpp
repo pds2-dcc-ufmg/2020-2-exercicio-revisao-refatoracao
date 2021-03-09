@@ -2,7 +2,6 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
-using namespace std;
 
 class Encomenda{
 
@@ -25,9 +24,9 @@ class Encomenda{
 		// Impressão dos atributos da classe
 		void print() 
 		{
-			std::cout << "[Remetente]" << endl;
+			std::cout << "[Remetente]" << std::endl;
 			REMET.print();
-			std::cout << "[Destinatário]" << endl;
+			std::cout << "[Destinatário]" << std::endl;
 			DEST.print();
 		}
 
@@ -41,7 +40,7 @@ class Encomenda{
 		{
 			this->print();
 			this->print_data();
-			std::cout << endl;
+			std::cout << std::endl;
 			return this->calcula();
 		}
 

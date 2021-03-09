@@ -3,7 +3,6 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
 const double taxa = 0.25;
 
@@ -14,11 +13,11 @@ class EncomendaRelampago: public Encomenda{
 		// Impressão dos atributos da classe EncomendaRelampago
 		void print_data() override
 		{
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << TOTAL << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << PESO << std::endl
+					  << "  Custo por kg: " << CUSTOkg << std::endl
+					  << "  Taxa adicional: " << 0.25 << std::endl
+					  << "  Custo total: " << TOTAL << std::endl;
 		}
 
 		// Construtor da classe EncomendaRelampago
