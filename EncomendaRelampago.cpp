@@ -5,7 +5,7 @@
 double EncomendaRelampago::calcula(){
 
 			double x = Encomenda::calcula();
-			x += x * 0.25;
+			x += x * _taxa;
 			
 			return x;
 }
