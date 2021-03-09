@@ -3,33 +3,29 @@
 
 #include "Cliente.hpp"
 
+class Encomenda
+{
+protected:
+	double peso;
+	double custoKg;
+	double total;
+	Cliente remetente;
+	Cliente destinatario;
 
-class Encomenda{
-
-	private:
-	
-		double peso;
-		double custoKg ;
-		double total ;
-		Cliente remetente;
-		Cliente destinatario;
-
-	public:
-		
-		double getPeso();
-    	double getCustoKg();
-    	double getTotal();
-    	Cliente getRemetente();
-    	Cliente getDestinatario();
-		void setPeso(double peso);
-    	void setCustoKG(double custoKg);
-    	void setT(double total);
-		void setRemetente(Cliente remetente);
-    	void setDestinatario(Cliente destinatario);
-		Encomenda(double peso, double custoKg, double total, Cliente remetente, Cliente destinatario);
-		void print();
-		Encomenda();
-
+public:
+	Encomenda();
+	Encomenda(double peso, double custoKg, double total, Cliente remetente, Cliente destinatario);
+	double getPeso();
+	void setPeso(double peso);
+	double getCustoKg();
+	void setCustoKg(double custoKg);
+	double getTotal();
+	void setTotal(double total);
+	Cliente getRemetente();
+	void setRemetente(Cliente remetente);
+	Cliente getDestinatario();
+	void setDestinatario(Cliente destinatario);
+	void print();
 };
 
 #endif

@@ -1,21 +1,25 @@
-#include "EncomendaNormal.hpp"        
+#include "EncomendaNormal.hpp"
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 
-EncomendaNormal(){}
+#include <iostream>
 
-EncomendaNormal::EncomendaNormal(double _peso, double _CustoKg){
-    this->peso = _peso;
-    this->CustoKg = _CustoKg;
+EncomendaNormal::EncomendaNormal(double peso, double custoKg)
+{
+	this->peso = peso;
+	this->custoKg = custoKg;
 }
 
-void EncomendaNormal::print(){
-		std::cout << "[Encomenda Normal]" << std::endl;
-		std::cout << "  Peso: " << this->getPeso() << std::endl
-			<< "  Custo por kg: " << this->getCustoKg() << std::endl
-			<< "  Custo total: " << this->getTotal() << std::endl;
+double EncomendaNormal::calcula()
+{
+	return this->getPeso() * this->getCustoKg();
 }
 
-double EncomendaNormal::calcula() {
-  return this->getPeso() * this->getCustoKg();
+void EncomendaNormal::print()
+{
+	Encomenda::print();
+    std::cout << "[Encomenda Normal]" << std::endl;
+	std::cout << "  Peso: " << this->getPeso() << std::endl
+			  << "  Custo por kg: " << this->getCustoKg() << std::endl
+			  << "  Custo total: " << this->getTotal() << std::endl;
 }
