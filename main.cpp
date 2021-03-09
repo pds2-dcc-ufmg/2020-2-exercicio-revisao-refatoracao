@@ -70,12 +70,12 @@ int main()
 	}
 
 	// Criação e inicialização do vetor de encomendas relâmpago
-	vector<EncomendaRelampago> encomendas_relamp;
+	vector<EncomendaRelampago> encomendas_relam;
 	for (int i = 0; i < NUM_RELAMP-1; i++)
 	{
-		encomendas_relamp.push_back(EncomendaRelampago(peso_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
+		encomendas_relam.push_back(EncomendaRelampago(peso_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
 	}
-	encomendas_relamp.push_back(EncomendaRelampago(peso_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
+	encomendas_relam.push_back(EncomendaRelampago(peso_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
 	
 	// Impressão das informações das encomendas e dos respectivos clientes envolvidos
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
@@ -88,7 +88,7 @@ int main()
 		custN += enc.metodo();
 	}
 
-	for (auto & enc: encomendas_relamp)
+	for (auto & enc: encomendas_relam)
 	{
 		custR += enc.metodo();
 	}
