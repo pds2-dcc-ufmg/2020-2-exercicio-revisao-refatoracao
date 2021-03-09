@@ -16,14 +16,13 @@ class EncomendaNormal: public Encomenda{
 			std::cout << "[Encomenda Normal]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Custo total: " << TOTAL << endl;
 		}
 
 		// Construtor - EncomendaNormal
 		EncomendaNormal(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
-			this->T = this->calcula();
-			this->taxa = 0.0;
+			this->TAXA = 0.0;
 		}
 
 		// Formatação da impressão final e cálculo do custo total

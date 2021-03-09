@@ -17,14 +17,13 @@ class EncomendaRelampago: public Encomenda{
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
 				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Custo total: " << TOTAL << endl;
 		}
 
 		// Construtor da classe EncomendaRelampago
 		EncomendaRelampago(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
-			this->T = this->calcula();
-			this->taxa = 0.25;
+			this->TAXA = 0.25;
 		}
 
 		// Formatação para impressão final e cálculo do custo total

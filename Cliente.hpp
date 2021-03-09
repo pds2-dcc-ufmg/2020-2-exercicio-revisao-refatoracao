@@ -16,10 +16,10 @@ class Cliente{
 		
 		// Campos de informação que um Cliente contém
 		string NOME;
-		string endereco;
+		string ENDERECO;
 		string CIDADE;
 		string ESTADO;
-		string cep;
+		string CEP;
 		
 };
 
