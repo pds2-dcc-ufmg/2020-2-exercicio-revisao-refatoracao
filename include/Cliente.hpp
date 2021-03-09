@@ -8,7 +8,7 @@ class Cliente{
 		
 		void imprimirDadosCliente();
 	
-	protected:
+	private:
 		std::string _nome;
 		std::string _endereco;
 		std::string _cidade;

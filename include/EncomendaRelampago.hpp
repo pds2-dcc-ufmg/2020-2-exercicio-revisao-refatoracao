@@ -8,10 +8,10 @@ class EncomendaRelampago: public Encomenda{
 		EncomendaRelampago(double peso, double custoKg, Cliente remetente, Cliente destinatario): 
 			Encomenda(peso, custoKg, remetente, destinatario){};
 
-		double calculaCustoTotal();
-		void imprimeEncomenda() override;
+		double calcularCustoTotal();
+		void imprimirEncomenda() override;
 	
-	protected:
+	private:
 		double _custoTotal = 0.0;
 		double _taxa = 0.25;
 };

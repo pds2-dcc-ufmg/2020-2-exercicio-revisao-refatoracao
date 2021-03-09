@@ -8,10 +8,10 @@ class EncomendaNormal: public Encomenda{
 		EncomendaNormal(double peso, double custoKg, Cliente remetente, Cliente destinatario): 
 			Encomenda(peso, custoKg, remetente, destinatario){};
 		
-		double calculaCustoTotal();
-		void imprimeEncomenda() override;
+		double calcularCustoTotal();
+		void imprimirEncomenda() override;
 	
-	protected:
+	private:
 		double _custoTotal = 0.0;
 };
 
