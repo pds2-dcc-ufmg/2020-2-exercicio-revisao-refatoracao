@@ -7,24 +7,25 @@ using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
+	private:
+	
+		double taxa = 0.25;
+
 	public:
-
-		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		//retorna a taxa de uma encomenda relampago
+		double getTaxa() {
+			return this->taxa;	
 		}
-
+		
+		//imprime na tela os dados de uma encomenda
 		void print(){
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "  Peso: " << this->getPeso() << endl
+				<< "  Custo por kg: " << this->getCustoKg() << endl
+				<< "  Taxa adicional: " << this->taxa << endl
+				<< "  Custo total: " << this->getCustoTotal(taxa) << endl;
 
 		}
 

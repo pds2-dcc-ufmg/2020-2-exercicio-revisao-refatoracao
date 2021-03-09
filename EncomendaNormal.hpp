@@ -6,25 +6,27 @@
 using namespace std;
 
 class EncomendaNormal: public Encomenda{
+	
+	private:
+	
+		double taxa = 0.0;
 
 	public:
-		
-	double calcula(){
+		//retorna a taxa da encomenda normal
+		double getTaxa() {
+			return this->taxa;	
+		}
 
-		double x = PESO * CUSTOkg;
+		//imprime na tela os dados de uma encomenda
+		void print(){
 
-		return x;
-	}
+			Encomenda::print();
+			std::cout << "[Encomenda Normal]" << endl;
+			std::cout << "  Peso: " << this->getPeso() << endl
+				<< "  Custo por kg: " << this->getCustoKg() << endl
+				<< "  Custo total: " << this->getCustoTotal(taxa) << endl;
 
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+		}
 
 };
 
