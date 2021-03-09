@@ -4,30 +4,23 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 using namespace std;
+static constexpr double taxa_adicional = 0.25;
 
 class EncomendaRelampago: public Encomenda{
-
 	public:
-
 		double calcula(){
-
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
+			this->_custo_total = this->_peso * this->_custo_kg * (1 + taxa_adicional);
+			return this->_custo_total;
+		} // calcula o valor do custo total da entrega e o retorna
 
 		void print(){
-
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+			std::cout << "  Peso: " << this->_peso << endl
+				<< "  Custo por kg: " << this->_custo_kg << endl
+				<< "  Taxa adicional: " << taxa_adicional << endl
+				<< "  Custo total: " << this->_custo_total << endl;
+		} // imprime na tela informações sobre a encomenda cadastrada
 };
 
 #endif
