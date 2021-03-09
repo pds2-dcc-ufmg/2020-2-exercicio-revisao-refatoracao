@@ -7,61 +7,21 @@ using namespace std;
 
 int main(){
 	
-	Cliente cli0;
-	cli0.nome = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.cidade = "Miletus";
-	cli0.estado = "Ionia";
-	cli0.cep = "548 a.C.";
+	Cliente cli0("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
 
-	Cliente cli1;
-	cli1.nome = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.cidade = "Atenas";
-	cli1.estado = "Ática";
-	cli1.cep = "384 a.C.";
+	Cliente cli1("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C");
 
-	Cliente cli2;
-	cli2.nome = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.cidade = "Atenas";
-	cli2.estado = "Ática";
-	cli2.cep = "348 a.C";
+	Cliente cli2("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
 
-	Cliente cli3;
-	cli3.nome = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.cidade = "Atenas";
-	cli3.estado = "Ática";
-	cli3.cep = "399 a.C.";
+    Cliente cli3("Socrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C");
 
-	Cliente cli4;
-	cli4.nome = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.cidade = "Samos";
-	cli4.estado = "Egeu";
-	cli4.cep = "571 a.C.";
+	Cliente cli4("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C");
 
-	Cliente cli5;
-	cli5.nome = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.cidade = "Eleia";
-	cli5.estado = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	Cliente cli5("Paramênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460a.C");
 
-	Cliente cli6;
-	cli6.nome = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.cidade = "Agrigento";
-	cli6.estado = "Sicília";
-	cli6.cep = "495 a.C.";
+	Cliente cli6("Empédocles", "RUa dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C");
 
-	Cliente cli7;
-	cli7.nome = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.cidade = "Clazômenas";
-	cli7.estado = "Jónia";
-	cli7.cep = "499 a.C.";
+	Cliente cli7("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C");
 
 	int quantN = 0;
 	int quantR = 0;
