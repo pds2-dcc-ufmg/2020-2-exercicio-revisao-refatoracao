@@ -11,3 +11,9 @@ void Cliente::print()
 						<< "  Estado: " << estado << endl
 						<< "  CEP: " << cep << endl;
 }
+
+Cliente::Cliente(string nome, string endereco, string cidade, string estado, string cep)
+  : nome(nome)
+  , endereco(endereco)
+  , cidade(cidade)
+  , estado(estado) {}

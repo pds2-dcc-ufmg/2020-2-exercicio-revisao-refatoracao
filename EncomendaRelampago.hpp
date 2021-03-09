@@ -9,6 +9,7 @@ class EncomendaRelampago : public Encomenda
 {
 
 public:
+  using Encomenda::Encomenda;
 	double calcula();
 
 	void print();

@@ -9,7 +9,6 @@ double EncomendaNormal::calcula()
 
 void EncomendaNormal::print()
 {
-
 		Encomenda::print();
 		cout << "[Encomenda Normal]" << endl;
 		cout << "  Peso: " << peso << endl

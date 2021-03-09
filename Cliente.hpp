@@ -8,6 +8,8 @@ class Cliente
 {
 
 public:
+  Cliente(string nome="", string endereco="", string cidade="", string estado="", string cep=""); 
+
 	string nome;
 	string endereco;
 	string cidade;

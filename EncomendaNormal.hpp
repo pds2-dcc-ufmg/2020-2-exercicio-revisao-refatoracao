@@ -9,8 +9,8 @@ class EncomendaNormal : public Encomenda
 {
 
 public:
+  using Encomenda::Encomenda;
 	double calcula();
-
 	void print();
 };
 
