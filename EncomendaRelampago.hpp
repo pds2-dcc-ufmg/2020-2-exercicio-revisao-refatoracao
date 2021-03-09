@@ -6,25 +6,41 @@
 using namespace std;
 
 class EncomendaRelampago: public Encomenda{
+  
+  private:
+
+    static constexpr double CUSTO_POR_KILO_ENCOMENDA_RELAMPAGO = 18;
+
+    static constexpr double TAXA_ADICIONAL_ENCOMENDA_RELAMPAGO = 0.25;
 
 	public:
+	
+		EncomendaRelampago(double peso, Cliente remetente, Cliente destinatario){
 
-		double calcula(){
+		  	_peso = peso;
+			_custoPorKG = CUSTO_POR_KILO_ENCOMENDA_RELAMPAGO; 
+			_remetente = remetente; 
+			_destinatario = destinatario;
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+   		}
+
+		double calcularCustoTotal() override { 
+
+      		return _peso * _custoPorKG * (1 + TAXA_ADICIONAL_ENCOMENDA_RELAMPAGO);
+
 		}
 
-		void print(){
+		void print() override{
 
-			Encomenda::print();
+			std::cout << "[Remetente]" << endl;
+			_remetente.print();
+			std::cout << "[Destinatário]" << endl;
+			_destinatario.print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
+			std::cout << "  Peso: " << _peso << endl
+				<< "  Custo por kg: " << _custoPorKG << endl
 				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Custo total: " << calcularCustoTotal() << endl;
 
 		}
 
