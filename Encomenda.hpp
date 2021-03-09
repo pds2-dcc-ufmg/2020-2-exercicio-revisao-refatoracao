@@ -2,9 +2,8 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
-using namespace std;
 
-class Encomenda{
+class Encomenda {
 
 	public:
 
@@ -15,7 +14,6 @@ class Encomenda{
 		Cliente dest;
 			
 		void print(){
-
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
 			std::cout << "[Destinatário]" << endl;
