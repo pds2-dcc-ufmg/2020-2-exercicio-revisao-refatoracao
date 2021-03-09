@@ -7,9 +7,6 @@ class Cliente {
 
 	public:
 
-        //TODO: Excluir depois
-        Cliente() {};
-
         Cliente(std::string nome, std::string endereco, std::string cidade, std::string estado, std::string cep);
 	    
         // imprime na tela os dados de um cliente cadastrado

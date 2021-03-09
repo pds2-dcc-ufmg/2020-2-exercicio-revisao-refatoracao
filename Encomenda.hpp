@@ -1,5 +1,5 @@
-#ifndef Encomenda_H
-#define Encomenda_H
+#ifndef ENCOMENDA_H 
+#define ENCOMENDA_H
 
 #include "Cliente.hpp"
 
@@ -7,21 +7,23 @@ class Encomenda {
 
 	public:
 
+        Encomenda(double peso, double custoEmKg, Cliente *remetente, Cliente *destinatario);
+
+        virtual double calculaCustoTotal();
+
+		void imprimeDados();
+
+        virtual ~Encomenda() {}
+
+
+    protected:
+
+		Cliente *remetente;
+		Cliente *destinatario;
+			
 		double peso = 0.0;
 		double custoEmKg = 0.0;
 		double custoTotal = 0.0;
-
-		Cliente remetente;
-		Cliente destinatario;
-			
-		void imprimeDados() {
-
-			std::cout << "[Remetente]" << std::endl;
-			remetente.imprimeDados();
-
-			std::cout << "[Destinatário]" << std::endl;
-			destinatario.imprimeDados();
-		}
 };
 
 #endif

@@ -7,22 +7,19 @@
 class EncomendaNormal: public Encomenda {
 
 	public:
-		
-	double calculaCustoTotal(){
 
-		double custoTotal = peso * custoEmKg;
+        EncomendaNormal(double peso, double custoEmKg, Cliente *remetente, Cliente *destinatario):
+            Encomenda(peso, custoEmKg, remetente, destinatario) {}
 
-		return custoTotal;
-	}
 
-	void imprimeDados() {
+        void imprimeDados() {
 
-		Encomenda::imprimeDados();
-		std::cout << "[Encomenda Normal]" << std::endl;
-		std::cout << "  Peso: " << peso << std::endl
-			<< "  Custo por kg: " << custoEmKg << std::endl
-			<< "  Custo total: " << custoTotal << std::endl;
-	}
+            Encomenda::imprimeDados();
+            std::cout << "[Encomenda Normal]" << std::endl;
+            std::cout << "  Peso: " << peso << std::endl
+                << "  Custo por kg: " << custoEmKg << std::endl
+                << "  Custo total: " << custoTotal << std::endl;
+        }
 };
 
 #endif

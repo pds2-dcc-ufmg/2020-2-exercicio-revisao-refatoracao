@@ -4,17 +4,21 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda {
 
 	public:
 
-		double calculaCustoTotal() {
+        EncomendaRelampago(double peso, double custoEmKg, Cliente *remetente, Cliente *destinatario):
+            Encomenda(peso, custoEmKg, remetente, destinatario) {}
 
-			double x = peso * custoEmKg;
-			x += x * taxaAdicional;
+
+        double calculaCustoTotal() override {
+
+			double custoTotal = peso * custoEmKg;
+			custoTotal += custoTotal * taxaAdicional;
 			
-			return x;
-		}
+			return custoTotal;
+        }
 
 		void imprimeDados() {
 

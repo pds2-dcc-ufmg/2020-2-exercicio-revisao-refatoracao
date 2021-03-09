@@ -5,137 +5,64 @@
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
 
+#define NUM_CLIENTES 8
+#define NUM_ENCOMENDAS_NORMAIS 5
+#define NUM_ENCOMENDAS_RELAMPAGO 3
+
 using namespace std;
 
 int main() {
+    
+    Cliente *cliente[NUM_CLIENTES];
 	
-	Cliente cliente0 = Cliente("Thales","Rua dos Pré-Socráticos","Miletus","Ionia","548 a.C.");
+    cliente[0] = new Cliente("Thales","Rua dos Pré-Socráticos","Miletus","Ionia","548 a.C.");
+	cliente[1] = new Cliente("Aristóteles","Avenida do Meio-Termo","Atenas","Ática","384 a.C.");
+	cliente[2] = new Cliente("Platão","Praça das Formas","Atenas","Ática","348 a.C");
+	cliente[3] = new Cliente("Sócrates","Rua do Elenchus","Atenas","Ática","399 a.C.");
+	cliente[4] = new Cliente("Pitágoras","Praça dos Quadrados dos Catetos","Samos","Egeu","571 a.C.");
+	cliente[5] = new Cliente("Parmênides","Rua do Não Ser","Eleia","Magna Grécia","460 a.C.");
+	cliente[6] = new Cliente("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
+	cliente[7] = new Cliente("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
 
-	Cliente cliente1 = Cliente("Aristóteles","Avenida do Meio-Termo","Atenas","Ática","384 a.C.");
+	int numEncomendasNormais = NUM_ENCOMENDAS_NORMAIS;
+	int numEncomendasRelampago = NUM_ENCOMENDAS_RELAMPAGO;
 
-	Cliente cliente2 = Cliente("Platão","Praça das Formas","Atenas","Ática","348 a.C");
+    int totalDeEncomendas = numEncomendasNormais + numEncomendasRelampago;
 
-	Cliente cliente3 = Cliente("Sócrates","Rua do Elenchus","Atenas","Ática","399 a.C.");
+    Encomenda *encomenda[totalDeEncomendas];
 
-	Cliente cliente4 = Cliente("Pitágoras","Praça dos Quadrados dos Catetos","Samos","Egeu","571 a.C.");
+	encomenda[0] = new EncomendaNormal(5,12,cliente[0],cliente[1]);
+	encomenda[1] = new EncomendaNormal(10,12,cliente[1],cliente[2]);
+	encomenda[2] = new EncomendaNormal(7,12,cliente[2],cliente[3]);
+	encomenda[3] = new EncomendaNormal(2,12,cliente[3],cliente[4]);
+	encomenda[4] = new EncomendaNormal(3,12,cliente[4],cliente[5]);
+	encomenda[5] = new EncomendaRelampago(13,18,cliente[5],cliente[6]);
+	encomenda[6] = new EncomendaRelampago(6,18,cliente[6],cliente[7]);
+	encomenda[7] = new EncomendaRelampago(8,18,cliente[7],cliente[0]);
 
-	Cliente cliente5 = Cliente("Parmênides","Rua do Não Ser","Eleia","Magna Grécia","460 a.C.");
-
-	Cliente cliente6 = Cliente("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
-
-	Cliente cliente7 = Cliente("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
-
-	int quantN = 0;
-	int quantR = 0;
-
-	EncomendaNormal encomenda0;
-	encomenda0.peso = 5;
-	encomenda0.custoEmKg = 12;
-	encomenda0.remetente = cliente0;
-	encomenda0.destinatario = cliente1;
-	quantN++;
-
-	EncomendaNormal encomenda1;
-	encomenda1.peso = 10;
-	encomenda1.custoEmKg = 12;
-	encomenda1.remetente = cliente1;
-	encomenda1.destinatario = cliente2;
-	quantN++;
-
-	EncomendaNormal encomenda2;
-	encomenda2.peso = 7;
-	encomenda2.custoEmKg = 12;
-	encomenda2.remetente = cliente2;
-	encomenda2.destinatario = cliente3;
-	quantN++;
-
-	EncomendaNormal encomenda3;
-	encomenda3.peso = 2;
-	encomenda3.custoEmKg = 12;
-	encomenda3.remetente = cliente3;
-	encomenda3.destinatario = cliente4;
-	quantN++;
-
-	EncomendaNormal encomenda4;
-	encomenda4.peso = 3;
-	encomenda4.custoEmKg = 12;
-	encomenda4.remetente = cliente4;
-	encomenda4.destinatario = cliente5;
-	quantN++;
-
-	EncomendaRelampago encomenda5;
-	encomenda5.peso = 13;
-	encomenda5.custoEmKg = 18;
-	encomenda5.remetente = cliente5;
-	encomenda5.destinatario = cliente6;
-	quantR++;
-
-	EncomendaRelampago encomenda6;
-	encomenda6.peso = 6;
-	encomenda6.custoEmKg = 18;
-	encomenda6.remetente = cliente6;
-	encomenda6.destinatario = cliente7;
-	quantR++;
-
-	EncomendaRelampago encomenda7;
-	encomenda7.peso = 8;
-	encomenda7.custoEmKg = 18;
-	encomenda7.remetente = cliente7;
-	encomenda7.destinatario = cliente0;
-	quantR++;
-	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custoTotalEncomendasNormais = 0;
+	double custoTotalEncomendasRelampago = 0;
 
-	encomenda0.calculaCustoTotal();
-	encomenda0.imprimeDados();
-	custN += encomenda0.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda1.calculaCustoTotal();
-	encomenda1.imprimeDados();
-	custN += encomenda1.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda2.calculaCustoTotal();
-	encomenda2.imprimeDados();
-	custN += encomenda2.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda3.calculaCustoTotal();
-	encomenda3.imprimeDados();
-	custN += encomenda3.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda4.calculaCustoTotal();
-	encomenda4.imprimeDados();
-	custN += encomenda4.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda5.calculaCustoTotal();
-	encomenda5.imprimeDados();
-	custR += encomenda5.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda6.calculaCustoTotal();
-	encomenda6.imprimeDados();
-	custR += encomenda6.calculaCustoTotal();
-	std::cout << endl;
-
-	encomenda7.calculaCustoTotal();
-	encomenda7.imprimeDados();
-	custR += encomenda7.calculaCustoTotal();
-	std::cout << endl;
+    for (int i = 0; i < totalDeEncomendas; i++) {
+        encomenda[i]->calculaCustoTotal();
+        encomenda[i]->imprimeDados();
+        custoTotalEncomendasNormais += encomenda[i]->calculaCustoTotal();
+        std::cout << endl;
+    }
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
+		 << "\nQuantidade: " << numEncomendasNormais
+		 << "\nValor Total: " << custoTotalEncomendasNormais
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
+		 << "\nQuantidade: " << numEncomendasRelampago
+		 << "\nValor Total: " << custoTotalEncomendasRelampago
 		 << endl;
-	
+
+    for (int i = 0; i < totalDeEncomendas; i++) {
+        delete cliente[i];
+        delete encomenda[i];
+    }
 }
