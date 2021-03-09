@@ -9,11 +9,11 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
-	double calcula(){
+	double calculaPreco(){
 
-		double x = PESO * CUSTOkg;
+		double PRECO = PESO * CUSTOkg;
 
-		return x;
+		return PRECO;
 	}
 
 	void print(){
@@ -22,7 +22,7 @@ class EncomendaNormal: public Encomenda{
 		std::cout << "[Encomenda Normal]" << endl;
 		std::cout << "  Peso: " << PESO << endl
 			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
+			<< "  Custo total: " << TOTAL << endl;
 
 	}
 
