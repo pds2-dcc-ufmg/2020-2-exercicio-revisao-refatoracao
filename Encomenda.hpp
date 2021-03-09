@@ -20,8 +20,10 @@ class Encomenda{
 			remetente.print();
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
-		}
 
+		}
+		Encomenda(double _PESO, double _CUSTOkg, double _T, Cliente _remetente, Cliente _dest): PESO(_PESO), CUSTOkg(_CUSTOkg), T(_T), remetente(_remetente), dest(_dest){};
+		
 };
 
 #endif
