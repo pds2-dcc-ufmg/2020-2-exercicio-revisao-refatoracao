@@ -2,6 +2,8 @@
 
 De modo geral busquei diminuir a repetição de informações e funções, facilitar a compreensão do programa e deixá-lo mais otimizado.
 
+-> Em todos os casos utilizei as letras minúsculas para declaração das variáveis e o underline como primeiro carácter para se referir aos elementos da própria classe.
+
 **Cliente.cpp**
 
 -> Implementação da função construtora de cliente;
@@ -11,8 +13,6 @@ De modo geral busquei diminuir a repetição de informações e funções, facil
 **Cliente.hpp**
 
 -> Criação de um construtor para a classe;
-
--> Utilização do underline(_) para se referenciar aos dados da própria classe;
 
 -> Separação correta dos dados em private e funções em public.
 
@@ -31,8 +31,6 @@ De modo geral busquei diminuir a repetição de informações e funções, facil
 -> Criação da função construtora para a classe;
 
 -> Separação correta dos dados em private e funções em public;
-
--> Utilização do underline(_) para se referenciar aos dados da própria classe;
 
 -> Melhora na organização dos nomes, por meio do underline e a utilização das palavras completas, sem abreviações.
 
