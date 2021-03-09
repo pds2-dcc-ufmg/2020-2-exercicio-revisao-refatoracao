@@ -13,7 +13,7 @@ class Encomenda{
 		Cliente _sender;
 		Cliente _recipient;
 			
-		void print();
+		virtual void print();
 
 		Encomenda(double weight, double costKg, Cliente sender, Cliente recipient);
 		Encomenda(); // construtor padrão
