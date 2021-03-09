@@ -33,7 +33,7 @@ template <class T> void Lista<T>::inserir(T encomenda) { // insere uma encomenda
 
 template <class T> int Lista<T>::getSize() const { // retorna o tamanho atual da lista
 
-   return this->_listaSize;
+	return this->_listaSize;
 
 } // fim do metodo getSize
 
