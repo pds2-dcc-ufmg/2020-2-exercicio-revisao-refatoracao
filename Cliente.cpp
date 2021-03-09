@@ -6,10 +6,10 @@ using namespace std;
 
 void Cliente::print(){
 	
-	cout << "  Nome: " << getNome << endl
-		 << "  Endereço: " << getEndereco << endl
-		 << "  Cidade: " << getCidade << endl
-		 << "  Estado: " << getEstado << endl
-		 << "  CEP: " << getCep << endl;
+	cout << "  Nome: " << nome << endl
+		 << "  Endereço: " << endereco << endl
+		 << "  Cidade: " << cidade << endl
+		 << "  Estado: " << estado << endl
+		 << "  CEP: " << cep << endl;
 
 }
