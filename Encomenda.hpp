@@ -14,14 +14,18 @@ class Encomenda{
 		Cliente remetente;
 		Cliente dest;
 			
-		void print(){
+			/*O método print foi transformado em
+			virtual para que as classes filhas pudessem
+			utilizá-lo com pequenas modificações em
+			suas respectivas classes */
+		virtual void print(){
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
 		}
-
+		void encomenda(double PESO, double CUSTOkg, Cliente remetente, Cliente dest);
 };
 
 #endif

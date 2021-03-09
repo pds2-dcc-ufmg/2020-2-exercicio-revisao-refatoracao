@@ -3,31 +3,36 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
+#define TAXA 0.25
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago : public Encomenda
+{
 
-	public:
+public:
+	double calcula()
+	{
 
-		double calcula(){
+		double x = PESO * CUSTOkg;
+		x += x * TAXA; /*constante TAXA foi utilizada pra caso o valor mude não
+			precise alterar todos os valores do código. */
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
+		return x;
+	}
+	/* Método print recebeu override pois o método foi herdado da classe mãe. */
+	void print() override
+	{
 
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+		std::cout << "[Remetente]" << endl;
+		remetente.print();
+		std::cout << "[Destinatário]" << endl;
+		dest.print();
+		std::cout << "[Encomenda Relâmpago]" << endl;
+		std::cout << "  Peso: " << PESO << endl
+				  << "  Custo por kg: " << CUSTOkg << endl
+				  << "  Taxa adicional: " << TAXA << endl
+				  << "  Custo total: " << T << endl;
+	}
 };
 
 #endif
