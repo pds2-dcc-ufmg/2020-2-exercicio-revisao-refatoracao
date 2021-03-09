@@ -6,7 +6,7 @@
 #include "Cliente.hpp"
 using namespace std;
 
-#define NUM_CLIENTES 8
+#define NUM_CLIENTES 8 // quantidade total de clientes
 #define NUM_NORMAIS 5 // quantidade de encomendas normais
 #define NUM_RELAMP 3 // quantidade de encomendas relâmpago
 
@@ -58,30 +58,30 @@ int main()
 	}
 
 	// Criação de vetores com as informações das encomendas
-	vector<double> pesos_normal = {5, 10, 7, 2, 3};
-	vector<double> pesos_relam = {13, 6, 8};
+	vector<double> peso_normal = {5, 10, 7, 2, 3};
+	vector<double> peso_relam = {13, 6, 8};
 	double custo_normal = 12, custo_relam = 18;
 
 	// Criação e inicialização do vetor de encomendas normais
 	vector<EncomendaNormal> encomendas_normais;
 	for (int i = 0; i < NUM_NORMAIS; i++)
 	{
-		encomendas_normais.push_back(EncomendaNormal(pesos_normal[i], custo_normal, clientes[i], clientes[i+1]));
+		encomendas_normais.push_back(EncomendaNormal(peso_normal[i], custo_normal, clientes[i], clientes[i+1]));
 	}
 
 	// Criação e inicialização do vetor de encomendas relâmpago
 	vector<EncomendaRelampago> encomendas_relamp;
 	for (int i = 0; i < NUM_RELAMP-1; i++)
 	{
-		encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
+		encomendas_relamp.push_back(EncomendaRelampago(peso_relam[i], custo_relam, clientes[i+NUM_NORMAIS], clientes[i+NUM_NORMAIS+1]));
 	}
-	encomendas_relamp.push_back(EncomendaRelampago(pesos_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
+	encomendas_relamp.push_back(EncomendaRelampago(peso_relam[NUM_RELAMP-1], custo_relam, clientes[NUM_NORMAIS+NUM_RELAMP-1], clientes[0]));
 	
 	// Impressão das informações das encomendas e dos respectivos clientes envolvidos
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custN = 0; // Custo total das encomendas normais
+	double custR = 0; // Custo total das encomendas relâmpago
 
 	for (auto & enc : encomendas_normais)
 	{

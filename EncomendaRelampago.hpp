@@ -9,6 +9,7 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
+		// Impressão dos atributos da classe EncomendaRelampago
 		void print()
 		{
 			Encomenda::print();
@@ -19,12 +20,14 @@ class EncomendaRelampago: public Encomenda{
 				<< "  Custo total: " << T << endl;
 		}
 
+		// Construtor da classe EncomendaRelampago
 		EncomendaRelampago(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
 			this->T = this->calcula();
 			this->taxa = 0.25;
 		}
 
+		// Formatação para impressão final e cálculo do custo total
 		double metodo() 
 		{
 			this->print();
