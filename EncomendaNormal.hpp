@@ -7,23 +7,30 @@ using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
+	private:
+
+		const double _CUSTOKILO = 12;
+		const double _TAXA = 0;
+		double _custoTotal;
+
 	public:
-		
-	double calcula(){
 
-		double x = PESO * CUSTOkg;
+		double getCustoKilo(){return _CUSTOKILO;};
+		double getTaxa(){return _TAXA;}
 
-		return x;
-	}
+		double getCustoTotal(){	
+			_custoTotal=getPeso()*getCustoKilo();
+			_custoTotal+=_custoTotal*getTaxa();
+			return _custoTotal;		
+		}
 
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
+		void print(){
+			Encomenda::print();
+			std::cout
+				<< "[Encomenda Normal]" << endl
+				<< "  Peso: " << getPeso() << endl
+				<< "  Custo por kg: " << getCustoKilo() << endl
+				<< "  Custo total: " << getCustoTotal() << endl;
 	}
 
 };
