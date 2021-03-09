@@ -1,27 +1,26 @@
-#ifndef Encomenda_H
-#define Encomenda_H
+#ifndef CLIENTE_H
+#define CLIENTE_H
 
-#include "Cliente.hpp"
+#include <string>
 using namespace std;
-
-class Encomenda{
-
+class Cliente{
 	public:
+   Cliente(string NOME, string endereco, string CIDADE, string ESTADO, string cep){
+         this ->_nomeCliente = NOME;
+  this->_enderecoCliente = endereco;
+  this->_CIDADECliente = CIDADE;
+  this ->_ESTADOCliente = ESTADO;
+  this->_cepCliente = cep; 
+      };
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
+		string NOME;
+		string endereco;
+		string CIDADE;
+		string ESTADO;
+		string cep;
+				
 		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
-};
+  // imprime na tela os dados de um cliente cadastrado
+    }
 
 #endif
