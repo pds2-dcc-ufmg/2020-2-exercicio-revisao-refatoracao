@@ -11,10 +11,7 @@ void Encomenda::print()
 
 double Encomenda::calcula()
 {
-    double x = this->_peso * this->_custoKG;
-    x += x * this->_taxa;
-
-    return x;
+    return this->_peso * this->_custoKG * (1 + this->_taxa);
 }
 
 double Encomenda::resultado()
