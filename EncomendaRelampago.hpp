@@ -8,24 +8,9 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula() override
+		virtual double calcula() override;
 
-			double x = peso * custoKg;
-			x += x * constante;
-			
-			return x;
-		}
-
-		void print() override{
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << std::endl;
-			std::cout << "  Peso: " << peso << endl
-				<< "  Custo por kg: " << custoKg << std::endl
-				<< "  Taxa adicional: " << 0.25 << std::endl
-				<< "  Custo total: " << custoTotal << endl;
-
-		}
+		virtual void print() override;
 	
 	private:
 		double constante = 0.25;
