@@ -22,7 +22,7 @@ class Encomenda{
 		double getCustoKg();
 		void setCustoKg(double new_custo_kg);
 	
-		double getCustoTotal();
+		double getCustoTotal(double taxa);
 	
 		Cliente getRemetente();
 		void setRemetente(Cliente new_remetente);
