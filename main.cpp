@@ -12,14 +12,14 @@
 int main(){
 
 	// criando e inserindo clientes
-	Cliente cliente0 ("Thales","Rua dos PrÃ©-SocrÃ¡ticos","Miletus","Ionia","548 a.C.");
-	Cliente cliente1 ("AristÃ³teles", "Avenida do Meio-Termo", "Atenas", "Ãtica", "384 a.C.");
-	Cliente cliente2 ("PlatÃ£o", "PraÃ§a das Formas",	"Atenas", "Ãtica", "348 a.C");
-	Cliente cliente3 ("SÃ³crates","Rua do Elenchus","Atenas", "Ãtica", "399 a.C.");
-	Cliente cliente4 ("PitÃ¡goras", "PraÃ§a dos Quadrados dos Catetos","Samos", "Egeu","571 a.C.");
-	Cliente cliente5 ("ParmÃªnides","Rua do NÃ£o Ser","Eleia", "Magna GrÃ©cia","460 a.C.");
-	Cliente cliente6 ("EmpÃ©docles", "Rua dos Quatro Elementos","Agrigento", "SicÃ­lia", "495 a.C.");
-	Cliente cliente7 ("AnaxÃ¡goras", "Avenida da Mente CÃ³smica", "ClazÃ´menas","JÃ³nia", "499 a.C.");
+	Cliente cliente0 ("Thales","Rua dos Pré-Socráticos","Miletus","Ionia","548 a.C.");
+	Cliente cliente1 ("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
+	Cliente cliente2 ("Platão", "Praça das Formas",	"Atenas", "Ática", "348 a.C");
+	Cliente cliente3 ("Sócrates","Rua do Elenchus","Atenas", "Ática", "399 a.C.");
+	Cliente cliente4 ("Pitágoras", "Praça dos Quadrados dos Catetos","Samos", "Egeu","571 a.C.");
+	Cliente cliente5 ("Parmênides","Rua do Não Ser","Eleia", "Magna Grécia","460 a.C.");
+	Cliente cliente6 ("Empédocles", "Rua dos Quatro Elementos","Agrigento", "Sicília", "495 a.C.");
+	Cliente cliente7 ("Anexágoras", "Avenida da Mente Cósmica", "Clazômenas","Jónia", "499 a.C.");
 
 	int _quantEncomendasNormais = 0;
 	int _quantEncomendasRelampago = 0;
