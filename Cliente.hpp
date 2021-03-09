@@ -7,14 +7,16 @@ class Cliente{
 
 	public:
 		
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print(); // Imprime na tela os dados de um cliente cadastrado
 
+		//Métodos para pegar os dados do Cliente
 		std::string get_nome();
 		std::string get_endereco();
 		std::string get_cidade();
 		std::string get_estado();
 		std::string get_cep();
 
+		//Métodos para modificar os dados do Cliente
 		void set_nome( std::string nome );
 		void set_endereco( std::string endereco );
 		void set_cidade( std::string cidade );
@@ -24,6 +26,7 @@ class Cliente{
 
 	private:
 
+		//Dados do cliente
 		std::string nome;
 		std::string endereco;
 		std::string cidade;

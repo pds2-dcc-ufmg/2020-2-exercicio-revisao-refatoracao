@@ -10,6 +10,7 @@ class EncomendaRelampago: public Encomenda{
 
 		const double taxa_relampago = 0.25;
 
+		//Calcular valor dessa encomenda
 		double calcula(){
 
 			double x = peso * custoKG;
@@ -18,6 +19,7 @@ class EncomendaRelampago: public Encomenda{
 			return x;
 		}
 
+		//Imprime dos dados dessa encomenda
 		void print() {
 
 			Encomenda::print();

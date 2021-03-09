@@ -2,6 +2,8 @@
 #include <string>
 #include "Cliente.hpp"
 
+//Implementação dos métodos de Cliente.hpp
+
 std::string Cliente::get_nome() {
 	return this->nome;
 }

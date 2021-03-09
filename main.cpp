@@ -6,6 +6,8 @@
 
 int main(){
 	
+	//Inicio do cadastro dos clientes
+
 	Cliente cli0;
 	cli0.set_nome( "Thales" );
 	cli0.set_endereco( "Rua dos Pré-Socráticos" );
@@ -62,8 +64,12 @@ int main(){
 	cli7.set_estado( "Jónia" );
 	cli7.set_cep( "499 a.C." );
 
-	int quant_normal = 0;
-	int quant_relampago = 0;
+	//Fim do cadastro dos clientes
+
+	int quant_normal = 0; //Quantidade de encomendas normais
+	int quant_relampago = 0; //Quantidade de encomendas relampago
+
+	//Inicio do cadastro das encomendas
 
 	EncomendaNormal enc0;
 	enc0.set_peso( 5 );
@@ -120,11 +126,14 @@ int main(){
 	enc7.set_remetente( cli7 );
 	enc7.set_dest( cli0 );
 	++quant_relampago;
+
+	//Fim do cadastro das encomendas
+	//Imprimir relatório das encomendas
 	
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
-	double cust_normal = 0;
-	double cust_relampago = 0;
+	double cust_normal = 0; //Custo das encomendas normais
+	double cust_relampago = 0; //Custo das encomendas relampagos
 
 	enc0.calcula();
 	enc0.print();

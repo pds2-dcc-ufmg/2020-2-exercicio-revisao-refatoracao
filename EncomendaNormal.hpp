@@ -8,6 +8,7 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
+		//Calcular valor dessa encomenda
 		double calcula() {
 
 			double x = peso * custoKG;
@@ -15,6 +16,7 @@ class EncomendaNormal: public Encomenda{
 			return x;
 		}
 
+		//Imprime dos dados dessa encomenda
 		void print() {
 
 			Encomenda::print();
