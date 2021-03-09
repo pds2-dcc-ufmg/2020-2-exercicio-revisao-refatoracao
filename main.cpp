@@ -3,65 +3,66 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
+
 using namespace std;
 
 int main(){
-	
+
 	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	cli0.setNome("Thales");
+	cli0.setEndereco("Rua dos Pré-Socráticos");
+	cli0.setCidade("Miletus");
+	cli0.setEstado("Ionia");
+	cli0.setCep("548 a.C.");
 
 	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	cli1.setNome("Aristóteles");
+	cli1.setEndereco("Avenida do Meio-Termo");
+	cli1.setCidade("Atenas");
+	cli1.setEstado("Ática");
+	cli1.setCep("384 a.C.");
 
 	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	cli2.setNome("Platão");
+	cli2.setEndereco("Praça das Formas");
+	cli2.setCidade("Atenas");
+	cli2.setEstado("Ática");
+	cli2.setCep("348 a.C");
 
 	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	cli3.setNome("Sócrates");
+	cli3.setEndereco("Rua do Elenchus");
+	cli3.setCidade("Atenas");
+	cli3.setEstado("Ática");
+	cli3.setCep("399 a.C.");
 
 	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	cli4.setNome("Pitágoras");
+	cli4.setEndereco("Praça dos Quadrados dos Catetos");
+	cli4.setCidade("Samos");
+	cli4.setEstado("Egeu");
+	cli4.setCep("571 a.C.");
 
 	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	cli5.setNome("Parmênides");
+	cli5.setEndereco("Rua do Não Ser");
+	cli5.setCidade("Eleia");
+	cli5.setEstado("Magna Grécia");
+	cli5.setCep("460 a.C.");
 
 	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	cli6.setNome("Empédocles");
+	cli6.setEndereco("Rua dos Quatro Elementos");
+	cli6.setCidade("Agrigento");
+	cli6.setEstado("Sicília");
+	cli6.setCep("495 a.C.");
 
 	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	cli7.setNome("Anaxágoras");
+	cli7.setEndereco("Avenida da Mente Cósmica");
+	cli7.setCidade("Clazômenas");
+	cli7.setEstado("Jónia");
+	cli7.setCep("499 a.C.");
 
 	int quantN = 0;
 	int quantR = 0;
@@ -121,8 +122,8 @@ int main(){
 	enc7.remetente = cli7;
 	enc7.dest = cli0;
 	quantR++;
-	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+
+	cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custN = 0;
 	double custR = 0;
@@ -130,50 +131,50 @@ int main(){
 	enc0.calcula();
 	enc0.print();
 	custN += enc0.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc1.calcula();
 	enc1.print();
 	custN += enc1.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc2.calcula();
 	enc2.print();
 	custN += enc2.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc3.calcula();
 	enc3.print();
 	custN += enc3.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc4.calcula();
 	enc4.print();
 	custN += enc4.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc5.calcula();
 	enc5.print();
 	custR += enc5.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc6.calcula();
 	enc6.print();
 	custR += enc6.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc7.calcula();
 	enc7.print();
 	custR += enc7.calcula();
-	std::cout << endl;
-	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
-	
+	cout << endl;
+
+	cout << "\n>> Encomendas Normais <<"
+	cout << "\nQuantidade: " << quantN
+	cout << "\nValor Total: " << custN
+	cout << endl
+	cout << "\n>> Encomendas Relâmpago <<"
+	cout << "\nQuantidade: " << quantR
+	cout << "\nValor Total: " << custR
+	cout << endl;
+
 }
