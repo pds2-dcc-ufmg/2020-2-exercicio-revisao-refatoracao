@@ -2,28 +2,32 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
+#include <iostream>
 
 
 class Encomenda{
 
-	private:
+    private:
 
-		double peso = 0.0;
-		double custoKg = 0.0;
-		double t = 0.0;
+        double peso = 0.0;
+        double custoKg = 0.0;
+        double t = 0.0;
     
     public:
-		Cliente remetente;
-		Cliente dest;
-			
-        virtual void print();
-        virtual double calcula();
+        Cliente remetente;
+        Cliente dest;
+    
+        Encomenda(double p, double c, Cliente r, Cliente d): peso(p), custoKg(c), remetente(r), dest(d){}
+
             
-        void getPeso();
+        virtual void print();
+        virtual double calcula() const = 0;
+            
+        double getPeso();
         void setPeso(double p);
-        void getCustoKg();
+        double getCustoKg();
         void setCustoKg(double c);
-        void getT();
+        double getT();
         void setT(double tt);
 
 };

@@ -1,28 +1,31 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
 
+#include <iostream>
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 #include "EncomendaRelampago.hpp"
 
 
-EncomendaRelampago::EncomendaRelampago(double p, double c, Cliente r, Cliente d): peso(p), custoKg(c),                                            remetente(r), dest(d){}
 
-void print() override{
+
+void Encomenda::print(){
 
     Encomenda::print();
-    std::cout << "[Encomenda Relâmpago]" << endl;
-    std::cout << "  Peso: " << peso << endl
-        << "  Custo por kg: " << custoKg << endl
-        << "  Taxa adicional: " << TAXARELAMPAGO << endl
-        << "  Custo total: " << t << endl;
+    std::cout << "[Encomenda Relâmpago]" << std::endl;
+    std::cout << "  Peso: " << peso << std::endl
+        << "  Custo por kg: " << custoKg << std::endl
+        << "  Taxa adicional: " << TAXARELAMPAGO << std::endl
+        << "  Custo total: " << t << std::endl;
 
 }
 
-double calcula() override{
+double EncomendaRelampago::calcula() const{
 
     double x = peso * custoKg;
     x += x * TAXARELAMPAGO;
     
     return x;
 }
+
+#endif

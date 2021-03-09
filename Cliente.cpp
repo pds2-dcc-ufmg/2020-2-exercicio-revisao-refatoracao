@@ -3,56 +3,54 @@
 #include "Cliente.hpp"
 
 
-Cliente::Cliente(std::string nomex, std::string enderecox, std::string cidadex,
-                 std::string estadox, std::string cepx): nome(nomex), endereco(enderecox), cidade(cidadex), estado(estadox), cep(cepx){}
 
 
 void Cliente::print(){
 
-	std::cout << "  Nome: " << nome << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << cidade << endl
-		 << "  Estado: " << estado << endl
-		 << "  CEP: " << cep << endl;
+    std::cout << "  Nome: " << nome << std::endl
+    << "  Endereço: " << endereco << std::endl
+    << "  Cidade: " << cidade << std::endl
+    << "  Estado: " << estado << std::endl
+    << "  CEP: " << cep << std::endl;
 
 }
 
-void getNome(){
+std::string Cliente::getNome(){
     return this->nome;
 }
 
-void setNome(std::string n){
+void Cliente::setNome(std::string n){
     this->nome = n;
 }
 
-void getEndereco(){
+std::string Cliente::getEndereco(){
     return this->endereco;
 }
 
-void setEndereco(std::string e){
+void Cliente::setEndereco(std::string e){
     this->endereco = e;
 }
 
-void getCidade(){
+std::string Cliente::getCidade(){
     return this->cidade;
 }
 
-void setCidade(std::string c){
+void Cliente::setCidade(std::string c){
     this->cidade = c;
 }
 
-void getEstado(){
+std::string Cliente::getEstado(){
     return this->estado;
 }
 
-void setEstado(std::string s){
+void Cliente::setEstado(std::string s){
     this->estado = s;
 }
 
-void getCep(){
+std::string Cliente::getCep(){
     return this->cep;
 }
 
-void setCep(std::string cp){
+void Cliente::setCep(std::string cp){
     this->cep = cp;
 }

@@ -1,26 +1,29 @@
 #ifndef EncomendaNormal_H
 #define EncomendaNormal_H
 
+#include <iostream>
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 #include "EncomendaNormal.hpp"
 
 
-EncomendaNormal::EncomendaNormal(double p, double c, Cliente r, Cliente d): peso(p), custoKg(c),                                            remetente(r), dest(d){}
 
-void print() override{
+
+void print(){
 
     Encomenda::print();
-    std::cout << "[Encomenda Normal]" << endl;
-    std::cout << "  Peso: " << peso << endl
-        << "  Custo por kg: " << custoKg << endl
-        << "  Custo total: " << t << endl;
+    std::cout << "[Encomenda Normal]" << std::endl;
+    std::cout << "  Peso: " << peso << std::endl
+        << "  Custo por kg: " << custoKg << std::endl
+        << "  Custo total: " << t << std::endl;
 
 }
 
-double calcula() override{
+double EncomendaNormal::calcula() const{
 
     double x = peso * custoKg;
 
     return x;
 }
+
+#endif

@@ -2,34 +2,34 @@
 #include <string>
 #include "Encomenda.hpp"
 
-virtual void print(){
+void Encomenda::print(){
 
-    std::cout << "[Remetente]" << endl;
+    std::cout << "[Remetente]" << std::endl;
     remetente.print();
-    std::cout << "[Destinatário]" << endl;
+    std::cout << "[Destinatário]" << std::endl;
     dest.print();
 }
 
-void getPeso(){
+double Encomenda::getPeso(){
     return this->peso;
 }
 
-void setPeso(double p){
+void Encomenda::setPeso(double p){
     this->peso = p;
 }
 
-void getCustoKg(){
+double Encomenda::getCustoKg(){
     return this->custoKg;
 }
 
-void setCustoKg(double c){
+void Encomenda::setCustoKg(double c){
     this->custoKg = c;
 }
 
-void getT(){
+double Encomenda::getT(){
     return this->t;
 }
 
-void setT(double tt){
+void Encomenda::setT(double tt){
     this->t = tt;
 }
