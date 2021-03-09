@@ -15,11 +15,11 @@ class Cliente{
 	private:
 		
 		// Campos de informação que um Cliente contém
-		string NOME;
-		string ENDERECO;
-		string CIDADE;
-		string ESTADO;
-		string CEP;
+		string _nome;
+		string _endereco;
+		string _cidade;
+		string _estado;
+		string _cep;
 		
 };
 

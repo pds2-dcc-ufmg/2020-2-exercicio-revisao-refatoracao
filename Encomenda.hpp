@@ -8,26 +8,26 @@ class Encomenda{
 	public:
 
 		// Atributos da classe Encomenda
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double TOTAL = 0.0;
+		double _peso = 0.0;
+		double _custo_kg = 0.0;
+		double _custo_total = 0.0;
 
 		// Construtor da classe Encomenda
 		Encomenda(double peso, double custo, Cliente remetente, Cliente destinatario) 
 		{
-			this->PESO = peso;
-			this->CUSTOkg = custo;
-			this->REMET = remetente;
-			this->DEST = destinatario;
+			this->_peso = peso;
+			this->_custo_kg = custo;
+			this->_remetente = remetente;
+			this->_destinatario = destinatario;
 		}
 
 		// Impressão dos atributos da classe
 		void print() 
 		{
 			std::cout << "[Remetente]" << std::endl;
-			REMET.print();
+			_remetente.print();
 			std::cout << "[Destinatário]" << std::endl;
-			DEST.print();
+			_destinatario.print();
 		}
 
 		// Cálculo do custo total da encomenda
@@ -47,8 +47,8 @@ class Encomenda{
 	private:
 
 		// Clientes associados à encomenda
-		Cliente REMET;
-		Cliente DEST;
+		Cliente _remetente;
+		Cliente _destinatario;
 			
 };
 

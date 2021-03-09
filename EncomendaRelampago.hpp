@@ -14,21 +14,21 @@ class EncomendaRelampago: public Encomenda{
 		void print_data() override
 		{
 			std::cout << "[Encomenda Relâmpago]" << std::endl;
-			std::cout << "  Peso: " << PESO << std::endl
-					  << "  Custo por kg: " << CUSTOkg << std::endl
+			std::cout << "  Peso: " << this->_peso << std::endl
+					  << "  Custo por kg: " << this->_custo_kg << std::endl
 					  << "  Taxa adicional: " << 0.25 << std::endl
-					  << "  Custo total: " << TOTAL << std::endl;
+					  << "  Custo total: " << this->_custo_total << std::endl;
 		}
 
 		// Construtor da classe EncomendaRelampago
 		EncomendaRelampago(double peso, double custo, Cliente remetente, Cliente destinatario) : Encomenda(peso, custo, remetente, destinatario)
 		{
-			this->TOTAL = this->calcula();
+			this->_custo_total = this->calcula();
 		}
 
 		double calcula() override
 		{
-			return this->PESO * this->CUSTOkg * (1 + taxa);
+			return this->_peso * this->_custo_kg * (1 + taxa);
 		}
 };
 
