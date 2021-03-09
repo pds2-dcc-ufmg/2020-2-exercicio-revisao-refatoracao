@@ -66,59 +66,59 @@ int main(){
 	int quantR = 0;
 
 	EncomendaNormal enc0;
-	enc0.peso = 5;
-	enc0.custoKg = 12;
-	enc0.remetente = cli0;
-	enc0.destinatario = cli1;
+	enc0.setPeso(5);
+	enc0.setCustoKg(2);
+	enc0.setRemetente(cli0);
+	enc0.setDestinatario(cli1);
 	quantN++;
 
 	EncomendaNormal enc1;
-	enc1.peso = 10;
-	enc1.custoKg = 12;
-	enc1.remetente = cli1;
-	enc1.destinatario = cli2;
+	enc1.setPeso(10);
+	enc1.setCustoKg(12);
+	enc1.setRemetente(cli1);
+	enc1.setDestinatario(cli2);
 	quantN++;
 
 	EncomendaNormal enc2;
-	enc2.peso = 7;
-	enc2.custoKg = 12;
-	enc2.remetente = cli2;
-	enc2.destinatario = cli3;
+	enc2.setPeso(7);
+	enc2.setCustoKg(12);
+	enc2.setRemetente(cli2);
+	enc2.setDestinatario(cli3);
 	quantN++;
 
 	EncomendaNormal enc3;
-	enc3.peso = 2;
-	enc3.custoKg = 12;
-	enc3.remetente = cli3;
-	enc3.destinatario = cli4;
+	enc3.setPeso(2);
+	enc3.setCustoKg(12);
+	enc3.setRemetente(cli3);
+	enc3.setDestinatario(cli4);
 	quantN++;
 
 	EncomendaNormal enc4;
-	enc4.peso = 3;
-	enc4.custoKg = 12;
-	enc4.remetente = cli4;
-	enc4.destinatario = cli5;
+	enc4.setPeso(3);
+	enc4.setCustoKg(12);
+	enc4.setRemetente(cli4);
+	enc4.setDestinatario(cli5);
 	quantN++;
 
 	EncomendaRelampago enc5;
-	enc5.peso = 13;
-	enc5.custoKg = 18;
-	enc5.remetente = cli5;
-	enc5.destinatario = cli6;
+	enc5.setPeso(13);
+	enc5.setCustoKg(18);
+	enc5.setRemetente(cli5);
+	enc5.setDestinatario(cli6);
 	quantR++;
 
 	EncomendaRelampago enc6;
-	enc6.peso = 6;
-	enc6.custoKg = 18;
-	enc6.remetente = cli6;
-	enc6.destinatario = cli7;
+	enc6.setPeso(6);
+	enc6.setCustoKg(18);
+	enc6.setRemetente(cli6);
+	enc6.setDestinatario(cli7);
 	quantR++;
 
 	EncomendaRelampago enc7;
-	enc7.peso = 8;
-	enc7.custoKg = 18;
-	enc7.remetente = cli7;
-	enc7.destinatario = cli0;
+	enc7.setPeso(8);
+	enc7.setCustoKg(18);
+	enc7.setRemetente(cli7);
+	enc7.setDestinatario(cli0);
 	quantR++;
 	
 	std::cout << std::endl << ">> Relatório de encomendas <<" << std::endl;
