@@ -10,3 +10,11 @@ void Encomenda::print(){
 			_dest.print();
   
 }
+
+double Encomenda::calcula(){
+	
+	double x = _peso * _custoKg;
+
+	return x;
+	
+}
