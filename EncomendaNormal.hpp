@@ -8,7 +8,7 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 	private:
 		static int qntdNormal;
-		static double custoTotalNormal;
+		
 
 		
 	public:	
