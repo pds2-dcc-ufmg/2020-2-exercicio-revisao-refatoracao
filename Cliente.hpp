@@ -4,18 +4,18 @@
 #include <string>
 using namespace std;
 
-class Cliente{
+class Cliente {
 
-	public:
+public:
 
-		string NOME;
-		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+	string nome;
+	string endereco;
+	string cidade;
+	string estado;
+	string cep;
+
+	void printCliente(); // imprime na tela os dados de um cliente cadastrado
+
 };
 
 #endif
