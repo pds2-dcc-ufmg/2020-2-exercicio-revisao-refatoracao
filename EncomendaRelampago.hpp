@@ -13,6 +13,9 @@ class EncomendaRelampago: public Encomenda{
 
 		void print() override;
 
+	private:
+
+		static constexpr double taxa = 0.25;
 };
 
 #endif

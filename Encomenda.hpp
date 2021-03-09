@@ -2,6 +2,7 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
+#include <vector>
 using namespace std;
 
 class Encomenda{

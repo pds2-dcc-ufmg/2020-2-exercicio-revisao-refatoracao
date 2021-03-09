@@ -11,7 +11,8 @@ int main(){
 	int quantR = 0;
 	double custN = 0;
 	double custR = 0;
-	Encomenda *_Encomendas;
+	std::vector<EncomendaRelampago> EncomRela;
+	std::vector<EncomendaNormal> EncomNorm;
 	int quantEnc =0;
 	
 	Cliente cli0;
@@ -75,7 +76,7 @@ int main(){
 	enc0.setCustokg(12);
 	enc0.setRemetente(cli0);
 	enc0.setDest(cli1);
-	_Encomendas[quantEnc]=enc0;
+	EncomNorm.push_back(enc0);
 	quantN++;
 	quantEnc++;
 
@@ -84,7 +85,7 @@ int main(){
 	enc1.setCustokg(12);
 	enc1.setRemetente(cli1);
 	enc1.setDest(cli2);
-	_Encomendas[quantEnc]=enc1;
+	EncomNorm.push_back(enc1);
 	quantN++;
 	quantEnc++;
 
@@ -94,7 +95,7 @@ int main(){
 	enc2.setCustokg(12);
 	enc2.setRemetente(cli2);
 	enc2.setDest(cli3);
-	_Encomendas[quantEnc]=enc2;
+	EncomNorm.push_back(enc2);
 	quantN++;
 	quantEnc++;
 
@@ -103,7 +104,7 @@ int main(){
 	enc3.setCustokg(12);
 	enc3.setRemetente(cli3);
 	enc3.setDest(cli4);
-	_Encomendas[quantEnc]=enc3;
+	EncomNorm.push_back(enc3);
 	quantN++;
 	quantEnc++;
 
@@ -112,7 +113,7 @@ int main(){
 	enc4.setCustokg(12);
 	enc4.setRemetente(cli4);
 	enc4.setDest(cli5);
-	_Encomendas[quantEnc]=enc4;
+	EncomNorm.push_back(enc4);
 	quantN++;
 	quantEnc++;
 
@@ -121,7 +122,7 @@ int main(){
 	enc5.setCustokg(18);
 	enc5.setRemetente(cli5);
 	enc5.setDest(cli6);
-	_Encomendas[quantEnc]=enc5;
+	EncomRela.push_back(enc5);
 	quantR++;
 	quantEnc++;
 
@@ -130,7 +131,7 @@ int main(){
 	enc6.setCustokg(18);
 	enc6.setRemetente(cli6);
 	enc6.setDest(cli7);
-	_Encomendas[quantEnc]=enc6;
+	EncomRela.push_back(enc6);
 	quantR++;
 	quantEnc++;
 
@@ -139,15 +140,25 @@ int main(){
 	enc7.setCustokg(18);
 	enc7.setRemetente(cli7);
 	enc7.setDest(cli0);
-	_Encomendas[quantEnc]=enc7;
+	EncomRela.push_back(enc7);
 	quantR++;
 	quantEnc++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	for(int aux=0; aux<quantEnc; aux++){
-		_Encomendas[aux].print();
-		custN += _Encomendas[aux].calcula();
+	for(EncomendaNormal n: EncomNorm){
+		double custototalnorm = n.calcula();
+		n.setCustoT(custototalnorm);
+		n.print();
+		custN += custototalnorm;
+		std::cout << endl;
+	}
+
+	for(EncomendaRelampago r: EncomRela){
+		double custototalrela = r.calcula();
+		r.setCustoT(custototalrela);
+		r.print();
+		custR += custototalrela;
 		std::cout << endl;
 	}
 	

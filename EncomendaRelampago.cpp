@@ -6,7 +6,7 @@
 double EncomendaRelampago::calcula(){
 
     double x = PESO * CUSTOkg;
-	x += x * 0.25;
+	x += x * taxa;
 			
 	return x;
 }
