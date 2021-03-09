@@ -2,7 +2,7 @@
 #include <string>
 #include "Cliente.hpp"
 
-Cliente::Cliente(string a,string b, string c, string d, string e){
+Cliente::Cliente(std::string a,std::string b, std::string c, std::string d, std::string e){
 	this->nome = a;
 	this->endereco = b;
 	this->cidade = c;
@@ -19,10 +19,10 @@ Cliente::Cliente(){
 
 void Cliente::print(){
 
-	std::cout << "  Nome: " << nome << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << cidade << endl
-		 << "  Estado: " << estado << endl
-		 << "  CEP: " << cep << endl;
+	std::cout << "  Nome: " << this->nome << std::endl
+		 << "  Endereço: " << this->endereco << std::endl
+		 << "  Cidade: " << this->cidade << std::endl
+		 << "  Estado: " << this->estado << std::endl
+		 << "  CEP: " << this->cep << std::endl;
 
 }
