@@ -7,7 +7,7 @@
 class EncomendaRelampago: public Encomenda{
 
 	private:
-		static constexpr const double TAXA_ENTREGRA_RELAMPAGO = 0.25; // taxa adicional constante para entregas relampago
+		static constexpr const double TAXA_ENTREGA_RELAMPAGO = 0.25; // taxa adicional constante para entregas relampago
 
 	public:
 
