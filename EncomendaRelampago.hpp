@@ -17,6 +17,6 @@ class EncomendaRelampago: public Encomenda{
 		int getQntd();
 };
 
-int EncomendaRelampago::qntdRelampago= 0;
+
 
 #endif
