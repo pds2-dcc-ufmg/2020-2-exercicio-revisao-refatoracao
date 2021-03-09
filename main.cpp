@@ -66,8 +66,8 @@ int main(){
 	int quantidadeNormal = 0;
 	int quantidadeRelampago = 0;
 
-	vector<EncomendaNormal> EncomendasNormais;
-	vector<EncomendaRelampago> EncomendasRelampago;
+	std::vector<EncomendaNormal> EncomendasNormais;
+	std::vector<EncomendaRelampago> EncomendasRelampago;
 
 	EncomendaNormal enc0;
 	enc0._peso = 5;
