@@ -20,4 +20,3 @@ class EncomendaRelampago: public Encomenda{
 int EncomendaRelampago::qntdRelampago= 0;
 
 #endif
-#endif
