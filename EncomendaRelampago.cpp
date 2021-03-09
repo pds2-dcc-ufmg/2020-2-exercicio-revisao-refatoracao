@@ -16,7 +16,7 @@ void EncomendaRelampago::print(){
 			std::cout << "[Encomenda Relâmpago]" << std::endl;
 			std::cout << "  Peso: " << _peso << std::endl
 				<< "  Custo por kg: " << _custoKg << std::endl
-				<< "  Taxa adicional: " << 0.25 << std::endl
+				<< "  Taxa adicional: " << _taxa << std::endl
 				<< "  Custo total: " << _total << std::endl;
 
 }
