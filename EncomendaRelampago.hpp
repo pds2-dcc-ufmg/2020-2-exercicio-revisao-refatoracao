@@ -12,6 +12,9 @@ class EncomendaRelampago: public Encomenda{
 		double taxa = 0.25;
 
 	public:
+		double getTaxa() {
+			return this->taxa;	
+		}
 
 		void print(){
 
