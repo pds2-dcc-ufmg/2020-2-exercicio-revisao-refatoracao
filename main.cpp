@@ -3,6 +3,7 @@
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
+#include <vector>
 
 int main(){
 	
@@ -65,12 +66,16 @@ int main(){
 	int quantidadeNormal = 0;
 	int quantidadeRelampago = 0;
 
+	vector<EncomendaNormal> EncomendasNormais;
+	vector<EncomendaRelampago> EncomendasRelampago;
+
 	EncomendaNormal enc0;
 	enc0._peso = 5;
 	enc0._custoKg = 12;
 	enc0._remetente = cli0;
 	enc0._dest = cli1;
 	quantidadeNormal++;
+	EncomendasNormais.push_back(enc0);
 
 	EncomendaNormal enc1;
 	enc1._peso = 10;
@@ -78,6 +83,7 @@ int main(){
 	enc1._remetente = cli1;
 	enc1._dest = cli2;
 	quantidadeNormal++;
+	EncomendasNormais.push_back(enc1);
 
 	EncomendaNormal enc2;
 	enc2._peso = 7;
@@ -85,6 +91,7 @@ int main(){
 	enc2._remetente = cli2;
 	enc2._dest = cli3;
 	quantidadeNormal++;
+	EncomendasNormais.push_back(enc2);
 
 	EncomendaNormal enc3;
 	enc3._peso = 2;
@@ -92,6 +99,7 @@ int main(){
 	enc3._remetente = cli3;
 	enc3._dest = cli4;
 	quantidadeNormal++;
+	EncomendasNormais.push_back(enc3);
 
 	EncomendaNormal enc4;
 	enc4._peso = 3;
@@ -99,6 +107,7 @@ int main(){
 	enc4._remetente = cli4;
 	enc4._dest = cli5;
 	quantidadeNormal++;
+	EncomendasNormais.push_back(enc4);
 
 	EncomendaRelampago enc5;
 	enc5._peso = 13;
@@ -106,6 +115,7 @@ int main(){
 	enc5._remetente = cli5;
 	enc5._dest = cli6;
 	quantidadeRelampago++;
+	EncomendasRelampago.push_back(enc5);
 
 	EncomendaRelampago enc6;
 	enc6._peso = 6;
@@ -113,6 +123,7 @@ int main(){
 	enc6._remetente = cli6;
 	enc6._dest = cli7;
 	quantidadeRelampago++;
+	EncomendasRelampago.push_back(enc6);
 
 	EncomendaRelampago enc7;
 	enc7._peso = 8;
@@ -120,51 +131,26 @@ int main(){
 	enc7._remetente = cli7;
 	enc7._dest = cli0;
 	quantidadeRelampago++;
+	EncomendasRelampago.push_back(enc7);
 	
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
 	double custoNormal = 0;
 	double custoRelampago = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custoNormal += enc0.calcula();
-	std::cout << std::endl;
+	for(int i = 0; i < quantidadeNormal; i++){
+		EncomendasNormais[i].calcula();
+		EncomendasNormais[i].print();
+		custoNormal += EncomendasNormais[i].calcula();
+		std::cout << std::endl;
+	}
 
-	enc1.calcula();
-	enc1.print();
-	custoNormal += enc1.calcula();
-	std::cout << std::endl;
-
-	enc2.calcula();
-	enc2.print();
-	custoNormal += enc2.calcula();
-	std::cout << std::endl;
-
-	enc3.calcula();
-	enc3.print();
-	custoNormal += enc3.calcula();
-	std::cout << std::endl;
-
-	enc4.calcula();
-	enc4.print();
-	custoNormal += enc4.calcula();
-	std::cout << std::endl;
-
-	enc5.calcula();
-	enc5.print();
-	custoRelampago += enc5.calcula();
-	std::cout << std::endl;
-
-	enc6.calcula();
-	enc6.print();
-	custoRelampago += enc6.calcula();
-	std::cout << std::endl;
-
-	enc7.calcula();
-	enc7.print();
-	custoRelampago += enc7.calcula();
-	std::cout << std::endl;
+	for(int i = 0; i < quantidadeRelampago; i++){
+		EncomendasRelampago[i].calcula();
+		EncomendasRelampago[i].print();
+		custoRelampago += EncomendasRelampago[i].calcula();
+		std::cout << std::endl;
+	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantidadeNormal
