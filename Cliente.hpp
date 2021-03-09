@@ -7,10 +7,10 @@ class Cliente{
 
 	public:
 
-		std::string NOME;
+		std::string nome;
 		std::string endereco;
-		std::string CIDADE;
-		std::string ESTADO;
+		std::string cidade;
+		std::string estado;
 		std::string cep;
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
