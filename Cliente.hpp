@@ -6,16 +6,20 @@ using namespace std;
 
 class Cliente{
 
-	public:
-
 		string NOME;
 		string endereco;
 		string CIDADE;
 		string ESTADO;
 		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+
+	public:
+
+		Cliente(string name, string address, string city, string state, string numCep) :
+		NOME(name), endereco(address), CIDADE(city), ESTADO(state), cep(numCep) {};
+
+		Cliente() {}; // construtor sem parametros para as atribuicoes no construtor das encomendas
+
+		void print(); // imprime na tela os dados de um cliente cadastrado	
 };
 
 #endif
