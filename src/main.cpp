@@ -41,14 +41,14 @@ int main(){
 	for(int i=0; i<QUANTIDADE_ENCOMENDAS_NORMAIS; i++){
 		encomendas_normal[i].calcula_tarifa_total();
 		encomendas_normal[i].print();
-		custo_total_encomendas_normais += encomendas_normal[i].getTarifaTotal();
+		custo_total_encomendas_normais += encomendas_normal[i].get_tarifa_total();
 		std::cout << std::endl;
 	}
 
 	for(int i=0; i<QUANTIDADE_ENCOMENDAS_RELAMPAGO; i++){
 		encomendas_relampago[i].calcula_tarifa_total();
 		encomendas_relampago[i].print();
-		custo_total_encomendas_relampago += encomendas_relampago[i].getTarifaTotal();
+		custo_total_encomendas_relampago += encomendas_relampago[i].get_tarifa_total();
 		std::cout << std::endl;
 	}
 

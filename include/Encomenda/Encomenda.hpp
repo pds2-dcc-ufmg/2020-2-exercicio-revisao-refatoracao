@@ -11,7 +11,7 @@ class Encomenda {
 		virtual double calcula_tarifa_total() = 0;
 		virtual void print() = 0;
 
-		double getTarifaTotal() { return _tarifa_total; }
+		double get_tarifa_total() { return _tarifa_total; }
 
 	protected:
 
