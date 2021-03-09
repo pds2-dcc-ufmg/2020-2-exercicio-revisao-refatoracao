@@ -1,4 +1,4 @@
-#ifndef EncomendaRelampago_H
+#ifndef ENCOMENDARELAMPAGO_H
 #define EncomendaRelampago_H
 
 #include "Encomenda.hpp"
@@ -9,24 +9,12 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
+		double calcula(){};
+		
+		void print(){};
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
-
-		void print(){
-
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
+    EncomendaRelampago(double _peso, double _custo_kg, Cliente remetente, Cliente dest){}
+		
 
 };
 

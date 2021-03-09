@@ -1,4 +1,4 @@
-#ifndef Encomenda_H
+#ifndef ENCOMENDA_H
 #define Encomenda_H
 
 #include "Cliente.hpp"
@@ -8,19 +8,16 @@ class Encomenda{
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
+		double peso = 0.0;
+		double custo_kg = 0.0;
+		double t = 0.0;
 		Cliente remetente;
 		Cliente dest;
-			
-		void print(){
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+    Encomenda(double _peso, double _custo_kg,
+    Cliente remetente, Cliente dest){}
+			
+		void print(){};
 
 };
 
