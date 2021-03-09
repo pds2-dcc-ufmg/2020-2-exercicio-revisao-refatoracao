@@ -4,9 +4,7 @@
 
 double EncomendaNormal::calcula(){
 
-		double x = _peso * _custoKg;
-
-		return x;
+		return Encomenda::calcula();
   
 }
 
