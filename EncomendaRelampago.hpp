@@ -7,11 +7,11 @@ using namespace std;
 
 class EncomendaRelampago: public Encomenda {
 	private:
-		double taxaAdicional = 1.25;
+		double taxaAdicional = 0.25;
 
 	public:
 		double calcula() {
-			return peso * custoKg * taxaAdicional;
+			return peso * custoKg * (1 + taxaAdicional);
 		}
 
 		void print() {
@@ -19,7 +19,7 @@ class EncomendaRelampago: public Encomenda {
 			cout << "[Encomenda Relâmpago]" << endl
 				 << "  Peso: " << peso << endl
 				 << "  Custo por kg: " << custoKg << endl
-				 << "  Taxa adicional: " << 0.25 << endl
+				 << "  Taxa adicional: " << taxaAdicional << endl
 				 << "  Custo total: " << custoTotal << endl;
 		}
 };
