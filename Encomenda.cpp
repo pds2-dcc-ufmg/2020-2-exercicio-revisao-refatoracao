@@ -2,6 +2,14 @@
 #include <string>
 #include "Encomenda.hpp"
 
+void print(){
+
+    std::cout << "[Remetente]" << endl;
+    remetente.print();
+    std::cout << "[Destinatário]" << endl;
+    dest.print();
+}
+
 void getPeso(){
     return this->peso;
 }

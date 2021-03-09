@@ -16,20 +16,14 @@ class Encomenda{
 		Cliente remetente;
 		Cliente dest;
 			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-        
-    void getPeso();
-    void setPeso(double p);
-    void getCustoKg();
-    void setCustoKg(double c);
-    void getT();
-    void setT(double tt);
+        void print();
+            
+        void getPeso();
+        void setPeso(double p);
+        void getCustoKg();
+        void setCustoKg(double c);
+        void getT();
+        void setT(double tt);
 
 };
 
