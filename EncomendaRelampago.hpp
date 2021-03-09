@@ -8,7 +8,7 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
+		double calcula() override
 
 			double x = peso * custoKg;
 			x += x * constante;
@@ -16,7 +16,7 @@ class EncomendaRelampago: public Encomenda{
 			return x;
 		}
 
-		void print(){
+		void print() override{
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << std::endl;
