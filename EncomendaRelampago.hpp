@@ -20,7 +20,7 @@ class EncomendaRelampago: public Encomenda{
 				<< "  Custo por kg: " << this->_custo_kg << endl
 				<< "  Taxa adicional: " << taxa_adicional << endl
 				<< "  Custo total: " << this->_custo_total << endl;
-		} // imprime na tela informações sobre a encomenda cadastrada
+		} // imprime na tela o resto das informações sobre a encomenda cadastrada
 };
 
 #endif
