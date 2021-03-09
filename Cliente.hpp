@@ -14,9 +14,8 @@ class Cliente{
 		string _cep;
 	
 	public:
-	
-	Cliente (string nome, string endereco, string cidade, string estado, string cep); // construtor para classe cliente
-	void print(); // imprime na tela os dados de um cliente cadastrado
+		Cliente (string nome, string endereco, string cidade, string estado, string cep); // construtor para classe cliente
+		void print(); // imprime na tela os dados de um cliente cadastrado
 		
 };
 
