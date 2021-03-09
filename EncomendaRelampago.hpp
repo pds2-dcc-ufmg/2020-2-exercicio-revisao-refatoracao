@@ -4,7 +4,11 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 
+
+
 class EncomendaRelampago: public Encomenda{
+	
+	const double _taxa = 0.25;
 
 	public:
 
