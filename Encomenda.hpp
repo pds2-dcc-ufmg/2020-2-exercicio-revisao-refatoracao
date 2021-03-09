@@ -3,8 +3,6 @@
 
 #include "Cliente.hpp"
 
-using namespace std;
-
 class Encomenda{
 
 	public:
