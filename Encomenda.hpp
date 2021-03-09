@@ -7,8 +7,8 @@ using namespace std;
 class Encomenda{
 
 	public:
-		virtual double calcula();
-		virtual void print();
+		virtual double calcula(){return 0;};
+		virtual void print(){};
 		
 		 void setPeso(double Peso){this->PESO = Peso;};
 		 void setCustokg(double Custokg){this->CUSTOkg = Custokg;};
