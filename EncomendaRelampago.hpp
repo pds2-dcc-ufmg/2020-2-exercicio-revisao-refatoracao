@@ -2,8 +2,9 @@
 #define EncomendaRelampago_H
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
+
 const double taxa = 0.25;
+using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
@@ -15,17 +16,16 @@ class EncomendaRelampago: public Encomenda{
 			x += x * taxa;
 			
 			return x;
-			
 		}
 
 		void print(){
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << peso << endl
+			cout << "[Encomenda Relâmpago]" << endl;
+			cout << "  Peso: " << peso << endl
 				<< "  Custo por kg: " << custoKg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Taxa adicional: " << taxa << endl
+				<< "  Custo total: " << total << endl;
 
 		}
 

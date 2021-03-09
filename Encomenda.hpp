@@ -10,7 +10,7 @@ class Encomenda{
 
 		double peso = 0.0;
 		double custoKg = 0.0;
-		double T = 0.0;
+		double total = 0.0;
 		Cliente remetente;
 		Cliente dest;
 			
@@ -20,7 +20,6 @@ class Encomenda{
 			remetente.print();
 			cout << "[Destinatário]" << endl;
 			dest.print();
-			
 		}
 
 };
