@@ -12,16 +12,20 @@ class EncomendaNormal: public Encomenda{
 		double taxa = 0.0;
 
 	public:
+	
+		double getTaxa() {
+			return this->taxa;	
+		}
 
-	void print(){
+		void print(){
 
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << this->getPeso() << endl
-			<< "  Custo por kg: " << this->getCustoKg() << endl
-			<< "  Custo total: " << this->getCustoTotal(taxa) << endl;
+			Encomenda::print();
+			std::cout << "[Encomenda Normal]" << endl;
+			std::cout << "  Peso: " << this->getPeso() << endl
+				<< "  Custo por kg: " << this->getCustoKg() << endl
+				<< "  Custo total: " << this->getCustoTotal(taxa) << endl;
 
-	}
+		}
 
 };
 
