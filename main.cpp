@@ -32,19 +32,19 @@ int main(){
 
 	EncomendaNormal encomenda_0 (5,12,cliente_0,cliente_1);
 	encomendasN.push_back(encomenda_0);
-	EncomendaNormal encomenda_0 (10,12,cliente_1,cliente_2);
+	EncomendaNormal encomenda_1 (10,12,cliente_1,cliente_2);
 	encomendasN.push_back(encomenda_1);
-	EncomendaNormal encomenda_0 (7,12,cliente_2,cliente_3);
+	EncomendaNormal encomenda_2 (7,12,cliente_2,cliente_3);
 	encomendasN.push_back(encomenda_2);
-	EncomendaNormal encomenda_0 (2,12,cliente_3,cliente_4);
+	EncomendaNormal encomenda_3 (2,12,cliente_3,cliente_4);
 	encomendasN.push_back(encomenda_3);
-	EncomendaNormal encomenda_0 (3,12,cliente_4,cliente_5);
+	EncomendaNormal encomenda_4 (3,12,cliente_4,cliente_5);
 	encomendasN.push_back(encomenda_4);
-	EncomendaNormal encomenda_0 (13,18,cliente_5,cliente_6);
+	EncomendaRelampago encomenda_5 (13,18,cliente_5,cliente_6);
 	encomendasR.push_back(encomenda_5);
-	EncomendaNormal encomenda_0 (6,18,cliente_6,cliente_7);
+	EncomendaRelampago encomenda_6 (6,18,cliente_6,cliente_7);
 	encomendasR.push_back(encomenda_6);
-	EncomendaNormal encomenda_0 (8,18,cliente_7,cliente_0);
+	EncomendaRelampago encomenda_7 (8,18,cliente_7,cliente_0);
 	encomendasR.push_back(encomenda_7);
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
