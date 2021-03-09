@@ -5,27 +5,24 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaNormal: public Encomenda{
-
+class EncomendaNormal: public Encomenda {
 	public:
-		
-	double calcula(){
+	//Construtor e destrutor:
+	EncomendaNormal(Cliente c1, Cliente c2, double _peso, double _custo) : Encomenda(c1,c2,_peso,_custo) {};
+	~EncomendaNormal() {};
 
-		double x = PESO * CUSTOkg;
+        //Métodos:
+        double calcula() {
+		return Encomenda::getCustoKg() * Encomenda::getPeso();
+        };
 
-		return x;
-	}
-
-	void print(){
-
+        void print() override {
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
+		std::cout << "  Peso: " << Encomenda::getPeso() << endl
+		<< "  Custo por kg: " << Encomenda::getCustoKg() << endl
+                << "  Custo total: " << Encomenda::getTotal() << endl;
 	}
-
 };
 
 #endif
