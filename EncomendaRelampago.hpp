@@ -5,11 +5,13 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda
+{
 
 	public:
 
-		double calcula(){
+		double calcula() //calcula o preço da encomenda
+		{
 
 			double x = PESO * CUSTOkg;
 			x += x * 0.25;
@@ -17,7 +19,8 @@ class EncomendaRelampago: public Encomenda{
 			return x;
 		}
 
-		void print(){
+		void print()//imprime os dados da encomenda relampago na tela
+		{
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
