@@ -21,7 +21,6 @@ int main(){
 	int quantR = 0;
  
 
-
 //Definição dos clientes e alocação no vetor
 
 	Cliente cli0;
@@ -31,6 +30,7 @@ int main(){
 	cli0.ESTADO = "Ionia";
 	cli0.cep = "548 a.C.";
 	clientes.push_back(cli0);
+	
 
 	Cliente cli1;
 	cli1.NOME = "Aristóteles";
@@ -90,8 +90,6 @@ int main(){
 
 
 
-
-//Definição das encomendas e alocação no vetor
 
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
@@ -157,10 +155,9 @@ int main(){
 	quantR++;
 	encomendas_relampago.push_back(enc7);
 
-
-
-
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
+
+
 
     for(int i = 0; i < quantN; i++){
 		encomendas_normais[i].print();

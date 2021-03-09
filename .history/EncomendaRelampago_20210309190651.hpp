@@ -9,7 +9,7 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-	static constexpr double taxa_adicional = 0.25;
+	static cons
 
 		void print(){
 
@@ -17,7 +17,7 @@ class EncomendaRelampago: public Encomenda{
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << taxa_adicional << endl
+				<< "  Taxa adicional: " << 0.25 << endl
 				<< "  Custo total: " << T << endl;
 
 		}

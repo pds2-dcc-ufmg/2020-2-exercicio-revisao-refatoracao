@@ -14,15 +14,7 @@ int main(){
 	vector<EncomendaNormal> encomendas_normais;
 
 	vector<EncomendaRelampago> encomendas_relampago;
-
-	double custN = 0;
-	double custR = 0;
-	int quantN = 0;
-	int quantR = 0;
  
-
-
-//Definição dos clientes e alocação no vetor
 
 	Cliente cli0;
 	cli0.NOME = "Thales";
@@ -31,6 +23,7 @@ int main(){
 	cli0.ESTADO = "Ionia";
 	cli0.cep = "548 a.C.";
 	clientes.push_back(cli0);
+	
 
 	Cliente cli1;
 	cli1.NOME = "Aristóteles";
@@ -88,10 +81,8 @@ int main(){
 	cli7.cep = "499 a.C.";
 	clientes.push_back(cli7);
 
-
-
-
-//Definição das encomendas e alocação no vetor
+	int quantN = 0;
+	int quantR = 0;
 
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
@@ -99,7 +90,7 @@ int main(){
 	enc0.remetente = cli0;
 	enc0.dest = cli1;
 	quantN++;
-	encomendas_normais.push_back(enc0);
+	encomendas_normais.push_back
 
 	EncomendaNormal enc1;
 	enc1.PESO = 10;
@@ -107,7 +98,6 @@ int main(){
 	enc1.remetente = cli1;
 	enc1.dest = cli2;
 	quantN++;
-	encomendas_normais.push_back(enc1);
 
 	EncomendaNormal enc2;
 	enc2.PESO = 7;
@@ -115,7 +105,6 @@ int main(){
 	enc2.remetente = cli2;
 	enc2.dest = cli3;
 	quantN++;
-	encomendas_normais.push_back(enc2);	
 
 	EncomendaNormal enc3;
 	enc3.PESO = 2;
@@ -123,7 +112,6 @@ int main(){
 	enc3.remetente = cli3;
 	enc3.dest = cli4;
 	quantN++;
-	encomendas_normais.push_back(enc3);
 
 	EncomendaNormal enc4;
 	enc4.PESO = 3;
@@ -131,7 +119,6 @@ int main(){
 	enc4.remetente = cli4;
 	enc4.dest = cli5;
 	quantN++;
-	encomendas_normais.push_back(enc4);
 
 	EncomendaRelampago enc5;
 	enc5.PESO = 13;
@@ -139,7 +126,6 @@ int main(){
 	enc5.remetente = cli5;
 	enc5.dest = cli6;
 	quantR++;
-	encomendas_relampago.push_back(enc5);
 
 	EncomendaRelampago enc6;
 	enc6.PESO = 6;
@@ -147,7 +133,6 @@ int main(){
 	enc6.remetente = cli6;
 	enc6.dest = cli7;
 	quantR++;
-	encomendas_relampago.push_back(enc6);
 
 	EncomendaRelampago enc7;
 	enc7.PESO = 8;
@@ -155,24 +140,51 @@ int main(){
 	enc7.remetente = cli7;
 	enc7.dest = cli0;
 	quantR++;
-	encomendas_relampago.push_back(enc7);
-
-
-
-
+	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-    for(int i = 0; i < quantN; i++){
-		encomendas_normais[i].print();
-    	custN += encomendas_normais[i].calcula_custo_total();
-		std::cout << endl;
-   }	
+	double custN = 0;
+	double custR = 0;
 
-    for(int i = 0; i < quantR; i++){
-		encomendas_relampago[i].print();
-    	custR += encomendas_relampago[i].calcula_custo_total();
-		std::cout << endl;
-   }
+	enc0.calcula_custo_total();
+	enc0.print();
+	custN += enc0.calcula_custo_total();
+	std::cout << endl;
+
+	enc1.calcula_custo_total();
+	enc1.print();
+	custN += enc1.calcula_custo_total();
+	std::cout << endl;
+
+	enc2.calcula_custo_total();
+	enc2.print();
+	custN += enc2.calcula_custo_total();
+	std::cout << endl;
+
+	enc3.calcula_custo_total();
+	enc3.print();
+	custN += enc3.calcula_custo_total();
+	std::cout << endl;
+
+	enc4.calcula_custo_total();
+	enc4.print();
+	custN += enc4.calcula_custo_total();
+	std::cout << endl;
+
+	enc5.calcula_custo_total();
+	enc5.print();
+	custR += enc5.calcula_custo_total();
+	std::cout << endl;
+
+	enc6.calcula_custo_total();
+	enc6.print();
+	custR += enc6.calcula_custo_total();
+	std::cout << endl;
+
+	enc7.calcula_custo_total();
+	enc7.print();
+	custR += enc7.calcula_custo_total();
+	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN

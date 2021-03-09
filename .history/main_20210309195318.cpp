@@ -14,15 +14,7 @@ int main(){
 	vector<EncomendaNormal> encomendas_normais;
 
 	vector<EncomendaRelampago> encomendas_relampago;
-
-	double custN = 0;
-	double custR = 0;
-	int quantN = 0;
-	int quantR = 0;
  
-
-
-//Definição dos clientes e alocação no vetor
 
 	Cliente cli0;
 	cli0.NOME = "Thales";
@@ -31,6 +23,7 @@ int main(){
 	cli0.ESTADO = "Ionia";
 	cli0.cep = "548 a.C.";
 	clientes.push_back(cli0);
+	
 
 	Cliente cli1;
 	cli1.NOME = "Aristóteles";
@@ -88,10 +81,8 @@ int main(){
 	cli7.cep = "499 a.C.";
 	clientes.push_back(cli7);
 
-
-
-
-//Definição das encomendas e alocação no vetor
+	int quantN = 0;
+	int quantR = 0;
 
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
@@ -157,22 +148,54 @@ int main(){
 	quantR++;
 	encomendas_relampago.push_back(enc7);
 
-
-
-
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-    for(int i = 0; i < quantN; i++){
-		encomendas_normais[i].print();
-    	custN += encomendas_normais[i].calcula_custo_total();
-		std::cout << endl;
+	double custN = 0;
+	double custR = 0;
+
+    for(int i = 0; i < 5; i++){
+       vetor[i]
    }	
 
-    for(int i = 0; i < quantR; i++){
-		encomendas_relampago[i].print();
-    	custR += encomendas_relampago[i].calcula_custo_total();
-		std::cout << endl;
-   }
+	enc0.calcula_custo_total();
+	enc0.print();
+	custN += enc0.calcula_custo_total();
+	std::cout << endl;
+
+	enc1.calcula_custo_total();
+	enc1.print();
+	custN += enc1.calcula_custo_total();
+	std::cout << endl;
+
+	enc2.calcula_custo_total();
+	enc2.print();
+	custN += enc2.calcula_custo_total();
+	std::cout << endl;
+
+	enc3.calcula_custo_total();
+	enc3.print();
+	custN += enc3.calcula_custo_total();
+	std::cout << endl;
+
+	enc4.calcula_custo_total();
+	enc4.print();
+	custN += enc4.calcula_custo_total();
+	std::cout << endl;
+
+	enc5.calcula_custo_total();
+	enc5.print();
+	custR += enc5.calcula_custo_total();
+	std::cout << endl;
+
+	enc6.calcula_custo_total();
+	enc6.print();
+	custR += enc6.calcula_custo_total();
+	std::cout << endl;
+
+	enc7.calcula_custo_total();
+	enc7.print();
+	custR += enc7.calcula_custo_total();
+	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN

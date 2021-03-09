@@ -21,10 +21,7 @@ class Encomenda{
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
 		}
-
-		double calcula_custo_total(){
-			return (PESO * CUSTOkg);
-		}
+		
 
 };
 

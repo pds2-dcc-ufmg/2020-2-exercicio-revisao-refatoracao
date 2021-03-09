@@ -7,8 +7,8 @@ using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
-	public:
-		
+	public:		
+
 	void print(){
 
 		Encomenda::print();

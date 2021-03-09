@@ -9,6 +9,7 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
+
 	void print(){
 
 		Encomenda::print();
