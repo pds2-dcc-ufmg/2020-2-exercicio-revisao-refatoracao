@@ -11,11 +11,9 @@ Cliente::Cliente (string nome, string endereco, string cidade, string estado, st
 }
 
 void Cliente::print(){
-
 	std::cout << "  Nome: " << this->_nome << endl
 		 << "  Endereço: " << this->_endereco << endl
 		 << "  Cidade: " << this->_cidade << endl
 		 << "  Estado: " << this->_estado << endl
 		 << "  CEP: " << this->_cep << endl;
-
 }
