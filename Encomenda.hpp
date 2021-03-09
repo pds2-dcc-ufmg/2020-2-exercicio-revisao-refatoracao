@@ -15,7 +15,7 @@ class Encomenda{
 	public:
 	    Encomenda() {}
         
-        Encomenda(double _peso, double  _custo, Cliente _remet, Cliente _dest) : 
+        	Encomenda(double _peso, double  _custo, Cliente _remet, Cliente _dest) : 
             Peso(_peso), 
             CustoKg(_custo),
             remetente(_remet),
