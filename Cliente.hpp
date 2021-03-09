@@ -16,6 +16,8 @@ class Cliente{
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
 		
+		void cadastro(string NOME, string endereco, string CIDADE, string EStado, string cep);
+		
 };
 
 #endif
