@@ -5,13 +5,11 @@
 #include "Cliente.hpp"
 class EncomendaRelampago : public Encomenda
 {
-
 public:
-	EncomendaRelampago();
-	void print();
+	EncomendaRelampago(double peso, double custoKG, Cliente remetente, Cliente destinatario)
+		: Encomenda(peso, custoKG, remetente, destinatario, 0.25){};
 
-protected:
-	double _taxa = 0.25;
+	void print_sub() override;
 };
 
 #endif

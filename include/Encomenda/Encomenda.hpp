@@ -6,7 +6,12 @@
 class Encomenda
 {
 public:
+	Encomenda(){};
+	Encomenda(double peso, double custoKG, Cliente remetente, Cliente destinatario, double taxa)
+		: _peso(peso), _custoKG(custoKG), _remetente(remetente), _destinatario(destinatario), _taxa(taxa){};
+
 	void print();
+	virtual void print_sub() = 0;
 	double calcula();
 
 	void printPeso();
@@ -16,11 +21,7 @@ public:
 	void printRemetente();
 	void printDestinatario();
 
-	void setPeso(double Peso);
-	void setCustoKG(double CustoKG);
-	void setTotal(double Total);
-	void setRemetente(Cliente Remetente);
-	void setDestinatario(Cliente Destinatario);
+	double resultado();
 
 protected:
 	double _peso = 0.0;

@@ -17,6 +17,14 @@ double Encomenda::calcula()
     return x;
 }
 
+double Encomenda::resultado()
+{
+    this->print();
+    this->print_sub();
+    std::cout << std::endl;
+    return this->calcula();
+}
+
 void Encomenda::printPeso()
 {
     std::cout << "  Peso: " << this->_peso << std::endl;
@@ -45,29 +53,4 @@ void Encomenda::printRemetente()
 void Encomenda::printDestinatario()
 {
     this->_destinatario.print();
-}
-
-void Encomenda::setPeso(double Peso)
-{
-    this->_peso = Peso;
-}
-
-void Encomenda::setCustoKG(double CustoKG)
-{
-    this->_custoKG = CustoKG;
-}
-
-void Encomenda::setTotal(double Total)
-{
-    this->_total = Total;
-}
-
-void Encomenda::setRemetente(Cliente Remetente)
-{
-    this->_remetente = Remetente;
-}
-
-void Encomenda::setDestinatario(Cliente Destinatario)
-{
-    this->_destinatario = Destinatario;
 }

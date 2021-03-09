@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "Cliente.hpp"
 
 void Cliente::print()
@@ -34,29 +33,4 @@ void Cliente::printEstado()
 void Cliente::printCep()
 {
 	std::cout << "  CEP: " << this->_cep << std::endl;
-}
-
-void Cliente::setNome(std::string Nome)
-{
-	this->_nome = Nome;
-}
-
-void Cliente::setEndereco(std::string Endereco)
-{
-	this->_endereco = Endereco;
-}
-
-void Cliente::setCidade(std::string Cidade)
-{
-	this->_cidade = Cidade;
-}
-
-void Cliente::setEstado(std::string Estado)
-{
-	this->_estado = Estado;
-}
-
-void Cliente::setCep(std::string Cep)
-{
-	this->_cep = Cep;
 }

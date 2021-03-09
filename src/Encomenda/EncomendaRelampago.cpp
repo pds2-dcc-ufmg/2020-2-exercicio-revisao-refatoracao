@@ -1,14 +1,8 @@
 #include <iostream>
 #include "EncomendaRelampago.hpp"
 
-EncomendaRelampago::EncomendaRelampago()
+void EncomendaRelampago::print_sub()
 {
-	this->_taxa = 0.25;
-}
-
-void EncomendaRelampago::print()
-{
-	Encomenda::print();
 	std::cout << "[Encomenda Relâmpago]" << std::endl;
 	this->printPeso();
 	this->printCustoKG();

@@ -7,6 +7,10 @@ class Cliente
 {
 
 public:
+	Cliente(){};
+	Cliente(std::string nome, std::string endereco, std::string cidade, std::string estado, std::string cep)
+		: _nome(nome), _endereco(endereco), _cidade(cidade), _estado(estado), _cep(cep){};
+
 	void print(); // imprime na tela os dados de um cliente cadastrado
 
 	void printNome();
@@ -14,12 +18,6 @@ public:
 	void printCidade();
 	void printEstado();
 	void printCep();
-
-	void setNome(std::string Nome);
-	void setEndereco(std::string Endereco);
-	void setCidade(std::string Cidade);
-	void setEstado(std::string Estado);
-	void setCep(std::string Cep);
 
 private:
 	std::string _nome;

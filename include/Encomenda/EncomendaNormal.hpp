@@ -7,9 +7,12 @@ using namespace std;
 
 class EncomendaNormal : public Encomenda
 {
-
 public:
-	void print();
+	EncomendaNormal(){};
+	EncomendaNormal(double peso, double custoKG, Cliente remetente, Cliente destinatario)
+		: Encomenda(peso, custoKG, remetente, destinatario, 0.0){};
+
+	void print_sub() override;
 };
 
 #endif

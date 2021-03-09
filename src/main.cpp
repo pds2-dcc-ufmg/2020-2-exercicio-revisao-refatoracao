@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
@@ -6,172 +7,74 @@
 
 int main()
 {
-	Cliente cli0;
-	cli0.setNome("Thales");
-	cli0.setEndereco("Rua dos Pré-Socráticos");
-	cli0.setCidade("Miletus");
-	cli0.setEstado("Ionia");
-	cli0.setCep("548 a.C.");
+	std::vector<std::string> nomes = {"Thales", "Aristóteles", "Platão", "Sócrates", "Pitágoras", "Parmênides", "Empédocles", "Anaxágoras"};
 
-	Cliente cli1;
-	cli1.setNome("Aristóteles");
-	cli1.setEndereco("Avenida do Meio-Termo");
-	cli1.setCidade("Atenas");
-	cli1.setEstado("Ática");
-	cli1.setCep("384 a.C.");
+	std::vector<std::string> enderecos = {"Rua dos Pré-Socráticos", "Avenida do Meio-Termo", "Praça das Formas", "Rua do Elenchus", "Praça dos Quadrados dos Catetos", "Rua do Não Ser", "Rua dos Quatro Elementos", "Avenida da Mente Cósmica"};
 
-	Cliente cli2;
-	cli2.setNome("Platão");
-	cli2.setEndereco("Praça das Formas");
-	cli2.setCidade("Atenas");
-	cli2.setEstado("Ática");
-	cli2.setCep("348 a.C");
+	std::vector<std::string> cidades = {"Miletus", "Atenas", "Atenas", "Atenas", "Samos", "Eleia", "Agrigento", "Clazômenas"};
 
-	Cliente cli3;
-	cli3.setNome("Sócrates");
-	cli3.setEndereco("Rua do Elenchus");
-	cli3.setCidade("Atenas");
-	cli3.setEstado("Ática");
-	cli3.setCep("399 a.C.");
+	std::vector<std::string> estados = {"Ionia", "Ática", "Ática", "Ática", "Egeu", "Magna Grécia", "Sicília", "Jónia"};
 
-	Cliente cli4;
-	cli4.setNome("Pitágoras");
-	cli4.setEndereco("Praça dos Quadrados dos Catetos");
-	cli4.setCidade("Samos");
-	cli4.setEstado("Egeu");
-	cli4.setCep("571 a.C.");
+	std::vector<std::string> ceps = {"548 a.C.", "384 a.C.", "348 a.C", "399 a.C.", "571 a.C.", "460 a.C.", "495 a.C.", "499 a.C."};
 
-	Cliente cli5;
-	cli5.setNome("Parmênides");
-	cli5.setEndereco("Rua do Não Ser");
-	cli5.setCidade("Eleia");
-	cli5.setEstado("Magna Grécia");
-	cli5.setCep("460 a.C.");
+	std::vector<Cliente> clientes;
+	int total_clientes = 8;
+	for (int i = 0; i < total_clientes; i++)
+	{
+		clientes.push_back(Cliente(nomes[i], enderecos[i], cidades[i], estados[i], ceps[i]));
+	};
 
-	Cliente cli6;
-	cli6.setNome("Empédocles");
-	cli6.setEndereco("Rua dos Quatro Elementos");
-	cli6.setCidade("Agrigento");
-	cli6.setEstado("Sicília");
-	cli6.setCep("495 a.C.");
+	std::vector<double> pesos_encomendas = {5, 10, 7, 2, 3, 13, 6, 8};
 
-	Cliente cli7;
-	cli7.setNome("Anaxágoras");
-	cli7.setEndereco("Avenida da Mente Cósmica");
-	cli7.setCidade("Clazômenas");
-	cli7.setEstado("Jónia");
-	cli7.setCep("499 a.C.");
+	std::vector<EncomendaNormal> encomendas_normais;
+	int num_normais = 5;
+	double peso_normal = 12.0;
 
-	int quantN = 0;
-	int quantR = 0;
+	std::vector<EncomendaRelampago> encomendas_relampago;
+	int num_relampagos = 3;
+	double peso_relampago = 18.0;
 
-	EncomendaNormal enc0;
-	enc0.setPeso(5);
-	enc0.setCustoKG(12);
-	enc0.setRemetente(cli0);
-	enc0.setDestinatario(cli1);
-	quantN++;
+	for (int i = 0; i < num_normais; i++)
+	{
+		encomendas_normais.push_back(EncomendaNormal(pesos_encomendas[i],
+													 peso_normal,
+													 clientes[i],
+													 clientes[i + 1]));
+	};
 
-	EncomendaNormal enc1;
-	enc1.setPeso(10);
-	enc1.setCustoKG(2);
-	enc1.setRemetente(cli1);
-	enc1.setDestinatario(cli2);
-	quantN++;
-
-	EncomendaNormal enc2;
-	enc2.setPeso(7);
-	enc2.setCustoKG(12);
-	enc2.setRemetente(cli2);
-	enc2.setDestinatario(cli3);
-	quantN++;
-
-	EncomendaNormal enc3;
-	enc3.setPeso(2);
-	enc3.setCustoKG(12);
-	enc3.setRemetente(cli3);
-	enc3.setDestinatario(cli4);
-	quantN++;
-
-	EncomendaNormal enc4;
-	enc4.setPeso(3);
-	enc4.setCustoKG(12);
-	enc4.setRemetente(cli4);
-	enc4.setDestinatario(cli5);
-	quantN++;
-
-	EncomendaRelampago enc5;
-	enc5.setPeso(13);
-	enc5.setCustoKG(8);
-	enc5.setRemetente(cli5);
-	enc5.setDestinatario(cli6);
-	quantR++;
-
-	EncomendaRelampago enc6;
-	enc6.setPeso(6);
-	enc6.setCustoKG(18);
-	enc6.setRemetente(cli6);
-	enc6.setDestinatario(cli7);
-	quantR++;
-
-	EncomendaRelampago enc7;
-	enc7.setPeso(8);
-	enc7.setCustoKG(18);
-	enc7.setRemetente(cli7);
-	enc7.setDestinatario(cli0);
-	quantR++;
+	for (int i = num_normais - 1; i < num_relampagos + num_normais - 1; i++)
+	{
+		encomendas_relampago.push_back(EncomendaRelampago(pesos_encomendas[i],
+														  peso_relampago,
+														  clientes[i],
+														  clientes[i + 1]));
+	};
+	encomendas_relampago.push_back(EncomendaRelampago(
+		pesos_encomendas[num_relampagos + num_normais - 1],
+		peso_relampago,
+		clientes[num_relampagos + num_normais - 1],
+		clientes[0]));
 
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custo_normal_total = 0;
+	double custo_relampago_total = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << std::endl;
+	for (auto i : encomendas_normais)
+	{
+		custo_normal_total += i.resultado();
+	}
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << std::endl;
-
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << std::endl;
-
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << std::endl;
-
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << std::endl;
-
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << std::endl;
-
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << std::endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << std::endl;
-
+	for (auto i : encomendas_relampago)
+	{
+		custo_relampago_total += i.resultado();
+	}
 	std::cout << "\n>> Encomendas Normais <<"
-			  << "\nQuantidade: " << quantN
-			  << "\nValor Total: " << custN
+			  << "\nQuantidade: " << num_normais
+			  << "\nValor Total: " << custo_normal_total
 			  << std::endl
 			  << "\n>> Encomendas Relâmpago <<"
-			  << "\nQuantidade: " << quantR
-			  << "\nValor Total: " << custR
+			  << "\nQuantidade: " << num_relampagos
+			  << "\nValor Total: " << custo_relampago_total
 			  << std::endl;
 }
