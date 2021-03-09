@@ -8,21 +8,21 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-	double calcula(){
 
-		double x = PESO * CUSTOkg;
+	double calculaPreco(){
 
-		return x;
+		double preco = peso * custoKg;
+
+		return preco;
 	}
 
-	void print(){
+	void printEncomenda(){ // imprime na tela os dados de uma encomenda cadastrada
 
-		Encomenda::print();
+		Encomenda::printEncomenda();
 		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
+		std::cout << "  Peso: " << peso << endl
+			<< "  Custo por kg: " << custoKg << endl
+			<< "  Custo total: " << custoTotal << endl;
 
 	}
 
