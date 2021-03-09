@@ -24,6 +24,13 @@ class EncomendaRelampago: public Encomenda{
 			this->T = this->calcula();
 			this->taxa = 0.25;
 		}
+
+		double metodo() 
+		{
+			this->print();
+			std::cout << endl;
+			return this->calcula();
+		}
 };
 
 #endif

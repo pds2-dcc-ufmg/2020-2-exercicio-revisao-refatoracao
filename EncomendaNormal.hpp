@@ -24,6 +24,13 @@ class EncomendaNormal: public Encomenda{
 			this->T = this->calcula();
 			this->taxa = 0.0;
 		}
+
+		double metodo()
+		{
+			this->print();
+			std::cout << endl;
+			return this->calcula();
+		}
 };
 
 #endif
