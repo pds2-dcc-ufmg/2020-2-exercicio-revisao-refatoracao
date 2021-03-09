@@ -8,6 +8,14 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
+	
+	double calcula(){
+	
+		Encomenda::calculo_padrao;
+		double x = calculo_padrao;
+		
+		return x;
+	}
 
 	void print(){
 
