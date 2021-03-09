@@ -14,11 +14,11 @@ template <class T> class Lista {
 
 	public:
 
-		Lista();
-		void inserir(T _encomenda);
-		double printAndCalc() const;
-		void printNthNode(int n) const;
-		int getSize() const;
+		Lista(); // declaracao do construtor da lista
+		void inserir(T _encomenda); // declaracao do metodo que insere uma encomenda na lista
+		double printAndCalc() const; // declaracao do metodo que printa as encomendas da lista e calcula o total de encomendas
+		void printNthNode(int n) const; // declaracao do metodo que printa a enesima encomenda armazenada na lista
+		int getSize() const; // declaracao do metodo que retorna o tamanho corrente da lista
 
 };
 
