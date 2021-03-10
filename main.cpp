@@ -62,11 +62,11 @@ int main(){
 	 
 	// Impressao das quantidades e custo total das encomendas
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
+		 << "\nQuantidade: " << v1.size()
 		 << "\nValor Total: " << custN
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
+		 << "\nQuantidade: " << v2.size()
 		 << "\nValor Total: " << custR
 		 << endl;
 	
