@@ -28,8 +28,8 @@ class Encomenda {
 		
 		// Imprime na tela as informações do remetente e do destinatário.
 		void print();
-		// Calcula o custo total da encomenda.
-		virtual double calculaCusto();
+		// Calcula o valor total da encomenda.
+		virtual double calculaValor();
 	
 	protected:
 		double _peso = 0.0;
