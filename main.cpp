@@ -40,9 +40,9 @@ int main(){
 	EncomendaRelampago enc7(8,18,cli7,cli0);
 	v2[2] = enc7;
 	
+	// Impressao dos dados das encomendas e Calculo de custos
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	// Impressao dos dados das encomendas e Calculo de custos
 	double custN = 0;
 	double custR = 0;
 	
