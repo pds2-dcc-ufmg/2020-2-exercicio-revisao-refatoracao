@@ -6,41 +6,40 @@
 #include <vector>
 
 
-int main(){
-	
-	std::vector<Cliente> clientes;
+int main() {
 
-	clientes.push_back(Cliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C."));
-	clientes.push_back(Cliente("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C."));
-	clientes.push_back(Cliente("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C"));
-	clientes.push_back(Cliente("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C."));
-	clientes.push_back(Cliente("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C"));
-	clientes.push_back(Cliente("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C."));
-	clientes.push_back(Cliente("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C."));
-	clientes.push_back(Cliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C."));
+	Cliente cli0("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
+	Cliente cli1("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
+	Cliente cli2("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
+	Cliente cli3("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.");
+	Cliente cli4("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C.");
+	Cliente cli5("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C.");
+	Cliente cli6("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.");
+	Cliente cli7("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.");
 
 
 	int quantNormal = 0;
 	int quantRelampago = 0;
 
-	std::vector<Encomenda> encomendas;
-	encomendas.push_back(EncomendaNormal(5, 12, clientes[0], clientes[1]));
+	EncomendaNormal enc0(5, 12, cli0, cli1);
 	quantNormal++;
-	encomendas.push_back(EncomendaNormal(10, 12, clientes[1], clientes[2]));
+	EncomendaNormal enc1(10, 12, cli1, cli2);
 	quantNormal++;
-	encomendas.push_back(EncomendaNormal(7, 12, clientes[2], clientes[3]));
+	EncomendaNormal enc2(7, 12, cli2, cli3);
 	quantNormal++;
-	encomendas.push_back(EncomendaNormal(2, 12, clientes[3], clientes[4]));
+	EncomendaNormal enc3(2, 12, cli3, cli4);
 	quantNormal++;
-	encomendas.push_back(EncomendaNormal(3, 12, clientes[4], clientes[5]));
+	EncomendaNormal enc4(3, 12, cli4, cli5);
 	quantNormal++;
-	encomendas.push_back(EncomendaRelampago(13, 18, clientes[5], clientes[6]));
+	EncomendaRelampago enc5(13, 18, cli5, cli6);
 	quantRelampago++;
-	encomendas.push_back(EncomendaRelampago(6, 18, clientes[6], clientes[7]));
+	EncomendaRelampago enc6(6, 18, cli6, cli7);
 	quantRelampago++;
-	encomendas.push_back(EncomendaRelampago(8, 18, clientes[7], clientes[0]));
+	EncomendaRelampago enc7(8, 18, cli7, cli0);
 	quantRelampago++;
-
+	
+	std::vector<EncomendaNormal> encomendas1 = { enc0, enc1, enc2, enc3, enc4 };
+	std::vector<EncomendaRelampago> encomendas2 = { enc5, enc6, enc7};
 
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
@@ -48,14 +47,18 @@ int main(){
 	double custoNormal = 0;
 	double custoRelampago = 0;
 
-	for(int i = 0; i < encomendas.size(); i++){
-		encomendas[i].calcula();
-		encomendas[i].print();
-		if(encomendas[i].getClassType() == 1){
-			custoNormal += encomendas[i].calcula();
-		} else if (encomendas[i].getClassType() == 2){
-			custoRelampago += encomendas[i].calcula();
-		}
+	for (EncomendaNormal iterator: encomendas1) {
+		iterator.calcula();
+		iterator.print();
+		custN += iterator.calcula();
+		std::cout << endl;
+	}
+
+	for (EncomendaRelampago iterator : encomendas2) {
+		iterator.calcula();
+		iterator.print();
+		custR += iterator.calcula();
+		std::cout << endl;
 	}
 
 	
