@@ -2,25 +2,31 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
+
 using namespace std;
 
 class Encomenda{
 
-	public:
+    protected:
+        double Peso = 0.0;
+        double CustoKg = 0.0;
+        double T = 0.0;
+        Cliente Remetente;
+        Cliente Dest;
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
+    public:
+        void print(){
 			std::cout << "[Remetente]" << endl;
-			remetente.print();
+			Remetente.print();
 			std::cout << "[Destinatário]" << endl;
-			dest.print();
+			Dest.print();
 		}
+
+		Encomenda(double _Peso, double _Custokg, int *(Quant), Cliente _remetente, Cliente _dest):Peso(_Peso),CustoKg(_Custokg),Remetente(_remetente),Dest(_dest){
+            *(Quant) = *(Quant) + 1;//Acrescentando a nova encomenda na quantidade total.
+		}
+
+        virtual double DefinirPreco(){}//Método para imprimir informações da encomenda e retornar o valor total como um double.
 
 };
 
