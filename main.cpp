@@ -163,7 +163,7 @@ int main(){
 	custR += enc6.calcula();
 	cout << endl;
 
-	enc7.calcula();d
+	enc7.calcula();
 	enc7.print();
 	custR += enc7.calcula();
 	cout << endl;
