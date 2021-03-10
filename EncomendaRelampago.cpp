@@ -16,4 +16,5 @@ void EncomendaRelampago :: print(){
 	<< "  Taxa adicional: " << 0.25 << endl
 	<< "  Custo total: " << total << endl;
 
+
 }

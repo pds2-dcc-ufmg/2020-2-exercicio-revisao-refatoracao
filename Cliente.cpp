@@ -5,7 +5,7 @@
 
 void Cliente :: printarCliente(){
 
-	std::cout << "  Nome: " << nome << endl
+	std::cout << " Nome: " << nome << endl
 	 << "  Endereco: " <<endereco<< endl
 	 << "  Cidade: " << cidade << endl
 	 << "  Estado: " << estado << endl

@@ -35,13 +35,6 @@ public:
 	void setDestinatario(Cliente NovoDest);
 
 
-
-
-
-
-
-
-
 };
 
 #endif

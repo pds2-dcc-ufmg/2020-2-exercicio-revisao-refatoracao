@@ -5,7 +5,7 @@
 using namespace std;
 
 class Cliente{
-	//trocando variaveis de publica para private
+	
 	private:
 
 	string nome;

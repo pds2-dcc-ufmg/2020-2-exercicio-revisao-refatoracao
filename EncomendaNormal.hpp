@@ -13,7 +13,6 @@ class EncomendaNormal: public Encomenda{
 
 	void print();
 
-
 };
 
 #endif

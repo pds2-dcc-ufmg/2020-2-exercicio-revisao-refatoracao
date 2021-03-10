@@ -3,10 +3,6 @@
 #include "Cliente.hpp"
 
 
-//Criada nova pasta Encomenda cpp para separar os atributos dos metodos
-
-
-
 void Encomenda :: print(){
 
 	std::cout << "[Remetente]" << endl;
