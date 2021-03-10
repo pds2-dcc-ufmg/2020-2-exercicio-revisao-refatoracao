@@ -19,7 +19,7 @@ class Cliente{
 		void getEndereco();
 		void getCidade();
 		void getEstado();
-		void getCep;	
+		void getCep();	
 			
 		
 };
