@@ -8,121 +8,121 @@ using namespace std;
 int main(){
 	
 	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	cli0.setNome("Thales");
+	cli0.setEndereco("Rua dos Pre-Socráticos");
+	cli0.setCidade("Miletus");
+	cli0.setEstado( "Ionia");
+	cli0.setCep("548 a.C.");
 
 	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	cli1.setNome("Aristoteles");
+	cli1.setEndereco("Avenida do Meio-Termo");
+	cli1.setCidade("Atenas");
+	cli1.setEstado("Atica");
+	cli1.setCep("384 a.C.");
 
 	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	cli2.setNome("Platao");
+	cli2.setEndereco("Praca das Formas");
+	cli2.setCidade("Atenas");
+	cli2.setEstado("Atica");
+	cli2.setCep("348 a.C");
 
 	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	cli3.setNome("Socrates");
+	cli3.setEndereco("Rua do Elenchus") ;
+	cli3.setCidade("Atenas");
+	cli3.setEstado("Atica");
+	cli3.setCep("399 a.C.");
 
 	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	cli4.setNome("Pitagoras");
+	cli4.setEndereco("Praca dos Quadrados dos Catetos");
+	cli4.setCidade("Samos");
+	cli4.setEstado("Egeu");
+	cli4.setCep("571 a.C.");
 
 	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	cli5.setNome("Parmenides");
+	cli5.setEndereco("Rua do Nao Ser");
+	cli5.setCidade("Eleia");
+	cli5.setEstado("Magna Grecia");
+	cli5.setCep("460 a.C.");
 
 	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	cli6.setNome("Empedocles");
+	cli6.setEndereco("Rua dos Quatro Elementos");
+	cli6.setCidade("Agrigento");
+	cli6.setEstado("Sicilia");
+	cli6.setCep("495 a.C");
 
 	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	cli7.setNome("Anaxagoras");
+	cli7.setEndereco("Avenida da Mente Cosmica");
+	cli7.setCidade("Clazomenas");
+	cli7.setEstado("Jonia");
+	cli7.setCep("499 a.C.");
 
 	int quantN = 0;
 	int quantR = 0;
 
 	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
+	enc0.setPeso(5);
+	enc0.setCusto(12);
+	enc0.setRemetente(cli0);
+	enc0.setDestinatario(cli1);
 	quantN++;
 
 	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
+	enc1.setPeso(10);
+	enc1.setCusto(12);
+	enc1.setRemetente(cli1);
+	enc1.setDestinatario(cli2);
 	quantN++;
 
 	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
+	enc2.setPeso(7);
+	enc2.setCusto(12);
+	enc2.setRemetente(cli2);
+	enc2.setDestinatario(cli3);
 	quantN++;
 
 	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
+	enc3.setPeso(2);
+	enc3.setCusto(12);
+	enc3.setRemetente(cli3);
+	enc3.setDestinatario(cli4);
 	quantN++;
 
 	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
+	enc4.setPeso(3);
+	enc4.setCusto(12);
+	enc4.setRemetente(cli4);
+	enc4.setDestinatario(cli5);
 	quantN++;
 
 	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
+	enc5.setPeso(13);
+	enc5.setCusto(18);
+	enc5.setRemetente(cli5);
+	enc5.setDestinatario(cli6);
 	quantR++;
 
 	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
+	enc6.setPeso(6);
+	enc6.setCusto(18);
+	enc6.setRemetente(cli6);
+	enc6.setDestinatario(cli7);
 	quantR++;
 
 	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
+	enc7.setPeso(8);
+	enc7.setCusto(18);
+	enc7.setRemetente(cli7);
+	enc7.setDestinatario(cli0);
 	quantR++;
 	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	std::cout << "\n>> Relatorio de encomendas <<" << endl;
 
 	double custN = 0;
 	double custR = 0;
@@ -171,9 +171,10 @@ int main(){
 		 << "\nQuantidade: " << quantN
 		 << "\nValor Total: " << custN
 		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
+		 << "\n>> Encomendas Relampago <<" 
 		 << "\nQuantidade: " << quantR
 		 << "\nValor Total: " << custR
 		 << endl;
 	
+	return 0;
 }
