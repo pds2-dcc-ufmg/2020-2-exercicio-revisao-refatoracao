@@ -26,10 +26,10 @@ class Encomenda {
 		Cliente getRemet();
 		Cliente getDest();
 			
-		virtual void print();
+		void print();
 		virtual double calcula();
 	
-	private:
+	protected:
 		double _peso = 0.0;
 		double _custoKg = 0.0;
 		double _total = 0.0;
