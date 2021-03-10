@@ -7,6 +7,7 @@ using namespace std;
 class Encomenda {
 	
 	public:
+		Encomenda(double p, double c, cliente r, cliente d): PESO(p), CUSTOkg(c), remetente(r), dest(d);
 		void print () {
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
