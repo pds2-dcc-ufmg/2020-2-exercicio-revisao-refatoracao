@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
@@ -7,6 +9,7 @@ using namespace std;
 
 int main(){
 	
+	// Inicialização de Clientes
 	Cliente cli0 ("Thales","Rua dos Pré-Socráticos","Miletus","Ionia","548 a.C.");
 	Cliente cli1 ("Aristóteles","Avenida do Meio-Termo","Atenas","Ática","384 a.C.");
 	Cliente cli2 ("Platão","Praça das Formas","Atenas","Ática","348 a.C.");
@@ -16,70 +19,48 @@ int main(){
 	Cliente cli6 ("Empédocles","Rua dos Quatro Elementos","Agrigento","Sicília","495 a.C.");
 	Cliente cli7 ("Anaxágoras","Avenida da Mente Cósmica","Clazômenas","Jónia","499 a.C.");
 	
-	int quantN = 0;
-	int quantR = 0;
+	// Inicialização de Encomendas
+	EncomendaNormal v1[5];
+	EncomendaRelampago v2[3];
 
 	EncomendaNormal enc0 (5,12,cli0,cli1);
-	quantN++;
-
+	v1[0] = enc0;
 	EncomendaNormal enc1(10,12,cli1,cli2);
-	quantN++;
-
+	v1[1] = enc1;
 	EncomendaNormal enc2(7,12,cli1,cli2);
-	quantN++;
-
+	v1[2] = enc2;
 	EncomendaNormal enc3(2,12,cli3,cli4);
-	quantN++;
-
+	v1[3] = enc3;
 	EncomendaNormal enc4(3,12,cli4,cli5);
-	quantN++;
-
+	v1[4] = enc4;
 	EncomendaRelampago enc5(13,18,cli5,cli6);
-	quantR++;
-
+	v2[0] = enc5;
 	EncomendaRelampago enc6(6,18,cli6,cli7);
-	quantR++;
-
+	v2[1] = enc6;
 	EncomendaRelampago enc7(8,18,cli7,cli0);
-	quantR++;
+	v2[2] = enc7;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
+	// Impressao dos dados das encomendas e Calculo de custos
 	double custN = 0;
 	double custR = 0;
-
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
-
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
-
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
-
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
 	
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
-
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
-
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
+	// para encomendas normais
+	for(int i=0 ;i<5; i++) {
+		v1[i].print();
+		custN += v1[i].calcula();
+		std::cout << endl;
+	}
 	
+	// para encomendas relampago
+	for(int i=0; i<3; i++ {
+		v2[i].print();
+		custR += v2[i].calcula();
+		std::cout << endl;
+	}
+	 
+	// Impressao das quantidades e custo total das encomendas
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN
 		 << "\nValor Total: " << custN
