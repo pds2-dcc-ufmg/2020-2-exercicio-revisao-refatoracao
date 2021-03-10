@@ -50,11 +50,11 @@ int main(){
 	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantidadeEncomendasNormais
+		 << "\nQuantidade: " << encomendasNormais.size()
 		 << "\nValor Total: " << custoTotalNormais
 		 << std::endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantidadeEncomendasRelampago
+		 << "\nQuantidade: " << encomendasRelampago.size()
 		 << "\nValor Total: " << custoTotalRelampago
 		 << std::endl;
 }
