@@ -13,9 +13,17 @@ class Cliente{
 		string CIDADE;
 		string ESTADO;
 		string cep;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+
+		void print(){
+
+	cout << "  Nome: " << NOME << endl
+		 << "  Endereço: " << endereco << endl
+		 << "  Cidade: " << CIDADE << endl
+		 << "  Estado: " << ESTADO << endl
+		 << "  CEP: " << cep << endl;
+
+        }
+// "print" imprime na tela os dados de um cliente cadastrado
 };
 
 #endif
