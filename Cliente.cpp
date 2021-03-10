@@ -14,16 +14,6 @@ string Cliente::getEstado() { return _ESTADO; };
 
 string Cliente::getCep() { return _CEP; };
 
-void Cliente::setNome(string NOME) { _NOME = NOME; };
-
-void Cliente::setEndereco(string ENDERECO) { _ENDERECO = ENDERECO; };
-
-void Cliente::setCidade(string CIDADE) { _CIDADE = CIDADE; };
-
-void Cliente::setEstado(string ESTADO) { _ESTADO = ESTADO; };
-
-void Cliente::setCep(string CEP) { _CEP = CEP; };
-
 void Cliente::print() {
 
 	cout << "  Nome: " << getNome() << endl;
@@ -32,4 +22,15 @@ void Cliente::print() {
 	cout << "  Estado: " << getEstado() << endl;
 	cout << "  CEP: " << getCep() << endl;
 
+}
+
+Cliente::Cliente() {};
+
+Cliente::Cliente(string NOME, string ENDERECO, string CIDADE, string ESTADO, string CEP) {
+
+	_NOME = NOME;
+	_ENDERECO = ENDERECO;
+	_CIDADE = CIDADE;
+	_ESTADO = ESTADO;
+	_CEP = CEP;
 }

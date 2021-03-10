@@ -10,21 +10,17 @@ class Encomenda {
 
 	public:
 
-        double taxa = 0.25;
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
+        double _taxa = 0.25;
+		double _PESO = 0.0;
+		double _CUSTOkg = 0.0;
+		double _T = 0.0;
+		Cliente _remetente;
+		Cliente _dest;
 
-		void print() {
+		void print();
 
-			cout << "[Remetente]" << endl;
-			remetente.print();
-			cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+		Encomenda(double PESO, double CUSTOkg, Cliente remetente, Cliente dest);
+		Encomenda();
 };
 
 #endif

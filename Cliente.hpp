@@ -21,11 +21,8 @@ class Cliente {
 		string getEstado();
 		string getCep();
 
-		void setNome(string NOME);
-		void setEndereco(string ENDERECO);
-		void setCidade(string CIDADE);
-		void setEstado(string ESTADO);
-		void setCep(string CEP);
+		Cliente(string NOME, string ENDERECO, string CIDADE, string ESTADO, string CEP);
+		Cliente();
 
 		void print();
 
