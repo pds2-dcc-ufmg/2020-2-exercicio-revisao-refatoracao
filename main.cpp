@@ -128,44 +128,44 @@ int main(){
 	double CUSTN = 0;
 	double CUSTR = 0;
 
-	enc0.calcula();
-	enc0.print();
-	CUSTN += enc0.calcula();
+	enc0.Calcula();
+	enc0.Print();
+	CUSTN += enc0.Calcula();
 	cout << endl;
 
-	enc1.calcula();
-	enc1.print();
-	CUSTN += enc1.calcula();
+	enc1.Calcula();
+	enc1.Print();
+	CUSTN += enc1.Calcula();
 	cout << endl;
 
-	enc2.calcula();
-	enc2.print();
-	CUSTN += enc2.calcula();
+	enc2.Calcula();
+	enc2.Print();
+	CUSTN += enc2.Calcula();
 	cout << endl;
 
-	enc3.calcula();
-	enc3.print();
-	CUSTN += enc3.calcula();
+	enc3.Calcula();
+	enc3.Print();
+	CUSTN += enc3.Calcula();
 	cout << endl;
 
-	enc4.calcula();
-	enc4.print();
-	CUSTN += enc4.calcula();
+	enc4.Calcula();
+	enc4.Print();
+	CUSTN += enc4.Calcula();
 	cout << endl;
 
-	enc5.calcula();
-	enc5.print();
-	CUSTR += enc5.calcula();
+	enc5.Calcula();
+	enc5.Print();
+	CUSTR += enc5.Calcula();
 	cout << endl;
 
-	enc6.calcula();
-	enc6.print();
-	CUSTR += enc6.calcula();
+	enc6.Calcula();
+	enc6.Print();
+	CUSTR += enc6.Calcula();
 	cout << endl;
 
-	enc7.calcula();
-	enc7.print();
-	CUSTR += enc7.calcula();
+	enc7.Calcula();
+	enc7.Print();
+	CUSTR += enc7.Calcula();
 	cout << endl;
 	
 	cout << "\n>> Encomendas Normais <<"
