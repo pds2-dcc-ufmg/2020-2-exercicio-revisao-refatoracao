@@ -1,8 +1,8 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
 #include <iostream>
-#include "Encomenda.h"
-#include "Cliente.h"
+#include "Encomenda.hpp"
+#include "Cliente.hpp"
 
 
 class EncomendaRelampago: public Encomenda{
