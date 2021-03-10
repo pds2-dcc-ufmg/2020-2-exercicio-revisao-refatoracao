@@ -8,6 +8,9 @@ static constexpr double taxa_adicional = 0.25;
 
 class EncomendaRelampago: public Encomenda{
 	public:
+		EncomendaRelampago(double peso, double custo_kg, Cliente remetente, Cliente destinatario) : Encomenda(peso,custo_kg,remetente,destinatario) {}
+		// construtor de EncomendaRelampago para manter os dados da Encomenda protected
+	
 		double calcula() override{
 			this->_custo_total = this->_peso * this->_custo_kg * (1 + taxa_adicional);
 			return this->_custo_total;
