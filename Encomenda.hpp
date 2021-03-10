@@ -8,7 +8,6 @@ using namespace std;
 class Encomenda{
 
     protected:
-
         double Peso = 0.0;
         double CustoKg = 0.0;
         double T = 0.0;

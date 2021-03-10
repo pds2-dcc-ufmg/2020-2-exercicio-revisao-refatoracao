@@ -8,7 +8,6 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
-
         double calcula(){
 
             double x = Peso * CustoKg;
@@ -32,7 +31,7 @@ class EncomendaRelampago: public Encomenda{
         double PrecoTotal(){
             this->print();
             return this->calcula();
-    }
+        }
 };
 
 #endif
