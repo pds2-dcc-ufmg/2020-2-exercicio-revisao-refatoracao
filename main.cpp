@@ -64,114 +64,114 @@ int main(){
 	cli7.ESTADO = "Jónia";
 	cli7.CEP = "499 a.C.";
 
-	int quantN = 0;
-	int quantR = 0;
+	int QUANTN = 0;
+	int QUANTR = 0;
 
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
 	enc0.CUSTOKG = 12;
 	enc0.REMETENTE = cli0;
 	enc0.DEST = cli1;
-	quantN++;
+	QUANTN++;
 
 	EncomendaNormal enc1;
 	enc1.PESO = 10;
 	enc1.CUSTOKG = 12;
 	enc1.REMETENTE = cli1;
 	enc1.DEST = cli2;
-	quantN++;
+	QUANTN++;
 
 	EncomendaNormal enc2;
 	enc2.PESO = 7;
 	enc2.CUSTOKG = 12;
 	enc2.REMETENTE = cli2;
 	enc2.DEST = cli3;
-	quantN++;
+	QUANTN++;
 
 	EncomendaNormal enc3;
 	enc3.PESO = 2;
 	enc3.CUSTOKG = 12;
 	enc3.REMETENTE = cli3;
 	enc3.DEST = cli4;
-	quantN++;
+	QUANTN++;
 
 	EncomendaNormal enc4;
 	enc4.PESO = 3;
 	enc4.CUSTOKG = 12;
 	enc4.REMETENTE = cli4;
 	enc4.DEST = cli5;
-	quantN++;
+	QUANTN++;
 
 	EncomendaRelampago enc5;
 	enc5.PESO = 13;
 	enc5.CUSTOKG = 18;
 	enc5.REMETENTE = cli5;
 	enc5.DEST = cli6;
-	quantR++;
+	QUANTR++;
 
 	EncomendaRelampago enc6;
 	enc6.PESO = 6;
 	enc6.CUSTOKG = 18;
 	enc6.REMETENTE = cli6;
 	enc6.DEST = cli7;
-	quantR++;
+	QUANTR++;
 
 	EncomendaRelampago enc7;
 	enc7.PESO = 8;
 	enc7.CUSTOKG = 18;
 	enc7.REMETENTE = cli7;
 	enc7.DEST = cli0;
-	quantR++;
+	QUANTR++;
 	
 	cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double CUSTN = 0;
+	double CUSTR = 0;
 
 	enc0.calcula();
 	enc0.print();
-	custN += enc0.calcula();
+	CUSTN += enc0.calcula();
 	cout << endl;
 
 	enc1.calcula();
 	enc1.print();
-	custN += enc1.calcula();
+	CUSTN += enc1.calcula();
 	cout << endl;
 
 	enc2.calcula();
 	enc2.print();
-	custN += enc2.calcula();
+	CUSTN += enc2.calcula();
 	cout << endl;
 
 	enc3.calcula();
 	enc3.print();
-	custN += enc3.calcula();
+	CUSTN += enc3.calcula();
 	cout << endl;
 
 	enc4.calcula();
 	enc4.print();
-	custN += enc4.calcula();
+	CUSTN += enc4.calcula();
 	cout << endl;
 
 	enc5.calcula();
 	enc5.print();
-	custR += enc5.calcula();
+	CUSTR += enc5.calcula();
 	cout << endl;
 
 	enc6.calcula();
 	enc6.print();
-	custR += enc6.calcula();
+	CUSTR += enc6.calcula();
 	cout << endl;
 
 	enc7.calcula();
 	enc7.print();
-	custR += enc7.calcula();
+	CUSTR += enc7.calcula();
 	cout << endl;
 	
 	cout << "\n>> Encomendas Normais <<"
-	cout << "\nQuantidade: " << quantN
-	cout << "\nValor Total: " << custN << endl
+	cout << "\nQuantidade: " << QUANTN
+	cout << "\nValor Total: " << CUSTN << endl
 	cout << "\n>> Encomendas Relâmpago <<" 
-	cout << "\nQuantidade: " << quantR
-	cout << "\nValor Total: " << custR << endl;
+	cout << "\nQuantidade: " << QUANTR
+	cout << "\nValor Total: " << CUSTR << endl;
 }
