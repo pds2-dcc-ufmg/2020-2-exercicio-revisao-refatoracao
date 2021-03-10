@@ -8,13 +8,18 @@ class Cliente{
 
 	public:
 
-		string NOME;
-		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
+
+		void preencher_cliente(string nome_, string endrereco_, string cidade_, string estado_, string cep_); //atribuir as informações
+		
+   private:
+   
+		string NOME;
+		string ENDERECO;
+		string CIDADE;
+		string ESTADO;
+		string CEP; 
 		
 };
 
