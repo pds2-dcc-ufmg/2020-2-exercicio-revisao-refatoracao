@@ -6,22 +6,21 @@ using namespace std;
 
 class Encomenda{
 
-	public:
+	
+	protected:
 
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
 		double T = 0.0;
 		Cliente remetente;
 		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+	
+	public:
+		Encomenda(double weight, double cost_per_kg, Cliente sender,  Cliente recipient): PESO(weight), CUSTOkg(cost_per_kg), remetente(sender) {}
+		virtual void print();
+		virtual double calcula();
+		// se normal retorna 1, se relampago retorna 2;
+		virtual int getClassType();
 };
 
 #endif
