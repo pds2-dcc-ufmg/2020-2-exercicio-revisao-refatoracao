@@ -13,9 +13,9 @@ class Cliente{
 		string CIDADE;
 		string ESTADO;
 		string cep;
-				
+
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+
 };
 
 #endif
