@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <locale.h>
+#include <locale>
 #include "Cliente.hpp"
 
 void Cliente::setNome(string nome){
@@ -35,7 +37,7 @@ string Cliente::getCep(){
 }
 
 void Cliente::print(){
-
+    setlocale(LC_CTYPE, "");
 	std::cout << "  Nome: " << getNome() << endl
 		 << "  Endereço: " << getEndereco() << endl
 		 << "  Cidade: " << getCidade() << endl

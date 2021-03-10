@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <locale.h>
+#include <locale>
 #include "EncomendaRelampago.hpp"
 
 double EncomendaRelampago::calcula(){
@@ -11,7 +13,7 @@ double EncomendaRelampago::calcula(){
 }
 
 void EncomendaRelampago::print(){
-
+    setlocale(LC_CTYPE, "");
     Encomenda::print();
     std::cout << "[Encomenda Relâmpago]" << endl;
     std::cout << "  Peso: " << getPeso() << endl

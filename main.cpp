@@ -1,4 +1,6 @@
 #include <iostream>
+#include <locale.h>
+#include <locale>
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
@@ -6,6 +8,7 @@
 using namespace std;
 
 int main(){
+    setlocale(LC_CTYPE, "");
 
 	Cliente cli0;
 	cli0.setNome("Thales");

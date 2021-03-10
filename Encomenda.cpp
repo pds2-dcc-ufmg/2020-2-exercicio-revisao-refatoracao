@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <locale.h>
+#include <locale>
 #include "Encomenda.hpp"
 
 void Encomenda::setPeso(double peso){
@@ -35,7 +37,7 @@ Cliente Encomenda::getDestinatario(){
 }
 
 void Encomenda::print(){
-
+    setlocale(LC_CTYPE, "");
     std::cout << "[Remetente]" << endl;
     _remetente_encomenda.print();
     std::cout << "[Destinatário]" << endl;
