@@ -7,11 +7,19 @@ using namespace std;
 
 class EncomendaNormal: public Encomenda{
 
-	public:
-		
+	public:	
+	
+	EncomendaNormal(double _peso, double _custoKg, Cliente _remetente, Cliente _dest){
+			
+			this->setPeso(_peso);
+			this->setCustoKg(_custoKg);
+			this->setRemetente(_remetente);
+			this->setDest(_dest);
+		}	
+	
 	double calcula(){
 
-		double x = PESO * CUSTOkg;
+		double x = this->getPeso() * this->getCustoKg();
 
 		return x;
 	}
@@ -20,9 +28,9 @@ class EncomendaNormal: public Encomenda{
 
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
+		std::cout << "  Peso: " << this->getPeso() << endl
+			<< "  Custo por kg: " << this->getCustoKg() << endl
+			<< "  Custo total: " << this->getCustoTotal() << endl;
 
 	}
 
