@@ -1,30 +1,32 @@
-#ifndef EncomendaRelampago_H
-#define EncomendaRelampago_H
+#ifndef ENCOMENDARELAMPAGO_H
+#define ENCOMENDARELAMPAGO_H
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
+#include <iostream>
+#define TAXA_ADICIONAL 0.25
 
 class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
+		EncomendaRelampago(double peso, double custoPorKg, Cliente remetente, Cliente destinatario): Encomenda(peso, custoPorKg, remetente, destinatario) {}
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
+		double calculaValorFinal(){
+
+			double valorTotal = Encomenda::calculaValorFinal();
+			valorTotal += valorTotal * TAXA_ADICIONAL;
+			return valorTotal;
 		}
 
 		void print(){
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
+			std::cout << "  Peso: " << getPeso() << std::endl
+				<< "  Custo por kg: " << getCustoPorKg() << std::endl
+				<< "  Taxa adicional: " << TAXA_ADICIONAL << std::endl
+				<< "  Custo total: " << calculaValorFinal() << std::endl;
 
 		}
 
