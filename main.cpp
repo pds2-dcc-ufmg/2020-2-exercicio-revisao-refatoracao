@@ -121,12 +121,12 @@ int main(){
 	std::cout << std::endl;
 
 	std::cout << "\n>> Encomendas Normais <<"
-		      << "\nQuantidade: " << quantidadeNormal
-		      << "\nValor Total: " << custoNormal
-		      << std::endl
-		      << "\n>> Encomendas Relâmpago <<"
-		      << "\nQuantidade: " << quantidadeRelampago
-		      << "\nValor Total: " << custoRelampago
-		      <<std::endl;
+		  << "\nQuantidade: " << quantidadeNormal
+		  << "\nValor Total: " << custoNormal
+		  << std::endl
+		  << "\n>> Encomendas Relâmpago <<"
+		  << "\nQuantidade: " << quantidadeRelampago
+		  << "\nValor Total: " << custoRelampago
+		  <<std::endl;
 
 }
