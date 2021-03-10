@@ -17,12 +17,12 @@ class Encomenda{
 			
 		void print(){
 
-			cout << "[Remetente]" << endl;
-			remetente.print();
-			cout << "[Destinatário]" << endl;
-			dest.print();
+		cout << "[Remetente]" << endl;
+		remetente.print();
+		cout << "[Destinatário]" << endl;
+		dest.print();
+		
 		}
-
-};
+		};
 
 #endif
