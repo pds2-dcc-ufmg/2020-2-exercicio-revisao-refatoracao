@@ -12,10 +12,10 @@ class EncomendaRelampago: public Encomenda{
 
 		double Calcula(){
 
-			double CONTA = PESO * CUSTOKG;
-			CONTA += CONTA * 0.25;
-			
-			return CONTA;
+		double CONTA = PESO * CUSTOKG;
+		       CONTA += CONTA * 0.25;
+		
+		       return CONTA;
 		}
 
 		void print(){
@@ -28,7 +28,6 @@ class EncomendaRelampago: public Encomenda{
 				<< "  Custo total: " << SOMATORIA << endl;
 
 		}
-
-};
+		};
 
 #endif
