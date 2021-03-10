@@ -15,7 +15,7 @@ class EncomendaNormal: public Encomenda{
 			return this->_custo_total;
 		} // calcula o valor do custo total da entrega e o retorna
 
-		void print_parte_2 override(){
+		void print_parte_2() override{
 			Encomenda::print_parte_1();
 			std::cout << "[Encomenda Normal]" << endl;
 			std::cout << "  Peso: " << this->_peso << endl
