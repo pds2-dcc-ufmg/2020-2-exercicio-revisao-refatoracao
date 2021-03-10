@@ -5,7 +5,7 @@
 #include "Cliente.hpp"
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda {
 	public:
 		// Calcula o valor total de uma encomenda relâmpago.
 		double calculaValor() override {
