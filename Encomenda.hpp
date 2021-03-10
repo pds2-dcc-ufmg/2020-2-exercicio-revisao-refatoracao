@@ -31,7 +31,7 @@ class Encomenda{
 			return T;
 		}
 		Cliente getRemetente(){
-			return remetente
+			return remetente;
 		}
 		Cliente getDest(){
 			return dest;
