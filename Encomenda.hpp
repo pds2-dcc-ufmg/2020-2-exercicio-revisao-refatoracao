@@ -15,12 +15,12 @@ class Encomenda{
 		Cliente REMETENTE;
 		Cliente DEST;
 			
-		void print(){
+		void Print(){
 
 		cout << "[Remetente]" << endl;
-		REMETENTE.print();
+		REMETENTE.Print();
 		cout << "[Destinatário]" << endl;
-		DEST.print();
+		DEST.Print();
 		
 		}
 		};
