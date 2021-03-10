@@ -7,26 +7,39 @@ using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
+	private:
+	double custo;
+
 	public:
 
 		double calcula(){
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+			custo = PESO * CUSTOkg;
+			custo += custo * 0.25;
 			
-			return x;
+			return custo;
 		}
 
 		void print(){
 
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
+			cout << "[Encomenda Relâmpago]" << endl;
+			cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
 				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Custo total: " << custo << endl;
 
 		}
+		
+		void executarTudo(){
+
+			EncomendaRelampago::calcula();
+			EncomendaRelampago::print();
+			cout << endl;
+
+		}
+
+		EncomendaRelampago(double PESO, double CUSTOkg, Cliente REMETENTE, Cliente DEST) : Encomenda(PESO, CUSTOkg, REMETENTE, DEST) { }
 
 };
 
