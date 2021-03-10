@@ -5,17 +5,32 @@
 using namespace std;
 
 class Cliente{
+	//trocando variaveis de publica para private
+	private:
 
-	public:
-
-		string NOME;
-		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
+	string nome;
+	string endereco;
+	string cidade;
+	string estado;
+	string cep;
 				
-		void print(); // imprime na tela os dados de um cliente cadastrado
 		
+	
+	public:
+	
+	string getNome();
+	string getEndereco();
+	string getCidade();
+	string getEstado();
+	string getCep();
+
+	void setNome(string _nome);
+	void setEndereco(string _endereco);
+	void setCidade(string _cidade);
+	void setEstado(string _estado);
+	void setCep(string _cep);
+
+	void printarCliente(); 
 };
 
 #endif
