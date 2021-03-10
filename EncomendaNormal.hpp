@@ -8,11 +8,10 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
+
 	double calcula(){
 
-		double x = PESO * CUSTOkg;
-
+		double x = Peso * CustoKg;
 		return x;
 	}
 
@@ -20,12 +19,17 @@ class EncomendaNormal: public Encomenda{
 
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
+		std::cout << "  Peso: " << Peso << endl
+			<< "  Custo por kg: " << CustoKg << endl
 			<< "  Custo total: " << T << endl;
+        std::cout << endl;
 
 	}
-
+    EncomendaNormal(double _Peso, double _Custokg, int *(Quant), Cliente _remetente, Cliente _dest):Encomenda(_Peso, _Custokg, Quant, _remetente, _dest){}
+    double PrecoTotal(){
+        this->print();
+        return this->calcula();
+    }
 };
 
 #endif
