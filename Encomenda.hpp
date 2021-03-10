@@ -14,6 +14,7 @@ class Encomenda{
 		Cliente remetente;
 		Cliente dest;
 			
+			
 		void print(){
 
 			std::cout << "[Remetente]" << endl;

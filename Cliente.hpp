@@ -10,6 +10,9 @@ class Cliente {
 
 	public:
 
+        // construtor padrao da classe Cliente
+		Cliente() {}
+
         // construtor da classe Cliente
         Cliente( std::string nome,
 		         std::string endereco,
