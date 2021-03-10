@@ -8,7 +8,7 @@ class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calculaValor(){
+		double calcula(){
 			
 			double valor = peso * custoKG;
 			valor += valor * TAXA_ADICIONAL
