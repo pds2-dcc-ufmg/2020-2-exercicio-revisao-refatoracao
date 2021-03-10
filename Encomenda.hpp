@@ -9,7 +9,7 @@ class Encomenda{
 
 	public:
 
-		double Peso = 0.0, CustoKg =0.0,  CustoTotal = 0.0;
+		double Peso = 0.0, CustoKg = 0.0,  CustoTotal = 0.0;
 		Cliente remetente;
 		Cliente dest;
 			
