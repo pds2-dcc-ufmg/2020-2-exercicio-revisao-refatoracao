@@ -3,6 +3,7 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
+#define taxa_adicional  0.25
 using namespace std;
 
 class EncomendaRelampago: public Encomenda{
@@ -11,9 +12,9 @@ class EncomendaRelampago: public Encomenda{
 
 		double calcula(){
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
+			double x = PESO * CUSTO_kg;
+			x += x * taxa_adicional;
+
 			return x;
 		}
 
@@ -22,9 +23,9 @@ class EncomendaRelampago: public Encomenda{
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Custo por kg: " << CUSTO_kg << endl
+				<< "  Taxa adicional: " << taxa_adicional << endl
+				<< "  Custo total: " << PRECO << endl;
 
 		}
 
