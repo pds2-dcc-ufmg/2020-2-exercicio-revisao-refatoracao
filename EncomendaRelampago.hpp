@@ -1,8 +1,10 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
+#define indiceMultiplicador 0.25
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
+
 using namespace std;
 
 class EncomendaRelampago: public Encomenda{
@@ -12,7 +14,7 @@ class EncomendaRelampago: public Encomenda{
 		double calcula(){
 
 			double x = peso * custoKg;
-			x += x * 0.25;
+			x += x * indiceMultiplicador;
 			
 			return x;
 		}
@@ -23,7 +25,7 @@ class EncomendaRelampago: public Encomenda{
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << peso << endl
 				<< "  Custo por kg: " << custoKg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
+				<< "  Taxa adicional: " << indiceMultiplicador << endl
 				<< "  Custo total: " << valor << endl;
 
 		}
