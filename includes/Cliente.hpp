@@ -9,16 +9,14 @@ using namespace std;
 class Cliente {
 
 	public:
-		string _name;
-		string _address;
-		string _city;
-		string _state;
-		string _zipCode;
-				
-		void print(); // imprime na tela os dados de um cliente cadastrado
+    /**
+     * @brief Construtor padrão da classe (default)
+     * 
+     */
+    Cliente();
 
 		/**
-		 * @brief Construtor da classe
+		 * @brief Construtor personalizado da classe
 		 * 
 		 * @param name 
 		 * @param address 
@@ -27,7 +25,20 @@ class Cliente {
 		 * @param zipCode 
 		 */
 		Cliente(string name, string address, string city, string state, string zipCode);
-		Cliente();
+
+    /**
+     * @brief imprime na tela os dados de um cliente cadastrado
+     * 
+     */
+    void print(); 
+
+  protected:
+    string _name;
+    string _address;
+    string _city;
+    string _state;
+    string _zipCode;
+		
 };
 
 #endif

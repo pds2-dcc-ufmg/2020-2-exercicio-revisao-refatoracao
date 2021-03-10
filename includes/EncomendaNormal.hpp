@@ -11,12 +11,21 @@ using namespace std;
 class EncomendaNormal: public Encomenda {
 
 	public:
-		
-	void calcula();
+    /**
+     * @brief Construtor da classe
+     * 
+     * @param weight 
+     * @param costKg 
+     * @param sender 
+     * @param recipient 
+     */
+    EncomendaNormal(double weight, double costKg, Cliente sender, Cliente recipient);
 
-	void print();
-
-	EncomendaNormal(double weight, double costKg, Cliente sender, Cliente recipient);
+    /**
+     * @brief printa os dados desejados
+     * 
+     */
+    void print() override;
 };
 
 #endif

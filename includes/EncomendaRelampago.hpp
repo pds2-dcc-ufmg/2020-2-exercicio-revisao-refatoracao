@@ -9,14 +9,24 @@
 using namespace std;
 
 class EncomendaRelampago: public Encomenda {
- 
+
 	public:
+		/**
+		 * @brief Construtor da classe
+		 * 
+		 * @param weight 
+		 * @param costKg 
+		 * @param sender 
+		 * @param recipient 
+		 */
+    EncomendaRelampago(double weight, double costKg, Cliente sender, Cliente recipient);
 
-		void calcula();
+    /**
+     * @brief printa os dados desejados
+     * 
+     */
+  	void print() override;
 
-		void print();
-
-		EncomendaRelampago(double weight, double costKg, Cliente sender, Cliente recipient);
 };
 
 #endif
