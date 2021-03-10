@@ -1,33 +1,34 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
-
+#include <iostream>
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
-class EncomendaRelampago: public Encomenda{
+class EncomendaRelampago: public Encomenda
+{
 
-	public:
+public:
 
-		double calcula(){
+	double calcula()
+	{
+	    double x = peso * custoKg;
+	    x += x * taxaExtra;
+		return x;
+	}
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
-			
-			return x;
-		}
+	void print()
+	{
+	    Encomenda::print();
+	    
+		std::cout << "[Encomenda Relâmpago]  " << std::endl
+			      << "  Peso: " << peso << std::endl
+			      << "  Custo por kg: " << custoKg << std::endl 
+			      << "  Taxa adicional: " << taxaExtra << std::endl   
+			      << "  Custo total: " << total << std::endl;
 
-		void print(){
+	}
 
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
-
-		}
-
+    double taxaExtra = 0.25;
 };
 
 #endif
