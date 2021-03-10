@@ -7,5 +7,8 @@
 class EncomendaNormal: public Encomenda {
 	public:
 		void print() override;
+		EncomendaNormal(double massa, double custoPorKg, Cliente remetente, Cliente destinatario)
+						: massa(massa), custoPorKg(custoPorKg), remetente(remetente), destinatario(destinatario)
+		{}
 };
 #endif

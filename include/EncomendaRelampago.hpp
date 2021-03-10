@@ -8,5 +8,8 @@ class EncomendaRelampago: public Encomenda {
 		static const double TAXA = 0.25;
 		double calcula() override;
 		void print() override;
+		EncomendaRelampago(double massa, double custoPorKg, Cliente remetente, Cliente destinatario)
+						: massa(massa), custoPorKg(custoPorKg), remetente(remetente), destinatario(destinatario)
+		{}
 };
 #endif

@@ -13,5 +13,8 @@ class Encomenda {
 	public:
 		void print();
 		double calcula();
+		Encomenda(double massa, double custoPorKg, Cliente remetente, Cliente destinatario)
+				: massa(massa), custoPorKg(custoPorKg), remetente(remetente), destinatario(destinatario)
+		{}
 };
 #endif
