@@ -21,13 +21,13 @@ class Encomenda{
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
 		}
-		void getPeso(){
+		double getPeso(){
 			return peso;
 		}
-		void getCusto(){
+		double getCusto(){
 			return custoKg;
 		}
-		void getT(){
+		double getT(){
 			return T;
 		}
 		Cliente getRemetente(){
