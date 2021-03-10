@@ -10,7 +10,7 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
-	double calcula(){
+	double Calcula(){
 
 	double CONTA = PESO * CUSTOKG;
 
@@ -18,9 +18,9 @@ class EncomendaNormal: public Encomenda{
 		
 	}
 
-	void print(){
+	void Print(){
 
-		Encomenda::print();
+		Encomenda::Print();
 		cout << "[Encomenda Normal]" << endl;
 		cout << "  Peso: " << PESO << endl
 		     << "  Custo por kg: " << CUSTOKG << endl
