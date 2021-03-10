@@ -12,12 +12,10 @@ class EncomendaRelampago: public Encomenda{
 
             double x = Peso * CustoKg;
             x += x * 0.25;
-
             return x;
         }
 
         void print(){
-
             Encomenda::print();
             std::cout << "[Encomenda Relâmpago]" << endl;
             std::cout << "  Peso: " << Peso << endl
@@ -27,6 +25,7 @@ class EncomendaRelampago: public Encomenda{
             std::cout << endl;
 
         }
+
         EncomendaRelampago(double _Peso, double _Custokg, int *(Quant), Cliente _remetente, Cliente _dest):Encomenda(_Peso, _Custokg, Quant, _remetente, _dest){}
 
         double DefinirPreco(){
