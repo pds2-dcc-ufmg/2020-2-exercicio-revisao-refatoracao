@@ -14,19 +14,17 @@ class EncomendaRelampago: public Encomenda{
 
 			double x = PESO * CUSTOkg;
 			x += x * taxa_adicional;
-			
 			return x;
 		}
 
 		void print(){
 
 			Encomenda::print();
-			std::cout<< "[Encomenda Relâmpago]" << endl;
-			std::cout<< "  Peso: " << PESO << endl
-				 << "  Custo por kg: " << CUSTOkg << endl
-				 << "  Taxa adicional: " << taxa_adicional << endl
-				 << "  Custo total: " << T << endl;
-
+			cout	<< "[Encomenda Relâmpago]" << endl;
+			cout	<< "  Peso: " << PESO << endl
+				<< "  Custo por kg: " << CUSTOkg << endl
+				<< "  Taxa adicional: " << taxa_adicional << endl
+				<< "  Custo total: " << T << endl;
 		}
 
 };
