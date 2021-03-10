@@ -4,10 +4,10 @@
 
 void Cliente::print() {
 	std::cout << "  Nome: " << this->_nome << endl
-		<< "  Endereço: " << this->_endereco << endl
-		<< "  Cidade: " << this->_cidade << endl
-		<< "  Estado: " << this->_estado << endl
-		<< "  CEP: " << this->_cep << endl;
+		  << "  Endereço: " << this->_endereco << endl
+		  << "  Cidade: " << this->_cidade << endl
+		  << "  Estado: " << this->_estado << endl
+		  << "  CEP: " << this->_cep << endl;
 }
 
 void Cliente::setNome(std::string nome) {
