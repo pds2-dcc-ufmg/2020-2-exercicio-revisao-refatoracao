@@ -18,11 +18,11 @@ class Cliente {
 		         std::string endereco,
 		         std::string cidade,
 		         std::string estado,
-		         std::string cep	 ): _nome(nome),
-				                        _endereco(endereco),
-							    	    _cidade(cidade),
-								        _estado(estado),
-								        _cep(cep) {}
+		         std::string cep	 ): _nome( nome ),
+				                        _endereco( endereco ),
+							    	    _cidade( cidade ),
+								        _estado( estado ),
+								        _cep( cep ) {}
 
         // imprime na tela os dados de um cliente cadastrado
 		void print(); 
