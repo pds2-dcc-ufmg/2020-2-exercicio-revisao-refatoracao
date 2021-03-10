@@ -1,14 +1,6 @@
 #include "../includes/Encomenda.hpp"
 
-Encomenda::Encomenda() = default; // construtor padrão
-
-Encomenda::Encomenda(double weight, double costKg, Cliente sender, Cliente recipient) {
-  this->_weight = weight;
-  this->_costKg = costKg;
-  this->_sender = sender;
-  this->_recipient = recipient;
-}
-
+// será modificado (override) pelas subclasses
 void Encomenda::print() {
   cout << "[Remetente]" << endl;
   (this->_sender).print();
