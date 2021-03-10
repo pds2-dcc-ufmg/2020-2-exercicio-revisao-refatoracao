@@ -7,9 +7,9 @@ using namespace std;
 class Cliente{
 
 	public:
-		Cliente(string name, string address, string city, string state, string cep): NOME(name), ENDERECO(address), CIDADE(city), ESTADO(state), CEP(cep){}
+		Cliente(string nome, string endereço, string cidade, string estado, string cep): NOME(nome), ENDERECO(endereco), CIDADE(cidade), ESTADO(estado), CEP(cep){}
 		Cliente(){}
-		void print(); // imprime na tela os dados de um cliente cadastrado
+		void print();
 		
 	private:
 		string NOME;
