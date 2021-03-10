@@ -8,8 +8,8 @@ class Encomenda{
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
+		double peso = 0.0;
+		double custoKg = 0.0;
 		double T = 0.0;
 		Cliente remetente;
 		Cliente dest;
@@ -20,6 +20,21 @@ class Encomenda{
 			remetente.print();
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
+		}
+		void getPeso(){
+			return peso;
+		}
+		void getCusto(){
+			return custoKg;
+		}
+		void getT(){
+			return T;
+		}
+		Cliente getRemetente(){
+			return remetente
+		}
+		Cliente getDest(){
+			return dest;
 		}
 
 };
