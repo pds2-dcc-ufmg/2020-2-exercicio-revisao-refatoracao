@@ -16,12 +16,15 @@ int main() {
 
 	int quantN = 0;
 	int quantR = 0;
-
+	
+	std::vector<Encomenda> encomendas;
+	
 	EncomendaNormal enc0;
 	enc0.setPeso(5);
 	enc0.setCustoKg(12);
 	enc0.setRemet(cli0);
 	enc0.setDest(cli1);
+	encomendas.push_back(enc0);
 	quantN++;
 	
 	EncomendaNormal enc1;
@@ -29,6 +32,7 @@ int main() {
 	enc1.setCustoKg(12);
 	enc1.setRemet(cli1);
 	enc1.setDest(cli2);
+	encomendas.push_back(enc1);
 	quantN++;
 
 	EncomendaNormal enc2;
@@ -36,6 +40,7 @@ int main() {
 	enc2.setCustoKg(12);
 	enc2.setRemet(cli2);
 	enc2.setDest(cli3);
+	encomendas.push_back(enc2);
 	quantN++;
 	
 	EncomendaNormal enc3;
@@ -43,6 +48,7 @@ int main() {
 	enc3.setCustoKg(12);
 	enc3.setRemet(cli3);
 	enc3.setDest(cli4);
+	encomendas.push_back(enc3);
 	quantN++;
 
 	EncomendaNormal enc4;
@@ -50,6 +56,7 @@ int main() {
 	enc4.setCustoKg(12);
 	enc4.setRemet(cli4);
 	enc4.setDest(cli5);
+	encomendas.push_back(enc4);
 	quantN++;
 
 	EncomendaRelampago enc5;
@@ -57,6 +64,7 @@ int main() {
 	enc5.setCustoKg(18);
 	enc5.setRemet(cli5);
 	enc5.setDest(cli6);
+	encomendas.push_back(enc5);
 	quantR++;
 	
 	EncomendaRelampago enc6;
@@ -64,6 +72,7 @@ int main() {
 	enc6.setCustoKg(18);
 	enc6.setRemet(cli6);
 	enc6.setDest(cli7);
+	encomendas.push_back(enc6);
 	quantR++;
 	
 	EncomendaRelampago enc7;
@@ -71,52 +80,27 @@ int main() {
 	enc7.setCustoKg(18);
 	enc7.setRemet(cli7);
 	enc7.setDest(cli0);
+	encomendas.push_back(enc7);
 	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custN = 0;
 	double custR = 0;
-
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
-
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
-
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
-
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
-
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
-
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
-
-	enc6.calcula();
-	enc6.print(); 
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
+	int counter = 0;
+	
+	for (Encomenda e : encomendas) {
+		e.calculaValor();
+		e.print();
+		std::cout << endl;
+		if (counter >= 0 && counter <= 4) {
+			custN += e.calculaValor();
+		}
+		else {
+			custR += e.calculaValor();
+		}
+		counter++;
+	}
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		  << "\nQuantidade: " << quantN
