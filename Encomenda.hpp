@@ -5,23 +5,18 @@
 using namespace std;
 
 class Encomenda{
-
+	protected:
+		double _peso = 0.0;
+		double _custo_kg = 0.0;
+		double _custo_total = 0.0;
+		Cliente _remetente;
+		Cliente _destinatario;
+	
 	public:
-
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
-
+		Encomenda(double peso, double custo_kg, Cliente remetente, Cliente destinatario); // construtor para classe encomenda
+		void print_parte_1(); // imprime na tela o remetente e o destinatário
+		virtual double calcula() = 0; // função abstrata para utilizar nas subclasses
+		virtual void print_parte_2() = 0; // // função abstrata para utilizar nas subclasses
 };
 
 #endif
