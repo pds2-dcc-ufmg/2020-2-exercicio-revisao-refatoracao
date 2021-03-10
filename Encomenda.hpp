@@ -11,9 +11,9 @@ class Encomenda{
 		void print(){
 
 			std::cout << "[Remetente]" << endl;
-			remetente.print();
+			this->getRemetente().print();
 			std::cout << "[Destinatário]" << endl;
-			dest.print();
+			this->getDest().print();
 		}
 	
 	        void setPeso(double _peso){
@@ -51,6 +51,15 @@ class Encomenda{
 			return this->custoTotal;
 		}
 	
+	        Cliente getRemetente(){
+			
+			return this->remetente;
+		}
+	
+                Cliente getDest(){
+			
+			return this->dest;
+		} 	
 	        
 	private:
 	
