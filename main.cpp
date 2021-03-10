@@ -5,7 +5,6 @@
 #include "Cliente.hpp"
 
 int main() {
-	
 	Cliente cli0("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
 	Cliente cli1("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
 	Cliente cli2("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
@@ -120,12 +119,11 @@ int main() {
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		<< "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
-	
+		  << "\nQuantidade: " << quantN
+		  << "\nValor Total: " << custN
+		  << endl
+		  << "\n>> Encomendas Relâmpago <<" 
+		  << "\nQuantidade: " << quantR
+		  << "\nValor Total: " << custR
+		  << endl;
 }
