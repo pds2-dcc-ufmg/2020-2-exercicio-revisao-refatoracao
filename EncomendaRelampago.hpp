@@ -10,7 +10,7 @@ using namespace std;
 class EncomendaRelampago: public Encomenda {
 	
 	public:
-		double calcula() {
+		double calcula() { // calcula o preço da encomenda
 			double x = PESO * CUSTOkg;
 			x += x * TAXA_ADICIONAL;
 			return x;
