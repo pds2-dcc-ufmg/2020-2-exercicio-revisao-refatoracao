@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 
-#include "Encomenda.hpp"
-#include "EncomendaNormal.hpp"
-#include "EncomendaRelampago.hpp"
-#include "Cliente.hpp"
+#include "../includes/Encomenda.hpp"
+#include "../includes/EncomendaNormal.hpp"
+#include "../includes/EncomendaRelampago.hpp"
+#include "../includes/Cliente.hpp"
 
 using namespace std;
 
@@ -67,7 +67,7 @@ int main(){
     "499 a.C.");
 
 	unsigned int quantN = 0, quantR = 0;
-  double custN = 0, custR = 0;
+  double costN = 0, costR = 0;
 
   vector<Encomenda*> vec(8);
 
@@ -88,10 +88,10 @@ int main(){
 
     EncomendaNormal* normalEnc = dynamic_cast<EncomendaNormal*> (vec[i]);
     if(normalEnc != NULL) { // encomenda normal
-      custN += cost;
+      costN += cost;
       quantN++;
     } else { // encomenda relampago
-      custR += cost;
+      costR += cost;
       quantR++;
     }
     cout << endl;
@@ -99,10 +99,10 @@ int main(){
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		<< "\nQuantidade: " << quantN
-		<< "\nValor Total: " << custN
+		<< "\nValor Total: " << costN
 		<< endl
 		<< "\n>> Encomendas Relâmpago <<" 
 		<< "\nQuantidade: " << quantR
-		<< "\nValor Total: " << custR
+		<< "\nValor Total: " << costR
 		<< endl;
 }

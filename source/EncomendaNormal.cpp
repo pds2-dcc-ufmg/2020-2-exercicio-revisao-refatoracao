@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include "EncomendaNormal.hpp"
+#include "../includes/EncomendaNormal.hpp"
 
 EncomendaNormal::EncomendaNormal(double weight, double costKg, Cliente sender, Cliente recipient) {
     this->_weight = weight;

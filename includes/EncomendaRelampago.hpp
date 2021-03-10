@@ -1,12 +1,15 @@
 #ifndef EncomendaRelampago_H
 #define EncomendaRelampago_H
 
-#include "Encomenda.hpp"
-#include "Cliente.hpp"
+#include <iostream>
+
+#include "./Encomenda.hpp"
+#include "./Cliente.hpp"
+
 using namespace std;
 
-class EncomendaRelampago: public Encomenda{
-
+class EncomendaRelampago: public Encomenda {
+ 
 	public:
 
 		void calcula();

@@ -1,10 +1,13 @@
 #ifndef Encomenda_H
 #define Encomenda_H
 
-#include "Cliente.hpp"
+#include <iostream>
+
+#include "./Cliente.hpp"
+
 using namespace std;
 
-class Encomenda{
+class Encomenda {
 
 	public:
 		double _weight;

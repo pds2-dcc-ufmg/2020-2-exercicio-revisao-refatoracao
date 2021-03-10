@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include "EncomendaRelampago.hpp"
+#include "../includes/EncomendaRelampago.hpp"
 
 EncomendaRelampago::EncomendaRelampago(double weight, double costKg, Cliente sender, Cliente recipient) {
     this->_weight = weight;
@@ -15,8 +13,8 @@ EncomendaRelampago::EncomendaRelampago(double weight, double costKg, Cliente sen
 
 void EncomendaRelampago::print() {
     Encomenda::print();
-    std::cout << "[Encomenda Relâmpago]" << endl;
-    std::cout << "  Peso: " << this->_weight << endl
+    cout << "[Encomenda Relâmpago]" << endl;
+    cout << "  Peso: " << this->_weight << endl
         << "  Custo por kg: " << this->_costKg << endl
         << "  Taxa adicional: " << 0.25 << endl
         << "  Custo total: " << this->_total << endl;
