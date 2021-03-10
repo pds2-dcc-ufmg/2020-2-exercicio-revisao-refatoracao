@@ -21,14 +21,6 @@ class EncomendaNormal: public Encomenda {
 
 		EncomendaNormal(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario) : Encomenda(peso, custoPorkg, remetente, destinatario) {}
 
-		// void print() {
-		// 	Encomenda::print();
-		// 	std::cout << "[Encomenda Normal]" << endl;
-		// 	std::cout << "  Peso: " << peso << endl
-		// 		<< "  Custo por kg: " << custoPorkg << endl
-		// 		<< "  Custo total: " << custoTotal << endl;
-		// }
-
 };
 
 #endif

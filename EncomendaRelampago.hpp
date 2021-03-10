@@ -25,17 +25,10 @@ class EncomendaRelampago: public Encomenda {
 		EncomendaRelampago(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario) : Encomenda(peso, custoPorkg, remetente, destinatario) {}
 
 		void calculaCustoTotal() override {
-			custoTotal = peso * custoPorkg * (1 + TAXA_ADICIONAL);
+			double valor = peso * custoPorkg;
+			valor += valor * (1 + TAXA_ADICIONAL);
+			custoTotal = valor;
 		}
-
-		// void print(){
-		// 	Encomenda::print();
-		// 	std::cout << "[Encomenda Relâmpago]" << endl;
-		// 	std::cout << "  Peso: " << peso << endl
-		// 		<< "  Custo por kg: " << custoPorkg << endl
-		// 		<< "  Taxa adicional: " << TAXA_ADICIONAL << endl
-		// 		<< "  Custo total: " << custoTotal << endl;
-		// }
 };
 
 #endif
