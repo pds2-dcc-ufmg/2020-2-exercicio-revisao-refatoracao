@@ -1,10 +1,9 @@
 #ifndef Encomenda_H
 #define Encomenda_H
 #include <iostream>
-#include "Cliente.hpp"
+#include "Cliente.h"
 
-class Encomenda
-{
+class Encomenda{
 
 public:
 
@@ -14,8 +13,7 @@ public:
 	Cliente remetente;
 	Cliente destinatario;
 
-		void print()
-		{
+		void print(){
         	std::cout << "[Remetente]" << std::endl;
 			remetente.print();
 			std::cout << "[Destinatário]" << std::endl;
