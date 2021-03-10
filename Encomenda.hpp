@@ -5,7 +5,7 @@
 using namespace std;
 
 class Encomenda{
-	private:
+	protected:
 		double _peso = 0.0;
 		double _custo_kg = 0.0;
 		double _custo_total = 0.0;
