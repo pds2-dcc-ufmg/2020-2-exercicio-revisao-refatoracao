@@ -48,13 +48,13 @@ int main(){
 	std::cout << "\n>> Relatório de encomendas <<" << std::endl;
     
     
-    int Num_Normal = 0;
-    int Num_Relampago = 0;
+    	int Num_Normal = 0;
+    	int Num_Relampago = 0;
 	double Valor_Normal = 0;
 	double Valor_Relampago = 0;
 
 	//imprime na tela as informações de remetente, destinatário e encomenda
-    for(Encomenda* a : Encomendas){
+    	for(Encomenda* a : Encomendas){
         a->calcula();
 	    a->print();
 	    if(a->getCusto() == 12.0){
@@ -63,7 +63,7 @@ int main(){
 	    }
 	    else {Num_Relampago++;Valor_Relampago += a->calcula();}
         std::cout<<std::endl;
-    }
+    	}
 	//limpa a memória dos vetores
 	for(int contador = 0; contador < Num_Normal + Num_Relampago; contador++){
 		delete Encomendas[contador];
