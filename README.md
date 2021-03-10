@@ -34,7 +34,9 @@ Abaixo estão, separadamente, algumas mudanças que fiz em cada parte do código
 
 -> Separação correta dos dados em private e funções em public;
 
--> Melhora na organização dos nomes, por meio do underline e a utilização das palavras completas, sem abreviações.
+-> Melhora na organização dos nomes, por meio do underline e a utilização das palavras completas, sem abreviações;
+
+-> Criação de duas funções abstratas para sobre escrevê-las em cada caso, com o intuito de manter os dados da classe Encomenda protected.
 
 **---->** Como EncomendaNormal e EncomendaRelampago são subclasses de Encomenda e por não implementarem muitos métodos, não acho que seja necessário implementar seus módulos cpp;
 
@@ -42,7 +44,11 @@ Abaixo estão, separadamente, algumas mudanças que fiz em cada parte do código
 
 -> Utilização do this como referência;
 
--> Melhor utilização da função calcula, por meio da atribuição do valor do custo total;  
+-> Melhor utilização da função calcula, por meio da atribuição do valor do custo total;
+
+-> Sobre escrita das funções feitas anteriormente;
+
+-> Criação do construtor de EncomendaNormal para passagem dos dados, a fim de manter os dados da classe Encomenda protected.
 
 **EncomendaRelampago.hpp**
 
@@ -50,7 +56,11 @@ Abaixo estão, separadamente, algumas mudanças que fiz em cada parte do código
 
 -> Melhor utilização da função calcula, por meio da atribuição do valor do custo total; 
 
--> Utilização da constante taxa_adicional para evitar a presença de números "aleatórios" no programa.
+-> Utilização da constante taxa_adicional para evitar a presença de números "aleatórios" no programa;
+
+-> Sobre escrita das funções feitas anteriormente;
+
+-> Criação do construtor de EncomendaRelampago para passagem dos dados, a fim de manter os dados da classe Encomenda protected.
 
 **main.cpp**
 
