@@ -1,0 +1,8 @@
+#Arquivos e pastas de IDEs
+*.vscode
+
+#Arquivos de saída do compilador
+*.o
+
+#Arquivos executáveis
+*.exe
