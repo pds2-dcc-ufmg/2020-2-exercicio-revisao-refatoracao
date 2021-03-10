@@ -9,9 +9,9 @@ class Encomenda {
 	public:
 		Encomenda(double p, double c, cliente r, cliente d): PESO(p), CUSTOkg(c), remetente(r), dest(d);
 		void print () { // imprime na tela os dados do remetente e do destinatário
-			std::cout << "[Remetente]" << endl;
+			cout << "[Remetente]" << endl;
 			remetente.print();
-			std::cout << "[Destinatário]" << endl;
+			cout << "[Destinatário]" << endl;
 			dest.print();
 		}
 	
