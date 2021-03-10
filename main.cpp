@@ -122,52 +122,51 @@ int main(){
 	enc7.dest = cli0;
 	quantR++;
 	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custN = 0, custR =0;
 
 	enc0.calcula();
 	enc0.print();
 	custN += enc0.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc1.calcula();
 	enc1.print();
 	custN += enc1.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc2.calcula();
 	enc2.print();
 	custN += enc2.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc3.calcula();
 	enc3.print();
 	custN += enc3.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc4.calcula();
 	enc4.print();
 	custN += enc4.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc5.calcula();
 	enc5.print();
 	custR += enc5.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc6.calcula();
 	enc6.print();
 	custR += enc6.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc7.calcula();
 	enc7.print();
 	custR += enc7.calcula();
-	std::cout << endl;
+	cout << endl;
 	
-	std::cout << "\n>> Encomendas Normais <<" 
+	cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN
 		 << "\nValor Total: " << custN
 		 << endl
