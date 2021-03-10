@@ -7,7 +7,7 @@ using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 	public:
-		// Calcula o custo total de uma encomenda relâmpago.
+		// Calcula o valor total de uma encomenda relâmpago.
 		double calculaValor() override {
 			double x = this->_peso * this->_custoKg;
 			x += x * this->_taxa;
