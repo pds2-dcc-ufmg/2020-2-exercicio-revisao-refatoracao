@@ -10,7 +10,7 @@ class Encomenda{
 
         virtual double calcula() = 0;
 
-		virtual ~Encomenda(){}
+		virtual ~Encomenda() {}
 
 		Encomenda( double peso, 
 		           double custoKg,
@@ -28,7 +28,8 @@ class Encomenda{
 			std::cout << "[Destinatário]" << endl;
 			_dest.print();
 		}
-
+ 
+ 
     protected:
 
 		double _peso = 0.0;

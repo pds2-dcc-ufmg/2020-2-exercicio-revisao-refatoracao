@@ -31,8 +31,8 @@ class EncomendaNormal: public Encomenda{
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
 		std::cout << "  Peso: " << _peso << endl
-			<< "  Custo por kg: " << _custoKg << endl
-			<< "  Custo total: " << _custoTotal << endl;
+		          << "  Custo por kg: " << _custoKg << endl
+			      << "  Custo total: " << _custoTotal << endl;
 	}
 };
 
