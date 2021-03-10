@@ -6,8 +6,8 @@
 
 class EncomendaNormal: public Encomenda{
 	public:
-		// Calcula o custo total de uma encomenda normal.
-		double calculaCusto() override {
+		// Calcula o valor total de uma encomenda normal.
+		double calculaValor() override {
 			double x = this->_peso * this->_custoKg;
 			return x;
 		}
