@@ -33,114 +33,114 @@ int main(){
 	int quantN = 0;
 	int quantR = 0;
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+	EncomendaNormal encomenda0;
+	encomenda0.peso = 5;
+	encomenda0.custoKG = 12;
+	encomenda0.remetente = cli0;
+	encomenda0.destinatario = cli1;
+	quantidadeNormal++;
 
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+	EncomendaNormal encomenda1;
+	encomenda1.peso = 10;
+	encomenda1.custoKG = 12;
+	encomenda1.remetente = cli1;
+	encomenda1.destinatario = cli2;
+	quantidadeNormal++;
 
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+	EncomendaNormal encomenda2;
+	encomenda2.peso = 7;
+	encomenda2.custoKG = 12;
+	encomenda2.remetente = cli2;
+	encomenda2.destinatario = cli3;
+	quantidadeNormal++;
 
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+	EncomendaNormal encomenda3;
+	encomenda3.peso = 2;
+	encomenda3.custoKG = 12;
+	encomenda3.remetente = cli3;
+	encomenda3.destinatario = cli4;
+	quantidadeNormal++;
 
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+	EncomendaNormal encomenda4;
+	encomenda4.peso = 3;
+	encomenda4.custoKG = 12;
+	encomenda4.remetente = cli4;
+	encomenda4.destinatario = cli5;
+	quantidadeNormal++;
 
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	EncomendaRelampago encomenda5;
+	encomenda5.peso = 13;
+	encomenda5.custoKG = 18;
+	encomenda5.remetente = cli5;
+	encomenda5.destinatario = cli6;
+	quantidadeRelampago++;
 
-	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+	EncomendaRelampago encomenda6;
+	encomenda6.peso = 6;
+	encomenda6.custoKG = 18;
+	encomenda6.remetente = cli6;
+	encomenda6.destinatario = cli7;
+	quantidadeRelampago++;
 
-	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
+	EncomendaRelampago encomenda7;
+	encomenda7.peso = 8;
+	encomenda7.custoKG = 18;
+	encomenda7.remetente = cli7;
+	encomenda7.destinatario = cli0;
+	quantidadeRelampago++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double custN = 0;
-	double custR = 0;
+	double custoNormal = 0;
+	double custoRelampago = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
+	encomenda0.calcula();
+	encomenda0.print();
+	custoNormal += encomenda0.calcula();
 	std::cout << endl;
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
+	encomenda1.calcula();
+	encomenda1.print();
+	custoNormal += encomenda1.calcula();
 	std::cout << endl;
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
+	encomenda2.calcula();
+	encomenda2.print();
+	custoNormal += encomenda2.calcula();
 	std::cout << endl;
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
+	encomenda3.calcula();
+	encomenda3.print();
+	custoNormal += encomenda3.calcula();
 	std::cout << endl;
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
+	encomenda4.calcula();
+	encomenda4.print();
+	custoNormal += encomenda4.calcula();
 	std::cout << endl;
 
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
+	encomenda5.calcula();
+	encomenda5.print();
+	custoRelampago += encomenda5.calcula();
 	std::cout << endl;
 
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
+	encomenda6.calcula();
+	encomenda6.print();
+	custoRelampago += encomenda6.calcula();
 	std::cout << endl;
 
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
+	encomenda7.calcula();
+	encomenda7.print();
+	custoRelampago += encomenda7.calcula();
 	std::cout << endl;
 	
 	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
+		 << "\nQuantidade: " << quantidadeNormal
+		 << "\nValor Total: " << custoNormal
 		 << endl
 		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
+		 << "\nQuantidade: " << quantidadeRelampago
+		 << "\nValor Total: " << custoRelampago
 		 << endl;
 	
 }
