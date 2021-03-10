@@ -31,3 +31,23 @@ string Cliente::getCep(){
 	return cep;
 		
 }
+void Cliente::setNome(string _S){
+	this->nome=_S;
+	
+}
+void Cliente::setEndereco(string _S){
+	this->endereco=_S;
+	
+}
+void Cliente::setCidade(string _S){
+	this->cidade=_S;
+	
+}
+void Cliente::setEstado(string _S){
+	this->estado=_S;
+	
+}
+void Cliente::setCep(string _S){
+	this->cep=_S;
+	
+}
