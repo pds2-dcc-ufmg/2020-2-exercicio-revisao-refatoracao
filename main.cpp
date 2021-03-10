@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <typeinfo>
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
@@ -24,30 +25,30 @@ int main(){
 	int quantN = 0;
 	int quantR = 0;
 
-    vector< EncomendaNormal > encomendas;	
+    vector< Encomenda* > enc;		
 
-	encomendas.push_back( EncomendaNormal(5, 12, clientes[0], clientes[1]) );
+	enc.push_back( new EncomendaNormal(5, 12, clientes.at(0), clientes.at(1)) );
 	quantN++;
 
-	encomendas.push_back( EncomendaNormal(10, 12, clientes[1], clientes[2]) );
+	enc.push_back( new EncomendaNormal(10, 12, clientes.at(1), clientes.at(2)) );	
 	quantN++;
 
-	encomendas.push_back( EncomendaNormal(7, 12, clientes[2], clientes[3]) );
+	enc.push_back( new EncomendaNormal(7, 12, clientes.at(2), clientes.at(3)) );	
 	quantN++;
 
-	encomendas.push_back( EncomendaNormal(2, 12, clientes[3], clientes[4]) );
+	enc.push_back( new EncomendaNormal(2, 12, clientes.at(3), clientes.at(4)) );	
 	quantN++;
 
-	encomendas.push_back( EncomendaNormal(3, 12, clientes[4], clientes[5]) );
+	enc.push_back( new EncomendaNormal(3, 12, clientes.at(4), clientes.at(5)) );	
 	quantN++;
 
-	encomendas.push_back( EncomendaNormal(13, 18, clientes[5], clientes[6]) );
+	enc.push_back( new EncomendaRelampago(13, 18, clientes.at(5), clientes.at(6)) );	
 	quantR++;
 
-	encomendas.push_back( EncomendaNormal(6, 18, clientes[6], clientes[7]) );
+	enc.push_back( new EncomendaRelampago(6, 18, clientes.at(6), clientes.at(7)) );
 	quantR++;
 
-	encomendas.push_back( EncomendaNormal(8, 18, clientes[7], clientes[0]) );
+	enc.push_back( new EncomendaRelampago(8, 18, clientes.at(7), clientes.at(0)) );
 	quantR++;
 	
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
@@ -55,15 +56,26 @@ int main(){
 	double custN = 0;
 	double custR = 0;
 
-    for( int i=0; i <=7; ++i ) {
-	    encomendas.at(i).calcula();
-	    encomendas.at(i).print();
-	    custN += encomendas.at(i).calcula();
+    const int NUM_ENCOMENDAS_N = 5;
+	const int NUM_ENCOMENDAS_R = 3;
+
+    for( int i=0; i<NUM_ENCOMENDAS_N; ++i ) {
+	    enc.at(i)->calcula();
+	    enc.at(i)->print();
+
+        custN += enc.at(i)->calcula();
+	    
 	    std::cout << endl;
 	}
 
+    for( int i=0; i<NUM_ENCOMENDAS_R; ++i ) {
+	    enc.at(i+NUM_ENCOMENDAS_N)->calcula();
+	    enc.at(i+NUM_ENCOMENDAS_N)->print();
 
-
+        custR += enc.at(i+NUM_ENCOMENDAS_N)->calcula();
+	    
+	    std::cout << endl;
+	}	
 	
 	std::cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << quantN
@@ -74,4 +86,8 @@ int main(){
 		 << "\nValor Total: " << custR
 		 << endl;
 	
+	for( int i=0; i<NUM_ENCOMENDAS_N + NUM_ENCOMENDAS_R; ++i )  {
+
+		delete( enc.at(i) );
+	}
 }

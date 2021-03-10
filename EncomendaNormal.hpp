@@ -9,6 +9,8 @@ class EncomendaNormal: public Encomenda{
 
 	public:
 		
+    ~EncomendaNormal() {}
+
     EncomendaNormal( double peso, 
 		             double custoKg,
 		             Cliente remetente,
@@ -17,23 +19,21 @@ class EncomendaNormal: public Encomenda{
 		                                        remetente,
 		                                        dest ) {}
 
-	double calcula(){
+	double calcula() override {
 
 		double x = _peso * _custoKg;
 
 		return x;
 	}
 
-	void print(){
+	void print() override {
 
 		Encomenda::print();
 		std::cout << "[Encomenda Normal]" << endl;
 		std::cout << "  Peso: " << _peso << endl
 			<< "  Custo por kg: " << _custoKg << endl
 			<< "  Custo total: " << _custoTotal << endl;
-
 	}
-
 };
 
 #endif

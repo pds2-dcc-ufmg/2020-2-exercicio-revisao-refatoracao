@@ -2,9 +2,9 @@ CC = g++
 CFLAGS = -std=c++11 -Wall  -Werror
 TARGET = program
 
-BUILD_DIR    = ./
-SRC_DIR      = ./
-INCLUDE_DIR  = ./
+BUILD_DIR    = .
+SRC_DIR      = .
+INCLUDE_DIR  = .
 
 ${BUILD_DIR}/${TARGET}: ${BUILD_DIR}/Cliente.o ${BUILD_DIR}/main.o
 	${CC} ${CFLAGS} -o ${BUILD_DIR}/${TARGET} ${BUILD_DIR}/*.o
