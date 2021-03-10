@@ -1,27 +1,30 @@
-#ifndef Encomenda_H
-#define Encomenda_H
+#ifndef ENCOMENDA_H 
+#define ENCOMENDA_H
 
 #include "Cliente.hpp"
-using namespace std;
 
-class Encomenda{
+class Encomenda {
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
+		Encomenda(double peso, double custoPorKg, Cliente *remetente, Cliente *destinatario);
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		// Calcula custo total de uma encomenda
+    virtual double calculaCustoTotal();
 
+		// Imprime dados dos clientes
+		virtual void print();
+
+    virtual ~Encomenda() {}
+
+    protected:
+
+			double peso = 0.0;
+			double custoPorKg = 0.0;
+			double custoTotal = 0.0;
+			double taxa;
+			Cliente *remetente;
+			Cliente *destinatario;
 };
 
 #endif
