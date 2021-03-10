@@ -1,13 +1,16 @@
+
 #include <iostream>
 #include <string>
 #include "Cliente.hpp"
 
+using namespace std;
+
 void Cliente::print(){
 
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
+		cout << "  Nome: " << Nome << endl;
+                cout << "  Endereço: " << endereco << endl;
+		cout << "  Cidade: " << Cidade << endl;
+                cout << "  Estado: " << Estado << endl;
+                cout << "  CEP: " << Cep << endl;
 
 }
