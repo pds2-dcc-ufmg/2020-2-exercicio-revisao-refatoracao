@@ -6,21 +6,22 @@ using namespace std;
 
 class Encomenda{
 
+	//Criação dos atributos da classe Encomenda que podem ser usados por suas classes filhas
+	protected:
+
+		double peso = 0.0;
+		double custoKg = 0.0;
+		double custoTotal = 0.0;
+		Cliente remetente;
+		Cliente destinatario;
+	
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
-
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		//Construtor da classe Encomenda...
+		Encomenda(double peso, double custoKg, Cliente remetente, Cliente destinatario);
+		
+		//Interface da função para impressão do remetente e do destinatario da encomenda...
+		void print();
 
 };
 
