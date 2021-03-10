@@ -70,57 +70,57 @@ int main(){
 	EncomendaNormal enc0;
 	enc0.PESO = 5;
 	enc0.CUSTOKG = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
+	enc0.REMETENTE = cli0;
+	enc0.DEST = cli1;
 	quantN++;
 
 	EncomendaNormal enc1;
 	enc1.PESO = 10;
 	enc1.CUSTOKG = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
+	enc1.REMETENTE = cli1;
+	enc1.DEST = cli2;
 	quantN++;
 
 	EncomendaNormal enc2;
 	enc2.PESO = 7;
 	enc2.CUSTOKG = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
+	enc2.REMETENTE = cli2;
+	enc2.DEST = cli3;
 	quantN++;
 
 	EncomendaNormal enc3;
 	enc3.PESO = 2;
 	enc3.CUSTOKG = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
+	enc3.REMETENTE = cli3;
+	enc3.DEST = cli4;
 	quantN++;
 
 	EncomendaNormal enc4;
 	enc4.PESO = 3;
 	enc4.CUSTOKG = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
+	enc4.REMETENTE = cli4;
+	enc4.DEST = cli5;
 	quantN++;
 
 	EncomendaRelampago enc5;
 	enc5.PESO = 13;
 	enc5.CUSTOKG = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
+	enc5.REMETENTE = cli5;
+	enc5.DEST = cli6;
 	quantR++;
 
 	EncomendaRelampago enc6;
 	enc6.PESO = 6;
 	enc6.CUSTOKG = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
+	enc6.REMETENTE = cli6;
+	enc6.DEST = cli7;
 	quantR++;
 
 	EncomendaRelampago enc7;
 	enc7.PESO = 8;
 	enc7.CUSTOKG = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
+	enc7.REMETENTE = cli7;
+	enc7.DEST = cli0;
 	quantR++;
 	
 	cout << "\n>> Relatório de encomendas <<" << endl;
@@ -151,7 +151,7 @@ int main(){
 	enc4.calcula();
 	enc4.print();
 	custN += enc4.calcula();
-	std::cout << endl;
+	cout << endl;
 
 	enc5.calcula();
 	enc5.print();
