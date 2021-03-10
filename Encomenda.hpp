@@ -8,9 +8,9 @@ class Encomenda{
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
+		double peso = 0.0;
+		double custokg = 0.0;
+		double tot = 0.0;
 		Cliente remetente;
 		Cliente dest;
 			
@@ -21,6 +21,9 @@ class Encomenda{
 			std::cout << "[Destinatário]" << endl;
 			dest.print();
 		}
+    
+    void registerEncomenda ( double peso, double custokg, Cliente remetente, Cliente dest);
+
 
 };
 
