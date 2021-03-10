@@ -3,8 +3,8 @@
 
 #include <string>
 
-class Cliente
-{
+class Cliente{
+   
     private:
         std::string nome;
         std::string endereco;
