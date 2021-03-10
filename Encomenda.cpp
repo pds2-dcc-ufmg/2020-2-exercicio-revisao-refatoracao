@@ -3,47 +3,47 @@
 #include "Encomenda.hpp"
 
 void Encomenda::print() {
-    std::cout << "[Remetente]" << endl;
-    this->_remetente.print();
-    std::cout << "[Destinatário]" << endl;
-    this->_destinatario.print();
+        std::cout << "[Remetente]" << endl;
+        this->_remetente.print();
+        std::cout << "[Destinatário]" << endl;
+        this->_destinatario.print();
 }
 
 void Encomenda::setPeso(double peso) {
-    this->_peso = peso;
+        this->_peso = peso;
 }
 
 void Encomenda::setCustoKg(double custoKg) {
-    this->_custoKg = custoKg;
+        this->_custoKg = custoKg;
 }
 
 void Encomenda::setTotal(double total) {
-    this->_total = total;
+        this->_total = total;
 }
 
 void Encomenda::setRemet(Cliente remetente) {
-    this->_remetente = remetente;
+        this->_remetente = remetente;
     
 void Encomenda::setDest(Cliente destinatario) {
-    this->_destinatario = destinatario;
+        this->_destinatario = destinatario;
 }
 
 double Encomenda::getPeso() {
-    return this->_peso;
+        return this->_peso;
 }
 
 double Encomenda::getCustoKg() {
-    return this->_custoKg;
+        return this->_custoKg;
 }
 
 double Encomenda::getTotal() {
-    return this->_total;
+        return this->_total;
 }
 
 Cliente Encomenda::getRemet() {
-    return this->_remetente;
+        return this->_remetente;
 }
    
 Cliente Encomenda::getDest() {
-    return this->_destinatario;
+        return this->_destinatario;
 }
