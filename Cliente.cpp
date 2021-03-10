@@ -1,13 +1,20 @@
-#include <iostream>
 #include <string>
 #include "Cliente.hpp"
+#include <iostream>
+include namespace std;
 
-void Cliente::print(){
+ string Cliente::getNome(){return NOME;};
+ string Cliente::getEnd(){return endereco;};
+ string Cliente::getCid(){return CIDADE;};
+ string Cliente::getEst(){return ESTADO;};
+ string Cliente::getCep(){return cep;};
 
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
+ void Cliente::print(){
+     
+cout << "  Nome: " << getNome() << endl
+     << "  Endereço: " << getEnd() << endl
+     << "  Cidade: " << getCid() << endl
+     << "  Estado: " << getEst() << endl
+     << "  CEP: " << getCep() << endl;
 
-}
+  }
