@@ -24,7 +24,7 @@ class EncomendaRelampago: public Encomenda{
 			std::cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
 				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+				<< "  Custo total: " << TOTAL << endl;
 
 		}
 

@@ -10,17 +10,14 @@ class Encomenda{
 
 		double PESO = 0.0;
 		double CUSTOkg = 0.0;
-		double T = 0.0;
+		double TOTAL = 0.0;
 		Cliente remetente;
-		Cliente dest;
+		Cliente destinatario;
 			
-		void print(){
+		void print();
+		
+		void preencher_enc(double PESO_, double CUSTOkg_, Cliente remetente_, Cliente destinatario_);
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
 
 };
 
