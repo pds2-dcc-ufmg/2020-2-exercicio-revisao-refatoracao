@@ -12,8 +12,8 @@ Encomenda::EncomendaNormal::EncomendaNormal(double peso, double custo_kg, Client
 
 double Encomenda::EncomendaNormal::EncomendaNormal::getCustoTotal()
 {
-  this->custo_total = this->peso * this->custo_kg;
-  return this->custo_total;
+  double custo_total = this->peso * this->custo_kg;
+  return custo_total;
 }
 
 void Encomenda::EncomendaNormal::EncomendaNormal::print()

@@ -2,7 +2,7 @@
 #include <string>
 #include "Cliente.hpp"
 
-Cliente::Cliente::Cliente(std::string cep, std::string cidade, std::string endereco, std::string estado, std::string nome)
+Cliente::Cliente::Cliente(std::string nome, std::string endereco, std::string cidade, std::string estado, std::string cep)
 {
 	this->cep = cep;
 	this->cidade = cidade;

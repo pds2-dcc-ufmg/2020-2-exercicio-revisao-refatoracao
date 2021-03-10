@@ -12,9 +12,9 @@ Encomenda::EncomendaRelampago::EncomendaRelampago(double peso, double custo_kg, 
 
 double Encomenda::EncomendaRelampago::getCustoTotal()
 {
-  this->custo_total = this->peso * this->custo_kg;
-  this->custo_total += custo_total * this->taxa_adicional;
-  return this->custo_total;
+  double custo_total = this->peso * this->custo_kg;
+  custo_total += custo_total * this->taxa_adicional;
+  return custo_total;
 }
 
 void Encomenda::EncomendaRelampago::print()

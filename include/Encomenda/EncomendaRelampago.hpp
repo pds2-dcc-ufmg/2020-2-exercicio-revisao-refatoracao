@@ -15,7 +15,8 @@ namespace Encomenda
 		EncomendaRelampago(double peso, double custo_kg, Cliente::Cliente remetente, Cliente::Cliente destinatario);
 
 		/**
-	  * \brief calcula o custo total com base no peso e no custo por kg
+	  * \brief calcula o custo total com base no peso, no custo por kg e na taxa adicional
+		* \return retorna o custo total 
 	  */
 		double getCustoTotal();
 

@@ -16,6 +16,7 @@ namespace Encomenda
 
 		/**
 	  * \brief calcula o custo total com base no peso e no custo por kg
+		* \return retorna o custo total 
 	  */
 		double getCustoTotal();
 
