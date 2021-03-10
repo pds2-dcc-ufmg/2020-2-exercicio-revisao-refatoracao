@@ -132,5 +132,5 @@ int main(){
 		encomendasRelampago.push_back(encomenda);
 	};
 
-	relatorioEncomendas(encomendasNormais,encomendasRelampago);
+	relatorioEncomendas(encomendasNormais,encomendasRelampago); 
 }
