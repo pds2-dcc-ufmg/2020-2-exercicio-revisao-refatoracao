@@ -1,7 +1,7 @@
 #ifndef Encomenda_H
 #define Encomenda_H
 #include <iostream>
-#include "Cliente.h"
+#include "Cliente.hpp"
 
 class Encomenda{
 
