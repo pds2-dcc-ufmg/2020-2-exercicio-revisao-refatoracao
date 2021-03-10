@@ -15,6 +15,7 @@ class EncomendaNormal: public Encomenda{
 	double CONTA = PESO * CUSTOKG;
 
 	return CONTA;
+		
 	}
 
 	void print(){
@@ -26,7 +27,6 @@ class EncomendaNormal: public Encomenda{
 		     << "  Custo total: " << SOMATORIA << endl;
 
 	}
-
 	};
 
 #endif
