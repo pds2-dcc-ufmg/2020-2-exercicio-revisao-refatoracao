@@ -16,8 +16,8 @@ int main(){
     Cliente *Cli6 = new Cliente("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.");
     Cliente *Cli7 = new Cliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.");
 
-	int QuantN = 0;
-	int QuantR = 0;
+	int QuantN = 0; //Quantidade de encomendas normais.
+	int QuantR = 0; //Quantidade de encomendas relampago.
 
     EncomendaNormal *Enc0 = new EncomendaNormal(5 , 12, &(QuantN), *(Cli0), *(Cli1));
     EncomendaNormal *Enc1 = new EncomendaNormal(10, 12, &(QuantN), *(Cli1), *(Cli2));
@@ -30,18 +30,17 @@ int main(){
 
 	std::cout << "\n>> Relatório de encomendas <<" << endl;
 
-	double CustN = 0;
-	double CustR = 0;
+	double CustN = 0;//Custo total de encomendas normais.
+	double CustR = 0;//Custo total de encomendas relampago.
 
-	CustN += Enc0->PrecoTotal();
-	CustN += Enc1->PrecoTotal();
-	CustN += Enc2->PrecoTotal();
-	CustN += Enc3->PrecoTotal();
-	CustN += Enc4->PrecoTotal();
-	CustR += Enc5->PrecoTotal();
-	CustR += Enc6->PrecoTotal();
-	CustR += Enc7->PrecoTotal();
-
+	CustN += Enc0->DefinirPreco();
+	CustN += Enc1->DefinirPreco();
+	CustN += Enc2->DefinirPreco();
+	CustN += Enc3->DefinirPreco();
+	CustN += Enc4->DefinirPreco();
+	CustR += Enc5->DefinirPreco();
+	CustR += Enc6->DefinirPreco();
+	CustR += Enc7->DefinirPreco();
 
 	std::cout << "\n>> Encomendas Normais <<"
 		 << "\nQuantidade: " << QuantN

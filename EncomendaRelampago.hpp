@@ -28,10 +28,12 @@ class EncomendaRelampago: public Encomenda{
 
         }
         EncomendaRelampago(double _Peso, double _Custokg, int *(Quant), Cliente _remetente, Cliente _dest):Encomenda(_Peso, _Custokg, Quant, _remetente, _dest){}
-        double PrecoTotal(){
+
+        double DefinirPreco(){
             this->print();
             return this->calcula();
         }
+
 };
 
 #endif

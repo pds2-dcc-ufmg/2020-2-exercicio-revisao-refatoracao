@@ -21,10 +21,13 @@ class Encomenda{
 			std::cout << "[Destinatário]" << endl;
 			Dest.print();
 		}
+
 		Encomenda(double _Peso, double _Custokg, int *(Quant), Cliente _remetente, Cliente _dest):Peso(_Peso),CustoKg(_Custokg),Remetente(_remetente),Dest(_dest){
             *(Quant) = *(Quant) + 1;//Acrescentando a nova encomenda na quantidade total.
 		}
-        virtual double PrecoTotal(){}//Método para imprimir informações da encomenda e retornar o valor total como um double.
+
+        virtual double DefinirPreco(){}//Método para imprimir informações da encomenda e retornar o valor total como um double.
+
 };
 
 #endif
