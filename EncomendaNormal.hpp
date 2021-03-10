@@ -8,23 +8,15 @@ using namespace std;
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-	double calcula(){
 
-		double x = PESO * CUSTOkg;
+		//Construtor da classe EncomendaNormal...
+		EncomendaNormal::EncomendaNormal(double peso, double custoKg, Cliente remetente, Cliente destinatario);
 
-		return x;
-	}
+		//Interface da função para calcular o preço da encomenda normal...
+		double calculaPreco();
 
-	void print(){
-
-		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
-
-	}
+		//Interface da função para impressão do remetente e do destinatario da encomenda normal...
+		void print();
 
 };
 
