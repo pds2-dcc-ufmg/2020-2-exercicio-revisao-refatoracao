@@ -21,7 +21,7 @@ class EncomendaRelampago: public Encomenda{
 		double calcula(){
 
 			double x = _peso * _custoKg;
-			x += x * 0.25;
+			x += x * _taxa;
 			
 			return x;
 		}
@@ -32,10 +32,15 @@ class EncomendaRelampago: public Encomenda{
 			std::cout << "[Encomenda Relâmpago]" << endl;
 			std::cout << "  Peso: " << _peso << endl
 				<< "  Custo por kg: " << _custoKg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
+				<< "  Taxa adicional: " << _taxa << endl
 				<< "  Custo total: " << _custoTotal << endl;
 
 		}
+
+
+	private:
+
+        const double _taxa = 0.25;
 
 };
 
