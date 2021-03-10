@@ -41,7 +41,7 @@ int main(){
 	v2[2] = enc7;
 	
 	// Impressao dos dados das encomendas e Calculo de custos
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	cout << "\n>> Relatório de encomendas <<" << endl;
 
 	double custN = 0;
 	double custR = 0;
@@ -61,7 +61,7 @@ int main(){
 	}
 	 
 	// Impressao das quantidades e custo total das encomendas
-	std::cout << "\n>> Encomendas Normais <<" 
+	cout << "\n>> Encomendas Normais <<" 
 		 << "\nQuantidade: " << v1.size()
 		 << "\nValor Total: " << custN
 		 << endl
