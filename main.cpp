@@ -2,9 +2,9 @@
 
 #include "Encomenda.hpp"
 
-#include "EncomendaNormal.cpp"
+#include "EncomendaNormal.hpp"
 
-#include "EncomendaRelampago.cpp"
+#include "EncomendaRelampago.hpp"
 
 int main(){
 
