@@ -18,7 +18,7 @@ class Encomenda{
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();
-			std::cout << "[Destinatário]" << endl;
+			cout << "[Destinatário]" << endl;
 			dest.print();
 		}
 
