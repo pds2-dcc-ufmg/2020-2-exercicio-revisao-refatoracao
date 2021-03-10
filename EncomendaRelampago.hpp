@@ -4,7 +4,7 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 using namespace std;
-cons double taxa=0.25;
+const double taxa=0.25;
 class EncomendaRelampago: public Encomenda{
 
 	public:
