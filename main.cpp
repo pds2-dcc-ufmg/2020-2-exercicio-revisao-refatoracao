@@ -1,179 +1,96 @@
 #include <iostream>
+#include <string>
+#include <vector>
+
 #include "Encomenda.hpp"
 #include "EncomendaNormal.hpp"
 #include "EncomendaRelampago.hpp"
 #include "Cliente.hpp"
+#include "Registro.cpp"
+
 using namespace std;
+using namespace Registro;
 
 int main(){
-	
-	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
 
-	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	vector<EncomendaNormal> normal;
+	vector<EncomendaRelampago> relampago;
 
-	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	/** registrando os clientes pela função do módulo Registro, passando nome, endereço, cidade, estado e CEP como parâmetros */
 
-	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	Cliente cli0 = registrarCliente("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
 
-	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	Cliente cli1 = registrarCliente("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
 
-	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	Cliente cli2 = registrarCliente("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
 
-	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	Cliente cli3 = registrarCliente("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.");
 
-	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	Cliente cli4 = registrarCliente("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C.");
 
-	int quantN = 0;
-	int quantR = 0;
+	Cliente cli5 = registrarCliente("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C.");
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
-	quantN++;
+	Cliente cli6 = registrarCliente("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.");
 
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
-	quantN++;
+	Cliente cli7 = registrarCliente("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.");
 
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
-	quantN++;
+	/** registrando as encomendas normais pela função do módulo Registro, passando peso, remetente e destinatário como parâmetros */
 
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
-	quantN++;
+	EncomendaNormal enc0 = registrarNormal(5, cli0, cli1);
+	normal.push_back(enc0);
 
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
-	quantN++;
+	EncomendaNormal enc1 = registrarNormal(10, cli1, cli2);
+	normal.push_back(enc1);
 
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
-	quantR++;
+	EncomendaNormal enc2 = registrarNormal(7, cli2, cli3);
+	normal.push_back(enc2);
 
-	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
-	quantR++;
+	EncomendaNormal enc3 = registrarNormal(2, cli3, cli4);
+	normal.push_back(enc3);
 
-	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
-	quantR++;
-	
-	std::cout << "\n>> Relatório de encomendas <<" << endl;
+	EncomendaNormal enc4 = registrarNormal(3, cli4, cli5);
+	normal.push_back(enc4);
+
+	/** registrando as encomendas relâmpago pela função do módulo Registro, passando peso, remetente e destinatário como parâmetros */
+
+	EncomendaRelampago enc5 = registrarRelampago(13, cli5, cli6);
+	relampago.push_back(enc5);
+
+	EncomendaRelampago enc6 = registrarRelampago(6, cli6, cli7);
+	relampago.push_back(enc6);
+
+	EncomendaRelampago enc7 = registrarRelampago(8, cli7, cli0);
+	relampago.push_back(enc7);
+
+	cout << "\n>> Relatório de encomendas <<" << endl;
+
+	int quantN = normal.size();
+	int quantR = relampago.size();
 
 	double custN = 0;
 	double custR = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
-	std::cout << endl;
+	/** iterando pelos vetores de encomendas para somar os custos totais */
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
-	std::cout << endl;
+	for(auto enc: normal) {
+		enc.print();
+		custN += enc.calculaTotal();
+		cout << endl;
+	}
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
-	std::cout << endl;
+	for(auto enc: relampago) {
+		enc.print();
+		custR += enc.calculaTotal();
+		cout << endl;
+	}
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
-	std::cout << endl;
+	cout << "\n>> Encomendas Normais <<"
+	     << "\nQuantidade: " << quantN
+	     << "\nValor Total: " << custN
+	     << endl
+	     << "\n>> Encomendas Relâmpago <<"
+	     << "\nQuantidade: " << quantR
+	     << "\nValor Total: " << custR
+	     << endl;
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
-	std::cout << endl;
-
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
-	std::cout << endl;
-
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
-	std::cout << endl;
-
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
-	std::cout << endl;
-	
-	std::cout << "\n>> Encomendas Normais <<" 
-		 << "\nQuantidade: " << quantN
-		 << "\nValor Total: " << custN
-		 << endl
-		 << "\n>> Encomendas Relâmpago <<" 
-		 << "\nQuantidade: " << quantR
-		 << "\nValor Total: " << custR
-		 << endl;
-	
 }
