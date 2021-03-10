@@ -3,26 +3,25 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
+
 
 class EncomendaNormal: public Encomenda{
 
 	public:
-		
-	double calcula(){
-
-		double x = PESO * CUSTOkg;
-
-		return x;
+	EncomendaNormal(double Peso_in, double Custo_Kg_in, Cliente *Remetente_in, Cliente *Destinatario_in ):
+	Encomenda(Peso_in, Custo_Kg_in, Remetente_in, Destinatario_in ){}
+	
+	 double calcula() override{
+		return Encomenda::getPeso() * Encomenda::getCusto();
 	}
-
-	void print(){
+        
+	void print() override{
 
 		Encomenda::print();
-		std::cout << "[Encomenda Normal]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-			<< "  Custo por kg: " << CUSTOkg << endl
-			<< "  Custo total: " << T << endl;
+		std::cout << "[Encomenda Normal]" << std::endl;
+		std::cout << "  Peso: " << Encomenda::getPeso() << std::endl
+			<< "  Custo por kg: " << Encomenda::getCusto() << std::endl
+			<< "  Custo total: " << Encomenda::getTotal() << std::endl;
 
 	}
 
