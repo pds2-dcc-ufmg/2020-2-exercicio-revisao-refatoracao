@@ -3,31 +3,30 @@
 
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
-using namespace std;
 
-class EncomendaRelampago : public Encomenda
+namespace Encomenda
 {
-
-public:
-	double calcula()
+	class EncomendaRelampago : public Encomenda
 	{
+	public:
+		/**
+	  * \brief construtor que inicializa as variáveis
+	  */
+		EncomendaRelampago(double peso, double custo_kg, Cliente::Cliente remetente, Cliente::Cliente destinatario);
 
-		double x = PESO * CUSTOkg;
-		x += x * 0.25;
+		/**
+	  * \brief calcula o custo total com base no peso e no custo por kg
+	  */
+		double getCustoTotal();
 
-		return x;
-	}
+		/**
+	  * \brief imprime na tela os dados da encomenda cadastrada
+	  */
+		void print();
 
-	void print()
-	{
-
-		Encomenda::print();
-		std::cout << "[Encomenda Relâmpago]" << endl;
-		std::cout << "  Peso: " << PESO << endl
-							<< "  Custo por kg: " << CUSTOkg << endl
-							<< "  Taxa adicional: " << 0.25 << endl
-							<< "  Custo total: " << T << endl;
-	}
-};
+	private:
+		const double taxa_adicional = 0.25;
+	};
+}
 
 #endif
