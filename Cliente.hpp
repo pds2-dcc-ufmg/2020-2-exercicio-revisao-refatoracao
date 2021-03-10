@@ -15,11 +15,11 @@ class Cliente{
 		string cep;
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
-		void getNome();
-		void getEndereco();
-		void getCidade();
-		void getEstado();
-		void getCep();	
+		string getNome();
+		string getEndereco();
+		string getCidade();
+		string getEstado();
+		string getCep();	
 			
 		
 };
