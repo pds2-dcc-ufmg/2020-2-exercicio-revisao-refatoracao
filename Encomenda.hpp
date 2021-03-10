@@ -2,6 +2,7 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
+
 using namespace std;
 
 class Encomenda{
@@ -9,19 +10,19 @@ class Encomenda{
 	public:
 
 		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
+		double CUSTOKG = 0.0;
+		double SOMATORIA = 0.0;
+		Cliente REMETENTE;
+		Cliente DEST;
 			
-		void print(){
+		void Print(){
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
+		cout << "[Remetente]" << endl;
+		REMETENTE.Print();
+		cout << "[Destinatário]" << endl;
+		DEST.Print();
+		
 		}
-
-};
+		};
 
 #endif
