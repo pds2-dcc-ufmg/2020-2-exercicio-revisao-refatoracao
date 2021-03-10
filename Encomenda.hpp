@@ -2,9 +2,10 @@
 #define Encomenda_H
 
 #include "Cliente.hpp"
-using namespace std;
 
-class Encomenda{
+
+class Encomenda
+{
 
 	public:
 
