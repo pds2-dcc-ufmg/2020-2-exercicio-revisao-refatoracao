@@ -8,11 +8,19 @@ using namespace std;
 class EncomendaRelampago: public Encomenda{
 
 	public:
-
+	
+	        EncomendaRelampago(double _peso, double _custoKg, Cliente _remetente, Cliente _dest){
+			
+			this->setPeso(_peso);
+			this->setCustoKg(_custoKg);
+			this->setRemetente(_remetente);
+			this->setDest(_dest);
+		}	
+	
 		double calcula(){
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+			double x = this->getPeso() * this->getCustoKg();
+			x += x * this->getTaxaAdicional();
 			
 			return x;
 		}
@@ -21,12 +29,20 @@ class EncomendaRelampago: public Encomenda{
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "  Peso: " << this->getPeso() << endl
+				<< "  Custo por kg: " << this->getCustoKg() << endl
+				<< "  Taxa adicional: " << this->getTaxaAdicional() << endl
+				<< "  Custo total: " << this->getCustoTotal() << endl;
 
 		}
+	
+	        double getTaxaAdicional(){
+			
+			return this->taxaAdicional;
+		}	
+	
+	private:
+	        double taxaAdicional=0.25;
 
 };
 
