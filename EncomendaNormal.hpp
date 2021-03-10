@@ -17,9 +17,15 @@ class EncomendaNormal: public Encomenda {
 				<< "  Custo total: " << custoTotal << endl;
 		}
 
+		void _calculaCustoTotal() override {
+			custoTotal = peso * custoPorkg;
+		}
+
 	public:
 
-		EncomendaNormal(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario) : Encomenda(peso, custoPorkg, remetente, destinatario) {}
+		EncomendaNormal(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario) : Encomenda(peso, custoPorkg, remetente, destinatario) {
+			_calculaCustoTotal();
+		}
 
 };
 

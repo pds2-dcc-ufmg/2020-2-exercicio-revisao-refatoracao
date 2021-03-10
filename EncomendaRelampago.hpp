@@ -20,15 +20,18 @@ class EncomendaRelampago: public Encomenda {
 				<< "  Custo total: " << custoTotal << endl;
 		}
 
-	public:
-
-		EncomendaRelampago(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario) : Encomenda(peso, custoPorkg, remetente, destinatario) {}
-
-		void calculaCustoTotal() override {
+		void _calculaCustoTotal() override {
 			double valor = peso * custoPorkg;
-			valor += valor * (1 + TAXA_ADICIONAL);
+			valor += valor * TAXA_ADICIONAL;
 			custoTotal = valor;
 		}
+
+	public:
+
+		EncomendaRelampago(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario) : Encomenda(peso, custoPorkg, remetente, destinatario) {
+			_calculaCustoTotal();
+		}
+
 };
 
 #endif

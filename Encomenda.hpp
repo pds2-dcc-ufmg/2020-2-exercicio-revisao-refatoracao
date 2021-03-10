@@ -16,14 +16,11 @@ class Encomenda {
 		Cliente *destinatario;
 		
 		virtual void _print() {}
+		virtual void _calculaCustoTotal() {}
 	
 	public:
 
 		Encomenda(double peso, double custoPorkg, Cliente *remetente, Cliente *destinatario);
-
-		virtual void calculaCustoTotal() {
-			custoTotal = peso * custoPorkg;
-		}
 
 		double getCustoTotal();
 

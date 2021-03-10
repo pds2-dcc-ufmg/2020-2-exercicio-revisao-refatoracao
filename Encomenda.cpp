@@ -8,7 +8,6 @@ Encomenda::Encomenda(double peso, double custoPorkg, Cliente *remetente, Cliente
     this->custoPorkg = custoPorkg;
     this->remetente = remetente;
     this->destinatario = destinatario;
-    this->calculaCustoTotal();
 }
 
 double Encomenda::getCustoTotal() {
