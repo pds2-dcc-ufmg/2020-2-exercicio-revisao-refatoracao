@@ -7,6 +7,9 @@ using namespace std;
 
 class EncomendaNormal: public Encomenda{
 	public:
+		EncomendaNormal(double peso, double custo_kg, Cliente remetente, Cliente destinatario) : Encomenda(peso,custo_kg,remetente,destinatario) {}
+		// construtor de EncomendaNormal para manter os dados da Encomenda protected
+	
 		double calcula() override{
 			this->_custo_total = this->_peso * this->_custo_kg;
 			return this->_custo_total;
