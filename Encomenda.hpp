@@ -6,15 +6,24 @@ using namespace std;
 
 class Encomenda{
 
-	public:
+	protected:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
+		double peso;
+		double custoKg;
+		double custoTotal = 0.0;
+	
+	public:
+		
 		Cliente remetente;
 		Cliente dest;
 			
-		void print(){
+	public:
+
+		Encomenda(double _peso,double _custoKg) : peso(_peso), custoKg(_custoKg){};
+		
+		virtual double calcularValor(){};
+		
+		virtual void print(){
 
 			std::cout << "[Remetente]" << endl;
 			remetente.print();

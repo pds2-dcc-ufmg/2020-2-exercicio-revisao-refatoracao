@@ -7,24 +7,30 @@ using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
+	private:
+		
+		double taxa = 0.25;
+	
 	public:
 
-		double calcula(){
+		EncomendaRelampago(double _peso,double _custoKg) : Encomenda(_peso,_custoKg){};
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+		double calcularValor() override{
+
+			double valor = peso * custoKg;
+			valor += valor * taxa;
 			
-			return x;
+			return valor;
 		}
 
-		void print(){
+		void print() override{
 
 			Encomenda::print();
 			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "  Peso: " << peso << endl
+				<< "  Custo por kg: " << custoKg << endl
+				<< "  Taxa adicional: " << taxa << endl
+				<< "  Custo total: " << custoTotal << endl;
 
 		}
 
