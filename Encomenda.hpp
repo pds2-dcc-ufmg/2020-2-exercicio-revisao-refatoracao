@@ -8,20 +8,35 @@ class Encomenda{
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
+        virtual double calcula() = 0;
+
+		virtual ~Encomenda() {}
+
+		Encomenda( double peso, 
+		           double custoKg,
+		           Cliente remetente,
+		           Cliente dest ): _peso( peso ),
+				                   _custoKg( custoKg ),
+								   _remetente( remetente ),
+								   _dest( dest )   {}
+
+					
+		virtual void print(){
 
 			std::cout << "[Remetente]" << endl;
-			remetente.print();
+			_remetente.print();
 			std::cout << "[Destinatário]" << endl;
-			dest.print();
+			_dest.print();
 		}
+ 
+ 
+    protected:
 
+		double _peso = 0.0;
+		double _custoKg = 0.0;
+		double _custoTotal = 0.0;
+		Cliente _remetente;
+		Cliente _dest;
 };
 
 #endif
