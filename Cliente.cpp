@@ -11,23 +11,23 @@ void Cliente::print(){
 		 << "  CEP: " << this->getCep() << endl;
 
 }
-void Cliente::getNome(){
+string Cliente::getNome(){
 	return nome;
 	
 }
-void Cliente::getEndereco(){
+string Cliente::getEndereco(){
 	return endereco;
 		
 }
-void Cliente::getCidade(){
+string Cliente::getCidade(){
  	return cidade;
 		
 }
-void Cliente::getEstado(){
+string Cliente::getEstado(){
 	return estado;
 		
 }
-void Cliente::getCep(){
+string Cliente::getCep(){
 	return cep;
 		
 }
