@@ -7,7 +7,7 @@
 
 int main(){
 
-    	Cliente cliente0("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
+    Cliente cliente0("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
 	Cliente cliente1("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
 	Cliente cliente2("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C");
 	Cliente cliente3("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.");
@@ -121,12 +121,12 @@ int main(){
 	std::cout << std::endl;
 
 	std::cout << "\n>> Encomendas Normais <<"
-		  << "\nQuantidade: " << quantidadeNormal
-		  << "\nValor Total: " << custoNormal
-		  << std::endl
-		  << "\n>> Encomendas Relâmpago <<"
-		  << "\nQuantidade: " << quantidadeRelampago
-		  << "\nValor Total: " << custoRelampago
-		  <<std::endl;
+		      << "\nQuantidade: " << quantidadeNormal
+		      << "\nValor Total: " << custoNormal
+		      << std::endl
+		      << "\n>> Encomendas Relâmpago <<"
+		      << "\nQuantidade: " << quantidadeRelampago
+		      << "\nValor Total: " << custoRelampago
+		      <<std::endl;
 
 }
