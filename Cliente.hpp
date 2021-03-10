@@ -2,20 +2,22 @@
 #define CLIENTE_H
 
 #include <string>
+#include "Endereco.hpp"
+
 using namespace std;
 
-class Cliente{
+class Cliente {
+
+	private:
+		string nome;
+		Endereco *endereco;
 
 	public:
+		Cliente(string nome, Endereco *endereco);
 
-		string NOME;
-		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
+		~Cliente();
 				
-		void print(); // imprime na tela os dados de um cliente cadastrado
-		
+		void print();
 };
 
 #endif
