@@ -8,60 +8,60 @@ using namespace std;
 int main(){
 	
 	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
+	cli0.Nome = "Thales";
+	cli0.Endereco = "Rua dos Pré-Socráticos";
+	cli0.Cidade = "Miletus";
+	cli0.Estado = "Ionia";
+	cli0.Cep = "548 a.C.";
 
 	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	cli1.Nome = "Aristóteles";
+	cli1.Endereco = "Avenida do Meio-Termo";
+	cli1.Cidade = "Atenas";
+	cli1.Estado = "Ática";
+	cli1.Cep = "384 a.C.";
 
 	Cliente cli2;
 	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
+	cli2.Endereco = "Praça das Formas";
 	cli2.CIDADE = "Atenas";
 	cli2.ESTADO = "Ática";
 	cli2.cep = "348 a.C";
 
 	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	cli3.Nome = "Sócrates";
+	cli3.Endereco = "Rua do Elenchus";
+	cli3.Cidade = "Atenas";
+	cli3.Estado = "Ática";
+	cli3.Cep = "399 a.C.";
 
 	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	cli4.Nome = "Pitágoras";
+	cli4.Endereco = "Praça dos Quadrados dos Catetos";
+	cli4.Cidade = "Samos";
+	cli4.Estado = "Egeu";
+	cli4.Cep = "571 a.C.";
 
 	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	cli5.Nome = "Parmênides";
+	cli5.Endereco = "Rua do Não Ser";
+	cli5.Cidade = "Eleia";
+	cli5.Estado = "Magna Grécia";
+	cli5.Cep = "460 a.C.";
 
 	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	cli6.Nome = "Empédocles";
+	cli6.Endereco = "Rua dos Quatro Elementos";
+	cli6.Cidade = "Agrigento";
+	cli6.Estado = "Sicília";
+	cli6.Cep = "495 a.C.";
 
 	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	cli7.Nome = "Anaxágoras";
+	cli7.Endereco = "Avenida da Mente Cósmica";
+	cli7.Cidade = "Clazômenas";
+	cli7.Estado = "Jónia";
+	cli7.Cep = "499 a.C.";
 
 	int quantN = 0;
 	int quantR = 0;
@@ -74,50 +74,50 @@ int main(){
 	quantN++;
 
 	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
+	enc1.Peso = 10;
+	enc1.Custokg = 12;
 	enc1.remetente = cli1;
 	enc1.dest = cli2;
 	quantN++;
 
 	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
+	enc2.Peso = 7;
+	enc2.Custokg = 12;
 	enc2.remetente = cli2;
 	enc2.dest = cli3;
 	quantN++;
 
 	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
+	enc3.Peso = 2;
+	enc3.Custokg = 12;
 	enc3.remetente = cli3;
 	enc3.dest = cli4;
 	quantN++;
 
 	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
+	enc4.Peso = 3;
+	enc4.Custokg = 12;
 	enc4.remetente = cli4;
 	enc4.dest = cli5;
 	quantN++;
 
 	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
+	enc5.Peso = 13;
+	enc5.Custokg = 18;
 	enc5.remetente = cli5;
 	enc5.dest = cli6;
 	quantR++;
 
 	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
+	enc6.Peso = 6;
+	enc6.Custokg = 18;
 	enc6.remetente = cli6;
 	enc6.dest = cli7;
 	quantR++;
 
 	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
+	enc7.Peso = 8;
+	enc7.Custokg = 18;
 	enc7.remetente = cli7;
 	enc7.dest = cli0;
 	quantR++;
