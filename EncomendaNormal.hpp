@@ -12,9 +12,9 @@ class EncomendaNormal: public Encomenda{
 		
 	double calcula(){
 
-		double x = PESO * CUSTOKG;
+		double CONTA = PESO * CUSTOKG;
 
-		return x;
+		return CONTA;
 	}
 
 	void print(){
