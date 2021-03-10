@@ -2,7 +2,7 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+void Cliente::mostrarDados(){
 
 	std::cout << "  Nome: " << nome << endl
 		 << "  Endereço: " << endereco << endl

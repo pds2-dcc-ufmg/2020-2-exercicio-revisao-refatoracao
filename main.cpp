@@ -128,42 +128,42 @@ int main(){
 	double custoRelampago = 0;
 
 	primeiraEncomenda.calcula();
-	primeiraEncomenda.print();
+	primeiraEncomenda.mostrarDados();
 	custoNormal += primeiraEncomenda.calcula();
 	std::cout << endl;
 
 	segundaEncomenda.calcula();
-	segundaEncomenda.print();
+	segundaEncomenda.mostrarDados();
 	custoNormal += segundaEncomenda.calcula();
 	std::cout << endl;
 
 	terceiraEncomenda.calcula();
-	terceiraEncomenda.print();
+	terceiraEncomenda.mostrarDados();
 	custoNormal += terceiraEncomenda.calcula();
 	std::cout << endl;
 
 	quartaEncomenda.calcula();
-	quartaEncomenda.print();
+	quartaEncomenda.mostrarDados();
 	custoNormal += quartaEncomenda.calcula();
 	std::cout << endl;
 
 	quintaEncomenda.calcula();
-	quintaEncomenda.print();
+	quintaEncomenda.mostrarDados();
 	custoNormal += quintaEncomenda.calcula();
 	std::cout << endl;
 
 	sextaEncomenda.calcula();
-	sextaEncomenda.print();
+	sextaEncomenda.mostrarDados();
 	custoRelampago += sextaEncomenda.calcula();
 	std::cout << endl;
 
 	setimaEncomenda.calcula();
-	setimaEncomenda.print();
+	setimaEncomenda.mostrarDados();
 	custoRelampago += setimaEncomenda.calcula();
 	std::cout << endl;
 
 	oitavaEncomenda.calcula();
-	oitavaEncomenda.print();
+	oitavaEncomenda.mostrarDados();
 	custoRelampago += oitavaEncomenda.calcula();
 	std::cout << endl;
 	
