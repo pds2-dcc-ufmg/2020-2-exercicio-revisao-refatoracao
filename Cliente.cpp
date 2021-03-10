@@ -3,11 +3,9 @@
 #include "Cliente.hpp"
 
 void Cliente::print(){
-
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
-
+	std::cout << "  Nome: "     << nome     << std::endl
+		 	  << "  Endereço: " << endereco << std::endl
+		 	  << "  Cidade: "   << cidade   << std::endl
+		 	  << "  Estado: "   << estado   << std::endl
+		 	  << "  CEP: "      << cep      << std::endl;
 }
