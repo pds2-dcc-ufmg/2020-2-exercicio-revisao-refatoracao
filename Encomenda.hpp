@@ -11,7 +11,7 @@ class Encomenda
 
 		double peso = 0.0;
 		double custoKg = 0.0;
-		double T = 0.0;
+		double valor = 0.0;
 		Cliente remetente;
 		Cliente dest;
 			
