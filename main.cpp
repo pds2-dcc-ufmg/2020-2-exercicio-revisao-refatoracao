@@ -1,132 +1,60 @@
-#include <iostream>
+#include "Cliente.hpp"
 
 #include "Encomenda.hpp"
 
-#include "EncomendaNormal.hpp"
+#include "EncomendaNormal.cpp"
 
-#include "EncomendaRelampago.hpp"
-
-#include "Cliente.hpp"
+#include "EncomendaRelampago.cpp"
 
 int main(){
 
 	//Definindo os clientes
-	
-	Cliente cli0;
-	cli0.NOME = "Thales";
-	cli0.endereco = "Rua dos Pré-Socráticos";
-	cli0.CIDADE = "Miletus";
-	cli0.ESTADO = "Ionia";
-	cli0.cep = "548 a.C.";
 
-	Cliente cli1;
-	cli1.NOME = "Aristóteles";
-	cli1.endereco = "Avenida do Meio-Termo";
-	cli1.CIDADE = "Atenas";
-	cli1.ESTADO = "Ática";
-	cli1.cep = "384 a.C.";
+	Cliente cliente_1("Thales", "Rua dos Pré-Socráticos", "Miletus", "Ionia", "548 a.C.");
 
-	Cliente cli2;
-	cli2.NOME = "Platão";
-	cli2.endereco = "Praça das Formas";
-	cli2.CIDADE = "Atenas";
-	cli2.ESTADO = "Ática";
-	cli2.cep = "348 a.C";
+	Cliente cliente_2("Aristóteles", "Avenida do Meio-Termo", "Atenas", "Ática", "384 a.C.");
 
-	Cliente cli3;
-	cli3.NOME = "Sócrates";
-	cli3.endereco = "Rua do Elenchus";
-	cli3.CIDADE = "Atenas";
-	cli3.ESTADO = "Ática";
-	cli3.cep = "399 a.C.";
+	Cliente cliente_3("Platão", "Praça das Formas", "Atenas", "Ática", "348 a.C.");
 
-	Cliente cli4;
-	cli4.NOME = "Pitágoras";
-	cli4.endereco = "Praça dos Quadrados dos Catetos";
-	cli4.CIDADE = "Samos";
-	cli4.ESTADO = "Egeu";
-	cli4.cep = "571 a.C.";
+	Cliente cliente_4("Sócrates", "Rua do Elenchus", "Atenas", "Ática", "399 a.C.");
 
-	Cliente cli5;
-	cli5.NOME = "Parmênides";
-	cli5.endereco = "Rua do Não Ser";
-	cli5.CIDADE = "Eleia";
-	cli5.ESTADO = "Magna Grécia";
-	cli5.cep = "460 a.C.";
+	Cliente cliente_5("Pitágoras", "Praça dos Quadrados dos Catetos", "Samos", "Egeu", "571 a.C.");
 
-	Cliente cli6;
-	cli6.NOME = "Empédocles";
-	cli6.endereco = "Rua dos Quatro Elementos";
-	cli6.CIDADE = "Agrigento";
-	cli6.ESTADO = "Sicília";
-	cli6.cep = "495 a.C.";
+	Cliente cliente_6("Parmênides", "Rua do Não Ser", "Eleia", "Magna Grécia", "460 a.C.");
 
-	Cliente cli7;
-	cli7.NOME = "Anaxágoras";
-	cli7.endereco = "Avenida da Mente Cósmica";
-	cli7.CIDADE = "Clazômenas";
-	cli7.ESTADO = "Jónia";
-	cli7.cep = "499 a.C.";
+	Cliente cliente_7("Empédocles", "Rua dos Quatro Elementos", "Agrigento", "Sicília", "495 a.C.");
+
+	Cliente cliente_8("Anaxágoras", "Avenida da Mente Cósmica", "Clazômenas", "Jónia", "499 a.C.");
 
 	//Definindo as encomendas
 
 	int quantN = 0;
+
 	int quantR = 0;
 
-	EncomendaNormal enc0;
-	enc0.PESO = 5;
-	enc0.CUSTOkg = 12;
-	enc0.remetente = cli0;
-	enc0.dest = cli1;
+	EncomendaNormal encomenda_1(5, 12);
 	quantN++;
 
-	EncomendaNormal enc1;
-	enc1.PESO = 10;
-	enc1.CUSTOkg = 12;
-	enc1.remetente = cli1;
-	enc1.dest = cli2;
+	EncomendaNormal encomenda_2(10, 12);
 	quantN++;
 
-	EncomendaNormal enc2;
-	enc2.PESO = 7;
-	enc2.CUSTOkg = 12;
-	enc2.remetente = cli2;
-	enc2.dest = cli3;
+	EncomendaNormal encomenda_3(7, 12);
 	quantN++;
 
-	EncomendaNormal enc3;
-	enc3.PESO = 2;
-	enc3.CUSTOkg = 12;
-	enc3.remetente = cli3;
-	enc3.dest = cli4;
+	EncomendaNormal encomenda_4(2, 12);
 	quantN++;
 
-	EncomendaNormal enc4;
-	enc4.PESO = 3;
-	enc4.CUSTOkg = 12;
-	enc4.remetente = cli4;
-	enc4.dest = cli5;
+
+	EncomendaNormal encomenda_5(3, 12);
 	quantN++;
 
-	EncomendaRelampago enc5;
-	enc5.PESO = 13;
-	enc5.CUSTOkg = 18;
-	enc5.remetente = cli5;
-	enc5.dest = cli6;
+	EncomendaRelampago encomenda_6(13, 18);
 	quantR++;
 
-	EncomendaRelampago enc6;
-	enc6.PESO = 6;
-	enc6.CUSTOkg = 18;
-	enc6.remetente = cli6;
-	enc6.dest = cli7;
+	EncomendaRelampago encomenda_7(6, 18);
 	quantR++;
 
-	EncomendaRelampago enc7;
-	enc7.PESO = 8;
-	enc7.CUSTOkg = 18;
-	enc7.remetente = cli7;
-	enc7.dest = cli0;
+	EncomendaRelampago encomenda_8(8, 18);
 	quantR++;
 
 	//Imprimindo o relatório
@@ -136,44 +64,76 @@ int main(){
 	double custN = 0;
 	double custR = 0;
 
-	enc0.calcula();
-	enc0.print();
-	custN += enc0.calcula();
+	cliente_1.Remetente();
+	cliente_1.imprimeDadosDoCliente(cliente_1);
+	cliente_2.Destinatario();
+	cliente_2.imprimeDadosDoCliente(cliente_2);
+	encomenda_1.calculaPrecoEncomenda();
+	encomenda_1.imprimeRelatorioEncomendas();
+	custN += encomenda_1.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc1.calcula();
-	enc1.print();
-	custN += enc1.calcula();
+	cliente_2.Remetente();
+	cliente_2.imprimeDadosDoCliente(cliente_2);
+	cliente_3.Destinatario();
+	cliente_3.imprimeDadosDoCliente(cliente_3);
+	encomenda_2.calculaPrecoEncomenda();
+	encomenda_2.imprimeRelatorioEncomendas();
+	custN += encomenda_2.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc2.calcula();
-	enc2.print();
-	custN += enc2.calcula();
+	cliente_3.Remetente();
+	cliente_3.imprimeDadosDoCliente(cliente_3);
+	cliente_4.Destinatario();
+	cliente_4.imprimeDadosDoCliente(cliente_4);
+	encomenda_3.calculaPrecoEncomenda();
+	encomenda_3.imprimeRelatorioEncomendas();
+	custN += encomenda_3.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc3.calcula();
-	enc3.print();
-	custN += enc3.calcula();
+	cliente_4.Remetente();
+	cliente_4.imprimeDadosDoCliente(cliente_4);
+	cliente_5.Destinatario();
+	cliente_5.imprimeDadosDoCliente(cliente_5);
+	encomenda_4.calculaPrecoEncomenda();
+	encomenda_4.imprimeRelatorioEncomendas();
+	custN += encomenda_4.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc4.calcula();
-	enc4.print();
-	custN += enc4.calcula();
+	cliente_5.Remetente();
+	cliente_5.imprimeDadosDoCliente(cliente_5);
+	cliente_6.Destinatario();
+	cliente_6.imprimeDadosDoCliente(cliente_6);
+	encomenda_5.calculaPrecoEncomenda();
+	encomenda_5.imprimeRelatorioEncomendas();
+	custN += encomenda_5.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc5.calcula();
-	enc5.print();
-	custR += enc5.calcula();
+	cliente_6.Remetente();
+	cliente_6.imprimeDadosDoCliente(cliente_6);
+	cliente_7.Destinatario();
+	cliente_7.imprimeDadosDoCliente(cliente_7);
+	encomenda_6.calculaPrecoEncomenda();
+	encomenda_6.imprimeRelatorioEncomendas();
+	custR += encomenda_6.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc6.calcula();
-	enc6.print();
-	custR += enc6.calcula();
+	cliente_7.Remetente();
+	cliente_7.imprimeDadosDoCliente(cliente_7);
+	cliente_8.Destinatario();
+	cliente_8.imprimeDadosDoCliente(cliente_8);
+	encomenda_7.calculaPrecoEncomenda();
+	encomenda_7.imprimeRelatorioEncomendas();
+	custR += encomenda_7.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
-	enc7.calcula();
-	enc7.print();
-	custR += enc7.calcula();
+	cliente_8.Remetente();
+	cliente_8.imprimeDadosDoCliente(cliente_8);
+	cliente_1.Destinatario();
+	cliente_1.imprimeDadosDoCliente(cliente_1);
+	encomenda_8.calculaPrecoEncomenda();
+	encomenda_8.imprimeRelatorioEncomendas();
+	custR += encomenda_8.calculaPrecoEncomenda();
 	std::cout << std::endl;
 
 	//Estatisticas gerais sobre as encomendas

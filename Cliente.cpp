@@ -1,10 +1,16 @@
-#include <iostream>
-
-#include <string>
-
 #include "Cliente.hpp"
 
-void Cliente::imprimirDadosDoCliente(Cliente cliente){
+void Cliente::Remetente(){
+
+	std::cout << "[Remetente]" << std::endl;
+}
+
+void Cliente::Destinatario(){
+
+	std::cout << "[Destinatário]" << std::endl;
+}
+
+void Cliente::imprimeDadosDoCliente(Cliente cliente){
 
 	std::cout << "  Nome: " << nome << std::endl
 		 << "  Endereço: " << endereco << std::endl
