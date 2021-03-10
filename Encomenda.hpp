@@ -25,9 +25,11 @@ class Encomenda {
 		double getTotal();
 		Cliente getRemet();
 		Cliente getDest();
-			
+		
+		// Imprime na tela as informações do remetente e do destinatário.
 		void print();
-		virtual double calcula();
+		// Calcula o custo total da encomenda.
+		virtual double calculaCusto();
 	
 	protected:
 		double _peso = 0.0;
