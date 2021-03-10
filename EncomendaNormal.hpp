@@ -4,7 +4,7 @@
 #include "Encomenda.hpp"
 #include "Cliente.hpp"
 
-class EncomendaNormal: public Encomenda{
+class EncomendaNormal: public Encomenda {
 	public:
 		// Calcula o valor total de uma encomenda normal.
 		double calculaValor() override {
