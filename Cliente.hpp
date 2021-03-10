@@ -1,3 +1,4 @@
+
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
@@ -8,11 +9,11 @@ class Cliente{
 
 	public:
 
-		string NOME;
+		string Nome;
 		string endereco;
-		string CIDADE;
-		string ESTADO;
-		string cep;
+		string Cidade;
+		string Estado;
+		string Cep;
 				
 		void print(); // imprime na tela os dados de um cliente cadastrado
 		
