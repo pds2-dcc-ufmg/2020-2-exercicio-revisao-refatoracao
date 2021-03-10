@@ -2,12 +2,20 @@
 #include <string>
 #include "Cliente.hpp"
 
-void Cliente::print()
+Cliente::Cliente::Cliente(std::string cep, std::string cidade, std::string endereco, std::string estado, std::string nome)
 {
+	this->cep = cep;
+	this->cidade = cidade;
+	this->endereco = endereco;
+	this->estado = estado;
+	this->nome = nome;
+}
 
-	std::cout << "  Nome: " << NOME << endl
-						<< "  Endereço: " << endereco << endl
-						<< "  Cidade: " << CIDADE << endl
-						<< "  Estado: " << ESTADO << endl
-						<< "  CEP: " << cep << endl;
+void Cliente::Cliente::print()
+{
+	std::cout << "  Nome: " << nome << std::endl
+						<< "  Endereço: " << endereco << std::endl
+						<< "  Cidade: " << cidade << std::endl
+						<< "  Estado: " << estado << std::endl
+						<< "  CEP: " << cep << std::endl;
 }

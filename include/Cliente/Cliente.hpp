@@ -2,19 +2,34 @@
 #define CLIENTE_H
 
 #include <string>
-using namespace std;
 
-class Cliente
+namespace Cliente
 {
+	class Cliente
+	{
+	public:
+		/**
+		* \brief construtor padrão que não inicializa as variáveis
+		*/
+		Cliente(){};
 
-public:
-	string NOME;
-	string endereco;
-	string CIDADE;
-	string ESTADO;
-	string cep;
+		/**
+		* \brief construtor que inicializa as variáveis
+		*/
+		Cliente(std::string cep, std::string cidade, std::string endereco, std::string estado, std::string nome);
 
-	void print(); // imprime na tela os dados de um cliente cadastrado
-};
+		/**
+		* \brief imprime na tela os dados de um cliente cadastrado
+		*/
+		void print();
+
+	private:
+		std::string nome;
+		std::string endereco;
+		std::string cidade;
+		std::string estado;
+		std::string cep;
+	};
+}
 
 #endif
