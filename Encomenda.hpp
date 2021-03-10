@@ -1,27 +1,24 @@
 #ifndef Encomenda_H
+
 #define Encomenda_H
 
-#include "Cliente.hpp"
-using namespace std;
+#include <string>
+
+#include <iostream>
 
 class Encomenda{
 
 	public:
 
-		double PESO = 0.0;
-		double CUSTOkg = 0.0;
-		double T = 0.0;
-		Cliente remetente;
-		Cliente dest;
-			
-		void print(){
+		double calculaPrecoEncomenda();
 
-			std::cout << "[Remetente]" << endl;
-			remetente.print();
-			std::cout << "[Destinatário]" << endl;
-			dest.print();
-		}
+		void imprimeRelatorioEncomendas();
 
+	protected:
+
+		double peso = 0.0;
+
+		double custoPorQuilograma = 0.0;
 };
 
 #endif

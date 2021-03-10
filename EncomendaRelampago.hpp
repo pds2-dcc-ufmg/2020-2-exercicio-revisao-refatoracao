@@ -2,32 +2,38 @@
 #define EncomendaRelampago_H
 
 #include "Encomenda.hpp"
-#include "Cliente.hpp"
-using namespace std;
 
 class EncomendaRelampago: public Encomenda{
 
 	public:
 
-		double calcula(){
+	EncomendaRelampago(){}
 
-			double x = PESO * CUSTOkg;
-			x += x * 0.25;
+	EncomendaRelampago(double peso, double custoPorQuilograma){
 			
-			return x;
+			this->peso = peso;
+
+			this->custoPorQuilograma = custoPorQuilograma;
+	}
+
+		double calculaPrecoEncomenda(){
+
+			double custoTotalEntrega = peso * custoPorQuilograma;
+
+			custoTotalEntrega += custoTotalEntrega * 0.25;
+			
+			return custoTotalEntrega;
 		}
 
-		void print(){
+		void imprimeRelatorioEncomendas(){
 
-			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
-				<< "  Custo por kg: " << CUSTOkg << endl
-				<< "  Taxa adicional: " << 0.25 << endl
-				<< "  Custo total: " << T << endl;
+			std::cout << "[Encomenda Relâmpago]" << std::endl;
 
+			std::cout << "  Peso: " << peso << std::endl
+				<< "  Custo por kg: " << custoPorQuilograma << std::endl
+				<< "  Taxa adicional: " << 0.25 << std::endl
+				<< "  Custo total: " << calculaPrecoEncomenda() << std::endl;
 		}
-
 };
 
 #endif

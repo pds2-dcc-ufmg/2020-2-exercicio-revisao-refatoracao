@@ -11,3 +11,4 @@ No **título** do Pull Request informe o seu **número de matrícula** e **nome*
 
 Lembre-se de analisar aspectos como: nomenclatura, formatação, organização, comentários, aplicação correta dos conceitos de OO, entre outros.
 Dica: Utilize o catálogo para pensar em possíveis sugestões de refatoração (https://refactoring.com/catalog/).
+

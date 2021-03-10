@@ -1,13 +1,20 @@
-#include <iostream>
-#include <string>
 #include "Cliente.hpp"
 
-void Cliente::print(){
+void Cliente::Remetente(){
 
-	std::cout << "  Nome: " << NOME << endl
-		 << "  Endereço: " << endereco << endl
-		 << "  Cidade: " << CIDADE << endl
-		 << "  Estado: " << ESTADO << endl
-		 << "  CEP: " << cep << endl;
+	std::cout << "[Remetente]" << std::endl;
+}
 
+void Cliente::Destinatario(){
+
+	std::cout << "[Destinatário]" << std::endl;
+}
+
+void Cliente::imprimeDadosDoCliente(Cliente cliente){
+
+	std::cout << "  Nome: " << nome << std::endl
+		 << "  Endereço: " << endereco << std::endl
+		 << "  Cidade: " << cidade << std::endl
+		 << "  Estado: " << estado << std::endl
+		 << "  CEP: " << cep << std::endl;
 }
