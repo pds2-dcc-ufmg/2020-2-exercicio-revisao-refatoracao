@@ -17,8 +17,8 @@ class EncomendaRelampago: public Encomenda {
 		}
 		void print(){
 			Encomenda::print();
-			std::cout << "[Encomenda Relâmpago]" << endl;
-			std::cout << "  Peso: " << PESO << endl
+			cout << "[Encomenda Relâmpago]" << endl;
+			cout << "  Peso: " << PESO << endl
 				<< "  Custo por kg: " << CUSTOkg << endl
 				<< "  Taxa adicional: " << TAXA_ADICIONAL << endl
 				<< "  Custo total: " << T << endl;
